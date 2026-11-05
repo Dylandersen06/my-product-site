@@ -1,16 +1,43 @@
+import ResultsView from "@/components/ResultsView";
 import SearchForm from "@/components/SearchForm";
 import Pricing from "@/components/Pricing";
 import { CARS } from "@/lib/cars";
+import type { RawParams } from "@/lib/loosen";
+import { hasSearch, parsePreferences, parseSort } from "@/lib/params";
 
 const BRAND_COUNT = new Set(CARS.map((car) => car.make)).size;
 
 const STEPS = [
-  { title: "Tell us what you need", body: "New, used or certified pre-owned, plus budget, seats, fuel type, body style, how you drive, and your must-haves." },
+  { title: "Tell us what you need", body: "New, used or certified pre-owned, plus budget, seats, fuel type, body style, and how you drive." },
   { title: "We score every car", body: `Every trim of our ${CARS.length} models is checked against your needs, and each model gets a 0–100 score.` },
   { title: "See your best matches", body: "Ranked results with clear reasons and honest trade-offs for each car." },
 ];
 
-export default function Home() {
+export default async function Home({ searchParams }: { searchParams: Promise<RawParams> }) {
+  const params = await searchParams;
+
+  if (hasSearch(params)) {
+    const prefs = parsePreferences(params);
+    const sort = parseSort(params);
+    return (
+      <>
+        <div className="container results-page">
+          <ResultsView params={params} prefs={prefs} sort={sort} basePath="/" />
+          <section className="section">
+            <div className="narrow">
+              <h2 className="section-title">Refine your search</h2>
+              <div className="card">
+                {/* Remounts the form after each search so its fields match the URL. */}
+                <SearchForm key={JSON.stringify(params)} initial={prefs} sort={sort} />
+              </div>
+            </div>
+          </section>
+        </div>
+        <Pricing />
+      </>
+    );
+  }
+
   return (
     <>
       <section className="hero">

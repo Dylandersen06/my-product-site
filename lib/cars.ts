@@ -6,6 +6,7 @@
 
 import { estimatePricing, type ConditionPricing } from "./pricing";
 import { TRIM_DATA } from "./trims";
+import { TRIM_SPECS } from "./trim-specs";
 
 export type BodyStyle =
   | "sedan"
@@ -35,7 +36,8 @@ export type StoredFeature =
   | "adaptiveCruise"
   | "blindSpot"
   | "heatedSeats"
-  | "sunroof";
+  | "sunroof"
+  | "camera360";
 
 export type Feature = StoredFeature | "thirdRow" | "towing";
 
@@ -46,6 +48,17 @@ export interface Trim extends ConditionPricing {
   /** MPG, EV range or plug-in range, ready to display. */
   economy: string;
   drivetrain: string;
+  /** 0-60 mph in seconds. */
+  zero60: number;
+  transmission: string;
+  /** Cubic feet behind the rearmost seats, or bed volume for pickups. */
+  cargoCuFt: number;
+  /** Max towing in pounds, 0 when not rated. */
+  towingLbs: number;
+  /** Combined MPG, null for pure EVs and unrated vehicles. */
+  mpg: number | null;
+  /** Electric range in miles, null if it doesn't plug in or isn't published. */
+  evRangeMi: number | null;
   features: StoredFeature[];
   highlights: string[];
 }
@@ -101,14 +114,24 @@ export const FEATURE_LABELS: Record<Feature, string> = {
   sunroof: "Sunroof / glass roof",
   thirdRow: "Third-row seating",
   towing: "Tows 3,500+ lbs",
+  camera360: "360° camera",
 };
 
 export const TOWING_THRESHOLD_LBS = 3500;
 
 export function hasFeature(car: Car, trim: Trim, feature: Feature): boolean {
   if (feature === "thirdRow") return car.seats >= 7;
-  if (feature === "towing") return car.towingLbs >= TOWING_THRESHOLD_LBS;
+  if (feature === "towing") return trim.towingLbs >= TOWING_THRESHOLD_LBS;
   return trim.features.includes(feature);
+}
+
+export const towingText = (lbs: number) => (lbs > 0 ? `${lbs.toLocaleString("en-US")} lb` : "Not rated");
+
+/** Reads the numbers out of an economy label like "42 mi electric / 38 mpg". */
+function parseEconomy(economy: string) {
+  const mpg = economy.match(/(\d+) mpg/);
+  const range = economy.match(/(\d+) mi (?:range|electric)/);
+  return { mpg: mpg ? Number(mpg[1]) : null, evRangeMi: range ? Number(range[1]) : null };
 }
 
 const FEATURE_CODES: Record<string, StoredFeature> = {
@@ -135,14 +158,32 @@ function car(
     .replace(/(^-|-$)/g, "");
   const rows = TRIM_DATA[id];
   if (!rows?.length) throw new Error(`No trims for ${id}`);
+  const specs = TRIM_SPECS[id];
+  if (!specs) throw new Error(`No specs for ${id}`);
+  const [zero60s, transmissions, cargoCuFt, cameraFrom, towing] = specs;
+  if (
+    zero60s.length !== rows.length ||
+    (Array.isArray(transmissions) && transmissions.length !== rows.length) ||
+    (towing && towing.length !== rows.length)
+  ) {
+    throw new Error(`Specs for ${id} don't line up with its ${rows.length} trims`);
+  }
   const trims = rows.map(
-    ([name, newPrice, engine, hp, economy, drivetrain, codes, highlights]): Trim => ({
+    ([name, newPrice, engine, hp, economy, drivetrain, codes, highlights], i): Trim => ({
       name,
       engine,
       hp,
       economy,
       drivetrain,
-      features: [...codes].map((code) => FEATURE_CODES[code]),
+      zero60: zero60s[i],
+      transmission: Array.isArray(transmissions) ? transmissions[i] : transmissions,
+      cargoCuFt,
+      towingLbs: towing ? towing[i] : towingLbs,
+      ...parseEconomy(economy),
+      features: [
+        ...[...codes].map((code) => FEATURE_CODES[code]),
+        ...(cameraFrom !== null && i >= cameraFrom ? (["camera360"] as const) : []),
+      ],
       highlights: highlights.split(", "),
       ...estimatePricing({ id, make, body, fuel, newPrice }),
     }),
@@ -313,3 +354,6 @@ export const CARS: Car[] = [
   // Bugatti is intentionally omitted: its cheapest model costs several million
   // dollars, far above the $1,000,000 budget cap.
 ];
+
+/** Every brand in the dataset, A to Z. */
+export const BRANDS: string[] = [...new Set(CARS.map((c) => c.make))].sort();

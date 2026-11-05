@@ -1,0 +1,207 @@
+import Form from "next/form";
+import BasicFields from "@/components/BasicFields";
+import BudgetPicker from "@/components/BudgetPicker";
+import ConditionToggle from "@/components/ConditionToggle";
+import HorsepowerPicker from "@/components/HorsepowerPicker";
+import { BRANDS, FEATURE_LABELS, type Feature } from "@/lib/cars";
+import {
+  CARGO_OPTIONS,
+  DRIVETRAIN_LABELS,
+  EV_RANGE_OPTIONS,
+  MPG_OPTIONS,
+  TOWING_OPTIONS,
+  TRANSMISSION_LABELS,
+  ZERO60_OPTIONS,
+  type Filters,
+} from "@/lib/filters";
+import { DEFAULT_SORT, type Preferences, type SortKey } from "@/lib/match";
+
+/** AWD and towing have their own filters here, so they aren't repeated as checkboxes. */
+const FEATURE_CHECKBOXES: Feature[] = [
+  "carplay",
+  "adaptiveCruise",
+  "heatedSeats",
+  "sunroof",
+  "thirdRow",
+  "camera360",
+  "blindSpot",
+];
+
+function NumberSelect({
+  name,
+  label,
+  value,
+  options,
+  format,
+}: {
+  name: string;
+  label: string;
+  value: number | null;
+  options: number[];
+  format: (n: number) => string;
+}) {
+  return (
+    <label className="field">
+      <span className="field-label">{label}</span>
+      <select name={name} defaultValue={value === null ? "" : String(value)}>
+        <option value="">Any</option>
+        {value !== null && !options.includes(value) && <option value={value}>{format(value)}</option>}
+        {options.map((n) => (
+          <option key={n} value={n}>
+            {format(n)}
+          </option>
+        ))}
+      </select>
+    </label>
+  );
+}
+
+function BrandGroup({ title, name, selected }: { title: string; name: string; selected: string[] }) {
+  return (
+    <details className="brand-group" open={selected.length > 0}>
+      <summary>
+        {title}
+        {selected.length > 0 && <span className="brand-count">{selected.length} selected</span>}
+      </summary>
+      <div className="checkbox-grid brand-grid">
+        {BRANDS.map((brand) => (
+          <label key={brand} className="checkbox">
+            <input type="checkbox" name={name} value={brand} defaultChecked={selected.includes(brand)} />
+            <span>{brand}</span>
+          </label>
+        ))}
+      </div>
+    </details>
+  );
+}
+
+export default function AdvancedForm({
+  initial,
+  filters,
+  sort = DEFAULT_SORT,
+}: {
+  initial: Preferences;
+  filters: Filters;
+  sort?: SortKey;
+}) {
+  return (
+    <Form action="/advanced" className="search-form" autoComplete="off">
+      {sort !== DEFAULT_SORT && <input type="hidden" name="sort" value={sort} />}
+
+      <fieldset className="filter-section">
+        <legend>Basics</legend>
+        <ConditionToggle initial={initial.conditions} />
+        <BudgetPicker initial={initial.budget} allowAny />
+        <BasicFields initial={initial} advanced />
+      </fieldset>
+
+      <fieldset className="filter-section">
+        <legend>Performance</legend>
+        <HorsepowerPicker min={filters.hpMin} max={filters.hpMax} />
+        <div className="form-grid">
+          <NumberSelect
+            name="zero60Max"
+            label="0–60 mph time"
+            value={filters.zero60Max}
+            options={ZERO60_OPTIONS}
+            format={(n) => `Under ${n} seconds`}
+          />
+          <label className="field">
+            <span className="field-label">Drivetrain</span>
+            <select name="drivetrain" defaultValue={filters.drivetrain ?? ""}>
+              <option value="">Any</option>
+              {Object.entries(DRIVETRAIN_LABELS).map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+          <label className="field field-wide">
+            <span className="field-label">Transmission</span>
+            <select name="transmission" defaultValue={filters.transmission ?? ""}>
+              <option value="">Any</option>
+              {Object.entries(TRANSMISSION_LABELS).map(([value, label]) => (
+                <option key={value} value={value}>
+                  {label}
+                </option>
+              ))}
+            </select>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset className="filter-section">
+        <legend>Practicality</legend>
+        <div className="form-grid">
+          <NumberSelect
+            name="mpgMin"
+            label="Minimum MPG"
+            value={filters.mpgMin}
+            options={MPG_OPTIONS}
+            format={(n) => `${n}+ mpg`}
+          />
+          <NumberSelect
+            name="rangeMin"
+            label="Minimum EV range"
+            value={filters.rangeMin}
+            options={EV_RANGE_OPTIONS}
+            format={(n) => `${n}+ miles`}
+          />
+          <p className="field-hint field-wide">
+            If you set both, a car qualifies by meeting either one. Setting only MPG leaves out pure EVs.
+          </p>
+          <NumberSelect
+            name="towMin"
+            label="Towing capacity"
+            value={filters.towMin}
+            options={TOWING_OPTIONS}
+            format={(n) => `${n.toLocaleString("en-US")}+ lb`}
+          />
+          <NumberSelect
+            name="cargoMin"
+            label="Cargo space"
+            value={filters.cargoMin}
+            options={CARGO_OPTIONS}
+            format={(n) => `${n}+ cu ft`}
+          />
+          <p className="field-hint field-wide">Cargo is space behind the rearmost seats, or bed volume for pickups.</p>
+        </div>
+      </fieldset>
+
+      <fieldset className="filter-section">
+        <legend>Brands</legend>
+        <BrandGroup title="Only show these brands" name="make" selected={filters.makes} />
+        <BrandGroup title="Exclude these brands" name="excludeMake" selected={filters.excludeMakes} />
+      </fieldset>
+
+      <fieldset className="filter-section">
+        <legend>Features</legend>
+        <p className="field-hint">The recommended trim must have every feature you check.</p>
+        <div className="checkbox-grid">
+          {FEATURE_CHECKBOXES.map((value) => (
+            <label key={value} className="checkbox">
+              <input
+                type="checkbox"
+                name="features"
+                value={value}
+                defaultChecked={initial.features.includes(value)}
+              />
+              <span>{FEATURE_LABELS[value]}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      <div className="form-actions">
+        <button type="submit" className="button button-primary button-lg">
+          Show matches
+        </button>
+        {/* A full page load, so every field really returns to its default. */}
+        <a href="/advanced" className="button button-outline button-lg">
+          Reset filters
+        </a>
+      </div>
+    </Form>
+  );
+}

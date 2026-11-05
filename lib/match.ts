@@ -13,6 +13,7 @@ import {
   type Trim,
   type Usage,
 } from "./cars";
+import { trimPasses, type Filters } from "./filters";
 import { CONDITION_LABELS, savingsVsNew, type Condition } from "./pricing";
 
 export interface Preferences {
@@ -22,8 +23,13 @@ export interface Preferences {
   seats: number;
   fuel: Fuel | "any";
   body: BodyStyle | "any";
-  usage: Usage;
+  usage: Usage | "any";
   features: Feature[];
+  /**
+   * Advanced Search only. When set, these filters, the body style, the fuel type
+   * and the features are all strict requirements instead of scoring preferences.
+   */
+  filters: Filters | null;
 }
 
 export const SORT_LABELS = {
@@ -52,6 +58,8 @@ export interface Match {
 export interface MatchResult {
   matches: Match[];
   excludedCount: number;
+  /** How many cars qualified before limiting the list. */
+  totalMatches: number;
   /**
    * True when no car fit the budget, so `matches` holds the closest-priced
    * cars that still have enough seats instead.
@@ -129,7 +137,8 @@ function savingsFor(trim: Trim, conditions: Condition[]): number {
   return Math.max(...(preOwned.length > 0 ? preOwned : (["used"] as const)).map((c) => savingsVsNew(trim.prices, c)));
 }
 
-const budgetMidpoint = (budget: Budget) => (budget.min + budget.max) / 2;
+/** The price ties are broken toward. "Any budget" favors the cheapest option. */
+const budgetMidpoint = (budget: Budget) => (budget.range === "any" ? 0 : (budget.min + budget.max) / 2);
 
 /**
  * Picks the trim and selected condition with the most budget and must-have
@@ -143,6 +152,7 @@ function bestOption(car: Car, prefs: Preferences, ignoreCap: boolean) {
   let best: { trim: Trim; condition: Condition; price: number; points: number; budget: number } | null = null;
   for (const trim of car.trims) {
     const have = prefs.features.filter((f) => hasFeature(car, trim, f)).length;
+    if (prefs.filters && (!trimPasses(trim, prefs.filters) || have < prefs.features.length)) continue;
     const featureShare = prefs.features.length === 0 ? 1 : have / prefs.features.length;
     for (const condition of prefs.conditions) {
       const price = trim.prices[condition];
@@ -168,14 +178,24 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
   const caveats: string[] = [];
   let score = 0;
 
+  const filters = prefs.filters;
+  if (filters) {
+    if (filters.makes.length > 0 && !filters.makes.includes(car.make)) return null;
+    if (filters.excludeMakes.includes(car.make)) return null;
+    if (prefs.fuel !== "any" && car.fuel !== prefs.fuel) return null;
+    if (prefs.body !== "any" && car.body !== prefs.body) return null;
+  }
+
   // Seats: a hard requirement.
   if (car.seats < prefs.seats) return null;
   score += WEIGHTS.seats;
-  reasons.push(
-    car.seats === prefs.seats
-      ? `Seats ${car.seats}, exactly what you need`
-      : `Seats ${car.seats}, room for your ${prefs.seats}`,
-  );
+  if (prefs.seats > 1) {
+    reasons.push(
+      car.seats === prefs.seats
+        ? `Seats ${car.seats}, exactly what you need`
+        : `Seats ${car.seats}, room for your ${prefs.seats}`,
+    );
+  }
 
   const best = bestOption(car, prefs, ignoreBudgetCap);
   if (!best) return null;
@@ -184,7 +204,9 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
 
   const { min, max, range } = prefs.budget;
   const text = priceText(trim, condition, price);
-  if (price > max) {
+  if (range === "any") {
+    reasons.push(text);
+  } else if (price > max) {
     caveats.push(`${text}, ${usd(price - max)} over your ${usd(max)} max`);
   } else if (price < min) {
     caveats.push(
@@ -218,7 +240,9 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
   }
 
   // Primary use
-  if (car.goodFor.includes(prefs.usage)) {
+  if (prefs.usage === "any") {
+    score += WEIGHTS.usage;
+  } else if (car.goodFor.includes(prefs.usage)) {
     score += WEIGHTS.usage;
     reasons.push(USAGE_REASONS[prefs.usage]);
   } else {
@@ -281,9 +305,13 @@ export function rankCars(prefs: Preferences, sort: SortKey = DEFAULT_SORT, limit
     return {
       matches: applySort(scored.slice(0, limit), sort),
       excludedCount: CARS.length - scored.length,
+      totalMatches: scored.length,
       fallback: false,
     };
   }
+
+  // Advanced Search shows what was asked for, or suggestions to loosen it.
+  if (prefs.filters) return { matches: [], excludedCount: CARS.length, totalMatches: 0, fallback: false };
 
   // Nothing fits the budget (e.g. a very low max): show the cheapest cars
   // that still seat everyone, so the shopper sees how close they can get.
@@ -291,5 +319,10 @@ export function rankCars(prefs: Preferences, sort: SortKey = DEFAULT_SORT, limit
     .filter(isMatch)
     .sort((a, b) => a.price - b.price)
     .slice(0, 5);
-  return { matches: applySort(closest, sort), excludedCount: CARS.length, fallback: closest.length > 0 };
+  return {
+    matches: applySort(closest, sort),
+    excludedCount: CARS.length,
+    totalMatches: 0,
+    fallback: closest.length > 0,
+  };
 }

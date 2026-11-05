@@ -15,7 +15,10 @@ export const BUDGET_RANGES = [
   { key: "250-1m", label: "$250k–$1M", min: 250_000, max: 1_000_000 },
 ] as const;
 
-export type BudgetRangeKey = (typeof BUDGET_RANGES)[number]["key"];
+/** Advanced Search's default, so other filters aren't limited by price until the shopper asks. */
+export const ANY_RANGE = { key: "any", label: "Any budget", min: 0, max: BUDGET_INPUT_MAX } as const;
+
+export type BudgetRangeKey = (typeof BUDGET_RANGES)[number]["key"] | typeof ANY_RANGE.key;
 
 export const DEFAULT_RANGE: BudgetRangeKey = "30-60";
 
@@ -29,7 +32,7 @@ export interface Budget {
 export const usd = (n: number) => `$${Math.round(n).toLocaleString("en-US")}`;
 
 export function findRange(key: string | undefined) {
-  return BUDGET_RANGES.find((r) => r.key === key);
+  return key === ANY_RANGE.key ? ANY_RANGE : BUDGET_RANGES.find((r) => r.key === key);
 }
 
 export function budgetLabel(budget: Budget): string {

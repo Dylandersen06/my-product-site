@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import {
+  ANY_RANGE,
   BUDGET_INPUT_MAX,
   BUDGET_INPUT_MIN,
   BUDGET_RANGES,
@@ -16,16 +17,17 @@ import {
  * Without JavaScript both are submitted, and the server gives the exact
  * amount priority.
  */
-export default function BudgetPicker({ initial }: { initial: Budget }) {
+export default function BudgetPicker({ initial, allowAny = false }: { initial: Budget; allowAny?: boolean }) {
+  const ranges = allowAny ? [ANY_RANGE, ...BUDGET_RANGES] : BUDGET_RANGES;
   const [range, setRange] = useState<BudgetRangeKey | null>(initial.range);
-  const [lastRange, setLastRange] = useState<BudgetRangeKey>(initial.range ?? DEFAULT_RANGE);
+  const [lastRange, setLastRange] = useState<BudgetRangeKey>(initial.range ?? (allowAny ? ANY_RANGE.key : DEFAULT_RANGE));
   const [exact, setExact] = useState(initial.range === null ? String(initial.max) : "");
 
   return (
     <fieldset className="features-fieldset">
       <legend className="field-label">Budget</legend>
       <div className="checkbox-grid budget-grid">
-        {BUDGET_RANGES.map((r) => (
+        {ranges.map((r) => (
           <label key={r.key} className="checkbox">
             <input
               type="radio"

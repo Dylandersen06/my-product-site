@@ -1,5 +1,5 @@
 import { usd } from "@/lib/budget";
-import { FEATURE_LABELS } from "@/lib/cars";
+import { FEATURE_LABELS, towingText } from "@/lib/cars";
 import type { Match } from "@/lib/match";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 
@@ -20,7 +20,10 @@ export default function TrimList({ match, conditions }: { match: Match; conditio
               {trim === recommended && count > 1 && <span className="price-tag">Recommended</span>}
             </div>
             <p className="trim-specs">
-              {trim.engine} · {trim.hp} hp · {trim.economy} · {trim.drivetrain}
+              {trim.engine} · {trim.hp} hp · {trim.zero60}s 0–60 · {trim.economy} · {trim.drivetrain}
+            </p>
+            <p className="trim-specs">
+              {trim.transmission} · Towing: {towingText(trim.towingLbs)} · Cargo: {trim.cargoCuFt} cu ft
             </p>
             <p className="trim-features">
               {[...trim.highlights, ...trim.features.map((f) => FEATURE_LABELS[f])].join(" · ")}

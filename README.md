@@ -2,7 +2,10 @@
 
 **By Dylan Andersen**
 
-CarMatch AI helps car shoppers find the models that best fit their needs. Fill out a short form (new, used or certified pre-owned, budget, seats, fuel type, body style, how you'll use the car, and must-have features) and get a ranked list of matching cars, each with a photo, a recommended trim, a 0–100 match score and the reasons behind it.
+CarMatch AI helps car shoppers find the models that best fit their needs. It has two search pages:
+
+- **Quick Search (`/`):** a short form (new, used or certified pre-owned, budget, seats, fuel type, body style, how you'll use the car) that returns a ranked list of cars, each with a photo, a recommended trim, a 0–100 match score and the reasons behind it.
+- **Advanced Search (`/advanced`):** everything on the quick form plus horsepower, 0–60, MPG or EV range, drivetrain, transmission, towing, cargo, brand include/exclude and feature filters. Cards also show key specs, and you can compare up to 3 cars side by side. If nothing matches, the page re-runs the search with each filter relaxed and suggests the changes that bring cars back.
 
 ## Running locally
 
@@ -36,9 +39,13 @@ Shoppers pick one or more conditions. Budget points use the price for the select
 
 New prices are approximate 2025 starting MSRPs, and features count if any trim offers them. **Used and CPO prices and mileage are modeled estimates, not market data.** `lib/pricing.ts` derives them from the new price using typical depreciation by brand, fuel type and body style, with overrides for specific models. Used and CPO examples are about 3 years old, or younger for models launched more recently. Check local listings for real prices.
 
+## Quick vs. Advanced matching
+
+Quick Search scores preferences: a near miss on fuel type or body style loses points but still appears. Advanced Search treats filters as requirements: a trim has to pass all of them (`lib/filters.ts`), including body style, fuel type and checked features. The search budget works the same way on both pages, except that Advanced Search defaults to "Any budget". Old `/results` links redirect to Quick Search.
+
 ## Trims
 
-`lib/trims.ts` lists each model's main trims (2–4 for most) with starting price, engine or motor, horsepower, MPG or EV range, drivetrain, features and highlights. Six low-volume models are sold in only one trim and are listed that way. Matching checks every trim in every selected condition and recommends the one with the best mix of budget fit and must-haves. Ties go to the price closest to the middle of the budget. Used and CPO estimates are calculated per trim. Trim data is approximate and was written by hand from general knowledge, so confirm it with a dealer.
+`lib/trims.ts` lists each model's main trims (2–4 for most) with starting price, engine or motor, horsepower, MPG or EV range, drivetrain, features and highlights. Six low-volume models are sold in only one trim and are listed that way. Matching checks every trim in every selected condition and recommends the one with the best mix of budget fit and must-haves. Ties go to the price closest to the middle of the budget. Used and CPO estimates are calculated per trim. `lib/trim-specs.ts` adds 0–60, transmission, cargo, towing and 360° camera availability for every trim, and the build fails if a row doesn't line up with its model's trims. Trim data is approximate and was written by hand from general knowledge, so confirm it with a dealer.
 
 ## Photos
 

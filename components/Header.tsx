@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NavLinks from "@/components/NavLinks";
 
 export default function Header() {
   return (
@@ -10,10 +11,7 @@ export default function Header() {
           </span>
           <span className="brand-by">by Dylan Andersen</span>
         </Link>
-        <nav className="nav-links">
-          <Link href="/#search">Find a car</Link>
-          <Link href="/#pricing">Pricing</Link>
-        </nav>
+        <NavLinks />
       </div>
     </header>
   );
