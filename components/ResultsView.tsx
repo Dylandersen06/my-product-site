@@ -146,6 +146,7 @@ export default function ResultsView({
               <li key={s}>{s}</li>
             ))}
           </ul>
+          <p className="results-promise">Ranked by what you told us. No sponsored rankings.</p>
         </div>
         <Link href={basePath} className="button button-outline">
           New search

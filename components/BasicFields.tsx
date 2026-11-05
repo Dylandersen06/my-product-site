@@ -1,5 +1,11 @@
-import { BODY_LABELS, FUEL_LABELS, USAGE_LABELS } from "@/lib/cars";
+import BodyIcon from "@/components/BodyIcon";
+import { BODY_LABELS, FUEL_LABELS, USAGE_LABELS, type BodyStyle } from "@/lib/cars";
 import type { Preferences } from "@/lib/match";
+
+const BODY_OPTIONS: ["any" | BodyStyle, string][] = [
+  ["any", "No preference"],
+  ...(Object.entries(BODY_LABELS) as [BodyStyle, string][]),
+];
 
 /** Seats, fuel, body style and use, shared by both search forms. */
 export default function BasicFields({ initial, advanced = false }: { initial: Preferences; advanced?: boolean }) {
@@ -29,19 +35,20 @@ export default function BasicFields({ initial, advanced = false }: { initial: Pr
         </select>
       </label>
 
-      <label className="field">
-        <span className="field-label">Body style</span>
-        <select name="body" defaultValue={initial.body}>
-          <option value="any">No preference</option>
-          {Object.entries(BODY_LABELS).map(([value, label]) => (
-            <option key={value} value={value}>
-              {label}
-            </option>
+      <fieldset className="body-picker field-wide">
+        <legend className="field-label">Body style</legend>
+        <div className="body-options">
+          {BODY_OPTIONS.map(([value, label]) => (
+            <label key={value} className="body-option">
+              <input type="radio" name="body" value={value} defaultChecked={initial.body === value} />
+              <BodyIcon body={value} />
+              <span>{label}</span>
+            </label>
           ))}
-        </select>
-      </label>
+        </div>
+      </fieldset>
 
-      <label className={advanced ? "field" : "field field-wide"}>
+      <label className="field field-wide">
         <span className="field-label">How will you mostly use it?</span>
         <select name="usage" defaultValue={initial.usage}>
           {advanced && <option value="any">No preference</option>}

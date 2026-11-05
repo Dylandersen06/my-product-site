@@ -13,7 +13,7 @@ export default function AdvisorPage() {
       <h1 className="results-title">AI Car Advisor</h1>
       <p className="muted advisor-intro">
         Describe your lifestyle and what you want. The advisor recommends cars from our {CARS.length} models with the
-        best trim and condition (Used, Certified Pre-Owned or New), explains why, and answers your follow-up questions.
+        best trim and condition (Used, Certified Pre-Owned or New), explains why, and answers your follow-up questions. No dealer or manufacturer pays for placement.
       </p>
       <AdvisorChat />
     </div>

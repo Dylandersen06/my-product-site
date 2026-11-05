@@ -24,7 +24,7 @@ export default async function AdvancedPage({ searchParams }: { searchParams: Pro
         <div className="advanced-intro">
           <h1 className="results-title">Advanced Search</h1>
           <p className="muted">
-            Every filter you set is a requirement: a trim must pass them all to appear. Leave anything on Any to skip it.
+            Pick your must-haves. Every filter you set is a requirement: a trim must pass them all to appear. Leave anything on Any to skip it.
           </p>
         </div>
       )}
