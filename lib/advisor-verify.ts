@@ -94,7 +94,7 @@ const OTHER_BRANDS = ["Dodge", "Acura", "Infiniti", "Alfa Romeo", "Mini", "Fiat"
 const OTHER_BRAND_PATTERN = new RegExp(`\\b(${OTHER_BRANDS.join("|")}) ([A-Z0-9][\\w-]*)`, "g");
 
 const MAKES = [...new Set(CARS.map((car) => car.make))];
-const MAKE_THEN_NAME = new RegExp(`(?<![\\w-])(${MAKES.map(escape).join("|")}) ([A-Z0-9][\\w-]*(?: [A-Z0-9][\\w-]*)?)`, "g");
+const MAKE_THEN_NAME = new RegExp(`(?<![\\w-])(${MAKES.map(escape).join("|")}) ([A-Z0-9][\\w-]*(?:\\.\\d[\\w-]*)?(?: [A-Z0-9][\\w-]*)?)`, "g");
 /** Words that can follow a brand without being a model: "Toyota Safety Sense". */
 const NOT_MODELS = /^(?:Safety|Sensing|EyeSight|SmartSense|Drive|Co-Pilot|Certified|CPO|Used|New|Pre-Owned|Dealers?|Cars?|Models?|SUVs?|Trucks?|Hybrid|Hybrids|EVs?|Autopilot|Super|Motor|Vehicles?|Ride|Is|Has|Offers|Makes|And|Or)\b/;
 
@@ -251,10 +251,11 @@ function checkNames(text: string, add: (message: string) => void) {
     const [, make, rest] = m;
     if (NOT_MODELS.test(rest) || ALREADY_SAID_MISSING.test(sentenceAround(plain, m.index))) continue;
     const first = rest.split(" ")[0];
-    const known = [...ALIASES.keys()].some((alias) => {
-      const full = `${make} ${rest}`;
-      return full === alias || full.startsWith(`${alias} `) || alias.startsWith(`${make} ${first}`);
-    });
+    const full = `${make} ${rest}`;
+    // A brand can be followed by a model or by a trim: "BMW M340i" is a 3 Series.
+    const known =
+      [...ALIASES.keys()].some((alias) => full === alias || full.startsWith(`${alias} `) || alias.startsWith(`${make} ${first}`)) ||
+      CARS.some((car) => car.make === make && car.trims.some((t) => t.name === rest || t.name.startsWith(`${first} `) || t.name === first));
     if (!known) add(`The ${make} ${first} isn't in our dataset, so we can't confirm its details.`);
   }
 }
