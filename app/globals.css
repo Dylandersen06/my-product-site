@@ -1699,3 +1699,29 @@ body:has(.compare-bar) .ask-ai {
 .car-detail .estimate-note {
   margin-bottom: 4px;
 }
+
+/* Corrections under an AI Advisor reply */
+.advisor-corrections {
+  padding: 12px 16px;
+  font-size: 0.95rem;
+  background: var(--warn-soft);
+  border: 1px solid var(--warn);
+  border-radius: 14px;
+}
+.advisor-corrections ul {
+  margin-top: 4px;
+  padding-left: 20px;
+}
+
+/* Links to the details page from search results */
+.result-title-link {
+  text-decoration: none;
+}
+.result-title-link:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+.result-details-link {
+  display: block;
+  margin-top: 12px;
+}

@@ -1,11 +1,13 @@
+import Link from "next/link";
 import CarPhoto from "@/components/CarPhoto";
 import { CompareCheckbox } from "@/components/Compare";
 import CostToOwnCard from "@/components/CostToOwnCard";
 import PriceComparison from "@/components/PriceComparison";
 import SpecStrip from "@/components/SpecStrip";
 import TrimList from "@/components/TrimList";
-import { BODY_LABELS, FUEL_LABELS } from "@/lib/cars";
+import { BODY_LABELS, FUEL_LABELS, carDetailsHref } from "@/lib/cars";
 import type { Match } from "@/lib/match";
+import { DEFAULT_MILES_PER_YEAR } from "@/lib/ownership";
 import { photoFor } from "@/lib/photos";
 import type { Condition } from "@/lib/pricing";
 
@@ -29,13 +31,23 @@ export default function ResultCard({
   milesPerYear: number;
 }) {
   const name = `${m.car.make} ${m.car.model}`;
+  const details = carDetailsHref(
+    m.car.id,
+    m.trim.name,
+    m.condition,
+    milesPerYear === DEFAULT_MILES_PER_YEAR ? undefined : milesPerYear,
+  );
   return (
     <li className="result-card">
       <CarPhoto name={name} bodyLabel={BODY_LABELS[m.car.body]} photo={photoFor(m.car.id)} rank={rank} />
       <div className="result-body">
         <div className="result-top">
           <div>
-            <h2>{name}</h2>
+            <h2>
+              <Link href={details} className="result-title-link">
+                {name}
+              </Link>
+            </h2>
             <p className="recommended-trim">
               {m.car.trims.length > 1 ? "Recommended trim: " : "Trim: "}
               <strong>{m.trim.name}</strong>
@@ -76,6 +88,9 @@ export default function ResultCard({
           ))}
         </ul>
         <TrimList match={m} conditions={conditions} />
+        <Link href={details} className="button button-outline result-details-link">
+          View details
+        </Link>
       </div>
     </li>
   );

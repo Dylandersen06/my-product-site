@@ -2,7 +2,7 @@
 // from the dataset, not the model's text, and a line that doesn't match a real
 // car and trim gets no card, so a card can't show an invented car or price.
 
-import { BODY_LABELS, CARS, type Car, type Trim } from "./cars";
+import { BODY_LABELS, CARS, carDetailsHref, type Car, type Trim } from "./cars";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "./ownership";
 import { photoFor, type CarPhoto } from "./photos";
 import { CONDITION_LABELS, type Condition } from "./pricing";
@@ -52,7 +52,7 @@ function findTrim(car: Car, label: string, carName: string): Trim | null {
   return car.trims.length === 1 && label === carName ? car.trims[0] : null;
 }
 
-function matchLabel(rawLabel: string): { car: Car; trim: Trim } | null {
+export function matchLabel(rawLabel: string): { car: Car; trim: Trim } | null {
   const label = normalize(rawLabel);
   for (const { car, name } of CARS_BY_NAME) {
     if (label !== name && !label.startsWith(`${name} `)) continue;
@@ -83,7 +83,7 @@ export function cardsFromReply(text: string): AdvisorCard[] {
       fiveYearCost: cost.total,
       monthlyCost: cost.monthly,
       photo: photoFor(car.id),
-      href: `/cars/${car.id}?${new URLSearchParams({ trim: trim.name, condition })}`,
+      href: carDetailsHref(car.id, trim.name, condition),
     });
   }
   return [...cards.values()];

@@ -125,6 +125,13 @@ export function hasFeature(car: Car, trim: Trim, feature: Feature): boolean {
   return trim.features.includes(feature);
 }
 
+/** The details page for a car, opened on a trim and condition. */
+export function carDetailsHref(id: string, trim: string, condition: string, milesPerYear?: number): string {
+  const query = new URLSearchParams({ trim, condition });
+  if (milesPerYear !== undefined) query.set("miles", String(milesPerYear));
+  return `/cars/${id}?${query}`;
+}
+
 export const towingText = (lbs: number) => (lbs > 0 ? `${lbs.toLocaleString("en-US")} lb` : "Not rated");
 
 /** Reads the numbers out of an economy label like "42 mi electric / 38 mpg". */

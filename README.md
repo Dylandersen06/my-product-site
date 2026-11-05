@@ -45,13 +45,15 @@ New prices are approximate 2025 starting MSRPs, and features count if any trim o
 
 When a reply recommends a car, a card appears under it with the car's photo and credit, trim, condition, price, 5-year cost and a "View details" link to `/cars/[id]`. `lib/advisor-cards.ts` reads the model's `**Make Model Trim (Condition)**` lines and looks them up in the dataset, so card figures always come from the data, and a line that doesn't match a real car and trim gets no card.
 
+After each reply, `lib/advisor-verify.ts` checks the cars, trims and features it names against the dataset, with no extra model call, and shows anything wrong in a "Correction from our data" box. It's deliberately conservative: it only corrects claims it can pin on a specific car, and only knows the features listed in that file, so it reduces mistakes rather than guaranteeing a perfect reply. It doesn't check prices or other figures.
+
 **Setup:** copy `.env.example` to `.env.local` and set `ANTHROPIC_API_KEY`. On Vercel, add it under Settings → Environment Variables. Never commit the key: `.env*` files are gitignored, apart from the placeholder `.env.example`. Without a key the chat shows a "not set up yet" message and the rest of the site works normally.
 
 **Cost controls** (`lib/advisor-limits.ts`, enforced on the server): 800 characters per message, 10 questions per chat, a 4,000-token limit per reply (including hidden reasoning), low effort, and 20 requests per visitor per 10 minutes. That last limit is per server instance, so also set a spend limit in the Anthropic Console, which is the real ceiling. The catalog in the system prompt uses prompt caching, so repeat requests pay about a tenth of the input price for it. Each request logs its token usage (never message content).
 
 ## 5-Year Cost to Own
 
-Every result card estimates depreciation, fuel or charging, insurance, maintenance and taxes and fees, with a 5-year total and monthly cost. Miles per year defaults to 12,000 and can be edited on the results. Results can be sorted by lowest cost to own. The assumptions are constants at the top of `lib/ownership.ts`. These are modeled estimates, not quotes, and exclude loan interest.
+Every result card estimates depreciation, fuel or charging, insurance, maintenance and taxes and fees, with a 5-year total and monthly cost. Miles per year defaults to 12,000 and can be edited on the results. Results can be sorted by lowest cost to own. Every result card links to the car's details page (`/cars/[id]`). The assumptions are constants at the top of `lib/ownership.ts`. These are modeled estimates, not quotes, and exclude loan interest.
 
 ## Quick vs. Advanced matching
 

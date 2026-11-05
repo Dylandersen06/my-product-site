@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import BackLink from "@/components/BackLink";
 import CarPhoto from "@/components/CarPhoto";
 import CostToOwnCard from "@/components/CostToOwnCard";
 import MilesControl from "@/components/MilesControl";
@@ -41,9 +41,7 @@ export default async function CarPage({
 
   return (
     <div className="container results-page">
-      <Link href="/advisor" className="back-link">
-        ← Back to the AI Advisor
-      </Link>
+      <BackLink />
       <article className="result-card car-detail">
         <CarPhoto name={name} bodyLabel={BODY_LABELS[car.body]} photo={photoFor(car.id)} />
         <div className="result-body">

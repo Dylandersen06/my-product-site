@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { cardsFromReply } from "@/lib/advisor-cards";
+import { verifyReply } from "@/lib/advisor-verify";
 import { MAX_ASSISTANT_CHARS, MAX_MESSAGE_CHARS, MAX_OUTPUT_TOKENS, MAX_USER_MESSAGES, RATE_LIMIT_REQUESTS, RATE_LIMIT_WINDOW_MS } from "@/lib/advisor-limits";
 import { ADVISOR_SYSTEM_PROMPT } from "@/lib/advisor-prompt";
 
@@ -116,7 +117,7 @@ export async function POST(request: Request) {
     messages: checked.messages,
   });
 
-  // One JSON object per line: {text}, then {cards} if any, then {done, stop} or {error}.
+  // One JSON object per line: {text}, then {cards} and {corrections} if any, then {done, stop} or {error}.
   const encoder = new TextEncoder();
   const body$ = new ReadableStream<Uint8Array>({
     async start(controller) {
@@ -134,6 +135,12 @@ export async function POST(request: Request) {
         const reply = final.content.flatMap((block) => (block.type === "text" ? [block.text] : [])).join("");
         const cards = cardsFromReply(reply);
         if (cards.length > 0) send({ cards });
+        const previous = checked.messages.findLast((m) => m.role === "assistant");
+        const corrections = verifyReply(reply, typeof previous?.content === "string" ? previous.content : "");
+        if (corrections.length > 0) {
+          console.log(`advisor corrections: ${corrections.length}`);
+          send({ corrections });
+        }
         send({ done: true, stop: final.stop_reason });
       } catch (error) {
         if (!stream.aborted) {

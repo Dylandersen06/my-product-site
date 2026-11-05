@@ -12,7 +12,13 @@ interface ChatMessage {
   content: string;
   /** Recommended cars from the dataset, shown under the reply. */
   cards?: AdvisorCard[];
+  /** What the data check found wrong in the reply. */
+  corrections?: string[];
 }
+
+/** Corrections go back with the reply, so the next answer doesn't repeat the mistake. */
+const contentForServer = ({ content, corrections }: ChatMessage) =>
+  corrections?.length ? `${content}\n\nCorrections from the site's data check: ${corrections.join(" ")}` : content;
 
 const STORAGE_KEY = "carmatch-advisor-chat";
 const STARTERS = [
@@ -152,7 +158,7 @@ export default function AdvisorChat() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         // Only the words go back to the server. Cards are for display.
-        body: JSON.stringify({ messages: history.map(({ role, content }) => ({ role, content })) }),
+        body: JSON.stringify({ messages: history.map((m) => ({ role: m.role, content: contentForServer(m) })) }),
         signal: controller.signal,
       });
       if (!response.ok || !response.body) {
@@ -176,6 +182,12 @@ export default function AdvisorChat() {
           }
           if (event.cards) {
             setMessages((current) => [...current.slice(0, -1), { ...current[current.length - 1], cards: event.cards }]);
+          }
+          if (event.corrections) {
+            setMessages((current) => [
+              ...current.slice(0, -1),
+              { ...current[current.length - 1], corrections: event.corrections },
+            ]);
           }
           if (event.error) failure = event.error;
           if (event.stop === "max_tokens" && reply.trim()) {
@@ -237,6 +249,16 @@ export default function AdvisorChat() {
                   <p>{m.content}</p>
                 )}
               </div>
+              {m.corrections && m.corrections.length > 0 && (
+                <div className="advisor-corrections" role="note">
+                  <strong>Correction from our data</strong>
+                  <ul>
+                    {m.corrections.map((correction) => (
+                      <li key={correction}>{correction}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
               {m.cards && m.cards.length > 0 && <RecommendationCards cards={m.cards} />}
             </Fragment>
           ))}
