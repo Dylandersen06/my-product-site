@@ -1,16 +1,13 @@
 import Link from "next/link";
-import CarPhoto from "@/components/CarPhoto";
+import CarCutoutCard from "@/components/CarCutoutCard";
 import ResultsView from "@/components/ResultsView";
-import ScoreRing from "@/components/ScoreRing";
 import SearchForm from "@/components/SearchForm";
 import Pricing from "@/components/Pricing";
-import { usd } from "@/lib/budget";
-import { BODY_LABELS, CARS, type BodyStyle } from "@/lib/cars";
+import { CARS, type BodyStyle } from "@/lib/cars";
 import type { RawParams } from "@/lib/loosen";
 import { DEFAULT_SORT, rankCars } from "@/lib/match";
 import { hasSearch, parsePreferences, parseSort } from "@/lib/params";
-import { photoFor } from "@/lib/photos";
-import { CONDITION_LABELS, CONDITIONS } from "@/lib/pricing";
+import { CONDITIONS } from "@/lib/pricing";
 
 const BRAND_COUNT = new Set(CARS.map((car) => car.make)).size;
 
@@ -21,44 +18,31 @@ const STEPS = [
 ];
 
 /** A real search, so the hero shows what the site actually returns for it. */
-const EXAMPLE_SEARCH = { condition: ["used", "new"], range: "30-60", seats: "5", usage: "family" };
-const EXAMPLE_HREF = "/?condition=used&condition=new&range=30-60&seats=5&usage=family";
+const EXAMPLE_SEARCH = { condition: "new", budget: "150000", seats: "4", body: "coupe", usage: "performance" };
+const EXAMPLE_HREF = "/?condition=new&budget=150000&seats=4&body=coupe&usage=performance";
 
-/** One car per tile, each linking to everything in that body style. The order is alphabetical by label. */
+/** One car per tile, each linking to everything in that body style. Each is a different brand, cheapest first. */
 const BODY_TILES: { body: BodyStyle; carId: string; plural: string }[] = [
-  { body: "coupe", carId: "ford-mustang", plural: "Coupes and sports cars" },
-  { body: "truck", carId: "ford-f-150", plural: "Pickup trucks" },
-  { body: "sedan", carId: "honda-accord", plural: "Sedans" },
-  { body: "suv", carId: "toyota-rav4-hybrid", plural: "SUVs" },
+  { body: "truck", carId: "toyota-tacoma", plural: "pickup trucks" },
+  { body: "suv", carId: "ford-explorer", plural: "SUVs" },
+  { body: "coupe", carId: "bentley-continental-gt", plural: "coupes and sports cars" },
+  { body: "sedan", carId: "rolls-royce-phantom", plural: "sedans" },
 ];
 
 function HeroExample() {
   const example = rankCars(parsePreferences(EXAMPLE_SEARCH), DEFAULT_SORT).matches[0];
   if (!example) return null;
-  const name = `${example.car.make} ${example.car.model}`;
   return (
     <aside className="hero-example" aria-label="Example result">
-      <CarPhoto name={name} bodyLabel={BODY_LABELS[example.car.body]} photo={photoFor(example.car.id)} rank={1} />
-      <div className="hero-example-body">
-        <div className="result-top">
-          <div className="result-heading">
-            <p className="hero-example-label">Real example: family of 5, $30–60k, used or new</p>
-            <h2>{name}</h2>
-            <p className="recommended-trim">
-              Recommended trim: <strong>{example.trim.name}</strong>
-            </p>
-            <p className="hero-example-price">
-              {usd(example.price)}
-              {example.condition !== "new" && <span className="price-est">est.</span>}{" "}
-              <span className="price-base">{CONDITION_LABELS[example.condition]}</span>
-            </p>
-          </div>
-          <ScoreRing score={example.score} />
-        </div>
+      <CarCutoutCard car={example.car} trim={example.trim} condition={example.condition}>
+        <p className="hero-example-label">
+          Real example: new sports car for 4, up to $150,000. Match score: {example.score}.
+        </p>
         <Link href={EXAMPLE_HREF} className="hero-example-link">
           See this full results list →
         </Link>
-      </div>
+      </CarCutoutCard>
+      <p className="cutout-prompt">Tap the car for specs and prices</p>
     </aside>
   );
 }
@@ -70,22 +54,21 @@ function BodyStrip() {
         <h2 id="body-strip-title" className="section-title">
           Start with the kind of car you picture
         </h2>
-        <p className="section-sub">Then narrow it down to what you need.</p>
+        <p className="section-sub">Tap a car for its specs and prices.</p>
         <ul className="body-strip">
           {BODY_TILES.map(({ body, carId, plural }) => {
             const car = CARS.find((c) => c.id === carId);
             if (!car) return null;
-            const name = `${car.make} ${car.model}`;
             return (
               <li key={body} className="body-tile">
-                <Link
-                  href={`/advanced?condition=used&condition=cpo&condition=new&range=any&seats=1&usage=any&body=${body}`}
-                  className="body-tile-link"
-                >
-                  {plural} →
-                </Link>
-                <p className="body-tile-car">Shown: {name}</p>
-                <CarPhoto name={name} bodyLabel={BODY_LABELS[body]} photo={photoFor(carId)} />
+                <CarCutoutCard car={car} trim={car.trims[0]}>
+                  <Link
+                    href={`/advanced?condition=used&condition=cpo&condition=new&range=any&seats=1&usage=any&body=${body}`}
+                    className="body-tile-link"
+                  >
+                    See all {plural} →
+                  </Link>
+                </CarCutoutCard>
               </li>
             );
           })}
@@ -101,7 +84,7 @@ function YourCarYourRules() {
       <div className="container unbiased">
         <div className="unbiased-claim">
           <h2 id="unbiased-title">An unbiased car search, built around you.</h2>
-          <p>No sponsored rankings. No dealer or manufacturer pays for placement. Your needs decide the order.</p>
+          <p>No sponsored rankings. We&rsquo;re independently funded, with no outside bias. Your needs decide the order.</p>
         </div>
         <div className="personal-ways">
           <Link href="/advanced" className="personal-way">

@@ -2,30 +2,30 @@
 :root {
   color-scheme: light dark;
 
-  --bg: #f3f5f9;
-  --surface: #ffffff;
-  --surface-2: #f7f8fb;
-  --text: #101828;
-  --muted: #4a5568;
-  --border: #d9dee7;
-  --border-strong: #8e99ab;
-  --accent: #1546c7;
-  --accent-contrast: #ffffff;
-  --accent-soft: #e8eefc;
+  --bg: #f5eedb;
+  --surface: #fffaeb;
+  --surface-2: #faf4e3;
+  --text: #17231c;
+  --muted: #4c5a50;
+  --border: #ded6bf;
+  --border-strong: #8a8d7c;
+  --accent: #0b4f30;
+  --accent-contrast: #fffaeb;
+  --accent-soft: #e3eee0;
   --good: #0c6e36;
-  --good-soft: #dcf5e6;
+  --good-soft: #dcf0da;
   --warn: #974400;
   --warn-soft: #fdf0d8;
-  --fair: #566072;
-  --focus: #1546c7;
+  --fair: #5a6358;
+  --focus: #0b4f30;
 
-  /* The navy brand band (header and hero) looks the same in both themes. */
-  --brand-bg: #0b1a38;
-  --brand-bg-2: #143070;
-  --brand-text: #ffffff;
-  --brand-muted: #c5cfe2;
-  --signal: #ffb627;
-  --signal-ink: #1c1300;
+  /* The racing green brand band (header and hero) looks the same in both themes. */
+  --brand-bg: #08301f;
+  --brand-bg-2: #125238;
+  --brand-text: #fbf3dc;
+  --brand-muted: #d3dccb;
+  --signal: #f4e8c6;
+  --signal-ink: #08301f;
 
   --radius: 16px;
   --radius-sm: 10px;
@@ -40,22 +40,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0a0f1c;
-    --surface: #131a2b;
-    --surface-2: #0f1524;
-    --text: #eef1f6;
-    --muted: #a8b2c3;
-    --border: #2a3550;
-    --border-strong: #66728a;
-    --accent: #8db0ff;
-    --accent-contrast: #0a0f1c;
-    --accent-soft: #1b2a50;
+    --bg: #0a1410;
+    --surface: #12211a;
+    --surface-2: #0e1a15;
+    --text: #f5eeda;
+    --muted: #b4bcac;
+    --border: #2a3b32;
+    --border-strong: #6e7c70;
+    --accent: #93d6ac;
+    --accent-contrast: #07170f;
+    --accent-soft: #163627;
     --good: #4ade80;
     --good-soft: #0b2e1c;
     --warn: #fbbf24;
     --warn-soft: #36280a;
-    --fair: #a8b2c3;
-    --focus: #8db0ff;
+    --fair: #b4bcac;
+    --focus: #93d6ac;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
   }
 }
@@ -220,7 +220,7 @@ h3 {
   border-radius: 999px;
 }
 .ask-ai:hover {
-  background: #ffc654;
+  background: #fff6dc;
 }
 
 /* Buttons ----------------------------------------------------------------- */
@@ -252,7 +252,7 @@ h3 {
   color: var(--signal-ink);
 }
 .button-signal:hover {
-  background: #ffc654;
+  background: #fff6dc;
 }
 .button-outline {
   background: var(--surface);
@@ -1754,7 +1754,7 @@ details[open] > .cost-head::after,
   border-radius: var(--radius);
 }
 .compare-dialog::backdrop {
-  background: rgba(5, 10, 25, 0.65);
+  background: rgba(4, 16, 11, 0.65);
 }
 /* Close stays in reach while the table scrolls. */
 .compare-dialog-head {
@@ -2389,4 +2389,393 @@ details[open] > .cost-head::after,
   * {
     transition: none !important;
   }
+}
+
+/* Car cutouts: just the car on cream, specs and prices on press */
+.cutout-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+.cutout-details {
+  flex: 1;
+}
+.cutout-summary {
+  position: relative;
+  display: block;
+  padding: 18px 16px 10px;
+  list-style: none;
+  cursor: pointer;
+  border-radius: var(--radius);
+}
+.cutout-summary::-webkit-details-marker {
+  display: none;
+}
+.cutout-summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: -2px;
+}
+.cutout-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+.cutout-summary:hover .cutout-img {
+  transform: scale(1.03);
+}
+.cutout-hint {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+.cutout-hint-icon {
+  position: relative;
+  width: 12px;
+  height: 12px;
+}
+.cutout-hint-icon::before,
+.cutout-hint-icon::after {
+  content: "";
+  position: absolute;
+  background: var(--accent-contrast);
+  border-radius: 2px;
+}
+.cutout-hint-icon::before {
+  top: 5px;
+  left: 0;
+  width: 12px;
+  height: 2px;
+}
+.cutout-hint-icon::after {
+  top: 0;
+  left: 5px;
+  width: 2px;
+  height: 12px;
+  transition: transform 0.15s ease;
+}
+.cutout-details[open] .cutout-hint-icon::after {
+  transform: scaleY(0);
+}
+.cutout-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 4px 16px 16px;
+  color: var(--text);
+}
+.cutout-panel h3 {
+  font-size: 1.05rem;
+}
+.cutout-panel .recommended-trim {
+  margin: -8px 0 0;
+}
+.cutout-prices {
+  list-style: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+.cutout-prices li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 7px 10px;
+  font-size: var(--fs-sm);
+}
+.cutout-prices li + li {
+  border-top: 1px solid var(--border);
+}
+.cutout-prices li.selected {
+  background: var(--accent-soft);
+}
+.cutout-specs > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 3px 0;
+  font-size: var(--fs-sm);
+}
+.cutout-specs dt {
+  flex-shrink: 0;
+  color: var(--muted);
+}
+.cutout-specs dd {
+  font-weight: 600;
+  text-align: right;
+}
+.cutout-link {
+  display: block;
+}
+.cutout-credit {
+  margin-top: auto;
+  padding: 6px 16px 12px;
+  border-bottom: none;
+}
+.body-strip {
+  align-items: start;
+}
+.body-tile {
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+.hero-example {
+  color: var(--text);
+}
+.hero-example .cutout-card {
+  height: auto;
+}
+.hero-example .hero-example-label {
+  margin: 0;
+  color: var(--muted);
+}
+/* The owner wants cars on white or cream, so these stay cream in dark mode too. */
+.cutout-card {
+  --surface: #f5eedb;
+  --text: #17231c;
+  --muted: #4c5a50;
+  --border: #ded6bf;
+  --accent: #0b4f30;
+  --accent-contrast: #fffaeb;
+  --accent-soft: #e3eee0;
+  --focus: #0b4f30;
+  color: var(--text);
+}
+.cutout-summary {
+  padding-top: 34px;
+}
+.hero-example {
+  background: #f5eedb;
+}
+.hero-example .photo-credit,
+.body-tile .photo-credit {
+  border: none;
+}
+.cutout-credit a {
+  color: inherit;
+}
+.cutout-prompt {
+  padding: 0 16px 14px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-align: center;
+  color: #0b4f30;
+}
+.cutout-panel .body-tile-link,
+.cutout-panel .hero-example-link {
+  padding: 0;
+  font-size: var(--fs-sm);
+}
+
+/* Quieter homepage: the hero sits on the page's cream instead of a green band,
+   and nothing competes with the cars. The header stays green. */
+.hero {
+  --brand-text: var(--text);
+  --brand-muted: var(--muted);
+  --signal: var(--accent);
+  --signal-ink: var(--accent-contrast);
+  --focus: var(--accent);
+  color: var(--text);
+  background: var(--bg);
+  padding: 40px 0 44px;
+}
+.hero::after {
+  display: none;
+}
+.hero .button-signal:hover {
+  background: var(--accent);
+  opacity: 0.9;
+}
+.hero-example {
+  background: transparent;
+  box-shadow: none;
+  border-radius: var(--radius);
+}
+.cutout-prompt {
+  color: var(--muted);
+  font-weight: 500;
+}
+.cutout-hint {
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: 1px solid var(--border-strong);
+}
+.cutout-hint-icon {
+  width: 10px;
+  height: 10px;
+}
+.cutout-hint-icon::before,
+.cutout-hint-icon::after {
+  background: var(--muted);
+}
+.cutout-hint-icon::before {
+  top: 4px;
+  width: 10px;
+  height: 2px;
+}
+.cutout-hint-icon::after {
+  left: 4px;
+  width: 2px;
+  height: 10px;
+}
+.cutout-credit {
+  font-size: 0.6875rem;
+}
+.unbiased-claim {
+  --brand-text: var(--text);
+  --brand-muted: var(--muted);
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+}
+.personal-way {
+  background: transparent;
+  box-shadow: none;
+}
+.step-num {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* Every car photo gets the same cream frame, slightly lighter than the page so it shows. */
+.cutout-img,
+.car-photo {
+  box-sizing: border-box;
+  border: 8px solid #fffaeb;
+  border-radius: var(--radius-sm);
+  background: #fffaeb;
+}
+.cutout-img {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+.cutout-missing {
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  text-align: center;
+}
+.cutout-summary {
+  padding: 0 0 8px;
+}
+.cutout-summary:hover .cutout-img {
+  transform: none;
+}
+.cutout-hint {
+  top: 16px;
+  right: 16px;
+  background: #fffaeb;
+  border-color: var(--border-strong);
+}
+.cutout-panel {
+  padding-left: 0;
+  padding-right: 0;
+}
+.cutout-credit {
+  padding: 2px 0 10px;
+}
+.cutout-prompt {
+  padding: 0 0 8px;
+}
+
+/* Flowing layout: one continuous background, with no boxed cards. Content is
+   separated by space and thin lines. Controls keep an outline so they still look
+   pressable, and the compare dialog keeps its edge because it floats. */
+:root {
+  --surface: var(--bg);
+  --surface-2: var(--bg);
+  --shadow: none;
+}
+.card,
+.results-tools,
+.filters-panel,
+.step,
+.personal-way,
+.price-card,
+.advisor-card,
+.advisor-msg.assistant,
+.result-card {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.card,
+.results-tools,
+.filters-panel-body,
+.personal-way,
+.price-card {
+  padding-left: 0;
+  padding-right: 0;
+}
+.filters-panel > summary {
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 1px solid var(--border);
+}
+.results-list {
+  gap: 0;
+}
+.result-card {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.result-card:first-child {
+  padding-top: 8px;
+}
+.result-card .car-photo {
+  border-radius: var(--radius-sm);
+}
+.result-card .result-body {
+  padding-left: 24px;
+  padding-right: 0;
+}
+.result-card .result-foot {
+  padding-left: 0;
+  padding-right: 0;
+}
+.result-card .photo-credit {
+  border: none;
+  padding-left: 0;
+}
+@media (max-width: 640px) {
+  .result-card .result-body {
+    padding-left: 0;
+    padding-top: 12px;
+  }
+}
+.price-card.featured {
+  border: none;
+  border-left: 3px solid var(--accent);
+  padding-left: 20px;
+}
+.personal-way,
+.step {
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+.advisor-msg.assistant {
+  padding-left: 0;
+  max-width: 100%;
+}
+.advisor-card {
+  border-top: 1px solid var(--border);
+}
+.compare-dialog {
+  border: 1px solid var(--border-strong);
+}
+.spec-strip > div,
+.cost-card {
+  background: transparent;
 }
