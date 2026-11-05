@@ -1383,3 +1383,227 @@ h1 {
     padding-top: 28px;
   }
 }
+
+/* 5-Year Cost to Own */
+.cost-card {
+  margin-bottom: 16px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+}
+.cost-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+.cost-head h3 {
+  font-size: 0.95rem;
+}
+.cost-totals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  line-height: 1.25;
+}
+.cost-total {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+.cost-monthly {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.cost-rows {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+}
+.cost-rows dt {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.cost-rows dd {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.cost-others {
+  margin-top: 10px;
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.miles-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.miles-control input[type="number"] {
+  width: 110px;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 7px 10px;
+}
+.miles-control .button {
+  padding: 7px 14px;
+  font-size: 0.85rem;
+}
+
+/* Ask the AI */
+.ask-ai {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 15;
+  padding: 11px 18px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--accent-contrast);
+  background: var(--accent);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+.ask-ai:hover {
+  opacity: 0.92;
+}
+body:has(.compare-bar) .ask-ai {
+  bottom: 84px;
+}
+
+/* AI Advisor */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.advisor-intro {
+  margin-bottom: 20px;
+}
+.advisor {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.advisor-starters {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.advisor-starter {
+  font: inherit;
+  font-size: 0.95rem;
+  text-align: left;
+  color: var(--text);
+  padding: 12px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.advisor-starter:hover {
+  border-color: var(--accent);
+}
+.advisor-log {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.advisor-msg {
+  max-width: 88%;
+  padding: 12px 16px;
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+.advisor-msg.user {
+  align-self: flex-end;
+  background: var(--accent-soft);
+  white-space: pre-wrap;
+}
+.advisor-msg.assistant {
+  align-self: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.advisor-msg p + p,
+.advisor-msg p + ul,
+.advisor-msg ul + p {
+  margin-top: 10px;
+}
+.advisor-msg ul {
+  padding-left: 20px;
+}
+.advisor-thinking {
+  color: var(--muted);
+}
+.advisor-form textarea {
+  display: block;
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+.advisor-form textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+.advisor-form-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  margin-top: 8px;
+}
+.advisor-form-row .field-hint {
+  margin-right: auto;
+}
+.advisor-form .button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+.advisor-error {
+  margin-bottom: 0;
+}
+.advisor-limit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 0;
+}
+.advisor-disclaimer {
+  display: block;
+  padding-bottom: 56px;
+}
+
+@media (max-width: 720px) {
+  .cost-rows {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .advisor-msg {
+    max-width: 100%;
+  }
+}

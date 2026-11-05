@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { CompareProvider, type CompareItem } from "@/components/Compare";
+import MilesControl from "@/components/MilesControl";
 import ResultCard from "@/components/ResultCard";
 import { budgetLabel, usd } from "@/lib/budget";
 import { BODY_LABELS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS, hasFeature, towingText, type Feature } from "@/lib/cars";
@@ -34,6 +35,8 @@ function compareItem(m: Match, prefs: Preferences): CompareItem {
       ...Object.fromEntries(
         CONDITIONS.map((c) => [`${CONDITION_LABELS[c]}${c === "new" ? "" : " (est.)"}`, usd(trim.prices[c])]),
       ),
+      "5-year cost (est.)": usd(m.ownership.total),
+      "Monthly cost (est.)": `${usd(m.ownership.monthly)}/mo`,
       Horsepower: `${trim.hp} hp`,
       "0–60 mph": `${trim.zero60}s`,
       "MPG / range": trim.economy,
@@ -55,6 +58,8 @@ function compareItem(m: Match, prefs: Preferences): CompareItem {
           { value: trim.prices[c], better: "low" as const },
         ]),
       ),
+      "5-year cost (est.)": { value: m.ownership.total, better: "low" },
+      "Monthly cost (est.)": { value: m.ownership.monthly, better: "low" },
       Horsepower: { value: trim.hp, better: "high" },
       "0–60 mph": { value: trim.zero60, better: "low" },
       Towing: { value: trim.towingLbs, better: "high" },
@@ -119,7 +124,14 @@ export default function ResultsView({
   const list = (
     <ol className="results-list">
       {matches.map((m, i) => (
-        <ResultCard key={m.car.id} match={m} rank={i + 1} conditions={prefs.conditions} advanced={advanced} />
+        <ResultCard
+          key={m.car.id}
+          match={m}
+          rank={i + 1}
+          conditions={prefs.conditions}
+          advanced={advanced}
+          milesPerYear={prefs.milesPerYear}
+        />
       ))}
     </ol>
   );
@@ -195,6 +207,10 @@ export default function ResultsView({
               ))}
             </div>
           </nav>
+          <MilesControl params={params} basePath={basePath} miles={prefs.milesPerYear} />
+          <p className="sort-hint">
+            Cost-to-own figures are estimates for the recommended trim and condition. They exclude loan interest.
+          </p>
           {sort === "savings" && newOnly && (
             <p className="sort-hint">You&rsquo;re searching New only, so this shows what buying used could save.</p>
           )}

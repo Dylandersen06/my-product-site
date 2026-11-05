@@ -25,6 +25,8 @@ export interface ConditionPricing {
   mileage: { used: number; cpo: number };
   /** Age of the used and CPO examples the estimates describe. */
   usedAgeYears: number;
+  /** Share of the new price a typical 3-year-old example keeps. */
+  threeYearShare: number;
 }
 
 /** Share of the new price a typical 3-year-old example keeps, by brand. */
@@ -118,6 +120,15 @@ const USED_AGE_YEARS: Record<string, number> = {
 /** Depreciation is steepest early: share of the 3-year loss taken by each age. */
 const AGE_CURVE: Record<number, number> = { 1: 0.5, 2: 0.78, 3: 1 };
 const DEFAULT_USED_AGE = 3;
+/** After year 3, value keeps falling by about this share each year. */
+const YEARLY_LOSS_AFTER_3 = 0.12;
+
+/** Share of the new price a car keeps at a given age, up to and past 3 years. */
+export function valueShareAtAge(threeYearShare: number, age: number): number {
+  if (age <= 0) return 1;
+  if (age <= 3) return 1 - (1 - threeYearShare) * AGE_CURVE[age];
+  return threeYearShare * (1 - YEARLY_LOSS_AFTER_3) ** (age - 3);
+}
 
 const LUXURY_BRANDS = new Set([
   "BMW",
@@ -145,6 +156,11 @@ const EXOTIC_BRANDS = new Set([
 const MAX_USED_SHARE_OF_NEW = 0.95;
 const MAX_CPO_SHARE_OF_NEW = 0.97;
 const CPO_MILEAGE_SHARE = 0.8;
+
+export function brandTier(make: string): "mainstream" | "luxury" | "exotic" {
+  if (EXOTIC_BRANDS.has(make)) return "exotic";
+  return LUXURY_BRANDS.has(make) ? "luxury" : "mainstream";
+}
 
 function cpoPremium(make: string): number {
   if (EXOTIC_BRANDS.has(make)) return 1.1;
@@ -176,7 +192,7 @@ export function estimatePricing(car: {
   const threeYearShare =
     MODEL_RETENTION[id] ??
     (BRAND_RETENTION[make] ?? 0.6) + FUEL_ADJUSTMENT[fuel] + (body === "truck" ? TRUCK_ADJUSTMENT : 0);
-  const share = 1 - (1 - threeYearShare) * AGE_CURVE[usedAgeYears];
+  const share = valueShareAtAge(threeYearShare, usedAgeYears);
 
   const used = roundPrice(newPrice * Math.min(share, MAX_USED_SHARE_OF_NEW));
   const cpo = roundPrice(Math.min(used * cpoPremium(make), newPrice * MAX_CPO_SHARE_OF_NEW));
@@ -186,6 +202,7 @@ export function estimatePricing(car: {
     prices: { used, cpo, new: newPrice },
     mileage: { used: roundMiles(usedMiles), cpo: roundMiles(usedMiles * CPO_MILEAGE_SHARE) },
     usedAgeYears,
+    threeYearShare,
   };
 }
 

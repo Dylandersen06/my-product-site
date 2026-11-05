@@ -1,5 +1,6 @@
 import CarPhoto from "@/components/CarPhoto";
 import { CompareCheckbox } from "@/components/Compare";
+import CostToOwnCard from "@/components/CostToOwnCard";
 import PriceComparison from "@/components/PriceComparison";
 import TrimList from "@/components/TrimList";
 import { BODY_LABELS, FUEL_LABELS, towingText } from "@/lib/cars";
@@ -18,11 +19,13 @@ export default function ResultCard({
   rank,
   conditions,
   advanced,
+  milesPerYear,
 }: {
   match: Match;
   rank: number;
   conditions: Condition[];
   advanced: boolean;
+  milesPerYear: number;
 }) {
   const name = `${m.car.make} ${m.car.model}`;
   return (
@@ -75,6 +78,7 @@ export default function ResultCard({
           </>
         )}
         <PriceComparison match={m} conditions={conditions} />
+        <CostToOwnCard match={m} milesPerYear={milesPerYear} />
         <ul className="reasons">
           {m.reasons.map((r) => (
             <li key={r} className="reason-good">

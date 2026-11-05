@@ -7,7 +7,7 @@ export default function Footer() {
         </p>
         <p className="fine-print">
           New prices are approximate 2025 starting MSRPs. Used and certified pre-owned prices and mileage are
-          estimates, not live listings, so check local listings for actual prices. Features and specs vary by trim.
+          estimates, not live listings, so check local listings for actual prices. Cost-to-own figures are estimates too. Features and specs vary by trim.
           Confirm details with a dealer. Car photos are representative, so the year and trim shown may differ.
         </p>
       </div>

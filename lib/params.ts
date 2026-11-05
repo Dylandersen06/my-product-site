@@ -10,6 +10,7 @@ import {
 import { BODY_LABELS, BRANDS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS, type Feature } from "./cars";
 import { DRIVETRAIN_LABELS, TRANSMISSION_LABELS, type Filters } from "./filters";
 import { DEFAULT_SORT, SORT_LABELS, type Preferences, type SortKey } from "./match";
+import { DEFAULT_MILES_PER_YEAR, MAX_MILES_PER_YEAR, MIN_MILES_PER_YEAR } from "./ownership";
 import { CONDITIONS, DEFAULT_CONDITIONS, type Condition } from "./pricing";
 
 type RawParams = Record<string, string | string[] | undefined>;
@@ -50,6 +51,12 @@ function parseConditions(params: RawParams): Condition[] {
 export function parseSort(params: RawParams): SortKey {
   const sort = first(params.sort);
   return isKey(SORT_LABELS, sort) ? sort : DEFAULT_SORT;
+}
+
+function parseMiles(params: RawParams): number {
+  const miles = positive(params, "miles");
+  if (miles === null) return DEFAULT_MILES_PER_YEAR;
+  return Math.round(Math.min(Math.max(miles, MIN_MILES_PER_YEAR), MAX_MILES_PER_YEAR));
 }
 
 /** A positive number from the URL, or null if it's empty or invalid. */
@@ -108,5 +115,6 @@ export function parsePreferences(params: RawParams, mode: SearchMode = "quick"):
     usage,
     features,
     filters: advanced ? parseFilters(params) : null,
+    milesPerYear: parseMiles(params),
   };
 }

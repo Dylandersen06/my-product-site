@@ -15,6 +15,7 @@ import {
   type Filters,
 } from "@/lib/filters";
 import { DEFAULT_SORT, type Preferences, type SortKey } from "@/lib/match";
+import { DEFAULT_MILES_PER_YEAR } from "@/lib/ownership";
 
 /** AWD and towing have their own filters here, so they aren't repeated as checkboxes. */
 const FEATURE_CHECKBOXES: Feature[] = [
@@ -87,6 +88,9 @@ export default function AdvancedForm({
   return (
     <Form action="/advanced" className="search-form" autoComplete="off">
       {sort !== DEFAULT_SORT && <input type="hidden" name="sort" value={sort} />}
+      {initial.milesPerYear !== DEFAULT_MILES_PER_YEAR && (
+        <input type="hidden" name="miles" value={initial.milesPerYear} />
+      )}
 
       <fieldset className="filter-section">
         <legend>Basics</legend>

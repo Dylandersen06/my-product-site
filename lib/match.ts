@@ -14,6 +14,7 @@ import {
   type Usage,
 } from "./cars";
 import { trimPasses, type Filters } from "./filters";
+import { costToOwn, type CostToOwn } from "./ownership";
 import { CONDITION_LABELS, savingsVsNew, type Condition } from "./pricing";
 
 export interface Preferences {
@@ -30,12 +31,15 @@ export interface Preferences {
    * and the features are all strict requirements instead of scoring preferences.
    */
   filters: Filters | null;
+  /** Annual driving behind the cost-to-own estimates. */
+  milesPerYear: number;
 }
 
 export const SORT_LABELS = {
   best: "Best match",
   price: "Price: low to high",
   savings: "Biggest savings",
+  cost: "Lowest cost to own",
 } as const;
 export type SortKey = keyof typeof SORT_LABELS;
 export const DEFAULT_SORT: SortKey = "best";
@@ -50,6 +54,8 @@ export interface Match {
   price: number;
   /** Largest saving vs new among the selected used/CPO conditions. */
   savings: number;
+  /** 5-year estimate for the recommended trim in that condition. */
+  ownership: CostToOwn;
   score: number; // 0–100
   reasons: string[];
   caveats: string[];
@@ -277,6 +283,7 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
     condition,
     price,
     savings: savingsFor(trim, prefs.conditions),
+    ownership: costToOwn(car, trim, condition, prefs.milesPerYear),
     score: Math.round(score),
     reasons,
     caveats,
@@ -289,6 +296,7 @@ const isMatch = (m: Match | null): m is Match => m !== null;
 function applySort(matches: Match[], sort: SortKey): Match[] {
   if (sort === "price") return [...matches].sort((a, b) => a.price - b.price || b.score - a.score);
   if (sort === "savings") return [...matches].sort((a, b) => b.savings - a.savings || b.score - a.score);
+  if (sort === "cost") return [...matches].sort((a, b) => a.ownership.total - b.ownership.total || b.score - a.score);
   return matches;
 }
 

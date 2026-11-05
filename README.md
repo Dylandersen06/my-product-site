@@ -39,6 +39,18 @@ Shoppers pick one or more conditions. Budget points use the price for the select
 
 New prices are approximate 2025 starting MSRPs, and features count if any trim offers them. **Used and CPO prices and mileage are modeled estimates, not market data.** `lib/pricing.ts` derives them from the new price using typical depreciation by brand, fuel type and body style, with overrides for specific models. Used and CPO examples are about 3 years old, or younger for models launched more recently. Check local listings for real prices.
 
+## AI Car Advisor
+
+`/advisor` is a chat where shoppers describe their lifestyle and get recommendations from the dataset, with the best trim and condition, plus answers to follow-up questions. An "Ask the AI" button links to it from every page. It calls the Anthropic API with `claude-haiku-5-5` from a server-side route (`app/api/advisor/route.ts`), so the key never reaches the browser.
+
+**Setup:** copy `.env.example` to `.env.local` and set `ANTHROPIC_API_KEY`. On Vercel, add it under Settings → Environment Variables. Never commit the key: `.env*` files are gitignored, apart from the placeholder `.env.example`. Without a key the chat shows a "not set up yet" message and the rest of the site works normally.
+
+**Cost controls** (`lib/advisor-limits.ts`, enforced on the server): 800 characters per message, 10 questions per chat, a 1,500-token reply limit, low effort, and 20 requests per visitor per 10 minutes. That last limit is per server instance, so also set a spend limit in the Anthropic Console, which is the real ceiling. The catalog in the system prompt uses prompt caching, so repeat requests pay about a tenth of the input price for it. Each request logs its token usage (never message content).
+
+## 5-Year Cost to Own
+
+Every result card estimates depreciation, fuel or charging, insurance, maintenance and taxes and fees, with a 5-year total and monthly cost. Miles per year defaults to 12,000 and can be edited on the results. Results can be sorted by lowest cost to own. The assumptions are constants at the top of `lib/ownership.ts`. These are modeled estimates, not quotes, and exclude loan interest.
+
 ## Quick vs. Advanced matching
 
 Quick Search scores preferences: a near miss on fuel type or body style loses points but still appears. Advanced Search treats filters as requirements: a trim has to pass all of them (`lib/filters.ts`), including body style, fuel type and checked features. The search budget works the same way on both pages, except that Advanced Search defaults to "Any budget". Old `/results` links redirect to Quick Search.
