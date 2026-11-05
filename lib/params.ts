@@ -1,3 +1,11 @@
+import {
+  BUDGET_INPUT_MAX,
+  BUDGET_INPUT_MIN,
+  DEFAULT_RANGE,
+  EXACT_BUDGET_FLOOR,
+  findRange,
+  type Budget,
+} from "./budget";
 import { BODY_LABELS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS, type Feature } from "./cars";
 import type { Preferences } from "./match";
 
@@ -10,11 +18,22 @@ function isKey<T extends string>(map: Record<T, string>, key: string | undefined
   return key !== undefined && Object.prototype.hasOwnProperty.call(map, key);
 }
 
+/**
+ * An exact `budget` (max dollars) takes priority over a preset `range`.
+ * Falls back to the default range when neither is valid.
+ */
+function parseBudget(params: RawParams): Budget {
+  const exact = Number(first(params.budget));
+  if (Number.isFinite(exact) && exact > 0) {
+    const max = Math.min(Math.max(exact, BUDGET_INPUT_MIN), BUDGET_INPUT_MAX);
+    return { min: Math.round(max * EXACT_BUDGET_FLOOR), max, range: null };
+  }
+  const range = findRange(first(params.range)) ?? findRange(DEFAULT_RANGE)!;
+  return { min: range.min, max: range.max, range: range.key };
+}
+
 /** Turn URL search params into validated preferences, falling back to sensible defaults. */
 export function parsePreferences(params: RawParams): Preferences {
-  const budgetRaw = Number(first(params.budget));
-  const budget = Number.isFinite(budgetRaw) && budgetRaw > 0 ? Math.min(Math.max(budgetRaw, 5000), 250000) : 35000;
-
   const seatsRaw = Number(first(params.seats));
   const seats = Number.isInteger(seatsRaw) && seatsRaw >= 1 && seatsRaw <= 8 ? seatsRaw : 5;
 
@@ -29,5 +48,5 @@ export function parsePreferences(params: RawParams): Preferences {
 
   const features = [...new Set(all(params.features))].filter((f): f is Feature => isKey(FEATURE_LABELS, f));
 
-  return { budget, seats, fuel, body, usage, features };
+  return { budget: parseBudget(params), seats, fuel, body, usage, features };
 }

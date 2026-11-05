@@ -1,9 +1,13 @@
 import Form from "next/form";
+import BudgetPicker from "@/components/BudgetPicker";
+import { DEFAULT_RANGE, findRange } from "@/lib/budget";
 import { BODY_LABELS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS, type Feature } from "@/lib/cars";
 import type { Preferences } from "@/lib/match";
 
+const defaultRange = findRange(DEFAULT_RANGE)!;
+
 const DEFAULTS: Preferences = {
-  budget: 35000,
+  budget: { min: defaultRange.min, max: defaultRange.max, range: defaultRange.key },
   seats: 5,
   fuel: "any",
   body: "any",
@@ -14,20 +18,9 @@ const DEFAULTS: Preferences = {
 export default function SearchForm({ initial = DEFAULTS }: { initial?: Preferences }) {
   return (
     <Form action="/results" className="search-form">
-      <div className="form-grid">
-        <label className="field">
-          <span className="field-label">Budget (USD)</span>
-          <input
-            type="number"
-            name="budget"
-            min={5000}
-            max={250000}
-            step={500}
-            defaultValue={initial.budget}
-            required
-          />
-        </label>
+      <BudgetPicker initial={initial.budget} />
 
+      <div className="form-grid">
         <label className="field">
           <span className="field-label">Seats needed</span>
           <select name="seats" defaultValue={String(initial.seats)}>

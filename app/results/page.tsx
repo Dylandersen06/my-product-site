@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SearchForm from "@/components/SearchForm";
+import { budgetLabel, usd } from "@/lib/budget";
 import { BODY_LABELS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS } from "@/lib/cars";
 import { rankCars } from "@/lib/match";
 import { parsePreferences } from "@/lib/params";
@@ -8,8 +9,6 @@ import { parsePreferences } from "@/lib/params";
 export const metadata: Metadata = {
   title: "Your matches | CarMatch AI by Dylan Andersen",
 };
-
-const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
 
 function scoreTone(score: number) {
   if (score >= 85) return "great";
@@ -23,10 +22,10 @@ export default async function ResultsPage({
   searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
   const prefs = parsePreferences(await searchParams);
-  const { matches, excludedCount } = rankCars(prefs);
+  const { matches, excludedCount, fallback } = rankCars(prefs);
 
   const summary = [
-    `Up to ${usd(prefs.budget)}`,
+    budgetLabel(prefs.budget),
     `${prefs.seats}+ seats`,
     prefs.fuel === "any" ? "Any fuel" : FUEL_LABELS[prefs.fuel],
     prefs.body === "any" ? "Any body style" : BODY_LABELS[prefs.body],
@@ -54,12 +53,18 @@ export default async function ResultsPage({
         <div className="card empty">
           <h2>No cars matched those needs</h2>
           <p className="muted">
-            Every car was either over your budget by more than 20% or had too few seats. Try raising your budget or
-            lowering the seat count.
+            No car in our list has {prefs.seats} or more seats. Try lowering the seat count.
           </p>
         </div>
       ) : (
         <>
+          {fallback && (
+            <div className="notice">
+              <strong>Nothing fits a {usd(prefs.budget.max)} budget yet.</strong> Every car with {prefs.seats}+ seats
+              starts more than 20% above it. Here are the most affordable options so you can see how close you can
+              get.
+            </div>
+          )}
           <ol className="results-list">
             {matches.map((m, i) => (
               <li key={m.car.id} className="result-card">
@@ -99,7 +104,7 @@ export default async function ResultsPage({
               </li>
             ))}
           </ol>
-          {excludedCount > 0 && (
+          {!fallback && excludedCount > 0 && (
             <p className="muted center">
               {excludedCount} car{excludedCount === 1 ? " was" : "s were"} left out for having too few seats or
               costing more than 20% over your budget.

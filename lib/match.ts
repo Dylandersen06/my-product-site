@@ -1,3 +1,4 @@
+import { budgetLabel, usd, type Budget } from "./budget";
 import {
   BODY_LABELS,
   CARS,
@@ -13,7 +14,7 @@ import {
 } from "./cars";
 
 export interface Preferences {
-  budget: number;
+  budget: Budget;
   seats: number;
   fuel: Fuel | "any";
   body: BodyStyle | "any";
@@ -31,6 +32,11 @@ export interface Match {
 export interface MatchResult {
   matches: Match[];
   excludedCount: number;
+  /**
+   * True when no car fit the budget, so `matches` holds the closest-priced
+   * cars that still have enough seats instead.
+   */
+  fallback: boolean;
 }
 
 /** How many points each criterion can contribute (sums to 100). */
@@ -72,11 +78,15 @@ const USAGE_REASONS: Record<Usage, string> = {
   towing: "Well suited to towing and hauling",
   city: "Easy to drive and park in the city",
   performance: "Genuinely fun to drive",
+  luxury: "Delivers a genuinely premium, comfortable experience",
 };
 
-const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
-
-export function scoreCar(car: Car, prefs: Preferences): Match | null {
+/**
+ * Score one car against the shopper's preferences. Returns null when the car
+ * fails a hard requirement (too few seats, or far over budget unless
+ * `ignoreBudgetCap` is set).
+ */
+export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false } = {}): Match | null {
   const reasons: string[] = [];
   const caveats: string[] = [];
   let score = 0;
@@ -90,20 +100,35 @@ export function scoreCar(car: Car, prefs: Preferences): Match | null {
       : `Seats ${car.seats}, room for your ${prefs.seats}`,
   );
 
-  // Budget: full points at or under budget, sliding scale up to 20% over.
-  if (car.price <= prefs.budget) {
+  // Budget: full points inside [min, max]. Above the max, a sliding scale down
+  // to zero at 20% over (beyond that the car is excluded). Below the min (the
+  // bottom of a preset range, or a quarter of an exact budget), partial credit
+  // in proportion to how close it gets, so a $22k car doesn't top the list
+  // for a $250k–$1M shopper.
+  const { min, max, range } = prefs.budget;
+  if (car.price > max) {
+    const over = (car.price - max) / max;
+    if (over > MAX_OVER_BUDGET && !ignoreBudgetCap) return null;
+    score += WEIGHTS.budget * Math.max(0, 1 - over / MAX_OVER_BUDGET);
+    caveats.push(`Starts around ${usd(car.price)}, ${usd(car.price - max)} over your ${usd(max)} max`);
+  } else if (car.price < min) {
+    score += WEIGHTS.budget * (car.price / min);
+    caveats.push(
+      range
+        ? `Starts around ${usd(car.price)}, below your ${budgetLabel(prefs.budget)} range`
+        : `Starts around ${usd(car.price)}, well below your ${usd(max)} budget`,
+    );
+  } else if (range && min > 0) {
     score += WEIGHTS.budget;
-    const under = prefs.budget - car.price;
+    reasons.push(`Starts around ${usd(car.price)}, within your ${budgetLabel(prefs.budget)} range`);
+  } else {
+    score += WEIGHTS.budget;
+    const under = max - car.price;
     reasons.push(
       under >= 1000
         ? `Starts around ${usd(car.price)}, ${usd(under)} under your budget`
         : `Starts around ${usd(car.price)}, right at your budget`,
     );
-  } else {
-    const over = (car.price - prefs.budget) / prefs.budget;
-    if (over > MAX_OVER_BUDGET) return null;
-    score += WEIGHTS.budget * (1 - over / MAX_OVER_BUDGET);
-    caveats.push(`Starts around ${usd(car.price)}, ${usd(car.price - prefs.budget)} over your budget`);
   }
 
   // Fuel type
@@ -154,11 +179,27 @@ export function scoreCar(car: Car, prefs: Preferences): Match | null {
   return { car, score: Math.round(score), reasons, caveats };
 }
 
+const isMatch = (m: Match | null): m is Match => m !== null;
+
 export function rankCars(prefs: Preferences, limit = 10): MatchResult {
-  const scored = CARS.map((car) => scoreCar(car, prefs)).filter((m): m is Match => m !== null);
-  scored.sort((a, b) => b.score - a.score || a.car.price - b.car.price);
-  return {
-    matches: scored.slice(0, limit),
-    excludedCount: CARS.length - scored.length,
-  };
+  const scored = CARS.map((car) => scoreCar(car, prefs)).filter(isMatch);
+  // Ties go to the car priced closest to the middle of the budget, so an
+  // "Under $30k" search favors cheap cars and a $150k search favors cars
+  // that actually use the budget.
+  const target = (prefs.budget.min + prefs.budget.max) / 2;
+  const distance = (m: Match) => Math.abs(m.car.price - target);
+  scored.sort((a, b) => b.score - a.score || distance(a) - distance(b));
+
+  if (scored.length > 0) {
+    return { matches: scored.slice(0, limit), excludedCount: CARS.length - scored.length, fallback: false };
+  }
+
+  // Nothing fits the budget (e.g. a very low max): show the cheapest cars
+  // that still seat everyone, so the shopper sees how close they can get.
+  const closest = CARS.filter((car) => car.seats >= prefs.seats)
+    .sort((a, b) => a.price - b.price)
+    .slice(0, 5)
+    .map((car) => scoreCar(car, prefs, { ignoreBudgetCap: true }))
+    .filter(isMatch);
+  return { matches: closest, excludedCount: CARS.length, fallback: closest.length > 0 };
 }

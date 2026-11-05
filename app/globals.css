@@ -326,6 +326,23 @@ h1 {
   width: 16px;
   height: 16px;
 }
+.budget-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.budget-exact {
+  margin-top: 14px;
+}
+.field-hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.notice {
+  border: 1px solid var(--warn);
+  background: var(--warn-soft);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+}
 
 /* Pricing */
 .pricing-grid {
@@ -586,6 +603,9 @@ h1 {
   .form-grid,
   .checkbox-grid {
     grid-template-columns: 1fr;
+  }
+  .budget-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .nav-links {
     gap: 14px;
