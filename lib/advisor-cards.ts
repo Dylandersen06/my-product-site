@@ -59,8 +59,22 @@ export function matchLabel(rawLabel: string): { car: Car; trim: Trim } | null {
     const trim = findTrim(car, label, name);
     if (trim) return { car, trim };
   }
-  return null;
+  // "BMW M340i" leaves out the model, which is fine if only one car has that trim.
+  const found = brandTrimMatches(label);
+  return found.length === 1 ? found[0] : null;
 }
+
+function brandTrimMatches(label: string): { car: Car; trim: Trim }[] {
+  return CARS.flatMap((car) => {
+    const make = normalize(car.make);
+    if (!label.startsWith(`${make} `)) return [];
+    const trim = car.trims.find((t) => normalize(t.name) === label.slice(make.length + 1));
+    return trim ? [{ car, trim }] : [];
+  });
+}
+
+/** True for "Honda EX-L": a real trim of that brand, even if several models share it. */
+export const isBrandAndTrim = (rawLabel: string) => brandTrimMatches(normalize(rawLabel)).length > 0;
 
 export function cardsFromReply(text: string): AdvisorCard[] {
   const cards = new Map<string, AdvisorCard>();

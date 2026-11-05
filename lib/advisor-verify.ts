@@ -6,7 +6,7 @@
 // features listed below, and checks words rather than meaning, so it reduces
 // mistakes without guaranteeing a reply is perfect.
 
-import { matchLabel } from "./advisor-cards";
+import { isBrandAndTrim, matchLabel } from "./advisor-cards";
 import { CARS, hasFeature, type Car, type Feature, type Trim } from "./cars";
 
 const MAX_CORRECTIONS = 5;
@@ -234,7 +234,7 @@ function sentenceAround(text: string, at: number): string {
 
 function checkNames(text: string, add: (message: string) => void) {
   for (const [, label] of text.matchAll(/\*\*([^*\n]+?)\s*\([^()\n]+\)\s*\*\*/g)) {
-    if (matchLabel(label)) continue;
+    if (matchLabel(label) || isBrandAndTrim(label)) continue;
     const car = [...ALIASES.entries()].filter(([alias]) => label.startsWith(`${alias} `) || label === alias).sort((a, b) => b[0].length - a[0].length)[0];
     if (car) {
       add(`Our data doesn't have that trim of the ${car[1].make} ${car[1].model}. Its trims are the ${joinNames(car[1].trims.map((t) => t.name))}.`);
