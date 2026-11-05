@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import CarPhoto from "@/components/CarPhoto";
 import PriceComparison from "@/components/PriceComparison";
+import TrimList from "@/components/TrimList";
 import SearchForm from "@/components/SearchForm";
 import { budgetLabel, usd } from "@/lib/budget";
 import { BODY_LABELS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS } from "@/lib/cars";
 import { DEFAULT_SORT, SORT_LABELS, rankCars, type SortKey } from "@/lib/match";
 import { parsePreferences, parseSort } from "@/lib/params";
+import { photoFor } from "@/lib/photos";
 import { CONDITION_LABELS } from "@/lib/pricing";
 
 export const metadata: Metadata = {
@@ -113,16 +116,27 @@ export default async function ResultsPage({
           <ol className="results-list">
             {matches.map((m, i) => (
               <li key={m.car.id} className="result-card">
-                <div className="result-rank">#{i + 1}</div>
+                <CarPhoto
+                  name={`${m.car.make} ${m.car.model}`}
+                  bodyLabel={BODY_LABELS[m.car.body]}
+                  photo={photoFor(m.car.id)}
+                  rank={i + 1}
+                />
                 <div className="result-body">
                   <div className="result-top">
                     <div>
                       <h2>
                         {m.car.make} {m.car.model}
                       </h2>
+                      <p className="recommended-trim">
+                        {m.car.trims.length > 1 ? "Recommended trim: " : "Trim: "}
+                        <strong>{m.trim.name}</strong>
+                      </p>
                       <p className="result-specs">
-                        {BODY_LABELS[m.car.body]} · {FUEL_LABELS[m.car.fuel]} · {m.car.seats} seats ·{" "}
-                        {m.car.efficiency}
+                        {BODY_LABELS[m.car.body]} · {FUEL_LABELS[m.car.fuel]} · {m.car.seats} seats
+                      </p>
+                      <p className="result-specs">
+                        {m.trim.engine} · {m.trim.hp} hp · {m.trim.economy} · {m.trim.drivetrain}
                       </p>
                     </div>
                     <div className={`score score-${scoreTone(m.score)}`}>
@@ -146,6 +160,7 @@ export default async function ResultsPage({
                       </li>
                     ))}
                   </ul>
+                  <TrimList match={m} conditions={prefs.conditions} />
                 </div>
               </li>
             ))}

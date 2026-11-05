@@ -1,6 +1,6 @@
-// Used and certified pre-owned (CPO) price estimates.
+// Used and certified pre-owned (CPO) price estimates, per trim.
 //
-// These are modeled from each car's new price using typical depreciation
+// These are modeled from each trim's new price using typical depreciation
 // patterns. They are NOT live market data: real prices vary by trim, mileage,
 // condition and region, so the UI labels them as estimates and tells shoppers
 // to check local listings.

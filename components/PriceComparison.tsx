@@ -3,13 +3,14 @@ import type { Match } from "@/lib/match";
 import { CONDITIONS, CONDITION_LABELS, cpoNote, savingsVsNew, type Condition } from "@/lib/pricing";
 
 export default function PriceComparison({ match, conditions }: { match: Match; conditions: Condition[] }) {
-  const { car } = match;
+  const { car, trim } = match;
   const note = cpoNote(car.make);
-  const age = `~${car.usedAgeYears} yr${car.usedAgeYears === 1 ? "" : "s"} old`;
+  const age = `~${trim.usedAgeYears} yr${trim.usedAgeYears === 1 ? "" : "s"} old`;
 
   return (
     <>
-      <ul className="price-compare" aria-label="Price by condition">
+      <p className="price-compare-title">Prices for the {trim.name}</p>
+      <ul className="price-compare" aria-label={`${trim.name} price by condition`}>
         {CONDITIONS.map((condition) => {
           const selected = conditions.includes(condition);
           const bestFit = selected && conditions.length > 1 && condition === match.condition;
@@ -20,7 +21,7 @@ export default function PriceComparison({ match, conditions }: { match: Match; c
                 {selected && <span className="price-tag">{bestFit ? "Best fit" : "Selected"}</span>}
               </div>
               <p className="price-amount">
-                {usd(car.prices[condition])}
+                {usd(trim.prices[condition])}
                 {condition !== "new" && <span className="price-est">est.</span>}
               </p>
               {condition === "new" ? (
@@ -30,10 +31,10 @@ export default function PriceComparison({ match, conditions }: { match: Match; c
                 </>
               ) : (
                 <>
-                  <p className="price-save">Save {usd(savingsVsNew(car.prices, condition))} vs new</p>
+                  <p className="price-save">Save {usd(savingsVsNew(trim.prices, condition))} vs new</p>
                   <p className="price-meta">
                     <span>{age}</span>
-                    <span>~{car.mileage[condition].toLocaleString("en-US")} mi</span>
+                    <span>~{trim.mileage[condition].toLocaleString("en-US")} mi</span>
                   </p>
                 </>
               )}

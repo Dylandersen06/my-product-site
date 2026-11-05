@@ -10,6 +10,7 @@ import {
   type Car,
   type Feature,
   type Fuel,
+  type Trim,
   type Usage,
 } from "./cars";
 import { CONDITION_LABELS, savingsVsNew, type Condition } from "./pricing";
@@ -35,9 +36,11 @@ export const DEFAULT_SORT: SortKey = "best";
 
 export interface Match {
   car: Car;
-  /** The selected condition that fits the budget best, used for the score. */
+  /** The trim that best fits the budget and must-haves. */
+  trim: Trim;
+  /** The selected condition that fits best, used for the score. */
   condition: Condition;
-  /** The car's price in that condition. */
+  /** The recommended trim's price in that condition. */
   price: number;
   /** Largest saving vs new among the selected used/CPO conditions. */
   savings: number;
@@ -98,10 +101,10 @@ const USAGE_REASONS: Record<Usage, string> = {
   luxury: "Delivers a genuinely premium, comfortable experience",
 };
 
-const priceText = (condition: Condition, price: number) =>
+const priceText = (trim: Trim, condition: Condition, price: number) =>
   condition === "new"
-    ? `New starts around ${usd(price)}`
-    : `${CONDITION_LABELS[condition]} estimate around ${usd(price)}`;
+    ? `The ${trim.name} starts around ${usd(price)} new`
+    : `The ${trim.name} is around ${usd(price)} ${CONDITION_LABELS[condition].toLowerCase()} (estimate)`;
 
 /**
  * Budget points for a price: full points inside [min, max]. Above the max, a
@@ -121,16 +124,44 @@ function budgetPoints(price: number, budget: Budget, ignoreCap: boolean): number
 }
 
 /** The biggest saving vs new among selected used/CPO conditions (or used, if only New is selected). */
-function savingsFor(car: Car, conditions: Condition[]): number {
+function savingsFor(trim: Trim, conditions: Condition[]): number {
   const preOwned = conditions.filter((c) => c !== "new");
-  return Math.max(...(preOwned.length > 0 ? preOwned : (["used"] as const)).map((c) => savingsVsNew(car.prices, c)));
+  return Math.max(...(preOwned.length > 0 ? preOwned : (["used"] as const)).map((c) => savingsVsNew(trim.prices, c)));
+}
+
+const budgetMidpoint = (budget: Budget) => (budget.min + budget.max) / 2;
+
+/**
+ * Picks the trim and selected condition with the most budget and must-have
+ * points. Ties go to the price closest to the middle of the budget, so an
+ * "Under $30k" search gets the cheapest trim that does the job and a bigger
+ * budget gets a better-equipped one. Returns null if every option is too far
+ * over budget.
+ */
+function bestOption(car: Car, prefs: Preferences, ignoreCap: boolean) {
+  const target = budgetMidpoint(prefs.budget);
+  let best: { trim: Trim; condition: Condition; price: number; points: number; budget: number } | null = null;
+  for (const trim of car.trims) {
+    const have = prefs.features.filter((f) => hasFeature(car, trim, f)).length;
+    const featureShare = prefs.features.length === 0 ? 1 : have / prefs.features.length;
+    for (const condition of prefs.conditions) {
+      const price = trim.prices[condition];
+      const budget = budgetPoints(price, prefs.budget, ignoreCap);
+      if (budget === null) continue;
+      const points = budget + WEIGHTS.features * featureShare;
+      const closer = best !== null && Math.abs(price - target) < Math.abs(best.price - target);
+      if (!best || points > best.points || (points === best.points && closer)) {
+        best = { trim, condition, price, points, budget };
+      }
+    }
+  }
+  return best;
 }
 
 /**
- * Score one car against the shopper's preferences, using whichever selected
- * condition fits the budget best (the cheaper one on a tie). Returns null when
- * the car fails a hard requirement (too few seats, or far over budget in every
- * selected condition unless `ignoreBudgetCap` is set).
+ * Score one car against the shopper's preferences, using its best-fitting trim
+ * and condition. Returns null when the car fails a hard requirement (too few
+ * seats, or every trim far over budget unless `ignoreBudgetCap` is set).
  */
 export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false } = {}): Match | null {
   const reasons: string[] = [];
@@ -146,38 +177,30 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
       : `Seats ${car.seats}, room for your ${prefs.seats}`,
   );
 
-  // Budget: judged on the selected condition that fits best.
-  let best: { condition: Condition; price: number; points: number } | null = null;
-  for (const condition of prefs.conditions) {
-    const price = car.prices[condition];
-    const points = budgetPoints(price, prefs.budget, ignoreBudgetCap);
-    if (points === null) continue;
-    if (!best || points > best.points || (points === best.points && price < best.price)) {
-      best = { condition, price, points };
-    }
-  }
+  const best = bestOption(car, prefs, ignoreBudgetCap);
   if (!best) return null;
-  score += best.points;
+  const { trim, condition, price } = best;
+  score += best.budget;
 
   const { min, max, range } = prefs.budget;
-  const text = priceText(best.condition, best.price);
-  if (best.price > max) {
-    caveats.push(`${text}, ${usd(best.price - max)} over your ${usd(max)} max`);
-  } else if (best.price < min) {
+  const text = priceText(trim, condition, price);
+  if (price > max) {
+    caveats.push(`${text}, ${usd(price - max)} over your ${usd(max)} max`);
+  } else if (price < min) {
     caveats.push(
       range ? `${text}, below your ${budgetLabel(prefs.budget)} range` : `${text}, well below your ${usd(max)} budget`,
     );
   } else if (range && min > 0) {
     reasons.push(`${text}, within your ${budgetLabel(prefs.budget)} range`);
   } else {
-    const under = max - best.price;
+    const under = max - price;
     reasons.push(under >= 1000 ? `${text}, ${usd(under)} under your budget` : `${text}, right at your budget`);
   }
 
   // Fuel type
   if (prefs.fuel === "any" || car.fuel === prefs.fuel) {
     score += WEIGHTS.fuel;
-    if (prefs.fuel !== "any") reasons.push(`${FUEL_LABELS[car.fuel]}, as requested (${car.efficiency})`);
+    if (prefs.fuel !== "any") reasons.push(`${FUEL_LABELS[car.fuel]}, as requested (${trim.economy})`);
   } else {
     const similarity = FUEL_SIMILARITY[prefs.fuel]?.[car.fuel] ?? 0;
     score += WEIGHTS.fuel * similarity;
@@ -206,24 +229,30 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
   if (prefs.features.length === 0) {
     score += WEIGHTS.features;
   } else {
-    const have = prefs.features.filter((f) => hasFeature(car, f));
-    const missing = prefs.features.filter((f) => !hasFeature(car, f));
+    const have = prefs.features.filter((f) => hasFeature(car, trim, f));
+    const missing = prefs.features.filter((f) => !hasFeature(car, trim, f));
     score += WEIGHTS.features * (have.length / prefs.features.length);
     if (have.length > 0) {
       reasons.push(
-        `Offers ${have.length} of ${prefs.features.length} must-haves: ${have.map((f) => FEATURE_LABELS[f]).join(", ")}`,
+        `This trim has ${have.length} of ${prefs.features.length} must-haves: ${have.map((f) => FEATURE_LABELS[f]).join(", ")}`,
       );
     }
-    if (missing.length > 0) {
-      caveats.push(`Missing: ${missing.map((f) => FEATURE_LABELS[f]).join(", ")}`);
+    for (const feature of missing) {
+      const other = car.trims.find((t) => hasFeature(car, t, feature));
+      caveats.push(
+        other
+          ? `Missing on this trim: ${FEATURE_LABELS[feature]} (available on the ${other.name})`
+          : `Missing: ${FEATURE_LABELS[feature]}`,
+      );
     }
   }
 
   return {
     car,
-    condition: best.condition,
-    price: best.price,
-    savings: savingsFor(car, prefs.conditions),
+    trim,
+    condition,
+    price,
+    savings: savingsFor(trim, prefs.conditions),
     score: Math.round(score),
     reasons,
     caveats,
@@ -244,7 +273,7 @@ export function rankCars(prefs: Preferences, sort: SortKey = DEFAULT_SORT, limit
   // Ties go to the car priced closest to the middle of the budget, so an
   // "Under $30k" search favors cheap cars and a $150k search favors cars
   // that actually use the budget.
-  const target = (prefs.budget.min + prefs.budget.max) / 2;
+  const target = budgetMidpoint(prefs.budget);
   const distance = (m: Match) => Math.abs(m.price - target);
   scored.sort((a, b) => b.score - a.score || distance(a) - distance(b));
 
