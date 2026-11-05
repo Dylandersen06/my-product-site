@@ -15,7 +15,6 @@ export default function PriceComparison({
 
   return (
     <>
-      <p className="price-compare-title">Prices for the {trim.name}</p>
       <ul className="price-compare" aria-label={`${trim.name} price by condition`}>
         {CONDITIONS.map((condition) => {
           const selected = conditions.includes(condition);

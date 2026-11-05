@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Form from "next/form";
 import BasicFields from "@/components/BasicFields";
 import BudgetPicker from "@/components/BudgetPicker";
@@ -57,6 +58,35 @@ function NumberSelect({
   );
 }
 
+/** A filter group that starts closed unless one of its filters is set. Its summary says what's inside. */
+function FilterGroup({
+  title,
+  hint,
+  count,
+  children,
+}: {
+  title: string;
+  hint: string;
+  count: number;
+  children: ReactNode;
+}) {
+  return (
+    <details className="filter-group" open={count > 0}>
+      <summary>
+        <span className="filter-group-title">
+          {title}
+          {count > 0 && <span className="brand-count">{count} set</span>}
+        </span>
+        <span className="field-hint">{hint}</span>
+      </summary>
+      <fieldset className="filter-group-body">
+        <legend className="sr-only">{title}</legend>
+        {children}
+      </fieldset>
+    </details>
+  );
+}
+
 function BrandGroup({ title, name, selected }: { title: string; name: string; selected: string[] }) {
   return (
     <details className="brand-group" open={selected.length > 0}>
@@ -85,6 +115,10 @@ export default function AdvancedForm({
   filters: Filters;
   sort?: SortKey;
 }) {
+  const practicalitySet = [filters.mpgMin, filters.rangeMin, filters.towMin, filters.cargoMin].filter(
+    (value) => value !== null,
+  ).length;
+
   return (
     <Form action="/advanced" className="search-form" autoComplete="off">
       {sort !== DEFAULT_SORT && <input type="hidden" name="sort" value={sort} />}
@@ -135,8 +169,7 @@ export default function AdvancedForm({
         </div>
       </fieldset>
 
-      <fieldset className="filter-section">
-        <legend>Practicality</legend>
+      <FilterGroup title="Practicality" hint="MPG, EV range, towing and cargo" count={practicalitySet}>
         <div className="form-grid">
           <NumberSelect
             name="mpgMin"
@@ -171,16 +204,18 @@ export default function AdvancedForm({
           />
           <p className="field-hint field-wide">Cargo is space behind the rearmost seats, or bed volume for pickups.</p>
         </div>
-      </fieldset>
+      </FilterGroup>
 
-      <fieldset className="filter-section">
-        <legend>Brands</legend>
+      <FilterGroup
+        title="Brands"
+        hint="Only show some brands, or exclude them"
+        count={filters.makes.length + filters.excludeMakes.length}
+      >
         <BrandGroup title="Only show these brands" name="make" selected={filters.makes} />
         <BrandGroup title="Exclude these brands" name="excludeMake" selected={filters.excludeMakes} />
-      </fieldset>
+      </FilterGroup>
 
-      <fieldset className="filter-section">
-        <legend>Features</legend>
+      <FilterGroup title="Features" hint="Your must-haves: CarPlay, heated seats, third row and more" count={initial.features.length}>
         <p className="field-hint">The recommended trim must have every feature you check.</p>
         <div className="checkbox-grid">
           {FEATURE_CHECKBOXES.map((value) => (
@@ -195,7 +230,7 @@ export default function AdvancedForm({
             </label>
           ))}
         </div>
-      </fieldset>
+      </FilterGroup>
 
       <div className="form-actions">
         <button type="submit" className="button button-primary button-lg">

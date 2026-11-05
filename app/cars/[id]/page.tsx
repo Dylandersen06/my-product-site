@@ -43,7 +43,9 @@ export default async function CarPage({
     <div className="container results-page">
       <BackLink />
       <article className="result-card car-detail">
-        <CarPhoto name={name} bodyLabel={BODY_LABELS[car.body]} photo={photoFor(car.id)} />
+        <div className="result-media">
+          <CarPhoto name={name} bodyLabel={BODY_LABELS[car.body]} photo={photoFor(car.id)} />
+        </div>
         <div className="result-body">
           <h1 className="car-detail-title">{name}</h1>
           <p className="recommended-trim">
@@ -56,14 +58,18 @@ export default async function CarPage({
             {trim.engine} · {trim.drivetrain} · {trim.transmission}
           </p>
           <SpecStrip trim={trim} />
+        </div>
+        <div className="result-foot">
           <PriceComparison match={match} conditions={[condition]} />
           <MilesControl params={query} basePath={`/cars/${car.id}`} miles={milesPerYear} />
-          <CostToOwnCard match={match} milesPerYear={milesPerYear} />
+          <div className="disclosures">
+            <CostToOwnCard match={match} milesPerYear={milesPerYear} open />
+            <TrimList match={match} conditions={[condition]} open />
+          </div>
           <p className="estimate-note">
             <strong>Used and certified pre-owned prices and all cost figures are estimates</strong>, not live listings or
             quotes. Check local listings and confirm details with a dealer.
           </p>
-          <TrimList match={match} conditions={[condition]} open />
         </div>
       </article>
     </div>

@@ -191,36 +191,38 @@ export default function ResultsView({
             for actual prices and availability.
           </p>
 
-          <nav className="sort-bar" aria-label="Sort results">
-            <span className="sort-label">Sort by</span>
-            <div className="sort-options">
-              {(Object.keys(SORT_LABELS) as SortKey[]).map((key) => (
-                <Link
-                  key={key}
-                  href={hrefWith(basePath, params, key === "best" ? { remove: ["sort"] } : { set: { sort: key } })}
-                  scroll={false}
-                  className={`sort-option${key === sort ? " active" : ""}`}
-                  aria-current={key === sort ? "true" : undefined}
-                >
-                  {SORT_LABELS[key]}
-                </Link>
-              ))}
-            </div>
-          </nav>
-          <MilesControl params={params} basePath={basePath} miles={prefs.milesPerYear} />
-          <p className="sort-hint">
-            Cost-to-own figures are estimates for the recommended trim and condition. They exclude loan interest.
-          </p>
-          {sort === "savings" && newOnly && (
-            <p className="sort-hint">You&rsquo;re searching New only, so this shows what buying used could save.</p>
-          )}
-          {advanced && (
+          <div className="results-tools">
+            <nav className="sort-bar" aria-label="Sort results">
+              <span className="sort-label">Sort by</span>
+              <div className="sort-options">
+                {(Object.keys(SORT_LABELS) as SortKey[]).map((key) => (
+                  <Link
+                    key={key}
+                    href={hrefWith(basePath, params, key === "best" ? { remove: ["sort"] } : { set: { sort: key } })}
+                    scroll={false}
+                    className={`sort-option${key === sort ? " active" : ""}`}
+                    aria-current={key === sort ? "true" : undefined}
+                  >
+                    {SORT_LABELS[key]}
+                  </Link>
+                ))}
+              </div>
+            </nav>
+            <MilesControl params={params} basePath={basePath} miles={prefs.milesPerYear} />
             <p className="sort-hint">
-              {totalMatches} car{totalMatches === 1 ? "" : "s"} match your filters
-              {totalMatches > matches.length ? `, showing the top ${matches.length}` : ""}. Tick Compare on up to 3 to
-              see them side by side.
+              Cost-to-own figures are estimates for the recommended trim and condition. They exclude loan interest.
             </p>
-          )}
+            {sort === "savings" && newOnly && (
+              <p className="sort-hint">You&rsquo;re searching New only, so this shows what buying used could save.</p>
+            )}
+            {advanced && (
+              <p className="sort-hint">
+                {totalMatches} car{totalMatches === 1 ? "" : "s"} match your filters
+                {totalMatches > matches.length ? `, showing the top ${matches.length}` : ""}. Tick Compare on up to 3 to
+                see them side by side.
+              </p>
+            )}
+          </div>
 
           {advanced ? <CompareProvider items={matches.map((m) => compareItem(m, prefs))}>{list}</CompareProvider> : list}
 

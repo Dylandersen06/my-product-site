@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-/** Floating link to the AI Advisor, on every page except the advisor itself. */
+/** Link to the AI Advisor in the sticky header, on every page except the advisor itself. */
 export default function AskAiButton() {
   if (usePathname() === "/advisor") return null;
   return (

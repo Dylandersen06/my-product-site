@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import AskAiButton from "@/components/AskAiButton";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -18,7 +17,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
-        <AskAiButton />
       </body>
     </html>
   );
