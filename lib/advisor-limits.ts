@@ -5,8 +5,11 @@
 export const MAX_MESSAGE_CHARS = 800;
 /** Most questions in one conversation. */
 export const MAX_USER_MESSAGES = 10;
-/** Longest reply the model can write, including its reasoning. */
-export const MAX_OUTPUT_TOKENS = 1500;
+/**
+ * Most tokens the model can use per reply, including hidden reasoning, which can
+ * take over 1,500 by itself. Replies are told to stay under 200 words.
+ */
+export const MAX_OUTPUT_TOKENS = 4000;
 /** Longest earlier reply accepted back from the browser, in characters. */
 export const MAX_ASSISTANT_CHARS = 8000;
 /** Requests allowed from one visitor in the window below. */

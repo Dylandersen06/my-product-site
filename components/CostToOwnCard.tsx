@@ -3,7 +3,13 @@ import type { Match, Preferences } from "@/lib/match";
 import { CONDITIONS, CONDITION_LABELS } from "@/lib/pricing";
 import { costToOwn } from "@/lib/ownership";
 
-export default function CostToOwnCard({ match: m, milesPerYear }: { match: Match; milesPerYear: Preferences["milesPerYear"] }) {
+export default function CostToOwnCard({
+  match: m,
+  milesPerYear,
+}: {
+  match: Pick<Match, "car" | "trim" | "condition" | "ownership">;
+  milesPerYear: Preferences["milesPerYear"];
+}) {
   const cost = m.ownership;
   const rows = [
     ["Depreciation", cost.depreciation],

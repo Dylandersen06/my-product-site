@@ -2,7 +2,13 @@ import { usd } from "@/lib/budget";
 import type { Match } from "@/lib/match";
 import { CONDITIONS, CONDITION_LABELS, cpoNote, savingsVsNew, type Condition } from "@/lib/pricing";
 
-export default function PriceComparison({ match, conditions }: { match: Match; conditions: Condition[] }) {
+export default function PriceComparison({
+  match,
+  conditions,
+}: {
+  match: Pick<Match, "car" | "trim" | "condition">;
+  conditions: Condition[];
+}) {
   const { car, trim } = match;
   const note = cpoNote(car.make);
   const age = `~${trim.usedAgeYears} yr${trim.usedAgeYears === 1 ? "" : "s"} old`;

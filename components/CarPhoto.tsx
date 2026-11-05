@@ -16,7 +16,7 @@ export default function CarPhoto({
   name: string;
   bodyLabel: string;
   photo?: Photo;
-  rank: number;
+  rank?: number;
 }) {
   const [failed, setFailed] = useState(false);
   const image = useRef<HTMLImageElement>(null);
@@ -30,7 +30,7 @@ export default function CarPhoto({
   if (!photo || failed) {
     return (
       <div className="car-photo-wrap">
-        <span className="car-rank">#{rank}</span>
+        {rank !== undefined && <span className="car-rank">#{rank}</span>}
         <div className="car-photo car-placeholder">
           <span className="car-placeholder-name">{name}</span>
           <span className="car-placeholder-body">{bodyLabel}</span>
@@ -42,7 +42,7 @@ export default function CarPhoto({
   return (
     <>
       <div className="car-photo-wrap">
-        <span className="car-rank">#{rank}</span>
+        {rank !== undefined && <span className="car-rank">#{rank}</span>}
         {/* Plain img: photos stay hosted on Wikimedia Commons, with no optimization proxy. */}
         <img
           ref={image}

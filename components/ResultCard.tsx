@@ -2,8 +2,9 @@ import CarPhoto from "@/components/CarPhoto";
 import { CompareCheckbox } from "@/components/Compare";
 import CostToOwnCard from "@/components/CostToOwnCard";
 import PriceComparison from "@/components/PriceComparison";
+import SpecStrip from "@/components/SpecStrip";
 import TrimList from "@/components/TrimList";
-import { BODY_LABELS, FUEL_LABELS, towingText } from "@/lib/cars";
+import { BODY_LABELS, FUEL_LABELS } from "@/lib/cars";
 import type { Match } from "@/lib/match";
 import { photoFor } from "@/lib/photos";
 import type { Condition } from "@/lib/pricing";
@@ -56,24 +57,7 @@ export default function ResultCard({
         </div>
         {advanced && (
           <>
-            <dl className="spec-strip">
-              <div>
-                <dt>Horsepower</dt>
-                <dd>{m.trim.hp} hp</dd>
-              </div>
-              <div>
-                <dt>0–60 mph</dt>
-                <dd>{m.trim.zero60}s</dd>
-              </div>
-              <div>
-                <dt>{m.trim.mpg === null && m.trim.evRangeMi !== null ? "EV range" : "MPG / range"}</dt>
-                <dd>{m.trim.economy}</dd>
-              </div>
-              <div>
-                <dt>Towing</dt>
-                <dd>{towingText(m.trim.towingLbs)}</dd>
-              </div>
-            </dl>
+            <SpecStrip trim={m.trim} />
             <CompareCheckbox id={m.car.id} name={name} />
           </>
         )}

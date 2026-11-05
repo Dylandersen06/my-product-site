@@ -1,4 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { cardsFromReply } from "@/lib/advisor-cards";
 import { MAX_ASSISTANT_CHARS, MAX_MESSAGE_CHARS, MAX_OUTPUT_TOKENS, MAX_USER_MESSAGES, RATE_LIMIT_REQUESTS, RATE_LIMIT_WINDOW_MS } from "@/lib/advisor-limits";
 import { ADVISOR_SYSTEM_PROMPT } from "@/lib/advisor-prompt";
 
@@ -108,12 +109,14 @@ export async function POST(request: Request) {
   const stream = client.messages.stream({
     model: MODEL,
     max_tokens: MAX_OUTPUT_TOKENS,
+    // Thinking stays on: with it off, the model reasons and corrects itself in the
+    // visible reply. It counts toward max_tokens, so that limit allows room for it.
     output_config: { effort: "low" },
     system: [{ type: "text", text: ADVISOR_SYSTEM_PROMPT, cache_control: { type: "ephemeral" } }],
     messages: checked.messages,
   });
 
-  // One JSON object per line: {text}, then {done, stop} or {error}.
+  // One JSON object per line: {text}, then {cards} if any, then {done, stop} or {error}.
   const encoder = new TextEncoder();
   const body$ = new ReadableStream<Uint8Array>({
     async start(controller) {
@@ -126,8 +129,11 @@ export async function POST(request: Request) {
         }
         const final = await stream.finalMessage();
         console.log(
-          `advisor usage: in=${final.usage.input_tokens} cache_read=${final.usage.cache_read_input_tokens ?? 0} cache_write=${final.usage.cache_creation_input_tokens ?? 0} out=${final.usage.output_tokens} stop=${final.stop_reason}`,
+          `advisor usage: in=${final.usage.input_tokens} cache_read=${final.usage.cache_read_input_tokens ?? 0} cache_write=${final.usage.cache_creation_input_tokens ?? 0} out=${final.usage.output_tokens} stop=${final.stop_reason} blocks=${final.content.map((b) => `${b.type}:${b.type === "text" ? `${b.text.length}c/${b.text.replace(/\s/g, "").length}nonspace` : JSON.stringify(b).length}`).join(",")}`,
         );
+        const reply = final.content.flatMap((block) => (block.type === "text" ? [block.text] : [])).join("");
+        const cards = cardsFromReply(reply);
+        if (cards.length > 0) send({ cards });
         send({ done: true, stop: final.stop_reason });
       } catch (error) {
         if (!stream.aborted) {

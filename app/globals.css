@@ -1607,3 +1607,95 @@ body:has(.compare-bar) .ask-ai {
     max-width: 100%;
   }
 }
+
+/* Recommendation cards in the AI Advisor */
+.advisor-cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.advisor-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+.advisor-card .photo-credit {
+  padding: 6px 14px;
+}
+.advisor-card .car-photo {
+  aspect-ratio: 16 / 10;
+}
+.advisor-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+  padding: 12px 14px 14px;
+}
+.advisor-card-body h3 {
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.advisor-card-trim {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+.advisor-card-figures {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 4px;
+}
+.advisor-card-figures dt {
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+.advisor-card-figures dd {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+.advisor-card-monthly {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.advisor-card-link {
+  margin-top: auto;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
+
+/* Car details page */
+.back-link {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-decoration: none;
+}
+.back-link:hover {
+  color: var(--text);
+}
+.car-detail-title {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  text-align: left;
+  margin: 0 0 4px;
+}
+.car-detail .spec-strip {
+  margin-top: 14px;
+}
+.car-detail .miles-control {
+  margin-top: 4px;
+}
+.car-detail .estimate-note {
+  margin-bottom: 4px;
+}

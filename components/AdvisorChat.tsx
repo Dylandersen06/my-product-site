@@ -1,11 +1,17 @@
 "use client";
 
-import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
+import { Fragment, useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
+import Link from "next/link";
+import CarPhoto from "@/components/CarPhoto";
+import type { AdvisorCard } from "@/lib/advisor-cards";
 import { MAX_MESSAGE_CHARS, MAX_USER_MESSAGES } from "@/lib/advisor-limits";
+import { usd } from "@/lib/budget";
 
 interface ChatMessage {
   role: "user" | "assistant";
   content: string;
+  /** Recommended cars from the dataset, shown under the reply. */
+  cards?: AdvisorCard[];
 }
 
 const STORAGE_KEY = "carmatch-advisor-chat";
@@ -49,6 +55,38 @@ function MessageText({ text }: { text: string }) {
         );
       })}
     </>
+  );
+}
+
+function RecommendationCards({ cards }: { cards: AdvisorCard[] }) {
+  return (
+    <ul className="advisor-cards" aria-label="Recommended cars">
+      {cards.map((card) => (
+        <li key={`${card.id}-${card.trim}-${card.condition}`} className="advisor-card">
+          <CarPhoto name={card.name} bodyLabel={card.bodyLabel} photo={card.photo} />
+          <div className="advisor-card-body">
+            <h3>{card.name}</h3>
+            <p className="advisor-card-trim">
+              {card.trim} · {card.conditionLabel}
+            </p>
+            <dl className="advisor-card-figures">
+              <div>
+                <dt>{card.condition === "new" ? "Starting price" : "Price (est.)"}</dt>
+                <dd>{usd(card.price)}</dd>
+              </div>
+              <div>
+                <dt>5-year cost (est.)</dt>
+                <dd>{usd(card.fiveYearCost)}</dd>
+              </div>
+            </dl>
+            <p className="advisor-card-monthly">About {usd(card.monthlyCost)}/mo est. at 12,000 miles a year</p>
+            <Link href={card.href} className="button button-outline advisor-card-link">
+              View details
+            </Link>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -113,7 +151,8 @@ export default function AdvisorChat() {
       const response = await fetch("/api/advisor", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: history }),
+        // Only the words go back to the server. Cards are for display.
+        body: JSON.stringify({ messages: history.map(({ role, content }) => ({ role, content })) }),
         signal: controller.signal,
       });
       if (!response.ok || !response.body) {
@@ -135,8 +174,11 @@ export default function AdvisorChat() {
             reply += event.text;
             appendText(event.text);
           }
+          if (event.cards) {
+            setMessages((current) => [...current.slice(0, -1), { ...current[current.length - 1], cards: event.cards }]);
+          }
           if (event.error) failure = event.error;
-          if (event.stop === "max_tokens") {
+          if (event.stop === "max_tokens" && reply.trim()) {
             const note = "\n\n(That reply hit the length limit. Ask me to continue if you'd like more.)";
             reply += note;
             appendText(note);
@@ -185,15 +227,18 @@ export default function AdvisorChat() {
       ) : (
         <div className="advisor-log" aria-live="polite">
           {messages.map((m, i) => (
-            <div key={i} className={`advisor-msg ${m.role}`}>
-              {m.role === "assistant" && !m.content ? (
-                <p className="advisor-thinking">Thinking…</p>
-              ) : m.role === "assistant" ? (
-                <MessageText text={m.content} />
-              ) : (
-                <p>{m.content}</p>
-              )}
-            </div>
+            <Fragment key={i}>
+              <div className={`advisor-msg ${m.role}`}>
+                {m.role === "assistant" && !m.content ? (
+                  <p className="advisor-thinking">Thinking…</p>
+                ) : m.role === "assistant" ? (
+                  <MessageText text={m.content} />
+                ) : (
+                  <p>{m.content}</p>
+                )}
+              </div>
+              {m.cards && m.cards.length > 0 && <RecommendationCards cards={m.cards} />}
+            </Fragment>
           ))}
           <div ref={end} />
         </div>

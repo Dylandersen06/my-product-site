@@ -43,9 +43,11 @@ New prices are approximate 2025 starting MSRPs, and features count if any trim o
 
 `/advisor` is a chat where shoppers describe their lifestyle and get recommendations from the dataset, with the best trim and condition, plus answers to follow-up questions. An "Ask the AI" button links to it from every page. It calls the Anthropic API with `claude-haiku-5-5` from a server-side route (`app/api/advisor/route.ts`), so the key never reaches the browser.
 
+When a reply recommends a car, a card appears under it with the car's photo and credit, trim, condition, price, 5-year cost and a "View details" link to `/cars/[id]`. `lib/advisor-cards.ts` reads the model's `**Make Model Trim (Condition)**` lines and looks them up in the dataset, so card figures always come from the data, and a line that doesn't match a real car and trim gets no card.
+
 **Setup:** copy `.env.example` to `.env.local` and set `ANTHROPIC_API_KEY`. On Vercel, add it under Settings → Environment Variables. Never commit the key: `.env*` files are gitignored, apart from the placeholder `.env.example`. Without a key the chat shows a "not set up yet" message and the rest of the site works normally.
 
-**Cost controls** (`lib/advisor-limits.ts`, enforced on the server): 800 characters per message, 10 questions per chat, a 1,500-token reply limit, low effort, and 20 requests per visitor per 10 minutes. That last limit is per server instance, so also set a spend limit in the Anthropic Console, which is the real ceiling. The catalog in the system prompt uses prompt caching, so repeat requests pay about a tenth of the input price for it. Each request logs its token usage (never message content).
+**Cost controls** (`lib/advisor-limits.ts`, enforced on the server): 800 characters per message, 10 questions per chat, a 4,000-token limit per reply (including hidden reasoning), low effort, and 20 requests per visitor per 10 minutes. That last limit is per server instance, so also set a spend limit in the Anthropic Console, which is the real ceiling. The catalog in the system prompt uses prompt caching, so repeat requests pay about a tenth of the input price for it. Each request logs its token usage (never message content).
 
 ## 5-Year Cost to Own
 

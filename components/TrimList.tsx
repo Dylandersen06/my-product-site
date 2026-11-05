@@ -5,12 +5,20 @@ import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 
 const SHORT_LABELS: Record<Condition, string> = { used: "Used est.", cpo: "CPO est.", new: "New" };
 
-export default function TrimList({ match, conditions }: { match: Match; conditions: Condition[] }) {
+export default function TrimList({
+  match,
+  conditions,
+  open = false,
+}: {
+  match: Pick<Match, "car" | "trim">;
+  conditions: Condition[];
+  open?: boolean;
+}) {
   const { car, trim: recommended } = match;
   const count = car.trims.length;
 
   return (
-    <details className="trim-details">
+    <details className="trim-details" open={open}>
       <summary>{count > 1 ? `View all trims (${count})` : "View trim details"}</summary>
       <ul className="trim-list">
         {car.trims.map((trim) => (
