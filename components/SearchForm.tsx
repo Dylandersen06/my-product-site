@@ -1,12 +1,15 @@
 import Form from "next/form";
 import BudgetPicker from "@/components/BudgetPicker";
+import ConditionToggle from "@/components/ConditionToggle";
 import { DEFAULT_RANGE, findRange } from "@/lib/budget";
 import { BODY_LABELS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS, type Feature } from "@/lib/cars";
-import type { Preferences } from "@/lib/match";
+import { DEFAULT_SORT, type Preferences, type SortKey } from "@/lib/match";
+import { DEFAULT_CONDITIONS } from "@/lib/pricing";
 
 const defaultRange = findRange(DEFAULT_RANGE)!;
 
 const DEFAULTS: Preferences = {
+  conditions: DEFAULT_CONDITIONS,
   budget: { min: defaultRange.min, max: defaultRange.max, range: defaultRange.key },
   seats: 5,
   fuel: "any",
@@ -15,10 +18,18 @@ const DEFAULTS: Preferences = {
   features: [],
 };
 
-export default function SearchForm({ initial = DEFAULTS }: { initial?: Preferences }) {
+export default function SearchForm({
+  initial = DEFAULTS,
+  sort = DEFAULT_SORT,
+}: {
+  initial?: Preferences;
+  sort?: SortKey;
+}) {
   return (
     <Form action="/results" className="search-form">
+      <ConditionToggle initial={initial.conditions} />
       <BudgetPicker initial={initial.budget} />
+      {sort !== DEFAULT_SORT && <input type="hidden" name="sort" value={sort} />}
 
       <div className="form-grid">
         <label className="field">

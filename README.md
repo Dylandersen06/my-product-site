@@ -2,7 +2,7 @@
 
 **By Dylan Andersen**
 
-CarMatch AI helps car shoppers find the models that best fit their needs. Fill out a short form (budget, seats, fuel type, body style, how you'll use the car, and must-have features) and get a ranked list of matching cars, each with a 0–100 match score and the reasons behind it.
+CarMatch AI helps car shoppers find the models that best fit their needs. Fill out a short form (new, used or certified pre-owned, budget, seats, fuel type, body style, how you'll use the car, and must-have features) and get a ranked list of matching cars, each with a 0–100 match score and the reasons behind it.
 
 ## Running locally
 
@@ -30,7 +30,11 @@ Shoppers pick a preset range (Under $30k, $30–60k, $60–100k, $100–250k, $2
 
 Bugatti isn't included: its cheapest model costs several million dollars, well above the $1M cap.
 
-Prices are approximate 2025 starting MSRPs, and features count if any trim offers them. Confirm details with a dealer.
+## New, used and certified pre-owned
+
+Shoppers pick one or more conditions. Budget points use the price for the selected condition, and when several are selected each car is judged on whichever fits the budget best. Each result card compares all three side by side, with the saving versus new. Results can be sorted by best match, price or biggest savings; sorting reorders the top 10 matches rather than changing which cars appear.
+
+New prices are approximate 2025 starting MSRPs, and features count if any trim offers them. **Used and CPO prices and mileage are modeled estimates, not market data.** `lib/pricing.ts` derives them from the new price using typical depreciation by brand, fuel type and body style, with overrides for specific models. Used and CPO examples are about 3 years old, or younger for models launched more recently. Check local listings for real prices.
 
 ## Stack
 

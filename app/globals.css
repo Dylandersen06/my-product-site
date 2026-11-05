@@ -119,6 +119,7 @@ a {
   gap: 20px;
 }
 .nav-links a {
+  white-space: nowrap;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--muted);
@@ -620,5 +621,248 @@ h1 {
     flex-direction: column;
     gap: 8px;
     padding: 20px;
+  }
+}
+
+/* Condition toggle */
+.condition-toggle {
+  border: none;
+}
+.condition-toggle legend {
+  margin-bottom: 4px;
+}
+.condition-toggle .field-hint {
+  display: block;
+  margin-bottom: 12px;
+}
+.condition-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+.condition-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 52px;
+  padding: 8px 10px;
+  text-align: center;
+  line-height: 1.25;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.condition-option:hover {
+  border-color: var(--accent);
+}
+.condition-option input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+.condition-option:has(input:checked) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+}
+.condition-option:has(input:checked)::before {
+  content: "✓";
+  font-weight: 700;
+}
+.condition-option:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Estimate note and sort bar */
+.estimate-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  border-left: 3px solid var(--warn);
+  padding: 2px 0 2px 12px;
+  margin-bottom: 20px;
+}
+.estimate-note strong {
+  color: var(--text);
+}
+.sort-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-bottom: 16px;
+}
+.sort-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.sort-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.sort-option {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+}
+.sort-option:hover {
+  border-color: var(--accent);
+}
+.sort-option.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-contrast);
+  font-weight: 600;
+}
+.sort-hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: -6px 0 16px;
+}
+
+/* Price comparison */
+.price-compare {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.price-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.price-cell.selected {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+  background: var(--accent-soft);
+}
+.price-cell-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+  min-height: 22px;
+}
+.price-cond {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.selected .price-cond {
+  color: var(--text);
+}
+.price-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+.price-amount {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+.price-est {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--muted);
+  margin-left: 4px;
+}
+.price-save {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--good);
+}
+.price-base {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.price-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+.price-meta span {
+  white-space: nowrap;
+}
+.price-meta span + span::before {
+  content: " · ";
+}
+.cpo-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: -8px 0 16px;
+}
+
+@media (max-width: 720px) {
+  /* Stack the conditions as rows: what it is on the left, what it costs on the right. */
+  .price-compare {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .price-cell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    column-gap: 12px;
+    align-items: baseline;
+  }
+  .price-cell-head {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .price-amount {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: right;
+    font-size: 1.15rem;
+  }
+  .price-meta {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .price-meta span {
+    display: block;
+  }
+  .price-meta span + span::before {
+    content: none;
+  }
+  .price-save,
+  .price-base {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: right;
+  }
+}
+
+@media (max-width: 600px) {
+  .result-top {
+    gap: 12px;
+  }
+  .condition-option {
+    font-size: 0.85rem;
+    padding: 8px 6px;
   }
 }

@@ -6,7 +6,9 @@ export default function Footer() {
           &copy; {new Date().getFullYear()} CarMatch AI. Designed &amp; built by <strong>Dylan Andersen</strong>.
         </p>
         <p className="fine-print">
-          Prices are approximate 2025 starting MSRPs. Features and specs vary by trim. Confirm details with a dealer.
+          New prices are approximate 2025 starting MSRPs. Used and certified pre-owned prices and mileage are
+          estimates, not live listings, so check local listings for actual prices. Features and specs vary by trim.
+          Confirm details with a dealer.
         </p>
       </div>
     </footer>

@@ -1,8 +1,11 @@
 // Car dataset for CarMatch AI.
-// Prices are approximate 2025 starting MSRPs in USD (base trim, before
-// destination fees). Features count as "available" if at least one trim
+// New prices are approximate 2025 starting MSRPs in USD (base trim, before
+// destination fees). Used and CPO prices and mileage are modeled estimates from
+// lib/pricing.ts, attached to every car by the car() helper below. Features count as "available" if at least one trim
 // offers them. Efficiency and towing figures are approximate manufacturer/EPA
 // estimates. Always confirm details with a dealer.
+
+import { estimatePricing, type ConditionPricing } from "./pricing";
 
 export type BodyStyle =
   | "sedan"
@@ -36,7 +39,7 @@ type StoredFeature =
 
 export type Feature = StoredFeature | "thirdRow" | "towing";
 
-export interface Car {
+export interface Car extends ConditionPricing {
   id: string;
   make: string;
   model: string;
@@ -44,7 +47,6 @@ export interface Car {
   body: BodyStyle;
   fuel: Fuel;
   seats: number;
-  price: number;
   efficiency: string;
   towingLbs: number;
   features: StoredFeature[];
@@ -119,7 +121,7 @@ function car(
   body: BodyStyle,
   fuel: Fuel,
   seats: number,
-  price: number,
+  newPrice: number,
   efficiency: string,
   towingLbs: number,
   features: StoredFeature[],
@@ -129,7 +131,20 @@ function car(
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
-  return { id, make, model, year: 2025, body, fuel, seats, price, efficiency, towingLbs, features, goodFor };
+  return {
+    id,
+    make,
+    model,
+    year: 2025,
+    body,
+    fuel,
+    seats,
+    efficiency,
+    towingLbs,
+    features,
+    goodFor,
+    ...estimatePricing({ id, make, body, fuel, newPrice }),
+  };
 }
 
 export const CARS: Car[] = [

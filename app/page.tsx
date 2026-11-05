@@ -3,12 +3,9 @@ import Pricing from "@/components/Pricing";
 import { CARS } from "@/lib/cars";
 
 const BRAND_COUNT = new Set(CARS.map((car) => car.make)).size;
-const prices = CARS.map((car) => car.price);
-const CHEAPEST_K = Math.floor(Math.min(...prices) / 1000);
-const PRICIEST_K = Math.floor(Math.max(...prices) / 1000);
 
 const STEPS = [
-  { title: "Tell us what you need", body: "Budget, seats, fuel type, body style, how you drive, and your must-haves." },
+  { title: "Tell us what you need", body: "New, used or certified pre-owned, plus budget, seats, fuel type, body style, how you drive, and your must-haves." },
   { title: "We score every car", body: `Each of our ${CARS.length} models is scored from 0–100 against your needs.` },
   { title: "See your best matches", body: "Ranked results with clear reasons and honest trade-offs for each car." },
 ];
@@ -21,9 +18,9 @@ export default function Home() {
           <span className="eyebrow">Car shopping, simplified</span>
           <h1>Find the car that actually fits your life.</h1>
           <p className="lead">
-            CarMatch AI compares {CARS.length} new cars from {BRAND_COUNT} brands, from {`$${CHEAPEST_K}k`} commuters
-            to {`$${PRICIEST_K}k`} supercars, against what you need and ranks the best matches, each with a match score and the reasons
-            behind it.
+            CarMatch AI compares {CARS.length} models from {BRAND_COUNT} brands, new, used or certified pre-owned,
+            against what you need and ranks the best matches, each with a match score, the reasons behind it, and how
+            much you could save versus buying new.
           </p>
           <a href="#search" className="button button-primary button-lg">
             Start matching

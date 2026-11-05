@@ -7,7 +7,8 @@ import {
   type Budget,
 } from "./budget";
 import { BODY_LABELS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS, type Feature } from "./cars";
-import type { Preferences } from "./match";
+import { DEFAULT_SORT, SORT_LABELS, type Preferences, type SortKey } from "./match";
+import { CONDITIONS, DEFAULT_CONDITIONS, type Condition } from "./pricing";
 
 type RawParams = Record<string, string | string[] | undefined>;
 
@@ -32,6 +33,18 @@ function parseBudget(params: RawParams): Budget {
   return { min: range.min, max: range.max, range: range.key };
 }
 
+/** Selected conditions in display order, defaulting to New when none are valid. */
+function parseConditions(params: RawParams): Condition[] {
+  const picked = all(params.condition);
+  const conditions = CONDITIONS.filter((c) => picked.includes(c));
+  return conditions.length > 0 ? conditions : DEFAULT_CONDITIONS;
+}
+
+export function parseSort(params: RawParams): SortKey {
+  const sort = first(params.sort);
+  return isKey(SORT_LABELS, sort) ? sort : DEFAULT_SORT;
+}
+
 /** Turn URL search params into validated preferences, falling back to sensible defaults. */
 export function parsePreferences(params: RawParams): Preferences {
   const seatsRaw = Number(first(params.seats));
@@ -48,5 +61,5 @@ export function parsePreferences(params: RawParams): Preferences {
 
   const features = [...new Set(all(params.features))].filter((f): f is Feature => isKey(FEATURE_LABELS, f));
 
-  return { budget: parseBudget(params), seats, fuel, body, usage, features };
+  return { conditions: parseConditions(params), budget: parseBudget(params), seats, fuel, body, usage, features };
 }

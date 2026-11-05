@@ -1,14 +1,29 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import PriceComparison from "@/components/PriceComparison";
 import SearchForm from "@/components/SearchForm";
 import { budgetLabel, usd } from "@/lib/budget";
 import { BODY_LABELS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS } from "@/lib/cars";
-import { rankCars } from "@/lib/match";
-import { parsePreferences } from "@/lib/params";
+import { DEFAULT_SORT, SORT_LABELS, rankCars, type SortKey } from "@/lib/match";
+import { parsePreferences, parseSort } from "@/lib/params";
+import { CONDITION_LABELS } from "@/lib/pricing";
 
 export const metadata: Metadata = {
   title: "Your matches | CarMatch AI by Dylan Andersen",
 };
+
+type RawParams = Record<string, string | string[] | undefined>;
+
+/** The current results URL with a different sort, keeping everything else. */
+function sortHref(params: RawParams, sort: SortKey) {
+  const query = new URLSearchParams();
+  for (const [key, value] of Object.entries(params)) {
+    if (key === "sort" || value === undefined) continue;
+    for (const v of Array.isArray(value) ? value : [value]) query.append(key, v);
+  }
+  if (sort !== DEFAULT_SORT) query.set("sort", sort);
+  return `/results?${query}`;
+}
 
 function scoreTone(score: number) {
   if (score >= 85) return "great";
@@ -19,12 +34,16 @@ function scoreTone(score: number) {
 export default async function ResultsPage({
   searchParams,
 }: {
-  searchParams: Promise<Record<string, string | string[] | undefined>>;
+  searchParams: Promise<RawParams>;
 }) {
-  const prefs = parsePreferences(await searchParams);
-  const { matches, excludedCount, fallback } = rankCars(prefs);
+  const params = await searchParams;
+  const prefs = parsePreferences(params);
+  const sort = parseSort(params);
+  const { matches, excludedCount, fallback } = rankCars(prefs, sort);
+  const newOnly = prefs.conditions.length === 1 && prefs.conditions[0] === "new";
 
   const summary = [
+    prefs.conditions.map((c) => CONDITION_LABELS[c]).join(" + "),
     budgetLabel(prefs.budget),
     `${prefs.seats}+ seats`,
     prefs.fuel === "any" ? "Any fuel" : FUEL_LABELS[prefs.fuel],
@@ -61,10 +80,36 @@ export default async function ResultsPage({
           {fallback && (
             <div className="notice">
               <strong>Nothing fits a {usd(prefs.budget.max)} budget yet.</strong> Every car with {prefs.seats}+ seats
-              starts more than 20% above it. Here are the most affordable options so you can see how close you can
-              get.
+              costs more than 20% above it in the condition you picked. Here are the most affordable options so you
+              can see how close you can get.
             </div>
           )}
+
+          <p className="estimate-note">
+            <strong>Used and certified pre-owned prices are estimates</strong>, not live listings. Check local listings
+            for actual prices and availability.
+          </p>
+
+          <nav className="sort-bar" aria-label="Sort results">
+            <span className="sort-label">Sort by</span>
+            <div className="sort-options">
+              {(Object.keys(SORT_LABELS) as SortKey[]).map((key) => (
+                <Link
+                  key={key}
+                  href={sortHref(params, key)}
+                  scroll={false}
+                  className={`sort-option${key === sort ? " active" : ""}`}
+                  aria-current={key === sort ? "true" : undefined}
+                >
+                  {SORT_LABELS[key]}
+                </Link>
+              ))}
+            </div>
+          </nav>
+          {sort === "savings" && newOnly && (
+            <p className="sort-hint">You&rsquo;re searching New only, so this shows what buying used could save.</p>
+          )}
+
           <ol className="results-list">
             {matches.map((m, i) => (
               <li key={m.car.id} className="result-card">
@@ -73,11 +118,11 @@ export default async function ResultsPage({
                   <div className="result-top">
                     <div>
                       <h2>
-                        {m.car.year} {m.car.make} {m.car.model}
+                        {m.car.make} {m.car.model}
                       </h2>
                       <p className="result-specs">
-                        From ~{usd(m.car.price)} · {BODY_LABELS[m.car.body]} · {FUEL_LABELS[m.car.fuel]} ·{" "}
-                        {m.car.seats} seats · {m.car.efficiency}
+                        {BODY_LABELS[m.car.body]} · {FUEL_LABELS[m.car.fuel]} · {m.car.seats} seats ·{" "}
+                        {m.car.efficiency}
                       </p>
                     </div>
                     <div className={`score score-${scoreTone(m.score)}`}>
@@ -88,6 +133,7 @@ export default async function ResultsPage({
                   <div className="meter" aria-hidden="true">
                     <div className={`meter-fill score-${scoreTone(m.score)}`} style={{ width: `${m.score}%` }} />
                   </div>
+                  <PriceComparison match={m} conditions={prefs.conditions} />
                   <ul className="reasons">
                     {m.reasons.map((r) => (
                       <li key={r} className="reason-good">
@@ -107,7 +153,7 @@ export default async function ResultsPage({
           {!fallback && excludedCount > 0 && (
             <p className="muted center">
               {excludedCount} car{excludedCount === 1 ? " was" : "s were"} left out for having too few seats or
-              costing more than 20% over your budget.
+              costing more than 20% over your budget in the condition you picked.
             </p>
           )}
         </>
@@ -117,7 +163,7 @@ export default async function ResultsPage({
         <div className="narrow">
           <h2 className="section-title">Refine your search</h2>
           <div className="card">
-            <SearchForm initial={prefs} />
+            <SearchForm initial={prefs} sort={sort} />
           </div>
         </div>
       </section>
