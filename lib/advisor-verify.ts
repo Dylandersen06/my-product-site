@@ -223,6 +223,15 @@ function recommended(text: string): { car: Car; trim: Trim }[] {
   return [...text.matchAll(/\*\*([^*\n]+?)\s*\(([^()\n]+)\)\s*\*\*/g)].flatMap(([, label]) => matchLabel(label) ?? []);
 }
 
+/** The reply already says this car isn't available, so there's nothing to correct. */
+const ALREADY_SAID_MISSING = /(?:isn['’]t|aren['’]t|not|never)\s+(?:\w+\s+)?(?:in|on|part of|listed|available|included)\b|(?:don['’]t|doesn['’]t|do not|does not)\s+(?:\w+\s+)?(?:have|carry|list|include)\b/i;
+
+function sentenceAround(text: string, at: number): string {
+  const before = text.slice(0, at).search(/[^.!?\n]*$/);
+  const end = text.slice(at).search(/[.!?\n]/);
+  return text.slice(before, end < 0 ? undefined : at + end);
+}
+
 function checkNames(text: string, add: (message: string) => void) {
   for (const [, label] of text.matchAll(/\*\*([^*\n]+?)\s*\([^()\n]+\)\s*\*\*/g)) {
     if (matchLabel(label)) continue;
@@ -235,9 +244,12 @@ function checkNames(text: string, add: (message: string) => void) {
   }
   // Bold recommendation lines were handled above.
   const plain = text.replace(/\*\*[^*\n]+?\s*\([^()\n]+\)\s*\*\*/g, "").replace(/\*\*/g, "");
-  for (const [whole] of plain.matchAll(OTHER_BRAND_PATTERN)) add(`The ${whole} isn't in our dataset, so we can't confirm its details.`);
-  for (const [, make, rest] of plain.matchAll(MAKE_THEN_NAME)) {
-    if (NOT_MODELS.test(rest)) continue;
+  for (const m of plain.matchAll(OTHER_BRAND_PATTERN)) {
+    if (!ALREADY_SAID_MISSING.test(sentenceAround(plain, m.index))) add(`The ${m[0]} isn't in our dataset, so we can't confirm its details.`);
+  }
+  for (const m of plain.matchAll(MAKE_THEN_NAME)) {
+    const [, make, rest] = m;
+    if (NOT_MODELS.test(rest) || ALREADY_SAID_MISSING.test(sentenceAround(plain, m.index))) continue;
     const first = rest.split(" ")[0];
     const known = [...ALIASES.keys()].some((alias) => {
       const full = `${make} ${rest}`;
@@ -268,7 +280,7 @@ export function verifyReply(reply: string, previousReply = ""): string[] {
       const subjects = findSubjects(sentence, focus?.car ?? null);
       const occurrences = findOccurrences(sentence);
       const question = sentence.trim().endsWith("?");
-      const unsure = UNSURE.test(sentence);
+      const sentenceUnsure = UNSURE.test(sentence);
       const asking = ASKING.test(sentence);
       let previous = null as { occurrence: Occurrence; negative: boolean } | null;
 
@@ -283,7 +295,9 @@ export function verifyReply(reply: string, previousReply = ""): string[] {
           (joined && previous !== null && previous.negative);
         previous = { occurrence, negative };
         lastCheck = occurrence;
-        if (question || unsure) continue;
+        // "Has a camera, but leather isn't listed" hedges only the second claim.
+        const clause = sentence.slice(clauseStart(sentence, occurrence.start), occurrence.end) + afterwards;
+        if (question || UNSURE.test(clause)) continue;
 
         if (GROUP.test(sentence) && subjects.length === 0) {
           for (const member of group) {
@@ -300,7 +314,7 @@ export function verifyReply(reply: string, previousReply = ""): string[] {
       }
 
       // "If you want one, the XSE includes it" refers to the last feature mentioned.
-      if (occurrences.length === 0 && lastCheck && !question && !unsure) {
+      if (occurrences.length === 0 && lastCheck && !question && !sentenceUnsure) {
         const pronoun = sentence.match(PRONOUN_CLAIM);
         if (pronoun) {
           const at = pronoun.index ?? 0;
