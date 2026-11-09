@@ -22,11 +22,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           signUpFallbackRedirectUrl="/account"
           afterSignOutUrl="/"
           appearance={{
+            // Fixed light colors in both light and dark mode. Clerk can't reliably use the
+            // site's dark-mode tokens, and without an explicit input text color, typed text
+            // came out white on white in dark mode.
             variables: {
               colorPrimary: "#0b4f30",
+              colorPrimaryForeground: "#fffaeb",
               colorBackground: "#fffaeb",
               colorForeground: "#17231c",
+              colorMutedForeground: "#4c5a50",
               colorInput: "#ffffff",
+              colorInputForeground: "#17231c",
+              colorBorder: "#ded6bf",
+              colorNeutral: "#17231c",
               borderRadius: "10px",
               fontFamily: "inherit",
             },
