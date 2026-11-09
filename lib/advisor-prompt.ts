@@ -3,6 +3,7 @@ import "server-only";
 import { CARS, hasFeature, towingText, type Car, type Feature, type Trim } from "./cars";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "./ownership";
 import { officialFor, overallStars } from "./official";
+import { paletteFor } from "./colors";
 
 // The catalog goes into every request, so it's written as tersely as possible
 // to keep costs down. The instructions below explain the shorthand.
@@ -64,6 +65,7 @@ Style:
 Reading the catalog:
 - Each model's first line gives body style, fuel, seats, cargo in cubic feet (bed volume for pickups), towing if the same for every trim, the age and used/CPO mileage of its pre-owned examples, and what it's good for. Seven or more seats means a third row. The bracket at the end is official government data: the NHTSA overall crash-test rating (or that NHTSA hasn't rated it) and the number of NHTSA recalls for that model year. When safety matters to the shopper, cite these as official NHTSA figures, and tell them to check a specific car's VIN for open recalls at nhtsa.gov/recalls. "No NHTSA rating" means untested, not unsafe.
 - Each trim line reads: name: used/CPO/new price; 5yr used/CPO/new 5-year cost; engine, horsepower, 0-60 time, MPG or range, drivetrain, transmission; features; highlights.
+- TYPICAL COLORS lists common factory paints by brand, with a few models listed on their own. They're a general guide: not every color is offered on every model, trim or year, so say "typically" and suggest confirming with a dealer.
 - Feature codes, available on that trim: AWD = AWD or 4WD, CarPlay = Apple CarPlay and Android Auto, ACC = adaptive cruise control, BSM = blind-spot monitoring, Heated = heated seats, Roof = sunroof or glass roof, 360cam = 360-degree camera. Write these out in plain words for shoppers.
 
 Scope:
@@ -74,4 +76,18 @@ Scope:
  * The full system prompt. It's built once and never changes between requests,
  * with nothing per-request in it, so prompt caching can reuse it.
  */
-export const ADVISOR_SYSTEM_PROMPT = `${INSTRUCTIONS}\n\nCATALOG\n${CARS.map(carBlock).join("\n\n")}`;
+/** Typical paint colors: one line per brand, plus models with their own palette. */
+function colorLines(): string {
+  const lines = new Map<string, string>();
+  for (const car of CARS) {
+    const palette = paletteFor(car);
+    if (!palette) continue;
+    const key = palette.modelSpecific ? `${car.make} ${car.model}` : car.make;
+    if (lines.has(key)) continue;
+    const note = palette.note ? ` (${palette.note})` : "";
+    lines.set(key, `${key}: ${palette.colors.map((c) => c.name).join(", ")}${note}`);
+  }
+  return [...lines.values()].join("\n");
+}
+
+export const ADVISOR_SYSTEM_PROMPT = `${INSTRUCTIONS}\n\nCATALOG\n${CARS.map(carBlock).join("\n\n")}\n\nTYPICAL COLORS\n${colorLines()}`;

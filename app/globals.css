@@ -2125,7 +2125,7 @@ details[open] > .cost-head::after,
   }
 }
 
-/* Header stacks: brand and Ask the AI on top, the three links beneath */
+/* Header stacks: brand and Start matching on top, the four links beneath */
 @media (max-width: 720px) {
   html {
     scroll-padding-top: 112px;
@@ -2140,7 +2140,12 @@ details[open] > .cost-head::after,
     order: 3;
     width: 100%;
     margin-left: 0;
-    gap: 16px;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .nav-links a {
+    font-size: clamp(0.75rem, 3.6vw, 0.875rem);
+    white-space: nowrap;
   }
   .ask-ai {
     margin-left: auto;
@@ -2874,4 +2879,67 @@ details[open] > .cost-head::after,
 }
 .official a {
   color: var(--accent);
+}
+
+/* Typical colors */
+.color-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+.color-dots-label {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+.color-dots ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.color-dots li {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.22);
+}
+.car-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.car-colors h2 {
+  font-size: var(--fs-lg);
+  letter-spacing: -0.02em;
+}
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 10px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--fs-sm);
+}
+.swatches li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.swatch {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.22),
+    inset -4px -6px 10px rgba(0, 0, 0, 0.18),
+    inset 4px 5px 8px rgba(255, 255, 255, 0.25);
 }

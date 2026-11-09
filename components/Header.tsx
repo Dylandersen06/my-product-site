@@ -1,6 +1,6 @@
 import Link from "next/link";
-import AskAiButton from "@/components/AskAiButton";
 import NavLinks from "@/components/NavLinks";
+import StartMatchingButton from "@/components/StartMatchingButton";
 
 export default function Header() {
   return (
@@ -14,7 +14,7 @@ export default function Header() {
           <span className="brand-by">by Dylan Andersen</span>
         </Link>
         <NavLinks />
-        <AskAiButton />
+        <StartMatchingButton />
       </div>
     </header>
   );
