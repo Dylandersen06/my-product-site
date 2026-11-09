@@ -1,8 +1,10 @@
 import Anthropic from "@anthropic-ai/sdk";
+import { currentUser } from "@clerk/nextjs/server";
 import { cardsFromReply } from "@/lib/advisor-cards";
 import { verifyReply } from "@/lib/advisor-verify";
 import { MAX_ASSISTANT_CHARS, MAX_MESSAGE_CHARS, MAX_OUTPUT_TOKENS, MAX_USER_MESSAGES, RATE_LIMIT_REQUESTS, RATE_LIMIT_WINDOW_MS } from "@/lib/advisor-limits";
 import { ADVISOR_SYSTEM_PROMPT } from "@/lib/advisor-prompt";
+import { accessFrom } from "@/lib/plan";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -86,6 +88,13 @@ export async function POST(request: Request) {
   if (!apiKey) return jsonError(503, "The advisor isn't set up yet. Please check back soon.");
 
   if (fromAnotherSite(request)) return jsonError(403, "Not allowed.");
+
+  // The advisor is a paid feature. Checked here, not just on the page, so it can't be skipped.
+  const user = await currentUser();
+  if (!user) return jsonError(401, "Log in to use the AI advisor.");
+  if (!accessFrom(user.publicMetadata).advisor) {
+    return jsonError(402, "The AI advisor needs a plan. Pick one on the advisor page to continue.");
+  }
 
   const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
   const retryAfter = rateLimited(ip);

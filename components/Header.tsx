@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { Suspense } from "react";
+import AccountControls from "@/components/AccountControls";
 import NavLinks from "@/components/NavLinks";
 import StartMatchingButton from "@/components/StartMatchingButton";
 
@@ -14,7 +16,12 @@ export default function Header() {
           <span className="brand-by">by Dylan Andersen</span>
         </Link>
         <NavLinks />
-        <StartMatchingButton />
+        <div className="nav-actions">
+          <StartMatchingButton />
+          <Suspense fallback={null}>
+            <AccountControls />
+          </Suspense>
+        </div>
       </div>
     </header>
   );

@@ -2147,8 +2147,11 @@ details[open] > .cost-head::after,
     font-size: clamp(0.75rem, 3.6vw, 0.875rem);
     white-space: nowrap;
   }
-  .ask-ai {
+  .nav-actions {
     margin-left: auto;
+    gap: 10px;
+  }
+  .ask-ai {
     padding: 6px 12px;
   }
   .car-detail {
@@ -2942,4 +2945,112 @@ details[open] > .cost-head::after,
     inset 0 0 0 1px rgba(0, 0, 0, 0.22),
     inset -4px -6px 10px rgba(0, 0, 0, 0.18),
     inset 4px 5px 8px rgba(255, 255, 255, 0.25);
+}
+
+/* Accounts */
+.nav-actions {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 14px;
+}
+.nav-login {
+  padding: 6px 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--brand-text);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.nav-login:hover {
+  border-bottom-color: var(--signal);
+}
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding-block: 48px 72px;
+}
+.account-page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 760px;
+  padding-block: 48px 72px;
+}
+.account-page h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  letter-spacing: -0.03em;
+}
+.account-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin: 0;
+}
+.account-facts div {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  min-width: 0;
+}
+.account-facts dt {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+.account-facts dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.plan-note {
+  margin: 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--border-strong);
+  color: var(--muted);
+}
+.plan-note-paid {
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--text);
+  font-weight: 600;
+}
+.advisor-locked {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.advisor-locked h2 {
+  font-size: var(--fs-lg);
+  letter-spacing: -0.02em;
+}
+.advisor-locked p {
+  margin: 0;
+}
+.post-button {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.post-button .button {
+  width: 100%;
+}
+.post-button .button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+.form-error {
+  color: var(--warn);
+  font-size: var(--fs-sm);
 }

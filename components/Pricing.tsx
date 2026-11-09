@@ -1,49 +1,41 @@
-import Link from "next/link";
+import { CheckoutButton } from "@/components/CheckoutButton";
+import { OFFERS, type PlanKey } from "@/lib/plan";
 
-const PLANS = [
-  {
-    name: "Pay per search",
-    price: "$1.50",
-    period: "per search",
-    blurb: "Perfect when you just need one answer.",
-    perks: ["One full ranked results list", "Match score for every car", "Clear reasons and trade-offs"],
-    featured: false,
-  },
-  {
-    name: "Monthly",
-    price: "$0.50",
-    period: "per month",
-    blurb: "Best value for comparing options over time.",
-    perks: ["Unlimited searches", "Match score for every car", "Clear reasons and trade-offs"],
-    featured: true,
-  },
-];
+const ORDER: PlanKey[] = ["pass", "monthly"];
 
-export default function Pricing() {
+/** Plans for the AI advisor. Searches are free, so only the advisor is paid. */
+export default function Pricing({ id = "pricing", heading = "Simple pricing" }: { id?: string; heading?: string }) {
   return (
-    <section id="pricing" className="section">
+    <section id={id} className="section">
       <div className="container">
-        <h2 className="section-title">Simple pricing</h2>
-        <p className="section-sub">Pick what works for you. No hidden fees.</p>
+        <h2 className="section-title">{heading}</h2>
+        <p className="section-sub">
+          Quick Search and Advanced Search are free. A plan unlocks the AI advisor. Payments are handled securely by
+          Stripe.
+        </p>
         <div className="pricing-grid">
-          {PLANS.map((plan) => (
-            <article key={plan.name} className={`price-card${plan.featured ? " featured" : ""}`}>
-              {plan.featured && <span className="badge">Best value</span>}
-              <h3>{plan.name}</h3>
-              <p className="price">
-                {plan.price} <span>{plan.period}</span>
-              </p>
-              <p className="muted">{plan.blurb}</p>
-              <ul>
-                {plan.perks.map((perk) => (
-                  <li key={perk}>{perk}</li>
-                ))}
-              </ul>
-              <Link href="/#search" className={`button ${plan.featured ? "button-primary" : "button-outline"}`}>
-                Get started
-              </Link>
-            </article>
-          ))}
+          {ORDER.map((kind) => {
+            const plan = OFFERS[kind];
+            const featured = kind === "monthly";
+            return (
+              <article key={kind} className={`price-card${featured ? " featured" : ""}`}>
+                {featured && <span className="badge">Best value</span>}
+                <h3>{plan.name}</h3>
+                <p className="price">
+                  {plan.price} <span>{plan.period}</span>
+                </p>
+                <p className="muted">{plan.blurb}</p>
+                <ul>
+                  {plan.perks.map((perk) => (
+                    <li key={perk}>{perk}</li>
+                  ))}
+                </ul>
+                <CheckoutButton kind={kind} className={`button ${featured ? "button-primary" : "button-outline"}`}>
+                  {kind === "monthly" ? "Subscribe" : "Buy a 24-hour pass"}
+                </CheckoutButton>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
