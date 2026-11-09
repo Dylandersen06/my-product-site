@@ -89,8 +89,10 @@ const ALIAS_PATTERN = new RegExp(
   "g",
 );
 
-/** Brands the dataset doesn't carry. */
-const OTHER_BRANDS = ["Dodge", "Acura", "Infiniti", "Alfa Romeo", "Mini", "Fiat", "Rivian", "Lucid", "Polestar", "Bugatti", "Koenigsegg", "Pagani", "Lotus", "Scion", "Saab", "Pontiac"];
+/** Brands the dataset doesn't carry. Any brand later added to the catalog drops out automatically. */
+const OTHER_BRANDS = ["Dodge", "Acura", "Infiniti", "Alfa Romeo", "Mini", "Fiat", "Rivian", "Lucid", "Polestar", "Bugatti", "Koenigsegg", "Pagani", "Lotus", "Scion", "Saab", "Pontiac"].filter(
+  (brand) => !CARS.some((car) => car.make === brand),
+);
 const OTHER_BRAND_PATTERN = new RegExp(`\\b(${OTHER_BRANDS.join("|")}) ([A-Z0-9][\\w-]*)`, "g");
 
 const MAKES = [...new Set(CARS.map((car) => car.make))];
