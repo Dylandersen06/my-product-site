@@ -4,6 +4,7 @@ import { CompareCheckbox } from "@/components/Compare";
 import CostToOwnCard from "@/components/CostToOwnCard";
 import PriceComparison from "@/components/PriceComparison";
 import ScoreRing from "@/components/ScoreRing";
+import { OfficialBadges } from "@/components/OfficialData";
 import SpecStrip from "@/components/SpecStrip";
 import TrimList from "@/components/TrimList";
 import { BODY_LABELS, FUEL_LABELS, carDetailsHref } from "@/lib/cars";
@@ -62,6 +63,7 @@ export default function ResultCard({
           <ScoreRing score={m.score} />
         </div>
         {advanced && <SpecStrip trim={m.trim} />}
+        <OfficialBadges car={m.car} />
         <ul className="reasons">
           {m.reasons.map((r) => (
             <li key={r} className="reason-good">

@@ -8,7 +8,7 @@ import {
   type Budget,
 } from "./budget";
 import { BODY_LABELS, BRANDS, FEATURE_LABELS, FUEL_LABELS, USAGE_LABELS, type Feature } from "./cars";
-import { DRIVETRAIN_LABELS, TRANSMISSION_LABELS, type Filters } from "./filters";
+import { DRIVETRAIN_LABELS, STAR_OPTIONS, TRANSMISSION_LABELS, type Filters } from "./filters";
 import { DEFAULT_SORT, SORT_LABELS, type Preferences, type SortKey } from "./match";
 import { DEFAULT_MILES_PER_YEAR, MAX_MILES_PER_YEAR, MIN_MILES_PER_YEAR } from "./ownership";
 import { CONDITIONS, DEFAULT_CONDITIONS, type Condition } from "./pricing";
@@ -86,6 +86,7 @@ function parseFilters(params: RawParams): Filters {
     cargoMin: positive(params, "cargoMin"),
     makes: brands("make"),
     excludeMakes: brands("excludeMake"),
+    minStars: STAR_OPTIONS.find((n) => n === positive(params, "minStars")) ?? null,
   };
 }
 

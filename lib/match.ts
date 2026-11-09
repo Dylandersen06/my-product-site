@@ -14,6 +14,7 @@ import {
   type Usage,
 } from "./cars";
 import { trimPasses, type Filters } from "./filters";
+import { overallStars } from "./official";
 import { costToOwn, type CostToOwn } from "./ownership";
 import { CONDITION_LABELS, savingsVsNew, type Condition } from "./pricing";
 
@@ -188,6 +189,7 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
   if (filters) {
     if (filters.makes.length > 0 && !filters.makes.includes(car.make)) return null;
     if (filters.excludeMakes.includes(car.make)) return null;
+    if (filters.minStars !== null && (overallStars(car.id) ?? 0) < filters.minStars) return null;
     if (prefs.fuel !== "any" && car.fuel !== prefs.fuel) return null;
     if (prefs.body !== "any" && car.body !== prefs.body) return null;
   }

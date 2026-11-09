@@ -10,6 +10,7 @@ import {
   DRIVETRAIN_LABELS,
   EV_RANGE_OPTIONS,
   MPG_OPTIONS,
+  STAR_OPTIONS,
   TOWING_OPTIONS,
   TRANSMISSION_LABELS,
   ZERO60_OPTIONS,
@@ -213,6 +214,28 @@ export default function AdvancedForm({
       >
         <BrandGroup title="Only show these brands" name="make" selected={filters.makes} />
         <BrandGroup title="Exclude these brands" name="excludeMake" selected={filters.excludeMakes} />
+      </FilterGroup>
+
+      <FilterGroup
+        title="Safety"
+        hint="Official NHTSA crash-test rating"
+        count={filters.minStars !== null ? 1 : 0}
+      >
+        <label className="field">
+          <span className="field-label">NHTSA overall crash rating</span>
+          <select name="minStars" defaultValue={filters.minStars === null ? "" : String(filters.minStars)}>
+            <option value="">Any</option>
+            {STAR_OPTIONS.map((n) => (
+              <option key={n} value={n}>
+                {n === 5 ? "5 stars" : `${n}+ stars`}
+              </option>
+            ))}
+          </select>
+        </label>
+        <p className="field-hint">
+          Uses NHTSA&rsquo;s official ratings. Models NHTSA hasn&rsquo;t rated, including many luxury and exotic cars,
+          are left out when this is set.
+        </p>
       </FilterGroup>
 
       <FilterGroup title="Features" hint="Your must-haves: CarPlay, heated seats, third row and more" count={initial.features.length}>

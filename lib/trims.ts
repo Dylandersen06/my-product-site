@@ -534,6 +534,25 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["LX 600 F Sport Handling", 112000, "3.4L turbo V6", 409, "19 mpg", "4WD", "acrbhs", "Sport styling, performance dampers"],
     ["LX 600 Ultra Luxury", 140000, "3.4L turbo V6", 409, "19 mpg", "4WD", "acrbhs", "Rear lounge seats, Mark Levinson audio"],
   ],
+  "acura-integra": [
+    ["Integra", 33000, "1.5L turbo I4", 200, "33 mpg", "FWD", "crbhs", "AcuraWatch, moonroof, 7-in touchscreen"],
+    ["A-Spec", 35500, "1.5L turbo I4", 200, "32 mpg", "FWD", "crbhs", "Sport styling, 18-in wheels"],
+    ["A-Spec Technology", 39000, "1.5L turbo I4", 200, "30 mpg", "FWD", "crbhs", "ELS Studio audio, 9-in touchscreen, manual option"],
+    ["Type S", 52000, "2.0L turbo I4", 320, "24 mpg", "FWD", "crbhs", "6-speed manual, adaptive dampers"],
+  ],
+  "acura-rdx": [
+    ["RDX", 46500, "2.0L turbo I4", 272, "23 mpg", "AWD", "acrbhs", "Panoramic roof, SH-AWD, AcuraWatch"],
+    ["Technology", 50500, "2.0L turbo I4", 272, "23 mpg", "AWD", "acrbhs", "ELS Studio audio, navigation"],
+    ["A-Spec", 52500, "2.0L turbo I4", 272, "23 mpg", "AWD", "acrbhs", "Sport styling, sport seats"],
+    ["A-Spec Advance", 56000, "2.0L turbo I4", 272, "23 mpg", "AWD", "acrbhs", "Head-up display, 360-degree camera"],
+  ],
+  "acura-mdx": [
+    ["MDX", 51000, "3.5L V6", 290, "22 mpg", "FWD or AWD", "acrbhs", "Three rows, panoramic roof, AcuraWatch"],
+    ["Technology", 56000, "3.5L V6", 290, "21 mpg", "FWD or AWD", "acrbhs", "ELS Studio audio, navigation"],
+    ["A-Spec", 61500, "3.5L V6", 290, "20 mpg", "AWD", "acrbhs", "Sport styling, SH-AWD"],
+    ["Advance", 66000, "3.5L V6", 290, "20 mpg", "AWD", "acrbhs", "Head-up display, 360-degree camera, ventilated seats"],
+    ["Type S Advance", 76000, "3.0L turbo V6", 355, "19 mpg", "AWD", "acrbhs", "Air suspension, Brembo brakes"],
+  ],
   "genesis-g70": [
     ["2.5T", 42000, "2.5L turbo I4", 300, "25 mpg", "RWD or AWD", "acrbhs", "14.5-in touchscreen, Highway Driving Assist"],
     ["2.5T Sport Prestige", 47000, "2.5L turbo I4", 300, "24 mpg", "RWD or AWD", "acrbhs", "Adaptive suspension, Lexicon audio"],

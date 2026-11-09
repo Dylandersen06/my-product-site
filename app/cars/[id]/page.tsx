@@ -4,6 +4,7 @@ import BackLink from "@/components/BackLink";
 import CarPhoto from "@/components/CarPhoto";
 import CostToOwnCard from "@/components/CostToOwnCard";
 import MilesControl from "@/components/MilesControl";
+import OfficialData from "@/components/OfficialData";
 import PriceComparison from "@/components/PriceComparison";
 import SpecStrip from "@/components/SpecStrip";
 import TrimList from "@/components/TrimList";
@@ -70,6 +71,7 @@ export default async function CarPage({
             <strong>Used and certified pre-owned prices and all cost figures are estimates</strong>, not live listings or
             quotes. Check local listings and confirm details with a dealer.
           </p>
+          <OfficialData car={car} />
         </div>
       </article>
     </div>

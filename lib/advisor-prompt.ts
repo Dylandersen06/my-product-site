@@ -2,6 +2,7 @@ import "server-only";
 
 import { CARS, hasFeature, towingText, type Car, type Feature, type Trim } from "./cars";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "./ownership";
+import { officialFor, overallStars } from "./official";
 
 // The catalog goes into every request, so it's written as tersely as possible
 // to keep costs down. The instructions below explain the shorthand.
@@ -31,7 +32,13 @@ function carBlock(car: Car): string {
   const miles = `~${first.usedAgeYears}y ${first.mileage.used / 1000}k/${first.mileage.cpo / 1000}k mi`;
   const tow = towingVaries ? "" : ` tow ${towingText(first.towingLbs)},`;
   const header = `${car.make} ${car.model} (${car.body}, ${car.fuel}, ${car.seats} seats, ${first.cargoCuFt} cu ft,${tow} ${miles}, for ${car.goodFor.join("/")})`;
-  return [header, ...car.trims.map((trim) => trimLine(car, trim, towingVaries))].join("\n");
+  const stars = overallStars(car.id);
+  const recalls = officialFor(car.id)?.recalls;
+  const official = [
+    stars !== null ? `NHTSA ${stars}/5 overall` : "no NHTSA rating",
+    recalls ? `${recalls.count} recalls (${recalls.year})` : null,
+  ].filter(Boolean).join(", ");
+  return [`${header} [${official}]`, ...car.trims.map((trim) => trimLine(car, trim, towingVaries))].join("\n");
 }
 
 const INSTRUCTIONS = `You are the AI Car Advisor for CarMatch AI, a car-shopping site. Shoppers describe their lifestyle and what they want, and you recommend cars from the catalog below, then answer follow-up questions about them.
@@ -55,7 +62,7 @@ Style:
 - Be warm and direct. Keep replies under 200 words unless asked for more. Use **bold** only for the recommendation lines, with short paragraphs or "- " lists and no headings or tables.
 
 Reading the catalog:
-- Each model's first line gives body style, fuel, seats, cargo in cubic feet (bed volume for pickups), towing if the same for every trim, the age and used/CPO mileage of its pre-owned examples, and what it's good for. Seven or more seats means a third row.
+- Each model's first line gives body style, fuel, seats, cargo in cubic feet (bed volume for pickups), towing if the same for every trim, the age and used/CPO mileage of its pre-owned examples, and what it's good for. Seven or more seats means a third row. The bracket at the end is official government data: the NHTSA overall crash-test rating (or that NHTSA hasn't rated it) and the number of NHTSA recalls for that model year. When safety matters to the shopper, cite these as official NHTSA figures, and tell them to check a specific car's VIN for open recalls at nhtsa.gov/recalls. "No NHTSA rating" means untested, not unsafe.
 - Each trim line reads: name: used/CPO/new price; 5yr used/CPO/new 5-year cost; engine, horsepower, 0-60 time, MPG or range, drivetrain, transmission; features; highlights.
 - Feature codes, available on that trim: AWD = AWD or 4WD, CarPlay = Apple CarPlay and Android Auto, ACC = adaptive cruise control, BSM = blind-spot monitoring, Heated = heated seats, Roof = sunroof or glass roof, 360cam = 360-degree camera. Write these out in plain words for shoppers.
 

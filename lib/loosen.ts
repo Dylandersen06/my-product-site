@@ -112,6 +112,9 @@ function relaxations(prefs: Preferences): Relaxation[] {
   }
   if (f.makes.length > 0) add("Show all brands", filter({ makes: [] }), { remove: ["make"] });
   if (f.excludeMakes.length > 0) add("Stop excluding brands", filter({ excludeMakes: [] }), { remove: ["excludeMake"] });
+  if (f.minStars !== null) {
+    add(`Remove the ${f.minStars}-star safety minimum`, filter({ minStars: null }), { remove: ["minStars"] });
+  }
   for (const feature of prefs.features) {
     add(
       `Drop the ${FEATURE_LABELS[feature]} requirement`,

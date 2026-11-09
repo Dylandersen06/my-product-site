@@ -42,6 +42,8 @@ export const MPG_OPTIONS = [20, 25, 30, 35, 40, 50];
 export const EV_RANGE_OPTIONS = [20, 40, 100, 200, 250, 300, 350, 400];
 export const TOWING_OPTIONS = [1500, 3500, 5000, 7500, 10000, 13000];
 export const CARGO_OPTIONS = [10, 15, 20, 30, 40, 60];
+/** Minimum NHTSA overall crash rating. */
+export const STAR_OPTIONS = [4, 5];
 
 export interface Filters {
   hpMin: number | null;
@@ -55,6 +57,8 @@ export interface Filters {
   cargoMin: number | null;
   makes: string[];
   excludeMakes: string[];
+  /** Minimum NHTSA overall stars. Models NHTSA hasn't rated don't qualify. */
+  minStars: number | null;
 }
 
 export function trimPasses(trim: Trim, f: Filters): boolean {
@@ -89,5 +93,6 @@ export function filterChips(f: Filters): string[] {
   if (f.cargoMin !== null) chips.push(`${f.cargoMin}+ cu ft cargo`);
   if (f.makes.length > 0) chips.push(`Only: ${f.makes.join(", ")}`);
   if (f.excludeMakes.length > 0) chips.push(`Not: ${f.excludeMakes.join(", ")}`);
+  if (f.minStars !== null) chips.push(f.minStars === 5 ? "NHTSA 5 stars" : `NHTSA ${f.minStars}+ stars`);
   return chips;
 }

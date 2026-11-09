@@ -2779,3 +2779,99 @@ details[open] > .cost-head::after,
 .cost-card {
   background: transparent;
 }
+
+/* Official government data (EPA and NHTSA) */
+.official-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.official-badges li {
+  padding: 2px 9px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+.official {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.official h2 {
+  font-size: var(--fs-lg);
+  letter-spacing: -0.02em;
+}
+.official h3 {
+  margin-top: 6px;
+  font-size: var(--fs-md);
+}
+.official-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+.official-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--fs-sm);
+}
+.official-table th,
+.official-table td {
+  padding: 7px 10px 7px 0;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+.official-table th {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.official-table a {
+  color: var(--accent);
+}
+.official-stars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+.official-stars div {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+.official-stars dt {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+.official-stars dd {
+  margin: 2px 0 0;
+  font-weight: 600;
+}
+.official-recalls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--fs-sm);
+}
+.official-recalls p {
+  margin: 2px 0 0;
+  color: var(--muted);
+}
+.official a {
+  color: var(--accent);
+}
