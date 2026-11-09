@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import AccountControls from "@/components/AccountControls";
 import NavLinks from "@/components/NavLinks";
 import StartMatchingButton from "@/components/StartMatchingButton";
+import UserSync from "@/components/UserSync";
 
 export default function Header() {
   return (
@@ -20,6 +21,7 @@ export default function Header() {
           <StartMatchingButton />
           <Suspense fallback={null}>
             <AccountControls />
+            <UserSync />
           </Suspense>
         </div>
       </div>

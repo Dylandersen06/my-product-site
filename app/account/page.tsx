@@ -3,10 +3,12 @@ import Link from "next/link";
 import { SignOutButton } from "@clerk/nextjs";
 import { currentUser } from "@clerk/nextjs/server";
 import { redirect } from "next/navigation";
+import { after } from "next/server";
 import { ManageBillingButton } from "@/components/CheckoutButton";
 import Pricing from "@/components/Pricing";
 import { getStripe, grantFromCheckout } from "@/lib/billing";
 import { OFFERS, accessFrom, formatPassEnd } from "@/lib/plan";
+import { syncUser } from "@/lib/users-db";
 
 export const metadata: Metadata = { title: "Your account · CarMatch AI" };
 
@@ -37,6 +39,9 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
   const confirmed = checkoutId ? await confirmCheckout(checkoutId, initialUser.id) : null;
   // Re-read the account after a purchase so the new plan shows.
   const user = confirmed === "ok" ? ((await currentUser()) ?? initialUser) : initialUser;
+
+  // Keep this account's row in the Neon users table current (new sign-ups land here).
+  after(() => syncUser(user));
 
   const email = user.primaryEmailAddress?.emailAddress ?? user.emailAddresses[0]?.emailAddress ?? "";
   const name = user.firstName || email.split("@")[0] || "there";

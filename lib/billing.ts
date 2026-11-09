@@ -2,6 +2,7 @@ import "server-only";
 import { clerkClient } from "@clerk/nextjs/server";
 import Stripe from "stripe";
 import { OFFERS, type PlanKey } from "./plan";
+import { syncUser } from "./users-db";
 
 // Stripe Checkout takes the payment, then a webhook (and, as a backup, the
 // return page) records what was bought on the shopper's Clerk account. Every
@@ -78,7 +79,7 @@ export async function grantFromCheckout(session: Stripe.Checkout.Session, expect
   };
 
   if (kind === "monthly") {
-    await clerk.users.updateUserMetadata(userId, { publicMetadata: { plan: "monthly" }, privateMetadata });
+    await syncUser(await clerk.users.updateUserMetadata(userId, { publicMetadata: { plan: "monthly" }, privateMetadata }));
     return "monthly";
   }
 
@@ -88,7 +89,9 @@ export async function grantFromCheckout(session: Stripe.Checkout.Session, expect
   const fromThisPurchase = new Date(session.created * 1000 + PASS_HOURS * 3600 * 1000);
   const current = typeof user.publicMetadata.passUntil === "string" ? new Date(user.publicMetadata.passUntil) : null;
   const passUntil = current && current > fromThisPurchase ? current : fromThisPurchase;
-  await clerk.users.updateUserMetadata(userId, { publicMetadata: { passUntil: passUntil.toISOString() }, privateMetadata });
+  await syncUser(
+    await clerk.users.updateUserMetadata(userId, { publicMetadata: { passUntil: passUntil.toISOString() }, privateMetadata }),
+  );
   return "pass";
 }
 
@@ -98,9 +101,10 @@ export async function syncSubscription(subscription: Stripe.Subscription): Promi
   if (!userId) return;
   const active = subscription.status === "active" || subscription.status === "trialing" || subscription.status === "past_due";
   const clerk = await clerkClient();
-  await clerk.users.updateUserMetadata(userId, {
+  const updated = await clerk.users.updateUserMetadata(userId, {
     // null removes the key in Clerk's metadata merge.
     publicMetadata: { plan: active ? "monthly" : null },
     privateMetadata: { stripeSubscriptionId: active ? subscription.id : null },
   });
+  await syncUser(updated);
 }
