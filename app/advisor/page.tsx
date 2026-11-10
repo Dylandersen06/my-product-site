@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { currentUser } from "@clerk/nextjs/server";
 import AdvisorChat from "@/components/AdvisorChat";
+import PaidLock from "@/components/PaidLock";
 import Pricing from "@/components/Pricing";
 import { CARS } from "@/lib/cars";
 import { accessFrom, formatPassEnd } from "@/lib/plan";
@@ -32,29 +32,15 @@ export default async function AdvisorPage({ searchParams }: { searchParams: Prom
             <AdvisorChat />
           </>
         ) : (
-          <div className="advisor-locked">
+          <>
             {params.checkout === "cancelled" && (
               <p className="plan-note">Checkout was cancelled, so you haven&rsquo;t been charged.</p>
             )}
-            <h2>The AI advisor is part of a paid plan</h2>
-            <p>
-              Quick Search and Advanced Search stay free. Pick a plan below to chat with the advisor
-              {user ? "." : ", after you log in or create a free account."}
-            </p>
-            {!user && (
-              <div className="account-actions">
-                <Link href="/sign-up?redirect_url=%2Fadvisor%23plans" className="button button-primary">
-                  Create a free account
-                </Link>
-                <Link href="/sign-in?redirect_url=%2Fadvisor%23plans" className="button button-outline">
-                  Log in
-                </Link>
-              </div>
-            )}
-          </div>
+            <PaidLock feature="The AI advisor" signedIn={!!user} returnTo="/advisor" />
+          </>
         )}
       </div>
-      {!access?.advisor && <Pricing id="plans" heading="Unlock the AI advisor" />}
+      {!access?.advisor && <Pricing id="plans" heading="Unlock the AI advisor and Snap a car" />}
     </>
   );
 }

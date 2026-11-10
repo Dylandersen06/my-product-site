@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import AffordCheck from "@/components/AffordCheck";
 import BackLink from "@/components/BackLink";
 import CarPhoto from "@/components/CarPhoto";
 import CostToOwnCard from "@/components/CostToOwnCard";
@@ -11,10 +12,10 @@ import SpecStrip from "@/components/SpecStrip";
 import TrimList from "@/components/TrimList";
 import { BODY_LABELS, CARS, FUEL_LABELS } from "@/lib/cars";
 import type { RawParams } from "@/lib/loosen";
-import { costToOwn } from "@/lib/ownership";
+import { DOC_FEE, SALES_TAX, YEARS, costToOwn } from "@/lib/ownership";
 import { parsePreferences } from "@/lib/params";
 import { photoFor } from "@/lib/photos";
-import { CONDITIONS, type Condition } from "@/lib/pricing";
+import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 
 const findCar = (id: string) => CARS.find((car) => car.id === id);
 
@@ -68,6 +69,17 @@ export default async function CarPage({
             <CostToOwnCard match={match} milesPerYear={milesPerYear} open />
             <TrimList match={match} conditions={[condition]} open />
           </div>
+          <AffordCheck
+            carName={name}
+            trimName={trim.name}
+            conditionLabel={CONDITION_LABELS[condition]}
+            price={trim.prices[condition]}
+            runningMonthly={
+              (match.ownership.fuel + match.ownership.insurance + match.ownership.maintenance) / (YEARS * 12)
+            }
+            salesTax={SALES_TAX}
+            docFee={DOC_FEE}
+          />
           <p className="estimate-note">
             <strong>Used and certified pre-owned prices and all cost figures are estimates</strong>, not live listings or
             quotes. Check local listings and confirm details with a dealer.

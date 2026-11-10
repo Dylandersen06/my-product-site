@@ -15,7 +15,7 @@ export const OFFERS = {
     period: "one time",
     cents: 150,
     blurb: "Try the AI advisor for a day. No subscription.",
-    perks: ["Unlimited AI advisor chats for 24 hours", "Recommendations with trims, prices and reasons", "Searches stay free"],
+    perks: ["Unlimited AI advisor chats for 24 hours", "Snap a car: identify any car from a photo", "Searches stay free"],
   },
   monthly: {
     name: "Monthly",
@@ -23,7 +23,7 @@ export const OFFERS = {
     period: "per month",
     cents: 499,
     blurb: "Best value while you shop around. Cancel anytime.",
-    perks: ["Unlimited AI advisor chats", "Recommendations with trims, prices and reasons", "Cancel anytime from your account"],
+    perks: ["Unlimited AI advisor chats", "Snap a car: identify any car from a photo", "Cancel anytime from your account"],
   },
 } as const;
 

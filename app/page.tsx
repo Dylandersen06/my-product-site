@@ -147,9 +147,14 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
               the right trim for each, with a match score, the reasons behind it, and how much you could save versus
               buying new.
             </p>
-            <Link href="/advisor" className="button button-signal button-lg">
-              Get matched by AI
-            </Link>
+            <div className="hero-actions">
+              <Link href="/advisor" className="button button-signal button-lg">
+                Get matched by AI
+              </Link>
+              <Link href="/snap" className="button button-outline button-lg">
+                Snap a car
+              </Link>
+            </div>
             <p className="hero-promise">No sponsored rankings. Your needs decide the order.</p>
             <dl className="hero-stats">
               <div>

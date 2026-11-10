@@ -3054,3 +3054,159 @@ details[open] > .cost-head::after,
   color: var(--warn);
   font-size: var(--fs-sm);
 }
+
+/* Homepage hero buttons */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Snap a car */
+.snap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+}
+.snap-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 24px;
+  border: 2px dashed var(--border-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  text-align: center;
+}
+.snap-preview {
+  max-width: 100%;
+  max-height: 340px;
+  border-radius: var(--radius-sm);
+  object-fit: contain;
+}
+.snap-result {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.snap-result h2 {
+  font-size: var(--fs-lg);
+  letter-spacing: -0.02em;
+}
+.snap-result h3 {
+  margin-top: 8px;
+  font-size: var(--fs-md);
+}
+.snap-similar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.snap-tile {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+}
+.snap-tile:hover {
+  border-color: var(--accent);
+}
+.snap-tile img,
+.snap-tile-placeholder {
+  width: 120px;
+  height: 80px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background: var(--surface-2);
+}
+.snap-tile-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  font-size: var(--fs-sm);
+}
+.snap-tile-body strong {
+  font-size: var(--fs-md);
+}
+.snap-tile-cta {
+  margin-top: 4px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Can I afford it? */
+.afford {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+.afford h2 {
+  font-size: var(--fs-lg);
+  letter-spacing: -0.02em;
+}
+.afford-breakdown {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 8px;
+  margin: 0;
+}
+.afford-breakdown div {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+.afford-breakdown dt {
+  color: var(--muted);
+  font-size: var(--fs-xs);
+}
+.afford-breakdown dd {
+  margin: 2px 0 0;
+  font-weight: 700;
+}
+.afford-breakdown .afford-total {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.afford-verdict {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  border-left: 4px solid var(--tone, var(--border-strong));
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+.afford-verdict p {
+  margin: 0;
+}
+.afford-good {
+  --tone: var(--good);
+}
+.afford-fair {
+  --tone: var(--warn);
+}
+.afford-warn {
+  --tone: #c0362c;
+}
+@media (max-width: 520px) {
+  .snap-tile {
+    grid-template-columns: 96px minmax(0, 1fr);
+  }
+  .snap-tile img,
+  .snap-tile-placeholder {
+    width: 96px;
+    height: 68px;
+  }
+}

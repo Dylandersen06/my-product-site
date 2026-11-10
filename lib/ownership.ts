@@ -9,7 +9,7 @@ export const DEFAULT_MILES_PER_YEAR = 12_000;
 export const MIN_MILES_PER_YEAR = 1_000;
 export const MAX_MILES_PER_YEAR = 50_000;
 
-const YEARS = 5;
+export const YEARS = 5;
 
 /** Fuel and electricity, in dollars. */
 const REGULAR_GAS_PER_GALLON = 3.3;
@@ -41,8 +41,8 @@ const EV_FACTOR = 0.6;
 const AGE_FACTOR: Record<Condition, number> = { new: 1, cpo: 1.1, used: 1.25 };
 
 /** Purchase and registration fees. */
-const SALES_TAX = 0.06;
-const DOC_FEE = 400;
+export const SALES_TAX = 0.06;
+export const DOC_FEE = 400;
 const NEW_CAR_DESTINATION_FEE = 1300;
 const REGISTRATION_PER_YEAR = 150;
 
