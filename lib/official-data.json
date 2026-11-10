@@ -7384,6 +7384,1764 @@
     ]
    }
   },
+  "dodge-hornet": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Hornet AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 47955
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V510000",
+      "date": "06/08/2026",
+      "component": "Seat Belts:Front:Retractor",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2023-2025 Dodge Hornet and 2023-2026 Alfa Romeo Tonale vehicles. The rear outboard seat belts may become twisted and fail to retract properly."
+     },
+     {
+      "campaign": "25V246000",
+      "date": "15/04/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2023-2025 Alfa Romeo Tonale and Dodge Hornet vehicles. The display module may not show the rearview camera image. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, "
+     },
+     {
+      "campaign": "24V752000",
+      "date": "09/10/2024",
+      "component": "Service Brakes, Hydraulic:Pedals And Linkages",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2025 Dodge Hornet and Alfa Romeo Tonale vehicles. The brake pedal may collapse and cause a loss of brake function."
+     }
+    ]
+   }
+  },
+  "dodge-durango": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Durango AWD",
+      "engine": "3.6L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 20
+      },
+      "epaId": 48287
+     },
+     {
+      "name": "Durango AWD",
+      "engine": "5.7L 8-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Midgrade",
+      "mpg": {
+       "city": 14,
+       "highway": 22,
+       "combined": 17
+      },
+      "epaId": 48288
+     },
+     {
+      "name": "Durango RWD",
+      "engine": "3.6L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 25,
+       "combined": 20
+      },
+      "epaId": 48279
+     },
+     {
+      "name": "Durango RWD",
+      "engine": "5.7L 8-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Midgrade",
+      "mpg": {
+       "city": 14,
+       "highway": 22,
+       "combined": 17
+      },
+      "epaId": 48280
+     },
+     {
+      "name": "Durango SRT AWD",
+      "engine": "6.2L 8-cyl supercharged",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 12,
+       "highway": 17,
+       "combined": 13
+      },
+      "epaId": 48289
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Dodge Durango SUV AWD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 20155
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "dodge-charger-daytona": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Charger Daytona R/T AWD 245/55ZR18",
+      "engine": "250 and 250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49072,
+      "mpge": 87,
+      "rangeMi": 274
+     },
+     {
+      "name": "Charger Daytona R/T AWD 255/45R20",
+      "engine": "250 and 250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48994,
+      "mpge": 98,
+      "rangeMi": 308
+     },
+     {
+      "name": "Charger Daytona R/T AWD 275/40R20",
+      "engine": "250 and 250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49073,
+      "mpge": 85,
+      "rangeMi": 268
+     },
+     {
+      "name": "Charger Daytona R/T AWD 305/35ZR20",
+      "engine": "250 and 250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49074,
+      "mpge": 88,
+      "rangeMi": 279
+     },
+     {
+      "name": "Charger Daytona Scat Pack AWD 305/35ZR20",
+      "engine": "250 and 250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49075,
+      "mpge": 88,
+      "rangeMi": 279
+     },
+     {
+      "name": "Charger Daytona Scat Pack AWD 325/35ZR20 Rear",
+      "engine": "250 and 250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49076,
+      "mpge": 70,
+      "rangeMi": 216
+     },
+     {
+      "name": "Charger Daytona Scat Pack AWD 325/35ZR20 Rear A/S",
+      "engine": "250 and 250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48995,
+      "mpge": 78,
+      "rangeMi": 241
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mini-cooper": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Cooper Convertible",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 27,
+       "highway": 37,
+       "combined": 30
+      },
+      "epaId": 48818
+     },
+     {
+      "name": "Cooper Hardtop 2 door",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 28,
+       "highway": 39,
+       "combined": 32
+      },
+      "epaId": 47972
+     },
+     {
+      "name": "Cooper Hardtop 4 door",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 28,
+       "highway": 39,
+       "combined": 32
+      },
+      "epaId": 48849
+     },
+     {
+      "name": "Cooper S Convertible",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 36,
+       "combined": 30
+      },
+      "epaId": 48819
+     },
+     {
+      "name": "Cooper S Hardtop 2 door",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 28,
+       "highway": 39,
+       "combined": 32
+      },
+      "epaId": 47777
+     },
+     {
+      "name": "Cooper S Hardtop 4 door",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 28,
+       "highway": 39,
+       "combined": 32
+      },
+      "epaId": 47995
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "25V616000",
+      "date": "17/09/2025",
+      "component": "Seat Belts:Front:Retractor",
+      "summary": "BMW of North America, LLC is recalling certain 2025-2026 X1 and X2, MINI Cooper Convertible, MINI Cooper, Mini Countryman S ALL4, and 2025 MINI Countryman SE ALL4 vehicles. The torsion bar in both front seat belt retractors may have been damaged during production."
+     },
+     {
+      "campaign": "24V697000",
+      "date": "18/09/2024",
+      "component": "Electronic Stability Control (Esc):Control Module",
+      "summary": "BMW of North America (BMW) is recalling certain 2023-2024 X1, 2024-2025 X5, 2025 X6, 2023-2025 X7, 740i, 760i, 2024 XM, 530i, 540i, i7, 750e, X2, 2024-2025 i5, 2024 Rolls Royce Spectre, 2025 MINI Countryman S ALL4, JCW Countryman ALL4, and 2025 MINI Hardtop 2 Door (Cooper, Cooper"
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "mini-countryman": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Countryman S All4",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 32,
+       "combined": 27
+      },
+      "epaId": 47799
+     }
+    ]
+   },
+   "safety": {
+    "year": 2024,
+    "description": "2024 Mini Countryman 5 HB AWD",
+    "overall": "Not Rated",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "Not Rated",
+    "vehicleId": 19243
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "24V340000",
+      "date": "15/05/2024",
+      "component": "Air Bags:Side/Window:Thorax",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 MINI Countryman S ALL4 and JCW Countryman ALL4 vehicles. The armrest support bracket on the rear side door panel may be improperly secured, allowing the armrest to detach during an air bag deployment."
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "fiat-500e": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "500e",
+      "engine": "87 kW DCPM",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48703,
+      "mpge": 116,
+      "rangeMi": 149
+     },
+     {
+      "name": "500e All Season",
+      "engine": "87 kW DCPM",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48704,
+      "mpge": 110,
+      "rangeMi": 141
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V715000",
+      "date": "21/10/2025",
+      "component": "Exterior Lighting:Headlights",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2025 Fiat 500e Battery Electric (BEV) vehicles. The headlight horizontal aim adjustment is not covered as intended, which can result in improperly adjusted headlights. As such, these vehicles fail to comply with the requirements of"
+     }
+    ]
+   }
+  },
+  "polestar-2": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "2 Dual Motor (19 Inch Wheels)",
+      "engine": "200 and 215 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48402,
+      "mpge": 101,
+      "rangeMi": 278
+     },
+     {
+      "name": "2 Dual Motor (20 Inch Wheels)",
+      "engine": "190 and 215 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48403,
+      "mpge": 97,
+      "rangeMi": 268
+     },
+     {
+      "name": "2 Dual Motor Performance Pack",
+      "engine": "190 and 215 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48404,
+      "mpge": 91,
+      "rangeMi": 254
+     },
+     {
+      "name": "2 Single Motor (19 Inch Wheels)",
+      "engine": "185 and 220 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48405,
+      "mpge": 114,
+      "rangeMi": 314
+     },
+     {
+      "name": "2 Single Motor (20 Inch Wheels)",
+      "engine": "185 and 220 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48406,
+      "mpge": 109,
+      "rangeMi": 300
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "polestar-4": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "4 Long Range Dual Motor",
+      "engine": "200 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48412,
+      "mpge": 83,
+      "rangeMi": 272
+     },
+     {
+      "name": "4 Long Range Single Motor",
+      "engine": "200 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48407,
+      "mpge": 90,
+      "rangeMi": 300
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "polestar-3": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "3 Long Range Dual Motor (20 Inch Wheels)",
+      "engine": "173 and 180 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48408,
+      "mpge": 87,
+      "rangeMi": 310
+     },
+     {
+      "name": "3 Long Range Dual Motor (21 Inch Wheels)",
+      "engine": "127 and 180 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48409,
+      "mpge": 88,
+      "rangeMi": 315
+     },
+     {
+      "name": "3 Long Range Dual Motor (22 Inch Wheels)",
+      "engine": "173 and 200 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48410,
+      "mpge": 80,
+      "rangeMi": 287
+     },
+     {
+      "name": "3 Long Range Dual Motor Performance Pack",
+      "engine": "127 and 200 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48411,
+      "mpge": 77,
+      "rangeMi": 279
+     },
+     {
+      "name": "3 Long Range Single Motor (20 Inch Wheels)",
+      "engine": "220 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48724,
+      "mpge": 94,
+      "rangeMi": 342
+     },
+     {
+      "name": "3 Long Range Single Motor (21 Inch Wheels)",
+      "engine": "220 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48725,
+      "mpge": 95,
+      "rangeMi": 350
+     },
+     {
+      "name": "3 Long Range Single Motor (22 Inch Wheels)",
+      "engine": "220 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48726,
+      "mpge": 91,
+      "rangeMi": 333
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "rivian-r1t": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "R1T All-Terrain Dual Large (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48752,
+      "mpge": 76,
+      "rangeMi": 289
+     },
+     {
+      "name": "R1T All-Terrain Dual Large Plus (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48416,
+      "mpge": 72,
+      "rangeMi": 292
+     },
+     {
+      "name": "R1T All-Terrain Dual Max (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48417,
+      "mpge": 78,
+      "rangeMi": 370
+     },
+     {
+      "name": "R1T All-Terrain Performance Dual Large (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48753,
+      "mpge": 76,
+      "rangeMi": 289
+     },
+     {
+      "name": "R1T All-Terrain Performance Dual Large Plus (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48418,
+      "mpge": 72,
+      "rangeMi": 292
+     },
+     {
+      "name": "R1T All-Terrain Performance Dual Max (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48419,
+      "mpge": 78,
+      "rangeMi": 370
+     },
+     {
+      "name": "R1T All-Terrain Tri Max (20in)",
+      "engine": "201, 201 and 233 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48754,
+      "mpge": 68,
+      "rangeMi": 329
+     },
+     {
+      "name": "R1T Dual Large (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48755,
+      "mpge": 79,
+      "rangeMi": 300
+     },
+     {
+      "name": "R1T Dual Large (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48756,
+      "mpge": 85,
+      "rangeMi": 329
+     },
+     {
+      "name": "R1T Dual Large Plus (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48757,
+      "mpge": 78,
+      "rangeMi": 317
+     },
+     {
+      "name": "R1T Dual Large Plus (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48420,
+      "mpge": 82,
+      "rangeMi": 330
+     },
+     {
+      "name": "R1T Dual Max (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48421,
+      "mpge": 80,
+      "rangeMi": 380
+     },
+     {
+      "name": "R1T Dual Max (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48422,
+      "mpge": 87,
+      "rangeMi": 420
+     },
+     {
+      "name": "R1T Dual Standard (20in)",
+      "engine": "208 and 208 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48423,
+      "mpge": 79,
+      "rangeMi": 258
+     },
+     {
+      "name": "R1T Dual Standard (22in)",
+      "engine": "208 and 208 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48424,
+      "mpge": 85,
+      "rangeMi": 270
+     },
+     {
+      "name": "R1T Performance Dual Large (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48758,
+      "mpge": 79,
+      "rangeMi": 300
+     },
+     {
+      "name": "R1T Performance Dual Large (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48759,
+      "mpge": 85,
+      "rangeMi": 329
+     },
+     {
+      "name": "R1T Performance Dual Large Plus (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48760,
+      "mpge": 78,
+      "rangeMi": 317
+     },
+     {
+      "name": "R1T Performance Dual Large Plus (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48425,
+      "mpge": 82,
+      "rangeMi": 330
+     },
+     {
+      "name": "R1T Performance Dual Max (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48426,
+      "mpge": 80,
+      "rangeMi": 380
+     },
+     {
+      "name": "R1T Performance Dual Max (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48427,
+      "mpge": 87,
+      "rangeMi": 420
+     },
+     {
+      "name": "R1T Tri Max (22in)",
+      "engine": "201, 201 and 233 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48761,
+      "mpge": 76,
+      "rangeMi": 371
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 8,
+    "items": [
+     {
+      "campaign": "26V597000",
+      "date": "16/09/2026",
+      "component": "Back Over Prevention:Software",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2022-2027 R1S, 2022-2026 R1T, and 2027 R2 vehicles. The rearview camera image may be obstructed by a notification when in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Sta"
+     },
+     {
+      "campaign": "26V508000",
+      "date": "06/08/2026",
+      "component": "Exterior Lighting:Turn Signal",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2025-2026 R1S and R1T vehicles. One or both front turn signals may fail to illuminate and flash. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, "
+     },
+     {
+      "campaign": "26V009000",
+      "date": "16/01/2026",
+      "component": "Seat Belts:Critical Fasteners",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2022-2025 R1T and 2022-2026 R1S vehicles. The bolts that secure the second-row driver and passenger side seat belt retractor assemblies may be improperly tightened."
+     },
+     {
+      "campaign": "26V003000",
+      "date": "05/01/2026",
+      "component": "Suspension:Critical Fasteners",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2022-2025 R1S and R1T vehicles that previously had service performed. The toe link may have been reassembled incorrectly during service procedures performed before March 10, 2025."
+     },
+     {
+      "campaign": "25V585000",
+      "date": "08/09/2025",
+      "component": "Electrical System:Adas:Autonomous/Self Driving:Software",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2025 R1S and R1T vehicles operating a software version prior to 2025.18.30. The Hands-Free Highway Assist (HWA) software may fail to correctly identify a lead vehicle."
+     }
+    ]
+   }
+  },
+  "rivian-r1s": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "R1S All-Terrain Dual Large (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48742,
+      "mpge": 76,
+      "rangeMi": 289
+     },
+     {
+      "name": "R1S All-Terrain Dual Large Plus (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48428,
+      "mpge": 72,
+      "rangeMi": 292
+     },
+     {
+      "name": "R1S All-Terrain Dual Max (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48429,
+      "mpge": 78,
+      "rangeMi": 370
+     },
+     {
+      "name": "R1S All-Terrain Performance  Dual Max (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48430,
+      "mpge": 78,
+      "rangeMi": 370
+     },
+     {
+      "name": "R1S All-Terrain Performance Dual Large (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48743,
+      "mpge": 76,
+      "rangeMi": 289
+     },
+     {
+      "name": "R1S All-Terrain Performance Dual Large Plus (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48431,
+      "mpge": 72,
+      "rangeMi": 292
+     },
+     {
+      "name": "R1S All-Terrain Tri Max (20in)",
+      "engine": "201 and 233 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48744,
+      "mpge": 68,
+      "rangeMi": 329
+     },
+     {
+      "name": "R1S Dual Large (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48745,
+      "mpge": 79,
+      "rangeMi": 300
+     },
+     {
+      "name": "R1S Dual Large (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48746,
+      "mpge": 85,
+      "rangeMi": 329
+     },
+     {
+      "name": "R1S Dual Large Plus (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48747,
+      "mpge": 78,
+      "rangeMi": 317
+     },
+     {
+      "name": "R1S Dual Large Plus (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48432,
+      "mpge": 82,
+      "rangeMi": 330
+     },
+     {
+      "name": "R1S Dual Max (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48433,
+      "mpge": 80,
+      "rangeMi": 380
+     },
+     {
+      "name": "R1S Dual Max (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48434,
+      "mpge": 84,
+      "rangeMi": 410
+     },
+     {
+      "name": "R1S Dual Standard (20in)",
+      "engine": "208 and 208 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48435,
+      "mpge": 79,
+      "rangeMi": 258
+     },
+     {
+      "name": "R1S Dual Standard (22in)",
+      "engine": "208 and 208 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48436,
+      "mpge": 85,
+      "rangeMi": 270
+     },
+     {
+      "name": "R1S Performance Dual Large (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48748,
+      "mpge": 79,
+      "rangeMi": 300
+     },
+     {
+      "name": "R1S Performance Dual Large (22in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48749,
+      "mpge": 85,
+      "rangeMi": 329
+     },
+     {
+      "name": "R1S Performance Dual Large Plus (20in)",
+      "engine": "264 and 264 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48750,
+      "mpge": 78,
+      "rangeMi": 317
+     },
+     {
+      "name": "R1S Performance Dual Large Plus (22in)",
+      "engine": "208 and 208 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48437,
+      "mpge": 82,
+      "rangeMi": 330
+     },
+     {
+      "name": "R1S Performance Dual Max (20in)",
+      "engine": "208 and 208 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48438,
+      "mpge": 80,
+      "rangeMi": 380
+     },
+     {
+      "name": "R1S Performance Dual Max (22in)",
+      "engine": "208 and 208 kW ACPM",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48439,
+      "mpge": 84,
+      "rangeMi": 410
+     },
+     {
+      "name": "R1S Tri Max (22in)",
+      "engine": "201, 201 and 233 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48751,
+      "mpge": 76,
+      "rangeMi": 371
+     }
+    ]
+   },
+   "safety": {
+    "year": 2024,
+    "description": "2024 Rivian R1S SUV AWD",
+    "overall": "Not Rated",
+    "frontal": "Not Rated",
+    "side": "Not Rated",
+    "rollover": "4",
+    "vehicleId": 19959
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 11,
+    "items": [
+     {
+      "campaign": "26V597000",
+      "date": "16/09/2026",
+      "component": "Back Over Prevention:Software",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2022-2027 R1S, 2022-2026 R1T, and 2027 R2 vehicles. The rearview camera image may be obstructed by a notification when in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Sta"
+     },
+     {
+      "campaign": "26V508000",
+      "date": "06/08/2026",
+      "component": "Exterior Lighting:Turn Signal",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2025-2026 R1S and R1T vehicles. One or both front turn signals may fail to illuminate and flash. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 108, \"Lamps, "
+     },
+     {
+      "campaign": "26V009000",
+      "date": "16/01/2026",
+      "component": "Seat Belts:Critical Fasteners",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2022-2025 R1T and 2022-2026 R1S vehicles. The bolts that secure the second-row driver and passenger side seat belt retractor assemblies may be improperly tightened."
+     },
+     {
+      "campaign": "26V003000",
+      "date": "05/01/2026",
+      "component": "Suspension:Critical Fasteners",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2022-2025 R1S and R1T vehicles that previously had service performed. The toe link may have been reassembled incorrectly during service procedures performed before March 10, 2025."
+     },
+     {
+      "campaign": "25V585000",
+      "date": "08/09/2025",
+      "component": "Electrical System:Adas:Autonomous/Self Driving:Software",
+      "summary": "Rivian Automotive, LLC (Rivian) is recalling certain 2025 R1S and R1T vehicles operating a software version prior to 2025.18.30. The Hands-Free Highway Assist (HWA) software may fail to correctly identify a lead vehicle."
+     }
+    ]
+   }
+  },
+  "lucid-air": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Air G Touring XR AWD with 19 inch wheels",
+      "engine": "178 and 433 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48371,
+      "mpge": 128,
+      "rangeMi": 512
+     },
+     {
+      "name": "Air G Touring XR AWD with 20 inch wheels",
+      "engine": "178 and 433 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48372,
+      "mpge": 120,
+      "rangeMi": 480
+     },
+     {
+      "name": "Air G Touring XR AWD with 21 inch wheels",
+      "engine": "178 and 433 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48373,
+      "mpge": 112,
+      "rangeMi": 446
+     },
+     {
+      "name": "Air Pure RWD with 19 inch wheels",
+      "engine": "330 kW ACPM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48374,
+      "mpge": 146,
+      "rangeMi": 420
+     },
+     {
+      "name": "Air Pure RWD with 20 inch wheels",
+      "engine": "330 kW ACPM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48375,
+      "mpge": 129,
+      "rangeMi": 372
+     },
+     {
+      "name": "Air Sapphire AWD",
+      "engine": "310, 310 and 310 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48376,
+      "mpge": 105,
+      "rangeMi": 427
+     },
+     {
+      "name": "Air Touring AWD with 19 inch wheels",
+      "engine": "178 and 433 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48377,
+      "mpge": 132,
+      "rangeMi": 406
+     },
+     {
+      "name": "Air Touring AWD with 20 inch wheels",
+      "engine": "178 and 433 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48378,
+      "mpge": 121,
+      "rangeMi": 377
+     },
+     {
+      "name": "Air Touring AWD with 21 inch wheels",
+      "engine": "178 and 433 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48379,
+      "mpge": 116,
+      "rangeMi": 361
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Lucid Air 4 DR AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20714
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 7,
+    "items": [
+     {
+      "campaign": "26V540000",
+      "date": "21/08/2026",
+      "component": "Electrical System:Software",
+      "summary": "Lucid USA, Inc. (Lucid) is recalling certain 2022-2026 Air vehicles. The exterior lighting circuit may have insufficient overcurrent protection, allowing the circuit to overheat."
+     },
+     {
+      "campaign": "26V309000",
+      "date": "13/05/2026",
+      "component": "Electrical System:Propulsion System:Inverter",
+      "summary": "Lucid USA, Inc. (Lucid) is recalling certain 2024-2025 Air vehicles equipped with rear-wheel drive. The Gen 4 inverter may experience internal friction and become damaged, causing a loss of drive power."
+     },
+     {
+      "campaign": "26V193000",
+      "date": "27/03/2026",
+      "component": "Power Train:Driveline:Driveshaft",
+      "summary": "Lucid USA, Inc. (Lucid) is recalling certain 2024-2026 Air vehicles equipped with Pure Rear-Wheel Drive. Improperly secured bolts may allow the half-shaft to disconnect from the drive unit."
+     },
+     {
+      "campaign": "26V017000",
+      "date": "17/01/2026",
+      "component": "Back Over Prevention:Software",
+      "summary": "Lucid USA, Inc. (Lucid) is recalling certain 2022-2026 Air vehicles equipped with an AD02 package and operating a software version from 2.8.0 through 2.8.16. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply wi"
+     },
+     {
+      "campaign": "25V670000",
+      "date": "08/10/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Lucid USA, Inc. (Lucid) is recalling certain 2022-2025 Air vehicles operating a software version prior to 2.8.0. The lower console display may fail to show a rearview camera image or may show a delayed, inaccurate image of what is behind the vehicle. As such, these vehicles fail "
+     }
+    ]
+   }
+  },
+  "lucid-gravity": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Gravity GT w/20F21R wheels (2R)",
+      "engine": "170 and 448 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49110,
+      "mpge": 108,
+      "rangeMi": 450
+     },
+     {
+      "name": "Gravity GT w/20F21R wheels (3R)",
+      "engine": "170 and 448 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49111,
+      "mpge": 104,
+      "rangeMi": 437
+     },
+     {
+      "name": "Gravity GT w/21F22R wheels (2R)",
+      "engine": "170 and 448 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49112,
+      "mpge": 98,
+      "rangeMi": 407
+     },
+     {
+      "name": "Gravity GT w/21F22R wheels (3R)",
+      "engine": "170 and 448 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49113,
+      "mpge": 92,
+      "rangeMi": 386
+     },
+     {
+      "name": "Gravity GT w/22F23R wheels (2R)",
+      "engine": "170 and 448 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49114,
+      "mpge": 98,
+      "rangeMi": 407
+     },
+     {
+      "name": "Gravity GT w/22F23R wheels (3R)",
+      "engine": "170 and 448 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49115,
+      "mpge": 92,
+      "rangeMi": 386
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V192000",
+      "date": "27/03/2026",
+      "component": "Seats",
+      "summary": "Lucid USA, Inc. (Lucid) is recalling certain 2025-2026 Gravity vehicles. The lap belt anchor brackets on the second row seats may have insufficient welds, which can cause bracket failure. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety"
+     },
+     {
+      "campaign": "26V018000",
+      "date": "17/01/2026",
+      "component": "Back Over Prevention:Software",
+      "summary": "Lucid USA, Inc. (Lucid) is recalling certain 2025-2026 Gravity vehicles operating a software version prior to 3.3.20. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Veh"
+     }
+    ]
+   }
+  },
+  "infiniti-qx50": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "QX50",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 29,
+       "combined": 26
+      },
+      "epaId": 48520
+     },
+     {
+      "name": "QX50 AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 28,
+       "combined": 25
+      },
+      "epaId": 48529
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Infiniti QX50 SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20762
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "infiniti-qx60": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "QX60 AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 27,
+       "combined": 24
+      },
+      "epaId": 48290
+     },
+     {
+      "name": "QX60 FWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 28,
+       "combined": 24
+      },
+      "epaId": 48284
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Infiniti QX60 SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20752
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V173000",
+      "date": "19/03/2025",
+      "component": "Service Brakes, Hydraulic:Foundation Components:Disc:Caliper",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Murano, Pathfinder, and INFINITI QX60 vehicles. One or both front brake caliper assemblies may have reduced strength and could break. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicl"
+     }
+    ]
+   }
+  },
+  "infiniti-qx80": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "QX80 2WD",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 20,
+       "combined": 18
+      },
+      "epaId": 48285
+     },
+     {
+      "name": "QX80 4WD",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 19,
+       "combined": 17
+      },
+      "epaId": 48291
+     }
+    ]
+   },
+   "safety": {
+    "year": 2024,
+    "description": "2024 Infiniti QX80 SUV 4WD",
+    "overall": "4",
+    "frontal": "3",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 19594
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V455000",
+      "date": "16/07/2026",
+      "component": "Equipment:Other:Labels",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2020-2026 Nissan Armada, 2011-2013 Infiniti QX56, and 2014-2027 QX80 vehicles equipped with 22\" wheels. The Gross Axle Weight Rating (GAWR) listed on the certification label is incorrect, which can allow the vehicle to be o"
+     },
+     {
+      "campaign": "25V821000",
+      "date": "27/11/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Murano, 2025-2026 Armada, and Infiniti QX80 vehicles. A software error may occur in the In-Vehicle Infotainment (IVI) system at vehicle startup, resulting in the rearview camera image not displaying when the vehicle is"
+     },
+     {
+      "campaign": "24V748000",
+      "date": "03/10/2024",
+      "component": "Back Over Prevention",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2024-2025 Rogue and 2025 INFINITI QX80 vehicles. A software error may cause the rearview camera to display a blank screen when the vehicle is in reverse. As such, these vehicles fail to comply with the requirements of Feder"
+     },
+     {
+      "campaign": "24V747000",
+      "date": "03/10/2024",
+      "component": "Back Over Prevention:Software",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 INFINITI QX80 vehicles equipped with an Around View Monitor (AVM). A software error may cause the rearview camera to freeze and display a blank screen when the vehicle is in reverse. As such, these vehicles fail to com"
+     }
+    ]
+   }
+  },
+  "alfa-romeo-tonale": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Tonale AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 48915
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V510000",
+      "date": "06/08/2026",
+      "component": "Seat Belts:Front:Retractor",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2023-2025 Dodge Hornet and 2023-2026 Alfa Romeo Tonale vehicles. The rear outboard seat belts may become twisted and fail to retract properly."
+     },
+     {
+      "campaign": "25V246000",
+      "date": "15/04/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2023-2025 Alfa Romeo Tonale and Dodge Hornet vehicles. The display module may not show the rearview camera image. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 111, "
+     },
+     {
+      "campaign": "24V752000",
+      "date": "09/10/2024",
+      "component": "Service Brakes, Hydraulic:Pedals And Linkages",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2025 Dodge Hornet and Alfa Romeo Tonale vehicles. The brake pedal may collapse and cause a loss of brake function."
+     }
+    ]
+   }
+  },
+  "alfa-romeo-giulia": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Giulia",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 33,
+       "combined": 27
+      },
+      "epaId": 48003
+     },
+     {
+      "name": "Giulia AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 48004
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V667000",
+      "date": "07/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2025 Alfa Romeo Giulia and Alfa Romeo Stelvio vehicles. The printed circuit board and software for the rearview camera may contain defects that cause the rearview camera image not to display properly. As such, these vehicles fail t"
+     }
+    ]
+   }
+  },
+  "alfa-romeo-stelvio": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Stelvio AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 28,
+       "combined": 24
+      },
+      "epaId": 48071
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V667000",
+      "date": "07/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2020-2025 Alfa Romeo Giulia and Alfa Romeo Stelvio vehicles. The printed circuit board and software for the rearview camera may contain defects that cause the rearview camera image not to display properly. As such, these vehicles fail t"
+     },
+     {
+      "campaign": "24V510000",
+      "date": "03/07/2024",
+      "component": "Air Bags:Frontal",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2017-2024 Alfa Romeo Giulia, 2018-2025 Alfa Romeo Stelvio, 2019-2023 Fiat 500X, Jeep Renegade, and 2024 Fiat 500E vehicles. A seat belt buckle switch sensor may be improperly connected, preventing the front seat air bag from deploying a"
+     }
+    ]
+   }
+  },
+  "lotus-emira": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Emira",
+      "engine": "3.5L 6-cyl supercharged",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 49131
+     },
+     {
+      "name": "Emira",
+      "engine": "3.5L 6-cyl supercharged",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 16,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 49130
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
   "genesis-g70": {
    "epa": {
     "year": 2025,

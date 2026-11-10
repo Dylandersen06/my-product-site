@@ -299,6 +299,108 @@ const BRAND_PAINTS: Record<string, { paints: Paint[]; note?: string }> = {
       ["Fusion Red", "#8A1E24"],
     ],
   },
+  Dodge: {
+    paints: [
+      ["White Knuckle", "#EFEFEC"],
+      ["Pitch Black", "#121214"],
+      ["Destroyer Grey", "#5E6163"],
+      ["Silver Bullet", "#A8AAAC"],
+      ["Go Mango", "#E8731C"],
+      ["Redline Red", "#B5121B"],
+      ["Frostbite", "#1E3F8C"],
+      ["Sublime", "#7FC241"],
+    ],
+  },
+  Mini: {
+    paints: [
+      ["Nanuq White", "#F0EFEA"],
+      ["Midnight Black", "#141416"],
+      ["Melting Silver", "#A6A8AA"],
+      ["Chili Red", "#B5121B"],
+      ["Ocean Wave Green", "#4E7A6E"],
+      ["Sunny Side Yellow", "#E9C83A"],
+      ["Blazing Blue", "#1F4FA0"],
+      ["Legend Grey", "#5E6163"],
+    ],
+    note: "Most Minis can also have a contrast roof and mirror caps.",
+  },
+  Fiat: {
+    paints: [
+      ["Ice White", "#F0F0EE"],
+      ["Onyx Black", "#141416"],
+      ["Mineral Grey", "#6A6D70"],
+      ["Celestial Blue", "#5E8DB0"],
+      ["Rose Gold", "#C9A08D"],
+      ["(RED)", "#B5121B"],
+    ],
+  },
+  Polestar: {
+    paints: [
+      ["Snow", "#EEEEEA"],
+      ["Space", "#141416"],
+      ["Magnesium", "#8C8F90"],
+      ["Thunder", "#5A5D60"],
+      ["Midnight", "#1E2A3E"],
+      ["Jupiter", "#C7C2B6"],
+    ],
+  },
+  Rivian: {
+    paints: [
+      ["Glacier White", "#EFEFEC"],
+      ["Midnight", "#1C2130"],
+      ["El Cap Granite", "#5E6163"],
+      ["LA Silver", "#A6A8AA"],
+      ["Forest Green", "#2E4A3A"],
+      ["Rivian Blue", "#2F5E8C"],
+      ["Launch Green", "#5C6B4A"],
+      ["Red Canyon", "#8C2A22"],
+    ],
+  },
+  Lucid: {
+    paints: [
+      ["Eureka Gold", "#B59A6A"],
+      ["Infinite Black", "#121214"],
+      ["Quantum Grey", "#6A6D70"],
+      ["Stellar White", "#F0F0EE"],
+      ["Zenith Red", "#8C1E25"],
+      ["Cosmos Silver", "#A9ABAD"],
+    ],
+  },
+  Infiniti: {
+    paints: [
+      ["Radiant White", "#EEEDE8"],
+      ["Black Obsidian", "#131315"],
+      ["Moonbow Blue", "#22314E"],
+      ["Graphite Shadow", "#4E5054"],
+      ["Liquid Platinum", "#A9ABAD"],
+      ["Dynamic Sunstone Red", "#8C1A22"],
+      ["Mineral Black", "#1E1F22"],
+    ],
+  },
+  "Alfa Romeo": {
+    paints: [
+      ["Alfa White", "#EFEFEC"],
+      ["Vulcano Black", "#141416"],
+      ["Vesuvio Grey", "#5D6062"],
+      ["Silverstone Grey", "#A0A3A5"],
+      ["Alfa Rosso", "#B5121B"],
+      ["Misano Blue", "#1F3A7A"],
+      ["Montreal Green", "#2E4A3A"],
+    ],
+  },
+  Lotus: {
+    paints: [
+      ["Magma Red", "#B5121B"],
+      ["Hethel Yellow", "#F2C230"],
+      ["Seneca Blue", "#3A6EA5"],
+      ["Dark Verdant", "#2E4A3A"],
+      ["Shadow Grey", "#5A5D60"],
+      ["Nimbus Grey", "#A0A3A5"],
+      ["Osmium Silver", "#B5B7B9"],
+      ["Pure White", "#F0F0EE"],
+    ],
+    note: "Lotus offers more colors through its Exclusive program.",
+  },
   BMW: {
     paints: [
       ["Alpine White", "#F1F1EE"],

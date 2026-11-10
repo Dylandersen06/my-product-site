@@ -553,6 +553,96 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Advance", 66000, "3.5L V6", 290, "20 mpg", "AWD", "acrbhs", "Head-up display, 360-degree camera, ventilated seats"],
     ["Type S Advance", 76000, "3.0L turbo V6", 355, "19 mpg", "AWD", "acrbhs", "Air suspension, Brembo brakes"],
   ],
+  "dodge-hornet": [
+    ["GT", 31000, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbh", "268 hp turbo, AWD standard"],
+    ["GT Plus", 35000, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbhs", "Leather seats, Harman Kardon audio"],
+  ],
+  "dodge-durango": [
+    ["GT", 42000, "3.6L V6", 295, "20 mpg", "RWD or AWD", "acrbhs", "Three rows, 8.4-in touchscreen"],
+    ["R/T", 48000, "5.7L V8", 360, "17 mpg", "RWD or AWD", "acrbhs", "HEMI V8, 8,700 lb towing"],
+    ["SRT 392", 65000, "6.4L V8", 475, "13 mpg", "AWD", "acrbhs", "475 hp, Brembo brakes"],
+  ],
+  "dodge-charger-daytona": [
+    ["R/T", 59600, "Dual electric motors", 496, "308 mi range", "AWD", "acrbh", "496 hp, AWD, muscle-car styling"],
+    ["Scat Pack", 64000, "Dual electric motors", 670, "241 mi range", "AWD", "acrbhs", "670 hp, Fratzonic exhaust sound"],
+  ],
+  "mini-cooper": [
+    ["Cooper C", 29000, "1.5L turbo I3", 156, "32 mpg", "FWD", "crbh", "Round OLED display, go-kart handling"],
+    ["Cooper S", 33000, "2.0L turbo I4", 201, "32 mpg", "FWD", "crbhs", "201 hp, panoramic roof option"],
+    ["John Cooper Works", 40000, "2.0L turbo I4", 228, "30 mpg", "FWD", "crbhs", "228 hp, JCW sport seats"],
+  ],
+  "mini-countryman": [
+    ["S ALL4", 40000, "2.0L turbo I4", 241, "27 mpg", "AWD", "acrbhs", "Largest Mini, ALL4 AWD"],
+    ["John Cooper Works ALL4", 46000, "2.0L turbo I4", 312, "26 mpg", "AWD", "acrbhs", "312 hp, JCW styling"],
+  ],
+  "fiat-500e": [
+    ["500e", 32500, "Single electric motor", 117, "149 mi range", "FWD", "crb", "Tiny footprint, easy to park"],
+    ["Giorgio Armani Collection", 38000, "Single electric motor", 117, "149 mi range", "FWD", "crbhs", "Armani styling, glass roof"],
+  ],
+  "polestar-2": [
+    ["Long Range Single Motor", 51000, "Single electric motor", 299, "314 mi range", "RWD", "crbhs", "Google built-in, 11.2-in screen"],
+    ["Long Range Dual Motor", 57000, "Dual electric motors", 421, "278 mi range", "AWD", "acrbhs", "421 hp, AWD"],
+    ["Dual Motor Performance", 64000, "Dual electric motors", 476, "254 mi range", "AWD", "acrbhs", "Öhlins dampers, Brembo brakes"],
+  ],
+  "polestar-4": [
+    ["Long Range Single Motor", 56000, "Single electric motor", 272, "300 mi range", "RWD", "crbhs", "Camera rear-view mirror, glass roof"],
+    ["Long Range Dual Motor", 63000, "Dual electric motors", 544, "272 mi range", "AWD", "acrbhs", "544 hp, AWD"],
+  ],
+  "polestar-3": [
+    ["Long Range Single Motor", 70000, "Single electric motor", 299, "350 mi range", "RWD", "crbhs", "Air suspension, 14.5-in screen"],
+    ["Long Range Dual Motor", 74000, "Dual electric motors", 489, "315 mi range", "AWD", "acrbhs", "489 hp, AWD"],
+    ["Performance", 81000, "Dual electric motors", 517, "279 mi range", "AWD", "acrbhs", "517 hp, sport chassis"],
+  ],
+  "rivian-r1t": [
+    ["Dual Standard", 71000, "Dual electric motors", 533, "270 mi range", "AWD", "arbhs", "Gear tunnel, air suspension"],
+    ["Dual Max", 86000, "Dual electric motors", 665, "420 mi range", "AWD", "arbhs", "420-mi range, 11,000 lb towing"],
+    ["Tri Max", 99000, "Three electric motors", 850, "374 mi range", "AWD", "arbhs", "850 hp, 0-60 in 2.9 s"],
+  ],
+  "rivian-r1s": [
+    ["Dual Standard", 77000, "Dual electric motors", 533, "270 mi range", "AWD", "arbhs", "Three rows, air suspension"],
+    ["Dual Max", 92000, "Dual electric motors", 665, "410 mi range", "AWD", "arbhs", "410-mi range"],
+    ["Tri Max", 106000, "Three electric motors", 850, "369 mi range", "AWD", "arbhs", "850 hp, 0-60 in 2.9 s"],
+  ],
+  "lucid-air": [
+    ["Pure", 70000, "Single electric motor", 430, "420 mi range", "RWD", "crbhs", "Glass canopy roof, 34-in curved display"],
+    ["Touring", 79000, "Dual electric motors", 620, "406 mi range", "AWD", "acrbhs", "620 hp, AWD"],
+    ["Grand Touring", 111000, "Dual electric motors", 819, "512 mi range", "AWD", "acrbhs", "512-mi range, 819 hp"],
+  ],
+  "lucid-gravity": [
+    ["Grand Touring", 96000, "Dual electric motors", 828, "450 mi range", "AWD", "acrbhs", "Three rows, 450-mi range, 828 hp"],
+  ],
+  "infiniti-qx50": [
+    ["Luxe", 44000, "2.0L variable-compression turbo I4", 268, "26 mpg", "FWD or AWD", "acrbhs", "ProPILOT Assist, panoramic roof"],
+    ["Sport", 49000, "2.0L variable-compression turbo I4", 268, "25 mpg", "AWD", "acrbhs", "Sport styling, 20-in wheels"],
+  ],
+  "infiniti-qx60": [
+    ["Pure", 50500, "2.0L turbo I4", 268, "24 mpg", "FWD or AWD", "acrbh", "Three rows, 12.3-in touchscreen"],
+    ["Luxe", 56500, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbhs", "Panoramic roof, 360-degree camera"],
+    ["Autograph", 66000, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbhs", "Quilted leather, Bose audio"],
+  ],
+  "infiniti-qx80": [
+    ["Luxe", 85000, "3.5L twin-turbo V6", 450, "18 mpg", "RWD or 4WD", "acrbhs", "450 hp, three rows"],
+    ["Sensory", 101000, "3.5L twin-turbo V6", 450, "17 mpg", "4WD", "acrbhs", "Massage seats, Klipsch audio"],
+    ["Autograph", 112000, "3.5L twin-turbo V6", 450, "17 mpg", "4WD", "acrbhs", "Semi-aniline leather, 24-speaker audio"],
+  ],
+  "alfa-romeo-tonale": [
+    ["Sprint", 37000, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbh", "268 hp, AWD standard"],
+    ["Veloce", 43000, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbhs", "Adaptive dampers, Harman Kardon audio"],
+  ],
+  "alfa-romeo-giulia": [
+    ["Sprint", 45000, "2.0L turbo I4", 280, "27 mpg", "RWD or AWD", "acrbh", "280 hp, sharp handling"],
+    ["Ti", 48000, "2.0L turbo I4", 280, "26 mpg", "AWD", "acrbhs", "Leather, Harman Kardon option"],
+    ["Quadrifoglio", 80000, "2.9L twin-turbo V6", 505, "20 mpg", "RWD", "crbhs", "505 hp, carbon-fiber trim"],
+  ],
+  "alfa-romeo-stelvio": [
+    ["Sprint", 49000, "2.0L turbo I4", 280, "24 mpg", "AWD", "acrbh", "Sports-car handling in an SUV"],
+    ["Ti", 52000, "2.0L turbo I4", 280, "24 mpg", "AWD", "acrbhs", "Leather, panoramic roof"],
+    ["Quadrifoglio", 89000, "2.9L twin-turbo V6", 505, "19 mpg", "AWD", "acrbhs", "505 hp, 0-60 in 3.6 s"],
+  ],
+  "lotus-emira": [
+    ["Turbo", 99900, "2.0L turbo I4", 400, "21 mpg", "RWD", "crbh", "Mid-engine, 400 hp"],
+    ["V6", 105000, "3.5L supercharged V6", 400, "19 mpg", "RWD", "crbh", "Supercharged V6, manual available"],
+  ],
   "genesis-g70": [
     ["2.5T", 42000, "2.5L turbo I4", 300, "25 mpg", "RWD or AWD", "acrbhs", "14.5-in touchscreen, Highway Driving Assist"],
     ["2.5T Sport Prestige", 47000, "2.5L turbo I4", 300, "24 mpg", "RWD or AWD", "acrbhs", "Adaptive suspension, Lexicon audio"],

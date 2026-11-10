@@ -72,6 +72,7 @@ EPA_RULES = {
     "mercedes-benz-e-class": {"base": "E-Class", "exclude": r"Wagon|AMG"},
     # Gas S-Classes are mild hybrids in the EPA data; the V12 Maybach is a different car.
     "mercedes-benz-s-class": {"base": "S-Class", "atv": {"Hybrid", ""}, "exclude": r"Maybach|S580e"},
+    "dodge-charger-daytona": {"base": "Charger", "include": r"Daytona"},
     "audi-s-e-tron-gt": {"base": "e-tron GT", "include": r"^S e-tron GT"},
     "land-rover-defender-110": {"base": "Defender", "include": r"110"},
     "land-rover-range-rover-sport": {"base": "Range Rover", "include": r"Sport"},
