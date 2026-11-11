@@ -1027,9 +1027,9 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Premier", 46000, "2.0L turbo I4", 228, "23 mpg", "FWD or AWD", "acrbhs", "Ventilated seats, Bose audio"],
   ],
   "chevrolet-blazer-ev": [
-    ["LT", 45000, "Single electric motor", 220, "312 mi range", "FWD", "crbh", "17.7-in touchscreen, Super Cruise available"],
-    ["RS", 50000, "Dual electric motors", 288, "279 mi range", "AWD", "acrbhs", "Sport styling, ventilated seats"],
-    ["SS", 61000, "Dual electric motors", 615, "303 mi range", "AWD", "acrbhs", "WOW launch mode, 615 hp"],
+    ["LT", 45000, "Single electric motor", 220, "312 mi range", "FWD", "rbh", "17.7-in touchscreen, Super Cruise available"],
+    ["RS", 50000, "Dual electric motors", 288, "279 mi range", "AWD", "arbhs", "Sport styling, ventilated seats"],
+    ["SS", 61000, "Dual electric motors", 615, "303 mi range", "AWD", "arbhs", "WOW launch mode, 615 hp"],
   ],
   "chevrolet-traverse": [
     ["LS", 40000, "2.5L turbo I4", 328, "23 mpg", "FWD or AWD", "acrbh", "17.7-in touchscreen, three rows"],
@@ -1056,9 +1056,9 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["High Country", 76000, "6.6L turbo-diesel V8", 470, "Not EPA-rated", "4WD", "acrbhs", "Duramax diesel, 22,500-lb towing"],
   ],
   "chevrolet-silverado-ev": [
-    ["WT", 57000, "Dual electric motors", 510, "450 mi range", "AWD", "acrb", "Max Range battery, Multi-Flex midgate"],
-    ["LT", 75000, "Dual electric motors", 754, "408 mi range", "AWD", "acrbhs", "17-in touchscreen, Super Cruise"],
-    ["RST", 90000, "Dual electric motors", 754, "440 mi range", "AWD", "acrbhs", "Four-wheel steering, air suspension"],
+    ["WT", 57000, "Dual electric motors", 510, "450 mi range", "AWD", "arb", "Max Range battery, Multi-Flex midgate"],
+    ["LT", 75000, "Dual electric motors", 754, "408 mi range", "AWD", "arbhs", "17-in touchscreen, Super Cruise"],
+    ["RST", 90000, "Dual electric motors", 754, "440 mi range", "AWD", "arbhs", "Four-wheel steering, air suspension"],
   ],
   "chevrolet-corvette": [
     ["Stingray 1LT", 70000, "6.2L V8", 490, "19 mpg", "RWD", "cbh", "Mid-engine, removable roof panel"],
@@ -1123,17 +1123,17 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Denali", 77000, "6.6L turbo-diesel V8", 470, "Not EPA-rated", "RWD or 4WD", "acrbhs", "Duramax diesel, 22,500-lb towing"],
   ],
   "gmc-hummer-ev-pickup": [
-    ["2X", 97000, "Dual electric motors", 570, "311 mi range", "AWD", "acrbhs", "CrabWalk, removable roof panels"],
-    ["3X", 107000, "Three electric motors", 830, "381 mi range", "AWD", "acrbhs", "Watts to Freedom launch, Super Cruise"],
+    ["2X", 97000, "Dual electric motors", 570, "311 mi range", "AWD", "arbhs", "CrabWalk, removable roof panels"],
+    ["3X", 107000, "Three electric motors", 830, "381 mi range", "AWD", "arbhs", "Watts to Freedom launch, Super Cruise"],
   ],
   "gmc-hummer-ev-suv": [
-    ["2X", 99000, "Dual electric motors", 570, "314 mi range", "AWD", "acrbhs", "CrabWalk, removable roof panels"],
-    ["3X", 105000, "Three electric motors", 830, "314 mi range", "AWD", "acrbhs", "Watts to Freedom launch, Super Cruise"],
+    ["2X", 99000, "Dual electric motors", 570, "314 mi range", "AWD", "arbhs", "CrabWalk, removable roof panels"],
+    ["3X", 105000, "Three electric motors", 830, "314 mi range", "AWD", "arbhs", "Watts to Freedom launch, Super Cruise"],
   ],
   "gmc-sierra-ev": [
-    ["Elevation", 90000, "Dual electric motors", 760, "390 mi range", "AWD", "acrbhs", "16.8-in touchscreen, Multi-Pro midgate"],
-    ["AT4", 98000, "Dual electric motors", 760, "314 mi range", "AWD", "acrbhs", "Off-road tires, air suspension"],
-    ["Denali", 100000, "Dual electric motors", 760, "440 mi range", "AWD", "acrbhs", "Four-wheel steering, Super Cruise"],
+    ["Elevation", 90000, "Dual electric motors", 760, "390 mi range", "AWD", "arbhs", "16.8-in touchscreen, Multi-Pro midgate"],
+    ["AT4", 98000, "Dual electric motors", 760, "314 mi range", "AWD", "arbhs", "Off-road tires, air suspension"],
+    ["Denali", 100000, "Dual electric motors", 760, "440 mi range", "AWD", "arbhs", "Four-wheel steering, Super Cruise"],
   ],
   "jeep-grand-cherokee-l": [
     ["Laredo", 42000, "3.6L V6", 293, "21 mpg", "RWD or 4WD", "acrbh", "Three rows, 10.1-in touchscreen"],
@@ -1476,5 +1476,192 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
   "porsche-cayenne-coupe": [
     ["Cayenne Coupe", 97000, "3.0L turbo V6", 348, "19 mpg", "AWD", "acrbhs", "Sloped roof, adaptive spoiler"],
     ["Cayenne S Coupe", 115000, "4.0L twin-turbo V8", 468, "17 mpg", "AWD", "acrbhs", "V8 power, air suspension"],
+  ],
+  // Full lineups: other luxury brands
+  "lexus-is": [
+    ["IS 300", 41000, "2.0L turbo I4", 241, "25 mpg", "RWD", "crbh", "Lexus Safety System+ 3.0, 12.3-in touchscreen"],
+    ["IS 350 F Sport", 47000, "3.5L V6", 311, "22 mpg", "RWD or AWD", "acrbhs", "F Sport suspension, sport seats"],
+    ["IS 500 F Sport Performance", 63000, "5.0L V8", 472, "20 mpg", "RWD", "crbhs", "V8 power, quad exhaust"],
+  ],
+  "lexus-ls": [
+    ["LS 500", 81000, "3.4L twin-turbo V6", 416, "22 mpg", "RWD or AWD", "acrbhs", "Air suspension, Mark Levinson option"],
+    ["LS 500 F Sport", 86000, "3.4L twin-turbo V6", 416, "22 mpg", "RWD or AWD", "acrbhs", "Adaptive suspension, rear-wheel steering"],
+  ],
+  "lexus-lc": [
+    ["LC 500", 101000, "5.0L V8", 471, "19 mpg", "RWD", "crbh", "Naturally aspirated V8, carbon roof option"],
+    ["LC 500h", 107000, "3.5L hybrid V6", 354, "29 mpg", "RWD", "crbhs", "Multistage hybrid, glass roof"],
+  ],
+  "lexus-rc": [
+    ["RC 300", 47000, "2.0L turbo I4", 241, "24 mpg", "RWD", "crbh", "Two-door coupe, Lexus Safety System+"],
+    ["RC 350 F Sport", 53000, "3.5L V6", 311, "22 mpg", "RWD or AWD", "acrbhs", "F Sport suspension, sport seats"],
+    ["RC F", 73000, "5.0L V8", 472, "18 mpg", "RWD", "crbhs", "V8 power, Torsen limited-slip differential"],
+  ],
+  "lexus-ux": [
+    ["UX 300h", 37500, "2.0L hybrid I4", 196, "43 mpg", "FWD or AWD", "acrbh", "Hybrid efficiency, 8-in touchscreen"],
+    ["UX 300h F Sport Design", 40000, "2.0L hybrid I4", 196, "42 mpg", "FWD or AWD", "acrbhs", "Sport styling, 12.3-in touchscreen"],
+    ["UX 300h Luxury", 46000, "2.0L hybrid I4", 196, "42 mpg", "FWD or AWD", "acrbhs", "Leather seats, Mark Levinson audio"],
+  ],
+  "lexus-tx": [
+    ["TX 350", 56000, "2.4L turbo I4", 275, "23 mpg", "FWD or AWD", "acrbh", "Three adult-size rows, 14-in touchscreen"],
+    ["TX 500h F Sport Performance", 70000, "2.4L turbo hybrid I4", 366, "27 mpg", "AWD", "acrbhs", "Hybrid power, adaptive suspension"],
+    ["TX 550h+ Luxury", 83000, "3.5L plug-in hybrid V6", 404, "33 mi electric / 27 mpg", "AWD", "acrbhs", "Plug-in hybrid, Mark Levinson audio"],
+  ],
+  "lexus-gx": [
+    ["GX 550 Premium", 66000, "3.4L twin-turbo V6", 349, "17 mpg", "4WD", "acrbh", "Full-time 4WD, 14-in touchscreen"],
+    ["GX 550 Overtrail", 70000, "3.4L twin-turbo V6", 349, "17 mpg", "4WD", "acrbhs", "Locking rear differential, all-terrain tires"],
+    ["GX 550 Luxury", 77000, "3.4L twin-turbo V6", 349, "17 mpg", "4WD", "acrbhs", "Semi-aniline leather, Mark Levinson audio"],
+  ],
+  "lexus-rz": [
+    ["RZ 300e", 47000, "Single electric motor", 201, "220 mi range", "FWD", "crbh", "14-in touchscreen, heated seats"],
+    ["RZ 450e Premium", 54000, "Dual electric motors", 308, "220 mi range", "AWD", "acrbhs", "DIRECT4 AWD, glass roof"],
+    ["RZ 450e Luxury", 60000, "Dual electric motors", 308, "196 mi range", "AWD", "acrbhs", "Ventilated seats, Mark Levinson audio"],
+  ],
+  "acura-tlx": [
+    ["Base", 46000, "2.0L turbo I4", 272, "25 mpg", "FWD or AWD", "acrbh", "AcuraWatch, 12.3-in display"],
+    ["A-Spec", 50000, "2.0L turbo I4", 272, "24 mpg", "FWD or AWD", "acrbhs", "Sport styling, ELS Studio audio"],
+    ["Type S", 58000, "3.0L turbo V6", 355, "21 mpg", "AWD", "acrbhs", "SH-AWD, Brembo brakes"],
+  ],
+  "acura-zdx": [
+    ["A-Spec RWD", 65000, "Single electric motor", 340, "313 mi range", "RWD", "crbhs", "11.3-in touchscreen, Google built-in"],
+    ["A-Spec AWD", 69000, "Dual electric motors", 490, "304 mi range", "AWD", "acrbhs", "Dual-motor AWD, Bang & Olufsen audio"],
+    ["Type S", 74000, "Dual electric motors", 499, "288 mi range", "AWD", "acrbhs", "Air suspension, Brembo brakes"],
+  ],
+  "acura-adx": [
+    ["ADX", 35000, "1.5L turbo I4", 190, "28 mpg", "FWD or AWD", "acrbh", "9-in touchscreen, AcuraWatch"],
+    ["A-Spec", 40000, "1.5L turbo I4", 190, "27 mpg", "FWD or AWD", "acrbhs", "Sport styling, panoramic roof"],
+  ],
+  "infiniti-qx55": [
+    ["Luxe", 52000, "2.0L variable-compression turbo I4", 268, "25 mpg", "AWD", "acrbhs", "Coupe-style roof, ProPILOT Assist"],
+    ["Essential", 56000, "2.0L variable-compression turbo I4", 268, "25 mpg", "AWD", "acrbhs", "Leather seats, 360-degree camera"],
+    ["Sensory", 59000, "2.0L variable-compression turbo I4", 268, "25 mpg", "AWD", "acrbhs", "Bose audio, ventilated seats"],
+  ],
+  "genesis-g80": [
+    ["2.5T Advanced", 57000, "2.5L turbo I4", 300, "23 mpg", "AWD", "acrbhs", "27-in display, Highway Driving Assist II"],
+    ["3.5T Sport Prestige", 75000, "3.5L twin-turbo V6", 375, "20 mpg", "AWD", "acrbhs", "Sport styling, rear-wheel steering"],
+  ],
+  "genesis-g90": [
+    ["3.5T", 100000, "3.5L twin-turbo V6", 375, "20 mpg", "AWD", "acrbhs", "Air suspension, reclining rear seats"],
+    ["3.5T E-Supercharger", 113000, "3.5L twin-turbo V6 with e-supercharger", 409, "20 mpg", "AWD", "acrbhs", "Electric supercharger, Bang & Olufsen audio"],
+  ],
+  "genesis-gv60": [
+    ["Standard", 53000, "Single electric motor", 225, "294 mi range", "RWD", "crbhs", "800-volt fast charging, face-recognition entry"],
+    ["Advanced", 57000, "Dual electric motors", 314, "264 mi range", "AWD", "acrbhs", "Dual-motor AWD, ventilated seats"],
+    ["Performance", 69000, "Dual electric motors", 429, "250 mi range", "AWD", "acrbhs", "Boost mode, adaptive suspension"],
+  ],
+  "genesis-electrified-gv70": [
+    ["Advanced", 67000, "Dual electric motors", 429, "236 mi range", "AWD", "acrbhs", "Boost mode, 800-volt fast charging"],
+    ["Prestige", 75000, "Dual electric motors", 429, "236 mi range", "AWD", "acrbhs", "Nappa leather, Bang & Olufsen audio"],
+  ],
+  "genesis-gv80-coupe": [
+    ["3.5T Advanced", 80000, "3.5L twin-turbo V6", 375, "19 mpg", "AWD", "acrbhs", "Coupe-style roof, 27-in display"],
+    ["3.5T E-Supercharger Prestige", 88000, "3.5L twin-turbo V6 with e-supercharger", 409, "19 mpg", "AWD", "acrbhs", "Electric supercharger, Bang & Olufsen audio"],
+  ],
+  "volvo-s60": [
+    ["B5 Core", 45000, "2.0L turbo mild-hybrid I4", 247, "29 mpg", "AWD", "acrbh", "Standard AWD, Google built-in"],
+    ["B5 Plus", 49000, "2.0L turbo mild-hybrid I4", 247, "29 mpg", "AWD", "acrbhs", "Harman Kardon audio, panoramic roof"],
+    ["B5 Ultra", 53000, "2.0L turbo mild-hybrid I4", 247, "29 mpg", "AWD", "acrbhs", "Bowers & Wilkins audio, head-up display"],
+  ],
+  "volvo-s90": [
+    ["B6 Plus", 61000, "2.0L turbo mild-hybrid I4", 295, "26 mpg", "AWD", "acrbhs", "Long wheelbase, Pilot Assist"],
+    ["B6 Ultra", 65000, "2.0L turbo mild-hybrid I4", 295, "26 mpg", "AWD", "acrbhs", "Bowers & Wilkins audio, massaging seats"],
+    ["T8 Ultra", 73000, "2.0L plug-in hybrid I4", 455, "38 mi electric / 30 mpg", "AWD", "acrbhs", "Plug-in hybrid, 455 hp"],
+  ],
+  "volvo-v60-cross-country": [
+    ["B5 Plus", 52000, "2.0L turbo mild-hybrid I4", 247, "26 mpg", "AWD", "acrbhs", "Raised ride height, hill descent control"],
+    ["B5 Ultra", 56000, "2.0L turbo mild-hybrid I4", 247, "26 mpg", "AWD", "acrbhs", "Bowers & Wilkins audio, 360-degree camera"],
+  ],
+  "volvo-v90-cross-country": [
+    ["B6 Plus", 62000, "2.0L turbo mild-hybrid I4", 295, "25 mpg", "AWD", "acrbhs", "Raised ride height, air suspension option"],
+    ["B6 Ultra", 66000, "2.0L turbo mild-hybrid I4", 295, "25 mpg", "AWD", "acrbhs", "Bowers & Wilkins audio, massaging seats"],
+  ],
+  "volvo-ex30": [
+    ["Plus Single Motor", 45000, "Single electric motor", 268, "261 mi range", "RWD", "crbh", "12.3-in center screen, Google built-in"],
+    ["Ultra Twin Motor Performance", 53000, "Dual electric motors", 422, "253 mi range", "AWD", "acrbhs", "422 hp, Harman Kardon audio"],
+  ],
+  "volvo-ex40": [
+    ["Plus Single Motor", 54000, "Single electric motor", 248, "293 mi range", "RWD", "crbhs", "Google built-in, Pilot Assist"],
+    ["Ultra Twin Motor", 61000, "Dual electric motors", 402, "257 mi range", "AWD", "acrbhs", "Dual-motor AWD, Harman Kardon audio"],
+  ],
+  "volvo-ec40": [
+    ["Plus Single Motor", 57000, "Single electric motor", 248, "296 mi range", "RWD", "crbhs", "Coupe-style roof, Google built-in"],
+    ["Ultra Twin Motor", 63000, "Dual electric motors", 402, "257 mi range", "AWD", "acrbhs", "Dual-motor AWD, Harman Kardon audio"],
+  ],
+  "volvo-ex90": [
+    ["Twin Motor Plus", 80000, "Dual electric motors", 402, "310 mi range", "AWD", "acrbhs", "Three rows, lidar-based safety"],
+    ["Twin Motor Performance Ultra", 89000, "Dual electric motors", 510, "300 mi range", "AWD", "acrbhs", "510 hp, Bowers & Wilkins audio"],
+  ],
+  "land-rover-defender-90": [
+    ["S", 57000, "3.0L turbo mild-hybrid I6", 395, "18 mpg", "4WD", "acrbh", "Two-door, Terrain Response"],
+    ["X-Dynamic SE", 66000, "3.0L turbo mild-hybrid I6", 395, "18 mpg", "4WD", "acrbhs", "Air suspension, Meridian audio"],
+    ["V8", 102000, "5.0L supercharged V8", 518, "15 mpg", "4WD", "acrbhs", "Supercharged V8, adaptive dynamics"],
+  ],
+  "land-rover-defender-130": [
+    ["S", 69000, "2.0L turbo I4", 296, "18 mpg", "4WD", "acrbh", "Eight seats, air suspension"],
+    ["X-Dynamic SE", 79000, "3.0L turbo mild-hybrid I6", 395, "18 mpg", "4WD", "acrbhs", "Inline-six, Meridian audio"],
+  ],
+  "land-rover-discovery": [
+    ["S", 61000, "2.0L turbo I4", 296, "20 mpg", "4WD", "acrbh", "Seven seats, Terrain Response 2"],
+    ["Dynamic SE", 71000, "3.0L turbo mild-hybrid I6", 355, "20 mpg", "4WD", "acrbhs", "Inline-six, air suspension"],
+  ],
+  "land-rover-discovery-sport": [
+    ["S", 51000, "2.0L turbo I4", 247, "23 mpg", "AWD", "acrbh", "Optional third row, Terrain Response"],
+    ["Dynamic SE", 56000, "2.0L turbo I4", 247, "23 mpg", "AWD", "acrbhs", "Panoramic roof, Meridian audio"],
+  ],
+  "land-rover-range-rover-evoque": [
+    ["S", 52000, "2.0L turbo mild-hybrid I4", 246, "24 mpg", "AWD", "acrbh", "Pivi Pro touchscreen, ClearSight mirror"],
+    ["Dynamic SE", 57000, "2.0L turbo mild-hybrid I4", 246, "24 mpg", "AWD", "acrbhs", "Panoramic roof, Meridian audio"],
+  ],
+  "land-rover-range-rover-velar": [
+    ["S", 64000, "2.0L turbo I4", 247, "23 mpg", "AWD", "acrbhs", "Curved 11.4-in touchscreen, flush door handles"],
+    ["Dynamic SE", 69000, "2.0L turbo I4", 247, "23 mpg", "AWD", "acrbhs", "Air suspension, Meridian audio"],
+  ],
+  "cadillac-ct4": [
+    ["Luxury", 37000, "2.0L turbo I4", 237, "27 mpg", "RWD or AWD", "acrbh", "8-in touchscreen, Super Cruise available"],
+    ["V-Series", 48000, "2.7L turbo I4", 325, "22 mpg", "RWD or AWD", "acrbhs", "Magnetic Ride Control, Brembo brakes"],
+    ["V-Series Blackwing", 63000, "3.6L twin-turbo V6", 472, "18 mpg", "RWD", "crbh", "6-speed manual available, track-tuned suspension"],
+  ],
+  "cadillac-xt4": [
+    ["Luxury", 39000, "2.0L turbo I4", 235, "26 mpg", "FWD or AWD", "acrbh", "33-in curved display, power liftgate"],
+    ["Premium Luxury", 44000, "2.0L turbo I4", 235, "26 mpg", "FWD or AWD", "acrbhs", "Leather seats, panoramic roof"],
+    ["Sport", 46000, "2.0L turbo I4", 235, "25 mpg", "FWD or AWD", "acrbhs", "Sport suspension, AKG audio"],
+  ],
+  "cadillac-xt5": [
+    ["Luxury", 46000, "2.0L turbo I4", 237, "23 mpg", "FWD or AWD", "acrbh", "8-in touchscreen, power liftgate"],
+    ["Premium Luxury", 51000, "2.0L turbo I4", 237, "23 mpg", "FWD or AWD", "acrbhs", "Leather seats, panoramic roof"],
+    ["Sport", 57000, "2.0L turbo I4", 237, "22 mpg", "AWD", "acrbhs", "Twin-clutch AWD, adaptive dampers"],
+  ],
+  "cadillac-xt6": [
+    ["Luxury", 51000, "3.6L V6", 310, "21 mpg", "FWD or AWD", "acrbh", "Three rows, 8-in touchscreen"],
+    ["Premium Luxury", 56000, "3.6L V6", 310, "21 mpg", "FWD or AWD", "acrbhs", "Leather seats, Bose audio"],
+    ["Sport", 62000, "3.6L V6", 310, "20 mpg", "AWD", "acrbhs", "Twin-clutch AWD, adaptive dampers"],
+  ],
+  "cadillac-optiq": [
+    ["Luxury", 54000, "Dual electric motors", 300, "302 mi range", "AWD", "arbhs", "33-in display, AKG audio"],
+    ["Sport", 56000, "Dual electric motors", 300, "302 mi range", "AWD", "arbhs", "Sport styling, 20-in wheels"],
+    ["Premium Luxury", 58000, "Dual electric motors", 300, "302 mi range", "AWD", "arbhs", "Super Cruise, ventilated seats"],
+  ],
+  "cadillac-vistiq": [
+    ["Luxury", 78000, "Dual electric motors", 615, "305 mi range", "AWD", "arbhs", "Three rows, 33-in display"],
+    ["Sport", 81000, "Dual electric motors", 615, "305 mi range", "AWD", "arbhs", "Four-wheel steering, sport styling"],
+    ["Platinum", 90000, "Dual electric motors", 615, "305 mi range", "AWD", "arbhs", "Super Cruise, AKG Studio audio"],
+  ],
+  "cadillac-escalade-iq": [
+    ["Luxury 1", 128000, "Dual electric motors", 750, "460 mi range", "AWD", "arbhs", "55-in pillar-to-pillar display, Super Cruise"],
+    ["Sport 3", 148000, "Dual electric motors", 750, "460 mi range", "AWD", "arbhs", "Executive rear seats, four-wheel steering"],
+  ],
+  "cadillac-celestiq": [
+    ["Celestiq", 340000, "Dual electric motors", 655, "303 mi range", "AWD", "arbhs", "Hand-built to order, smart-glass roof"],
+  ],
+  "lincoln-nautilus": [
+    ["Premiere", 54000, "2.0L turbo I4", 250, "24 mpg", "AWD", "acrbhs", "48-in panoramic display, BlueCruise available"],
+    ["Reserve", 62000, "2.0L turbo I4", 250, "24 mpg", "AWD", "acrbhs", "Massaging seats, Revel audio"],
+    ["Black Label", 76000, "2.0L turbo I4", 250, "24 mpg", "AWD", "acrbhs", "Black Label interior, concierge service"],
+  ],
+  "aston-martin-vanquish": [
+    ["Vanquish", 420000, "5.2L twin-turbo V12", 824, "14 mpg", "RWD", "crbh", "824-hp V12, carbon body"],
+  ],
+  "bentley-flying-spur": [
+    ["Flying Spur", 230000, "4.0L V8 plug-in hybrid", 671, "40 mi electric", "AWD", "acrbhs", "Four-door grand tourer, rear-wheel steering"],
+    ["Speed", 270000, "4.0L V8 plug-in hybrid", 771, "40 mi electric", "AWD", "acrbhs", "771 hp, active anti-roll"],
   ],
 };

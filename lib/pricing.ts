@@ -123,6 +123,14 @@ const MODEL_RETENTION: Record<string, number> = {
   "mercedes-benz-eqe-suv": 0.38,
   "mercedes-benz-eqs": 0.33,
   "mercedes-benz-eqs-suv": 0.38,
+  "lexus-gx": 0.82,
+  "lexus-rz": 0.4,
+  "acura-zdx": 0.4,
+  "genesis-g90": 0.4,
+  "genesis-gv60": 0.4,
+  "volvo-ex90": 0.4,
+  "cadillac-escalade-iq": 0.5,
+  "cadillac-celestiq": 0.6,
   "nissan-leaf": 0.45,
 };
 
@@ -160,6 +168,17 @@ const USED_AGE_YEARS: Record<string, number> = {
   "mercedes-benz-cle": 2,
   "audi-q6-e-tron": 1,
   "audi-a6-e-tron": 1,
+  "lexus-tx": 2,
+  "acura-zdx": 2,
+  "acura-adx": 1,
+  "genesis-gv80-coupe": 1,
+  "volvo-ex30": 1,
+  "volvo-ex90": 1,
+  "cadillac-optiq": 1,
+  "cadillac-vistiq": 1,
+  "cadillac-escalade-iq": 1,
+  "cadillac-celestiq": 1,
+  "aston-martin-vanquish": 1,
   "maserati-granturismo": 2,
 };
 

@@ -13681,6 +13681,2257 @@
     "items": []
    }
   },
+  "lexus-is": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "IS 300",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 31,
+       "combined": 25
+      },
+      "epaId": 48847
+     },
+     {
+      "name": "IS 300 AWD",
+      "engine": "3.5L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48843
+     },
+     {
+      "name": "IS 350",
+      "engine": "3.5L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 28,
+       "combined": 23
+      },
+      "epaId": 48844
+     },
+     {
+      "name": "IS 350 AWD",
+      "engine": "3.5L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48845
+     },
+     {
+      "name": "IS 500",
+      "engine": "5.0L 8-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 25,
+       "combined": 20
+      },
+      "epaId": 48846
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "lexus-ls": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "LS 500",
+      "engine": "3.4L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 29,
+       "combined": 22
+      },
+      "epaId": 48854
+     },
+     {
+      "name": "LS 500 AWD",
+      "engine": "3.4L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 27,
+       "combined": 21
+      },
+      "epaId": 48855
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     },
+     {
+      "campaign": "25V595000",
+      "date": "11/09/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Toyota Venza, 2023-2025 RAV4 Prime, RAV4, Highlander, GR Corolla, Crown, 2024-2025 Lexus TX, LS, Toyota Tacoma, Grand Highlander, and 2025 Lexus RX, Toyota Crown Signia, Camry, RAV 4 Plug-in Hybrid ("
+     }
+    ]
+   }
+  },
+  "lexus-lc": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "LC 500",
+      "engine": "5.0L 8-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 24,
+       "combined": 18
+      },
+      "epaId": 48829
+     },
+     {
+      "name": "LC 500h",
+      "engine": "3.5L 6-cyl hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AV-S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 33,
+       "combined": 29
+      },
+      "epaId": 48830
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     }
+    ]
+   }
+  },
+  "lexus-rc": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "RC 300",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 31,
+       "combined": 25
+      },
+      "epaId": 48834
+     },
+     {
+      "name": "RC 300 AWD",
+      "engine": "3.5L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48831
+     },
+     {
+      "name": "RC 350",
+      "engine": "3.5L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 28,
+       "combined": 23
+      },
+      "epaId": 48832
+     },
+     {
+      "name": "RC 350 AWD",
+      "engine": "3.5L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48833
+     },
+     {
+      "name": "RC F",
+      "engine": "5.0L 8-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 48835
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "lexus-ux": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "UX 300h",
+      "engine": "2.0L 4-cyl hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 45,
+       "highway": 41,
+       "combined": 43
+      },
+      "epaId": 47708
+     },
+     {
+      "name": "UX 300h",
+      "engine": "2.0L 4-cyl hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 45,
+       "highway": 41,
+       "combined": 43
+      },
+      "epaId": 47710
+     },
+     {
+      "name": "UX 300h AWD",
+      "engine": "2.0L 4-cyl hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 44,
+       "highway": 40,
+       "combined": 42
+      },
+      "epaId": 47709
+     },
+     {
+      "name": "UX 300h AWD",
+      "engine": "2.0L 4-cyl hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 44,
+       "highway": 40,
+       "combined": 42
+      },
+      "epaId": 47711
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "lexus-tx": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "TX 350",
+      "engine": "2.4L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48946
+     },
+     {
+      "name": "TX 350 AWD",
+      "engine": "2.4L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 26,
+       "combined": 23
+      },
+      "epaId": 48963
+     },
+     {
+      "name": "TX 500h AWD",
+      "engine": "2.4L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 27,
+       "highway": 28,
+       "combined": 27
+      },
+      "epaId": 48962
+     },
+     {
+      "name": "TX 550h Plus AWD",
+      "engine": "3.5L 6-cyl plug-in hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S6)",
+      "fuel": "Premium and Electricity",
+      "mpg": {
+       "city": 29,
+       "highway": 28,
+       "combined": 29
+      },
+      "epaId": 49013,
+      "electricRangeMi": 33,
+      "mpge": 76
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V179000",
+      "date": "24/03/2026",
+      "component": "Equipment:Other:Labels",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024-2025 Toyota Tundra, Tacoma Hybrid, Tacoma, RAV4 Hybrid, Land Cruiser Hybrid, Lexus GX550, 2024-2026 Tundra Hybrid, 2025 Sequoia Hybrid, Crown Signia, Grand Highlander, Lexus TX500 Hybrid, Lexus NX350 Hybr"
+     },
+     {
+      "campaign": "26V162000",
+      "date": "18/03/2026",
+      "component": "Back Over Prevention:Software",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2025 Lexus NX350, NX250, 2023-2026 RX350, and 2024-2026 TX350 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles fail to comply with the req"
+     },
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     },
+     {
+      "campaign": "25V595000",
+      "date": "11/09/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Toyota Venza, 2023-2025 RAV4 Prime, RAV4, Highlander, GR Corolla, Crown, 2024-2025 Lexus TX, LS, Toyota Tacoma, Grand Highlander, and 2025 Lexus RX, Toyota Crown Signia, Camry, RAV 4 Plug-in Hybrid ("
+     }
+    ]
+   }
+  },
+  "lexus-gx": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "GX 550",
+      "engine": "3.4L 6-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 15,
+       "highway": 21,
+       "combined": 17
+      },
+      "epaId": 48964
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V179000",
+      "date": "24/03/2026",
+      "component": "Equipment:Other:Labels",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024-2025 Toyota Tundra, Tacoma Hybrid, Tacoma, RAV4 Hybrid, Land Cruiser Hybrid, Lexus GX550, 2024-2026 Tundra Hybrid, 2025 Sequoia Hybrid, Crown Signia, Grand Highlander, Lexus TX500 Hybrid, Lexus NX350 Hybr"
+     },
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     }
+    ]
+   }
+  },
+  "lexus-rz": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "RZ 300e (18 inch wheels)",
+      "engine": "150 kW AC Synchronous",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49099,
+      "mpge": 125,
+      "rangeMi": 266
+     },
+     {
+      "name": "RZ 300e (20 inch wheels)",
+      "engine": "150 kW AC Synchronous",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49100,
+      "mpge": 105,
+      "rangeMi": 224
+     },
+     {
+      "name": "RZ 450e AWD (18 inch wheels)",
+      "engine": "80 and 150 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49101,
+      "mpge": 107,
+      "rangeMi": 220
+     },
+     {
+      "name": "RZ 450e AWD (20 inch wheels)",
+      "engine": "80 and 150 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49102,
+      "mpge": 95,
+      "rangeMi": 196
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     },
+     {
+      "campaign": "25V577000",
+      "date": "04/09/2025",
+      "component": "Visibility:Defroster/Defogger/Hvac System",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2025 bZ4X, Lexus RZ, and Subaru Solterra vehicles. During certain HVAC system faults, such as electrical compressor failure, the defroster and defogger system may become inoperative."
+     }
+    ]
+   }
+  },
+  "acura-tlx": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "TLX AWD A-SPEC",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 48161
+     },
+     {
+      "name": "TLX FWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 31,
+       "combined": 25
+      },
+      "epaId": 48160
+     },
+     {
+      "name": "TLX Type-S",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 25,
+       "combined": 21
+      },
+      "epaId": 48162
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Acura TLX 4 DR AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20099
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V721000",
+      "date": "29/10/2026",
+      "component": "Steering:Electric Power Assist System",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2021-2025 Acura TLX, 2022-2024 Acura MDX, and 2023-2025 Pilot vehicles. The software for the electric power steering (EPS) assist may cause the EPS system to enter a failsafe mode, resulting in a loss of power steering assist."
+     },
+     {
+      "campaign": "25V391000",
+      "date": "13/06/2025",
+      "component": "Service Brakes, Hydraulic:Pedals And Linkages",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2021-2025 Acura TLX, 2023-2025 Acura MDX, and 2023-2025 Honda Pilot vehicles. The brake pedal pivot pin was not secured properly, which can cause the pedal to shift out of position. As such, these vehicles fail to comply with "
+     }
+    ]
+   }
+  },
+  "acura-zdx": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "ZDX AWD",
+      "engine": "155 and 220 kW AC Induction",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50024,
+      "mpge": 89,
+      "rangeMi": 323
+     },
+     {
+      "name": "ZDX AWD Type S",
+      "engine": "155 and 220 kW AC Induction",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50025,
+      "mpge": 83,
+      "rangeMi": 296
+     },
+     {
+      "name": "ZDX RWD",
+      "engine": "255 kW ACPM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50023,
+      "mpge": 91,
+      "rangeMi": 327
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Acura ZDX SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20783
+   },
+   "recalls": {
+    "year": 2026,
+    "count": 0,
+    "items": []
+   }
+  },
+  "acura-adx": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "ADX AWD",
+      "engine": "1.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 30,
+       "combined": 27
+      },
+      "epaId": 49044
+     },
+     {
+      "name": "ADX FWD",
+      "engine": "1.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 31,
+       "combined": 28
+      },
+      "epaId": 49045
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Acura ADX SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20785
+   },
+   "recalls": null
+  },
+  "infiniti-qx55": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "QX55 AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 28,
+       "combined": 25
+      },
+      "epaId": 48094
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Infiniti QX55 SUV AWD",
+    "overall": "Not Rated",
+    "frontal": "4",
+    "side": "Not Rated",
+    "rollover": "Not Rated",
+    "vehicleId": 20763
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "genesis-g80": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "G80 AWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 48038
+     },
+     {
+      "name": "G80 AWD",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 48039
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Genesis G80 4 DR AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20550
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V229000",
+      "date": "10/04/2026",
+      "component": "Fuel System, Gasoline:Delivery:Hoses, Lines/Piping, And Fittings",
+      "summary": "Hyundai Motor America (Genesis) is recalling certain Genesis 2022-2026 GV70, 2023-2025 G90, 2021-2025 G80, and GV80 vehicles. Fuel may leak at the pipe connection between the fuel pipe and fuel rail."
+     },
+     {
+      "campaign": "26V019000",
+      "date": "17/01/2026",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain Genesis 2025-2026 G80, GV80, 2026 G80 \"Electrified,\" GV60, GV70 \"Electrified\" and GV70 vehicles. Due to a software error, the instrument panel display may fail. As such, these vehicles fail to comply with the requirements of Fe"
+     }
+    ]
+   }
+  },
+  "genesis-g90": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "G90 AWD",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 48040
+     },
+     {
+      "name": "G90 MHEV",
+      "engine": "3.5L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 20
+      },
+      "epaId": 48041
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V229000",
+      "date": "10/04/2026",
+      "component": "Fuel System, Gasoline:Delivery:Hoses, Lines/Piping, And Fittings",
+      "summary": "Hyundai Motor America (Genesis) is recalling certain Genesis 2022-2026 GV70, 2023-2025 G90, 2021-2025 G80, and GV80 vehicles. Fuel may leak at the pipe connection between the fuel pipe and fuel rail."
+     },
+     {
+      "campaign": "26V218000",
+      "date": "07/04/2026",
+      "component": "Seat Belts:Front:Anchorage",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2023-2025 Hyundai Ioniq 6, 2023-2026 Genesis G90, 2024-2026 Hyundai Santa Fe, and Hyundai Santa Fe Hybrid vehicles. The driver and passenger seat belt anchors may detach."
+     },
+     {
+      "campaign": "25V833000",
+      "date": "02/12/2025",
+      "component": "Electrical System:Adas",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2023-2026 Genesis G90 vehicles. The Highway Drive Assist (HDA) corner radar may falsely detect another vehicle, which can result in sudden, unintended braking while driving."
+     },
+     {
+      "campaign": "25V474000",
+      "date": "17/07/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain Genesis 2023-2025 G90 and GV60 vehicles. Due to a software error, the instrument panel display may fail. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 101, "
+     }
+    ]
+   }
+  },
+  "genesis-gv60": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "GV60 AWD (19 inch Wheels)",
+      "engine": "74 and 160 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48356,
+      "mpge": 100,
+      "rangeMi": 264
+     },
+     {
+      "name": "GV60 AWD Advanced (20 inch Wheels)",
+      "engine": "74 and 160 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48354,
+      "mpge": 95,
+      "rangeMi": 248
+     },
+     {
+      "name": "GV60 AWD Performance",
+      "engine": "74 and 160 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48355,
+      "mpge": 90,
+      "rangeMi": 235
+     },
+     {
+      "name": "GV60 RWD",
+      "engine": "168 kW PMSM (IPM)",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48352,
+      "mpge": 112,
+      "rangeMi": 294
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Genesis GV60 SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20555
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "25V624000",
+      "date": "19/09/2025",
+      "component": "Structure:Exterior Trim",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2023-2025 Genesis GV60 electric vehicles. The stainless-steel molding at the top of the windshield assembly may detach."
+     },
+     {
+      "campaign": "25V474000",
+      "date": "17/07/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain Genesis 2023-2025 G90 and GV60 vehicles. Due to a software error, the instrument panel display may fail. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) number 101, "
+     },
+     {
+      "campaign": "24V868000",
+      "date": "18/11/2024",
+      "component": "Electrical System:12V/24V/48V Battery",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2022-2024 IONIQ 5, 2023-2025 IONIQ 6, Genesis GV60, Genesis GV70 \"Electrified,\" and Genesis G80 \"Electrified\" vehicles. The Integrated Charging Control Unit (ICCU) may become damaged and stop charging the 12-volt battery, which"
+     },
+     {
+      "campaign": "24V584000",
+      "date": "07/08/2024",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain Genesis 2024-2025 GV60 hybrid and 2025 GV80 vehicles. The rearview camera display may shut off when the vehicle is driven in reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety "
+     }
+    ]
+   }
+  },
+  "genesis-electrified-gv70": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Electrified GV70",
+      "engine": "74 and 160 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48353,
+      "mpge": 91,
+      "rangeMi": 236
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "genesis-gv80-coupe": {
+   "epa": null,
+   "epaNote": "The EPA lists the GV80 Coupe together with the GV80.",
+   "safety": {
+    "year": 2025,
+    "description": "2025 Genesis GV80 Coupe SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20561
+   },
+   "recalls": null
+  },
+  "volvo-s60": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "S60 B5",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 27,
+       "highway": 36,
+       "combined": 30
+      },
+      "epaId": 48001
+     },
+     {
+      "name": "S60 B5 AWD",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 34,
+       "combined": 28
+      },
+      "epaId": 48002
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V908000",
+      "date": "23/12/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2021-2025 XC40, 2022 V90, 2022-2024 C40BEV, 2022-2025 S90, V90CC, XC60, 2023-2025 S60, V60, V60CC, XC90, and 2025 EC40, and EX40 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such,"
+     },
+     {
+      "campaign": "25V282000",
+      "date": "08/05/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2021-2025 XC40, 2022 V90, 2022-2025 S90, V90CC, C40, XC60, 2023-2025 S60, V60, V60CC, XC90, and 2025 EC40 and EX40 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicle"
+     }
+    ]
+   }
+  },
+  "volvo-s90": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "S90 B6 AWD",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 48035
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "25V908000",
+      "date": "23/12/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2021-2025 XC40, 2022 V90, 2022-2024 C40BEV, 2022-2025 S90, V90CC, XC60, 2023-2025 S60, V60, V60CC, XC90, and 2025 EC40, and EX40 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such,"
+     },
+     {
+      "campaign": "25V282000",
+      "date": "08/05/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2021-2025 XC40, 2022 V90, 2022-2025 S90, V90CC, C40, XC60, 2023-2025 S60, V60, V60CC, XC90, and 2025 EC40 and EX40 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicle"
+     },
+     {
+      "campaign": "25V104000",
+      "date": "19/02/2025",
+      "component": "Visibility:Windshield",
+      "summary": "Volvo Car USA, LLC (Volvo) is recalling certain 2025 S90 vehicles. The windows may be improperly secured and detach."
+     }
+    ]
+   }
+  },
+  "volvo-v60-cross-country": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "V60CC B5 AWD",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 31,
+       "combined": 27
+      },
+      "epaId": 48050
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "volvo-v90-cross-country": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "V90CC B6 AWD",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 29,
+       "combined": 25
+      },
+      "epaId": 48053
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "volvo-ex30": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "EX30 Single Motor extended range (18 Inch Wheels)",
+      "engine": "185 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48449,
+      "mpge": 114,
+      "rangeMi": 257
+     },
+     {
+      "name": "EX30 Single Motor extended range (19/20 Inch Wheels)",
+      "engine": "185 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48450,
+      "mpge": 116,
+      "rangeMi": 261
+     },
+     {
+      "name": "EX30 Twin Performance (19 Inch Wheels)",
+      "engine": "115 and 185 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48775,
+      "mpge": 109,
+      "rangeMi": 253
+     },
+     {
+      "name": "EX30 Twin Performance (20 Inch Wheels)",
+      "engine": "115 and 185 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48776,
+      "mpge": 109,
+      "rangeMi": 250
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V671000",
+      "date": "09/10/2026",
+      "component": "Seats:Front Assembly:Head Restraint",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2025-2026 EX30 and 2026 EX30CC vehicles. The head restraint cushion may detach during a crash."
+     },
+     {
+      "campaign": "26V136000",
+      "date": "11/03/2026",
+      "component": "Seat Belts:Front:Warning Light/Devices",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2025-2026 EX30 and 2026 EX30CC vehicles. The seat belt warning system may not activate the audible warning chime as intended. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard "
+     },
+     {
+      "campaign": "26V103000",
+      "date": "21/02/2026",
+      "component": "Electrical System:Propulsion System:Traction Battery",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2025 EX30 vehicles. The high voltage battery may experience a short circuit and overheat."
+     },
+     {
+      "campaign": "26V001000",
+      "date": "02/01/2026",
+      "component": "Electrical System:Propulsion System:Traction Battery",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2025 EX30 vehicles. The high-voltage battery may experience a short circuit and overheat."
+     }
+    ]
+   }
+  },
+  "volvo-ex40": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "EX40",
+      "engine": "185 and 220 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48451,
+      "mpge": 106,
+      "rangeMi": 296
+     },
+     {
+      "name": "EX40 Twin",
+      "engine": "190 and 210 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48447,
+      "mpge": 94,
+      "rangeMi": 260
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "25V908000",
+      "date": "23/12/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2021-2025 XC40, 2022 V90, 2022-2024 C40BEV, 2022-2025 S90, V90CC, XC60, 2023-2025 S60, V60, V60CC, XC90, and 2025 EC40, and EX40 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such,"
+     },
+     {
+      "campaign": "25V392000",
+      "date": "13/06/2025",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2023 Volvo C40 BEV, 2025 EC40, 2023-2024 XC40 BEV, 2020-2026 XC90 PHEV, 2022-2026 XC60 PHEV, 2023-2025 S60 PHEV, 2024-2025 V60 PHEV, and 2025-2026 EX40 and 2025 S90 PHEV vehicles. In certain driving scenarios while coasting down"
+     },
+     {
+      "campaign": "25V282000",
+      "date": "08/05/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2021-2025 XC40, 2022 V90, 2022-2025 S90, V90CC, C40, XC60, 2023-2025 S60, V60, V60CC, XC90, and 2025 EC40 and EX40 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicle"
+     }
+    ]
+   }
+  },
+  "volvo-ec40": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "EC40",
+      "engine": "185 and 220 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48448,
+      "mpge": 106,
+      "rangeMi": 298
+     },
+     {
+      "name": "EC40 Twin",
+      "engine": "135 and 215 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48446,
+      "mpge": 97,
+      "rangeMi": 268
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "25V908000",
+      "date": "23/12/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2021-2025 XC40, 2022 V90, 2022-2024 C40BEV, 2022-2025 S90, V90CC, XC60, 2023-2025 S60, V60, V60CC, XC90, and 2025 EC40, and EX40 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such,"
+     },
+     {
+      "campaign": "25V392000",
+      "date": "13/06/2025",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2023 Volvo C40 BEV, 2025 EC40, 2023-2024 XC40 BEV, 2020-2026 XC90 PHEV, 2022-2026 XC60 PHEV, 2023-2025 S60 PHEV, 2024-2025 V60 PHEV, and 2025-2026 EX40 and 2025 S90 PHEV vehicles. In certain driving scenarios while coasting down"
+     },
+     {
+      "campaign": "25V282000",
+      "date": "08/05/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2021-2025 XC40, 2022 V90, 2022-2025 S90, V90CC, C40, XC60, 2023-2025 S60, V60, V60CC, XC90, and 2025 EC40 and EX40 vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicle"
+     }
+    ]
+   }
+  },
+  "volvo-ex90": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "EX90 Twin Motor (20 and 22 Inch Wheels)",
+      "engine": "127 and 200 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48777,
+      "mpge": 81,
+      "rangeMi": 300
+     },
+     {
+      "name": "EX90 Twin Motor (21 Inch Wheels)",
+      "engine": "127 and 173 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48778,
+      "mpge": 84,
+      "rangeMi": 310
+     },
+     {
+      "name": "EX90 Twin Motor Performance (20 and 22 Inch Wheels)",
+      "engine": "127 and 180 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48780,
+      "mpge": 81,
+      "rangeMi": 300
+     },
+     {
+      "name": "EX90 Twin Motor Performance (21 Inch Wheels)",
+      "engine": "173 and 180 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48779,
+      "mpge": 84,
+      "rangeMi": 310
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Volvo EX90 SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20203
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "25V654000",
+      "date": "30/09/2025",
+      "component": "Structure:Body:Hatchback/Liftgate:Support Device/Strut",
+      "summary": "Volvo Car USA, LLC (Volvo) is recalling certain 2025 EX90 vehicles. A spindle nut may detach from the Power Operated Tailgate (POT) drive units, causing the tailgate to suddenly drop."
+     },
+     {
+      "campaign": "25V071000",
+      "date": "07/02/2025",
+      "component": "Exterior Lighting:Headlights:Concealment Devices",
+      "summary": "Volvo Car USA, LLC (Volvo) is recalling certain 2025 EX90 vehicles. Due to a software error in the low power controller (LPC), the headlight shutters may close over the high and low beams while driving."
+     },
+     {
+      "campaign": "24V869000",
+      "date": "19/11/2024",
+      "component": "Seats:Critical Fasteners",
+      "summary": "Volvo Car USA, LLC (Volvo Car) is recalling certain 2025 EX90 vehicles. The bolts for the second-row free-standing seat may not be tightened properly."
+     }
+    ]
+   }
+  },
+  "land-rover-defender-90": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Defender 90",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 21,
+       "combined": 19
+      },
+      "epaId": 48131
+     },
+     {
+      "name": "Defender 90",
+      "engine": "5.0L 8-cyl supercharged",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 15,
+       "highway": 19,
+       "combined": 16
+      },
+      "epaId": 48565
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "land-rover-defender-130": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Defender 130",
+      "engine": "5.0L 8-cyl supercharged",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 19,
+       "combined": 16
+      },
+      "epaId": 48567
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "land-rover-discovery": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Discovery",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48123
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V458000",
+      "date": "16/07/2026",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Jaguar Land Rover North America, LLC (Land Rover) is recalling certain 2021-2025 Land Rover Discovery vehicles. Water may not be able to drain away from the rearview camera due to insufficient drain holes, which may result in damage to the rearview camera."
+     },
+     {
+      "campaign": "26V389000",
+      "date": "13/06/2026",
+      "component": "Air Bags:Frontal",
+      "summary": "Jaguar Land Rover North America, LLC (Land Rover) is recalling certain 2020-2026 Land Rover Defender, 2021-2026 Discovery, and 2022-2026 Range Rover vehicles. The driver\u2019s air bag clockspring connector may corrode, which can cause the air bag not to deploy as intended."
+     }
+    ]
+   }
+  },
+  "land-rover-discovery-sport": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Discovery Sport",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 23,
+       "combined": 20
+      },
+      "epaId": 48104
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V705000",
+      "date": "16/10/2025",
+      "component": "Power Train:Automatic Transmission:Gear Position Indication (Prndl)",
+      "summary": "Jaguar Land Rover North America, LLC (Land Rover) is recalling certain 2025 Range Rover, Range Rover Sport, Discovery Sport, and 2026 Range Rover Evoque, and Jaguar F-Pace vehicles. Moisture may have entered the gear shift module (GSM) during assembly, which can cause the gear sh"
+     }
+    ]
+   }
+  },
+  "land-rover-range-rover-evoque": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Range Rover Evoque",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 27,
+       "combined": 22
+      },
+      "epaId": 48103
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V454000",
+      "date": "07/07/2025",
+      "component": "Air Bags:Passenger Side Frontal:Cushion",
+      "summary": "Jaguar Land Rover North America, LLC (Jaguar) is recalling certain 2020\u20132025 Range Rover Evoque vehicles. The passenger air bag may tear during deployment."
+     }
+    ]
+   }
+  },
+  "land-rover-range-rover-velar": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Range Rover Velar",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 26,
+       "combined": 23
+      },
+      "epaId": 47737
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "cadillac-ct4": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "CT4",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 31,
+       "combined": 25
+      },
+      "epaId": 47981
+     },
+     {
+      "name": "CT4",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 32,
+       "combined": 26
+      },
+      "epaId": 47979
+     },
+     {
+      "name": "CT4 AWD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 47983
+     },
+     {
+      "name": "CT4 AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 31,
+       "combined": 25
+      },
+      "epaId": 47980
+     },
+     {
+      "name": "CT4 V",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 29,
+       "combined": 23
+      },
+      "epaId": 47982
+     },
+     {
+      "name": "CT4 V",
+      "engine": "3.6L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 47985
+     },
+     {
+      "name": "CT4 V",
+      "engine": "3.6L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 15,
+       "highway": 23,
+       "combined": 18
+      },
+      "epaId": 47986
+     },
+     {
+      "name": "CT4 V AWD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 28,
+       "combined": 23
+      },
+      "epaId": 47984
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "cadillac-xt4": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "XT4 AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 28,
+       "combined": 25
+      },
+      "epaId": 48088
+     },
+     {
+      "name": "XT4 FWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 29,
+       "combined": 26
+      },
+      "epaId": 48056
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Cadillac XT4 SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20426
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "24V795000",
+      "date": "24/10/2024",
+      "component": "Structure:Interior Panels:Dashboard",
+      "summary": "General Motors, LLC (GM) is recalling certain 2025 Cadillac XT4 vehicles. The instrument panel may be missing the perforation on the underside of the panel cover that allows the passenger-side air bag to deploy properly."
+     }
+    ]
+   }
+  },
+  "cadillac-xt5": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "XT5 AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48084
+     },
+     {
+      "name": "XT5 AWD",
+      "engine": "3.6L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 48086
+     },
+     {
+      "name": "XT5 FWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 48057
+     },
+     {
+      "name": "XT5 FWD",
+      "engine": "3.6L 6-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 48059
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Cadillac XT5 SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20424
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "24V459000",
+      "date": "20/06/2024",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "General Motors, LLC (GM) is recalling certain 2023-2025 Cadillac XT5 and 2024-2025 Cadillac XT6 vehicles. The instrument panel may not illuminate when the hazard warning lights, high beams, or turn signals are activated. As such, these vehicles fail to comply with the requirement"
+     }
+    ]
+   }
+  },
+  "cadillac-xt6": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "XT6 AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 26,
+       "combined": 23
+      },
+      "epaId": 48085
+     },
+     {
+      "name": "XT6 AWD",
+      "engine": "3.6L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 25,
+       "combined": 20
+      },
+      "epaId": 48087
+     },
+     {
+      "name": "XT6 FWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48058
+     },
+     {
+      "name": "XT6 FWD",
+      "engine": "3.6L 6-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 48060
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Cadillac XT6 SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20428
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "24V459000",
+      "date": "20/06/2024",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "General Motors, LLC (GM) is recalling certain 2023-2025 Cadillac XT5 and 2024-2025 Cadillac XT6 vehicles. The instrument panel may not illuminate when the hazard warning lights, high beams, or turn signals are activated. As such, these vehicles fail to comply with the requirement"
+     }
+    ]
+   }
+  },
+  "cadillac-optiq": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "OPTIQ AWD (11 kW Charger)",
+      "engine": "140, 155, 205 and 220 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49951,
+      "mpge": 99,
+      "rangeMi": 303
+     },
+     {
+      "name": "OPTIQ AWD (19 kW Charger)",
+      "engine": "140, 155, 205 and 220 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49952,
+      "mpge": 99,
+      "rangeMi": 303
+     },
+     {
+      "name": "OPTIQ AWD V SERIES 11 kW Charger",
+      "engine": "140, 155, 205 and 220 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50026,
+      "mpge": 92,
+      "rangeMi": 278
+     },
+     {
+      "name": "OPTIQ AWD V SERIES 19 kW charger",
+      "engine": "140, 155, 205 and 220 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50027,
+      "mpge": 83,
+      "rangeMi": 250
+     },
+     {
+      "name": "OPTIQ RWD (11 kW Charger)",
+      "engine": "210 and 255 kW ACPM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49949,
+      "mpge": 105,
+      "rangeMi": 317
+     },
+     {
+      "name": "OPTIQ RWD (19 kW Charger)",
+      "engine": "210 and 255 kW ACPM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49950,
+      "mpge": 105,
+      "rangeMi": 317
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2026,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V612000",
+      "date": "24/09/2026",
+      "component": "Visibility:Power Window Devices And Controls",
+      "summary": "General Motors, LLC (GM) is recalling certain 2025-2027 Cadillac OPTIQ vehicles. When closed using the key fob's express-up function, the front windows may fail to detect an obstruction and reverse direction. As such, these vehicles fail to conform to Federal Motor Vehicle Safety"
+     },
+     {
+      "campaign": "26V114000",
+      "date": "26/02/2026",
+      "component": "Equipment:Other:Owners/Service/Other Manual",
+      "summary": "General Motors has decided that certain 2027 Chevrolet Bolt EV, 2025-2026 Cadillac OPTIQ, Chevrolet Colorado, Equinox EV, GMC Canyon, 2026 Buick Enclave, Envision, Cadillac CT5, Escalade, Escalade ESV, Escalade IQ, Escalade IQL, LYRIQ, VISTIQ, Chevrolet Blazer EV, Corvette Conver"
+     },
+     {
+      "campaign": "25V704000",
+      "date": "16/10/2025",
+      "component": "Tires:Tread/Belt",
+      "summary": "General Motors, LLC (GM) is recalling certain 2025-2026 Cadillac Optic and 2025-2026 Chevrolet Equinox EV vehicles equipped with 21-inch Continental all-season tires. One or more of these tires may experience partial or full tread detachment."
+     }
+    ]
+   }
+  },
+  "cadillac-vistiq": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "VISTIQ (11 kW Charger)",
+      "engine": "155 and 220 kW AC Induction",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49636,
+      "mpge": 86,
+      "rangeMi": 305
+     },
+     {
+      "name": "VISTIQ (19 kW Charger)",
+      "engine": "155 and 220 kW AC Induction",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49637,
+      "mpge": 86,
+      "rangeMi": 300
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2026,
+    "count": 5,
+    "items": [
+     {
+      "campaign": "26V717000",
+      "date": "29/10/2026",
+      "component": "Service Brakes, Hydraulic:Antilock/Traction Control/Electronic Limited Slip:Control Unit/Module",
+      "summary": "General Motors, LLC (GM) is recalling certain 2023\u20132027 Cadillac LYRIQ, 2025\u20132026 model year Cadillac CELESTIQ, 2024\u20132027 Chevrolet Blazer EV, and 2026-2027 Cadillac VISTIQ vehicles. The brake system control module (BSCM) contains a software defect that may cause a loss of brakin"
+     },
+     {
+      "campaign": "26V394000",
+      "date": "18/06/2026",
+      "component": "Seats:Mid/Rear Assembly:Power Adjust",
+      "summary": "General Motors, LLC (GM) is recalling certain 2026-2027 Cadillac Vistiq vehicles. When the power fold feature is activated, the third-row power seatback may fail to reverse when enountering a person."
+     },
+     {
+      "campaign": "26V114000",
+      "date": "26/02/2026",
+      "component": "Equipment:Other:Owners/Service/Other Manual",
+      "summary": "General Motors has decided that certain 2027 Chevrolet Bolt EV, 2025-2026 Cadillac OPTIQ, Chevrolet Colorado, Equinox EV, GMC Canyon, 2026 Buick Enclave, Envision, Cadillac CT5, Escalade, Escalade ESV, Escalade IQ, Escalade IQL, LYRIQ, VISTIQ, Chevrolet Blazer EV, Corvette Conver"
+     },
+     {
+      "campaign": "25V819000",
+      "date": "25/11/2025",
+      "component": "Equipment:Other:Owners/Service/Other Manual",
+      "summary": "General Motors is recalling certain 2026 Cadillac Vistiq electric vehicles. The radio may not have been set to the correct status to download the electronic owner's manual during production. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Saf"
+     },
+     {
+      "campaign": "25V483000",
+      "date": "24/07/2025",
+      "component": "Electrical System:Propulsion System:Traction Battery",
+      "summary": "General Motors (GM) is recalling certain 2026 Cadillac VISTIQ vehicles and 2025 Cadillac LYRIQ vehicles. The bolts attaching the high voltage battery to the interior floor may be missing or loose."
+     }
+    ]
+   }
+  },
+  "cadillac-escalade-iq": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "cadillac-celestiq": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "CELESTIQ",
+      "engine": "155 and 220 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49067,
+      "mpge": 81,
+      "rangeMi": 303
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V717000",
+      "date": "29/10/2026",
+      "component": "Service Brakes, Hydraulic:Antilock/Traction Control/Electronic Limited Slip:Control Unit/Module",
+      "summary": "General Motors, LLC (GM) is recalling certain 2023\u20132027 Cadillac LYRIQ, 2025\u20132026 model year Cadillac CELESTIQ, 2024\u20132027 Chevrolet Blazer EV, and 2026-2027 Cadillac VISTIQ vehicles. The brake system control module (BSCM) contains a software defect that may cause a loss of brakin"
+     }
+    ]
+   }
+  },
+  "lincoln-nautilus": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Nautilus AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 48536
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Lincoln Nautilus SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20363
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 6,
+    "items": [
+     {
+      "campaign": "26V165000",
+      "date": "19/03/2026",
+      "component": "Back Over Prevention:Software",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2022-2025 Lincoln Navigator, 2024-2025 Lincoln Nautilus, 2025 Lincoln Aviator and Explorer vehicles. The Image Processing Module A (IPMA) may experience multiple unexpected resets, resulting in loss of the rearview camera image and a"
+     },
+     {
+      "campaign": "26V122000",
+      "date": "04/03/2026",
+      "component": "Engine And Engine Cooling:Exhaust System:Emission Control:Gas Recirculation Valve (Egr Valve)",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Ranger, Lincoln Nautilus, Mustang, Maverick, Explorer, Escape, Lincoln Corsair, Bronco Sport, and Bronco vehicles. The exhaust gas recirculation (EGR) valve may fail, resulting in an unexpected loss of drive power."
+     },
+     {
+      "campaign": "25V519000",
+      "date": "09/08/2025",
+      "component": "Exterior Lighting:Lighting Control Module",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Lincoln Nautilus, Mustang Mach E, and Mustang vehicles. The LED Driver Modules may contain a burnt diode, which can cause the low-beam and high-beam headlights, daytime running lights, front position lights, and front turn signa"
+     },
+     {
+      "campaign": "25V518000",
+      "date": "08/08/2025",
+      "component": "Visibility:Power Window Devices And Controls",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 Lincoln Nautilus vehicles that were repaired incorrectly under recall 24V953. The window automatic reversal system may not react correctly after detecting an obstruction. As such, these vehicles fail to comply with the requ"
+     },
+     {
+      "campaign": "25V343000",
+      "date": "23/05/2025",
+      "component": "Electrical System",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2024-2025 Lincoln Nautilus, 2023-2025 Escape, 2023 Lincoln Corsair, 2025 Lincoln Corsair, Maverick, and Bronco Sport vehicles equipped with a 1.5L or 2.0L MPC engine and an engine block heater. The engine block heater may overheat wh"
+     }
+    ]
+   }
+  },
+  "aston-martin-vanquish": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Vanquish",
+      "engine": "5.2L 12-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 13,
+       "highway": 21,
+       "combined": 16
+      },
+      "epaId": 48801
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V532000",
+      "date": "20/08/2025",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module:Software",
+      "summary": "Aston Martin is recalling certain 2025 Vanquish vehicles. The vacuum pump may not generate vacuum, resulting in a loss of power brake assist and decreased brake function."
+     }
+    ]
+   }
+  },
+  "bentley-flying-spur": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Flying Spur",
+      "engine": "4.0L 8-cyl turbo plug-in hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Premium and Electricity",
+      "mpg": {
+       "city": 17,
+       "highway": 22,
+       "combined": 19
+      },
+      "epaId": 49002,
+      "electricRangeMi": 30,
+      "mpge": 46
+     },
+     {
+      "name": "Flying Spur Speed",
+      "engine": "4.0L 8-cyl turbo plug-in hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Premium and Electricity",
+      "mpg": {
+       "city": 17,
+       "highway": 22,
+       "combined": 19
+      },
+      "epaId": 49003,
+      "electricRangeMi": 30,
+      "mpge": 46
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V648000",
+      "date": "25/09/2025",
+      "component": "Fuel System, Gasoline:Delivery:Fuel Pump",
+      "summary": "Bentley Motors, Inc. (Bentley) is recalling certain 2025-2026 Continental GTC, Continental GT, and 2025 Flying Spur vehicles. The bolted joint connection securing the high-pressure fuel pump to the V8 Evo engine may be improperly tightened and cause a fuel leak."
+     }
+    ]
+   }
+  },
   "tesla-model-s": {
    "epa": {
     "year": 2025,
