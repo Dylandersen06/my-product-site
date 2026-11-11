@@ -489,6 +489,11 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["S 580 4MATIC", 128000, "4.0L turbo V8", 496, "20 mpg", "AWD", "acrbhs", "V8 power, Burmester audio"],
     ["Maybach S 580", 200000, "4.0L turbo V8", 496, "19 mpg", "AWD", "acrbhs", "Extended wheelbase, reclining rear seats"],
   ],
+  "mercedes-benz-gls": [
+    ["GLS 450 4MATIC", 88500, "3.0L turbo I6", 375, "21 mpg", "AWD", "acrbhs", "Seven seats, air suspension, mild-hybrid boost"],
+    ["GLS 580 4MATIC", 113000, "4.0L turbo V8", 510, "16 mpg", "AWD", "acrbhs", "V8 power, Burmester audio"],
+    ["AMG GLS 63", 146000, "4.0L turbo V8", 603, "15 mpg", "AWD", "acrbhs", "AMG active ride control, sport exhaust"],
+  ],
   "mercedes-benz-g-class": [
     ["G 550", 148000, "3.0L turbo I6", 443, "15 mpg", "4WD", "acrbhs", "Three locking differentials, mild-hybrid boost"],
     ["AMG G 63", 185000, "4.0L turbo V8", 577, "14 mpg", "4WD", "acrbhs", "AMG exhaust, adaptive suspension"],
@@ -829,5 +834,178 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
   "rolls-royce-phantom": [
     ["Phantom", 475000, "6.75L twin-turbo V12", 563, "14 mpg", "RWD", "crbhs", "Planar suspension, The Gallery dashboard"],
     ["Phantom Extended", 550000, "6.75L twin-turbo V12", 563, "14 mpg", "RWD", "crbhs", "Longer wheelbase, rear Serenity seats"],
+  ],
+  // Full lineups: Japanese mainstream brands
+  "toyota-corolla-hatchback": [
+    ["SE", 24500, "2.0L I4", 169, "35 mpg", "FWD", "crb", "Toyota Safety Sense, 8-in touchscreen"],
+    ["Nightshade", 26000, "2.0L I4", 169, "35 mpg", "FWD", "crbh", "Black wheels and trim, heated seats"],
+    ["XSE", 28000, "2.0L I4", 169, "33 mpg", "FWD", "crbh", "Heated seats, premium audio"],
+  ],
+  "toyota-corolla-cross": [
+    ["L", 24500, "2.0L I4", 169, "32 mpg", "FWD", "crb", "Toyota Safety Sense, 8-in touchscreen"],
+    ["LE", 28500, "2.0L I4", 169, "31 mpg", "FWD or AWD", "acrbh", "Heated seats, smart key"],
+    ["Hybrid S", 30000, "2.0L hybrid I4", 196, "42 mpg", "AWD", "acrbh", "Standard AWD, sport styling"],
+    ["XLE", 30500, "2.0L I4", 169, "31 mpg", "FWD or AWD", "acrbhs", "Moonroof, 18-in wheels"],
+  ],
+  "toyota-crown": [
+    ["XLE", 41000, "2.5L hybrid I4", 236, "41 mpg", "AWD", "acrbhs", "Standard AWD, 12.3-in touchscreen"],
+    ["Limited", 46000, "2.5L hybrid I4", 236, "41 mpg", "AWD", "acrbhs", "Leather seats, panoramic roof"],
+    ["Platinum", 54000, "2.4L turbo hybrid I4", 340, "30 mpg", "AWD", "acrbhs", "Hybrid Max power, adaptive suspension"],
+  ],
+  "toyota-crown-signia": [
+    ["XLE", 43500, "2.5L hybrid I4", 240, "38 mpg", "AWD", "acrbhs", "Standard AWD, 12.3-in touchscreen"],
+    ["Limited", 48000, "2.5L hybrid I4", 240, "38 mpg", "AWD", "acrbhs", "Leather seats, panoramic roof"],
+  ],
+  "toyota-bz4x": [
+    ["XLE", 37000, "Single electric motor", 201, "252 mi range", "FWD", "crbh", "12.3-in touchscreen, heated seats"],
+    ["XLE AWD", 39500, "Dual electric motors", 214, "228 mi range", "AWD", "acrbh", "X-MODE AWD, heated seats"],
+    ["Limited AWD", 43500, "Dual electric motors", 214, "222 mi range", "AWD", "acrbhs", "Panoramic roof, ventilated seats"],
+  ],
+  "toyota-grand-highlander": [
+    ["XLE", 44500, "2.4L turbo I4", 265, "24 mpg", "FWD or AWD", "acrbh", "Three adult-size rows, 12.3-in touchscreen"],
+    ["XLE Hybrid", 46500, "2.5L hybrid I4", 245, "37 mpg", "FWD or AWD", "acrbh", "Hybrid efficiency, three adult-size rows"],
+    ["Limited", 51500, "2.4L turbo I4", 265, "23 mpg", "FWD or AWD", "acrbhs", "Leather seats, panoramic roof"],
+    ["Hybrid MAX Platinum", 59000, "2.4L turbo hybrid I4", 362, "27 mpg", "AWD", "acrbhs", "Hybrid Max power, head-up display"],
+  ],
+  "toyota-sequoia": [
+    ["SR5", 63000, "3.4L twin-turbo hybrid V6", 437, "21 mpg", "RWD or 4WD", "acrbh", "i-FORCE MAX hybrid, 14-in touchscreen"],
+    ["Limited", 71000, "3.4L twin-turbo hybrid V6", 437, "21 mpg", "RWD or 4WD", "acrbhs", "Leather seats, power-folding third row"],
+    ["TRD Pro", 81000, "3.4L twin-turbo hybrid V6", 437, "20 mpg", "4WD", "acrbhs", "FOX shocks, locking rear differential"],
+    ["Capstone", 86000, "3.4L twin-turbo hybrid V6", 437, "21 mpg", "RWD or 4WD", "acrbhs", "Semi-aniline leather, 22-in wheels"],
+  ],
+  "toyota-tundra": [
+    ["SR", 41000, "3.4L twin-turbo V6", 348, "19 mpg", "RWD or 4WD", "acrb", "Toyota Safety Sense, 8-in touchscreen"],
+    ["SR5", 47000, "3.4L twin-turbo V6", 389, "19 mpg", "RWD or 4WD", "acrbh", "14-in touchscreen option, crew cab available"],
+    ["Limited", 55000, "3.4L twin-turbo V6", 389, "18 mpg", "RWD or 4WD", "acrbhs", "Leather seats, power rear window"],
+    ["TRD Pro", 69000, "3.4L twin-turbo hybrid V6", 437, "20 mpg", "4WD", "acrbhs", "i-FORCE MAX hybrid, FOX shocks"],
+  ],
+  "toyota-land-cruiser": [
+    ["1958", 57000, "2.4L turbo hybrid I4", 326, "23 mpg", "4WD", "acrbh", "Round headlights, full-time 4WD"],
+    ["Land Cruiser", 63000, "2.4L turbo hybrid I4", 326, "23 mpg", "4WD", "acrbhs", "Locking differentials, 12.3-in touchscreen"],
+    ["First Edition", 74000, "2.4L turbo hybrid I4", 326, "23 mpg", "4WD", "acrbhs", "Leather seats, roof rack, rock rails"],
+  ],
+  "toyota-gr86": [
+    ["Base", 30500, "2.4L flat-4", 228, "22 mpg", "RWD", "crb", "Torsen limited-slip differential, 8-in touchscreen"],
+    ["Premium", 33500, "2.4L flat-4", 228, "22 mpg", "RWD", "crbh", "18-in wheels, heated seats"],
+  ],
+  "toyota-gr-supra": [
+    ["3.0", 57000, "3.0L turbo I6", 382, "26 mpg", "RWD", "crbh", "Adaptive suspension, active differential"],
+    ["3.0 Premium", 61000, "3.0L turbo I6", 382, "26 mpg", "RWD", "crbh", "JBL audio, head-up display"],
+  ],
+  "toyota-gr-corolla": [
+    ["Core", 39000, "1.6L turbo I3", 300, "24 mpg", "AWD", "acrb", "GR-FOUR AWD, adjustable torque split"],
+    ["Premium", 46000, "1.6L turbo I3", 300, "24 mpg", "AWD", "acrbh", "Torsen limited-slip differentials, heated seats"],
+  ],
+  "toyota-mirai": [
+    ["XLE", 51000, "Hydrogen fuel cell", 182, "402 mi range", "RWD", "crbh", "Hydrogen refueling, sold only in California"],
+    ["Limited", 68000, "Hydrogen fuel cell", 182, "357 mi range", "RWD", "crbhs", "Panoramic roof, ventilated seats"],
+  ],
+  "honda-passport": [
+    ["EX-L", 42500, "3.5L V6", 280, "21 mpg", "AWD", "acrbhs", "Leather seats, power tailgate"],
+    ["TrailSport", 45000, "3.5L V6", 280, "20 mpg", "AWD", "acrbhs", "All-terrain tires, skid plates"],
+    ["Black Edition", 48500, "3.5L V6", 280, "21 mpg", "AWD", "acrbhs", "Black trim, ventilated seats"],
+  ],
+  "honda-ridgeline": [
+    ["Sport", 41000, "3.5L V6", 280, "21 mpg", "AWD", "acrbh", "In-bed trunk, dual-action tailgate"],
+    ["RTL", 44000, "3.5L V6", 280, "21 mpg", "AWD", "acrbhs", "Leather seats, sunroof"],
+    ["TrailSport", 46500, "3.5L V6", 280, "20 mpg", "AWD", "acrbhs", "All-terrain tires, off-road suspension"],
+    ["Black Edition", 47500, "3.5L V6", 280, "21 mpg", "AWD", "acrbhs", "Black trim, ventilated seats"],
+  ],
+  "honda-prologue": [
+    ["EX", 48000, "Single electric motor", 220, "308 mi range", "FWD or AWD", "acrbh", "11.3-in touchscreen, Google built-in"],
+    ["Touring", 51000, "Single electric motor", 220, "308 mi range", "FWD or AWD", "acrbhs", "Leather seats, panoramic roof"],
+    ["Elite", 57000, "Dual electric motors", 288, "283 mi range", "AWD", "acrbhs", "Standard AWD, ventilated seats"],
+  ],
+  "honda-civic-type-r": [
+    ["Type R", 46000, "2.0L turbo I4", 315, "24 mpg", "FWD", "crb", "6-speed manual, adaptive dampers"],
+  ],
+  "nissan-sentra": [
+    ["S", 21500, "2.0L I4", 149, "34 mpg", "FWD", "cb", "Safety Shield 360, 7-in touchscreen"],
+    ["SV", 22500, "2.0L I4", 149, "34 mpg", "FWD", "crbh", "12.3-in touchscreen, ProPILOT Assist"],
+    ["SR", 25500, "2.0L I4", 149, "33 mpg", "FWD", "crbhs", "Sport styling, 18-in wheels"],
+  ],
+  "nissan-altima": [
+    ["S", 27500, "2.5L I4", 188, "32 mpg", "FWD or AWD", "acb", "Safety Shield 360, 8-in touchscreen"],
+    ["SV", 29000, "2.5L I4", 188, "32 mpg", "FWD or AWD", "acrbh", "ProPILOT Assist, heated seats"],
+    ["SR", 30500, "2.5L I4", 188, "31 mpg", "FWD or AWD", "acrbhs", "Sport tuning, 19-in wheels"],
+    ["SL", 34000, "2.5L I4", 188, "31 mpg", "FWD or AWD", "acrbhs", "Leather seats, Bose audio"],
+  ],
+  "nissan-kicks": [
+    ["S", 22000, "2.0L I4", 141, "31 mpg", "FWD or AWD", "acb", "Safety Shield 360, 7-in touchscreen"],
+    ["SV", 23500, "2.0L I4", 141, "31 mpg", "FWD or AWD", "acrbh", "12.3-in touchscreen, ProPILOT Assist"],
+    ["SR", 26000, "2.0L I4", 141, "30 mpg", "FWD or AWD", "acrbhs", "Bose headrest speakers, 19-in wheels"],
+  ],
+  "nissan-murano": [
+    ["SV", 41000, "2.0L turbo I4", 241, "24 mpg", "AWD", "acrbh", "Dual 12.3-in screens, standard AWD"],
+    ["SL", 46000, "2.0L turbo I4", 241, "24 mpg", "AWD", "acrbhs", "Panoramic roof, leather seats"],
+    ["Platinum", 50000, "2.0L turbo I4", 241, "24 mpg", "AWD", "acrbhs", "Massaging seats, Bose audio"],
+  ],
+  "nissan-pathfinder": [
+    ["S", 37500, "3.5L V6", 284, "23 mpg", "FWD or 4WD", "acrb", "Three rows, ProPILOT Assist"],
+    ["SV", 40500, "3.5L V6", 284, "23 mpg", "FWD or 4WD", "acrbh", "Heated seats, 8-in touchscreen"],
+    ["Rock Creek", 45500, "3.5L V6", 295, "21 mpg", "4WD", "acrbh", "Off-road suspension, 6,000-lb towing"],
+    ["Platinum", 51500, "3.5L V6", 284, "22 mpg", "FWD or 4WD", "acrbhs", "Leather seats, panoramic roof"],
+  ],
+  "nissan-armada": [
+    ["SV", 57000, "3.5L twin-turbo V6", 425, "17 mpg", "RWD or 4WD", "acrbh", "14.3-in touchscreen, ProPILOT Assist"],
+    ["SL", 64000, "3.5L twin-turbo V6", 425, "17 mpg", "RWD or 4WD", "acrbhs", "Leather seats, power third row"],
+    ["PRO-4X", 68000, "3.5L twin-turbo V6", 425, "16 mpg", "4WD", "acrbhs", "Off-road suspension, locking rear differential"],
+    ["Platinum", 72000, "3.5L twin-turbo V6", 425, "17 mpg", "RWD or 4WD", "acrbhs", "Massaging seats, Klipsch audio"],
+  ],
+  "nissan-frontier": [
+    ["S", 32000, "3.8L V6", 310, "20 mpg", "RWD or 4WD", "acb", "Safety Shield 360, 8-in touchscreen"],
+    ["SV", 36000, "3.8L V6", 310, "20 mpg", "RWD or 4WD", "acrbh", "12.3-in touchscreen, heated seats"],
+    ["PRO-4X", 42500, "3.8L V6", 310, "19 mpg", "4WD", "acrbh", "Locking rear differential, Bilstein shocks"],
+  ],
+  "nissan-ariya": [
+    ["Engage", 40000, "Single electric motor", 214, "216 mi range", "FWD", "crbh", "Dual 12.3-in screens, ProPILOT Assist"],
+    ["Venture+", 45000, "Single electric motor", 238, "289 mi range", "FWD", "crbhs", "Larger battery, panoramic roof"],
+    ["Platinum+ e-4ORCE", 54000, "Dual electric motors", 389, "267 mi range", "AWD", "acrbhs", "e-4ORCE AWD, Bose audio"],
+  ],
+  "nissan-z": [
+    ["Sport", 43000, "3.0L twin-turbo V6", 400, "21 mpg", "RWD", "cb", "6-speed manual or 9-speed automatic"],
+    ["Performance", 53000, "3.0L twin-turbo V6", 400, "21 mpg", "RWD", "cbh", "Limited-slip differential, larger brakes"],
+    ["NISMO", 66000, "3.0L twin-turbo V6", 420, "19 mpg", "RWD", "cbh", "NISMO suspension, Recaro seats"],
+  ],
+  "mazda-mazda3-sedan": [
+    ["2.5 S", 24500, "2.5L I4", 191, "31 mpg", "FWD or AWD", "acrb", "8.8-in display, i-Activsense safety"],
+    ["2.5 S Preferred", 28500, "2.5L I4", 191, "31 mpg", "FWD or AWD", "acrbhs", "Leatherette seats, sunroof"],
+    ["2.5 Turbo Premium Plus", 35500, "2.5L turbo I4", 250, "27 mpg", "AWD", "acrbhs", "Bose audio, 360-degree camera"],
+  ],
+  "mazda-cx-30": [
+    ["2.5 S", 25500, "2.5L I4", 191, "29 mpg", "AWD", "acrb", "Standard AWD, 10.25-in display"],
+    ["2.5 S Premium", 31500, "2.5L I4", 191, "29 mpg", "AWD", "acrbhs", "Leather seats, Bose audio"],
+    ["2.5 Turbo Premium Plus", 36500, "2.5L turbo I4", 250, "26 mpg", "AWD", "acrbhs", "Turbo power, 360-degree camera"],
+  ],
+  "mazda-cx-70": [
+    ["3.3 Turbo", 41500, "3.3L turbo I6", 280, "25 mpg", "AWD", "acrbh", "Two rows, 12.3-in display"],
+    ["PHEV Preferred", 54000, "2.5L plug-in hybrid I4", 323, "26 mi electric / 25 mpg", "AWD", "acrbhs", "Plug-in hybrid, panoramic roof"],
+    ["3.3 Turbo S Premium Plus", 55000, "3.3L turbo I6", 340, "24 mpg", "AWD", "acrbhs", "Higher output, ventilated seats"],
+  ],
+  "subaru-impreza": [
+    ["Base", 23500, "2.0L flat-4", 152, "30 mpg", "AWD", "acrb", "Standard AWD, EyeSight safety"],
+    ["Sport", 26500, "2.0L flat-4", 152, "29 mpg", "AWD", "acrbh", "11.6-in touchscreen, heated seats"],
+    ["RS", 29500, "2.5L flat-4", 182, "29 mpg", "AWD", "acrbhs", "Sport suspension, Harman Kardon audio"],
+  ],
+  "subaru-legacy": [
+    ["Base", 25500, "2.5L flat-4", 180, "30 mpg", "AWD", "acrb", "Standard AWD, EyeSight safety"],
+    ["Premium", 27500, "2.5L flat-4", 180, "30 mpg", "AWD", "acrbh", "11.6-in touchscreen, heated seats"],
+    ["Sport", 31500, "2.4L turbo flat-4", 260, "27 mpg", "AWD", "acrbhs", "Turbo power, 19-in wheels"],
+    ["Limited", 33500, "2.5L flat-4", 180, "30 mpg", "AWD", "acrbhs", "Leather seats, Harman Kardon audio"],
+  ],
+  "subaru-brz": [
+    ["Premium", 31000, "2.4L flat-4", 228, "22 mpg", "RWD", "crb", "Torsen limited-slip differential, 8-in touchscreen"],
+    ["Limited", 34000, "2.4L flat-4", 228, "22 mpg", "RWD", "crbh", "Heated seats, 18-in wheels"],
+    ["tS", 37000, "2.4L flat-4", 228, "22 mpg", "RWD", "cbh", "STI-tuned dampers, Brembo brakes"],
+  ],
+  "subaru-solterra": [
+    ["Premium", 39000, "Dual electric motors", 215, "227 mi range", "AWD", "acrbh", "Standard AWD, X-MODE"],
+    ["Limited", 44500, "Dual electric motors", 215, "222 mi range", "AWD", "acrbhs", "Panoramic roof, ventilated seats"],
+    ["Touring", 47000, "Dual electric motors", 215, "222 mi range", "AWD", "acrbhs", "Harman Kardon audio, 360-degree camera"],
+  ],
+  "mitsubishi-outlander-sport": [
+    ["S", 24000, "2.0L I4", 148, "27 mpg", "FWD or AWD", "acb", "8-in touchscreen, forward collision mitigation"],
+    ["SE", 26500, "2.4L I4", 168, "26 mpg", "FWD or AWD", "acrbh", "Adaptive cruise, heated seats"],
+    ["Trail Edition", 28000, "2.4L I4", 168, "26 mpg", "AWD", "acrbh", "Standard AWD, roof rack"],
   ],
 };

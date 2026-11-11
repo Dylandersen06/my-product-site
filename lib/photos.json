@@ -531,6 +531,244 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
   },
+  "toyota-corolla-hatchback": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/2022_Toyota_Corolla_Hatchback_SE_in_Classic_Silver_Metallic%2C_Front_Right%2C_09-10-2023.jpg/960px-2022_Toyota_Corolla_Hatchback_SE_in_Classic_Silver_Metallic%2C_Front_Right%2C_09-10-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Toyota_Corolla_Hatchback_SE_in_Classic_Silver_Metallic,_Front_Right,_09-10-2023.jpg",
+    "artist": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "toyota-corolla-cross": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/2023_Toyota_Corolla_Cross_XLE_4WD_in_Wind_Chill_Pearl%2C_front_left.jpg/960px-2023_Toyota_Corolla_Cross_XLE_4WD_in_Wind_Chill_Pearl%2C_front_left.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Corolla_Cross_XLE_4WD_in_Wind_Chill_Pearl,_front_left.jpg",
+    "artist": "Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "toyota-crown": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/2023_Toyota_Crown_Platinum_in_Oxygen_White%2C_Front_Left%2C_2023-12-22.jpg/960px-2023_Toyota_Crown_Platinum_in_Oxygen_White%2C_Front_Left%2C_2023-12-22.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Crown_Platinum_in_Oxygen_White,_Front_Left,_2023-12-22.jpg",
+    "artist": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "toyota-crown-signia": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fc/25_Toyota_Crown_Signia_Limited.jpg/960px-25_Toyota_Crown_Signia_Limited.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:25_Toyota_Crown_Signia_Limited.jpg",
+    "artist": "HJUdall",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "toyota-bz4x": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ea/Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg/960px-Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Toyota_bZ4X_Automesse_Ludwigsburg_2022_1X7A5895.jpg",
+    "artist": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "toyota-grand-highlander": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/2026_Toyota_Grand_Highlander_Hybrid_XLE_in_Wind_Chill_Pearl%2C_front_left%2C_07-10-2026.jpg/960px-2026_Toyota_Grand_Highlander_Hybrid_XLE_in_Wind_Chill_Pearl%2C_front_left%2C_07-10-2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2026_Toyota_Grand_Highlander_Hybrid_XLE_in_Wind_Chill_Pearl,_front_left,_07-10-2026.jpg",
+    "artist": "Cutlass",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "toyota-sequoia": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cf/2023_Toyota_Sequoia_Limited_in_Wind_Chill_Pearl%2C_Front_Right%2C_01-16-2023.jpg/960px-2023_Toyota_Sequoia_Limited_in_Wind_Chill_Pearl%2C_Front_Right%2C_01-16-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Toyota_Sequoia_Limited_in_Wind_Chill_Pearl,_Front_Right,_01-16-2023.jpg",
+    "artist": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "toyota-tundra": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/dc/2022_Toyota_Tundra_Limited_CrewMax_Short_Bed_4x4_with_TRD_Off-Road_Package%2C_front_left%2C_11-01-2022.jpg/960px-2022_Toyota_Tundra_Limited_CrewMax_Short_Bed_4x4_with_TRD_Off-Road_Package%2C_front_left%2C_11-01-2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Toyota_Tundra_Limited_CrewMax_Short_Bed_4x4_with_TRD_Off-Road_Package,_front_left,_11-01-2022.jpg",
+    "artist": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "toyota-land-cruiser": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6d/2021_Toyota_Land_Cruiser_300_3.4_ZX_%28Colombia%29_front_view_04.png/960px-2021_Toyota_Land_Cruiser_300_3.4_ZX_%28Colombia%29_front_view_04.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_Toyota_Land_Cruiser_300_3.4_ZX_(Colombia)_front_view_04.png",
+    "artist": "Autosdeprimera",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "toyota-gr86": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/2022_Toyota_GR86_Premium_in_Halo%2C_Front_Right%2C_04-10-2022.jpg/960px-2022_Toyota_GR86_Premium_in_Halo%2C_Front_Right%2C_04-10-2022.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Toyota_GR86_Premium_in_Halo,_Front_Right,_04-10-2022.jpg",
+    "artist": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "toyota-gr-supra": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/2020_Toyota_GR_Supra_%28United_States%29.png/960px-2020_Toyota_GR_Supra_%28United_States%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2020_Toyota_GR_Supra_(United_States).png",
+    "artist": "Gold Pony",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "toyota-gr-corolla": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/2024_Toyota_GR_Corolla_Circuit_Edition_in_Blue_Flame%2C_front_right%2C_2024-06-30.jpg/960px-2024_Toyota_GR_Corolla_Circuit_Edition_in_Blue_Flame%2C_front_right%2C_2024-06-30.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Toyota_GR_Corolla_Circuit_Edition_in_Blue_Flame,_front_right,_2024-06-30.jpg",
+    "artist": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "toyota-mirai": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/Toyota_Mirai_%28JPD20%29_IMG_5303.jpg/960px-Toyota_Mirai_%28JPD20%29_IMG_5303.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Toyota_Mirai_(JPD20)_IMG_5303.jpg",
+    "artist": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "honda-passport": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c3/2026_Honda_Passport_RTL%2C_front_right%2C_06-07-2025.jpg/960px-2026_Honda_Passport_RTL%2C_front_right%2C_06-07-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2026_Honda_Passport_RTL,_front_right,_06-07-2025.jpg",
+    "artist": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "honda-ridgeline": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/2022_Honda_Ridgeline_Touring_in_Sonic_Gray_Pearl%2C_front_left%2C_2024-05-11.jpg/960px-2022_Honda_Ridgeline_Touring_in_Sonic_Gray_Pearl%2C_front_left%2C_2024-05-11.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Honda_Ridgeline_Touring_in_Sonic_Gray_Pearl,_front_left,_2024-05-11.jpg",
+    "artist": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "honda-prologue": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/2024_Honda_Prologue_Touring%2C_front_7.11.25.jpg/960px-2024_Honda_Prologue_Touring%2C_front_7.11.25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Honda_Prologue_Touring,_front_7.11.25.jpg",
+    "artist": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "honda-civic-type-r": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/71/2024_Honda_Civic_Type_R%2C_front_right%2C_06-15-2024.jpg/960px-2024_Honda_Civic_Type_R%2C_front_right%2C_06-15-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Honda_Civic_Type_R,_front_right,_06-15-2024.jpg",
+    "artist": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "nissan-sentra": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0c/2024_Nissan_Sentra_%28B18%29_DSC_3754.jpg/960px-2024_Nissan_Sentra_%28B18%29_DSC_3754.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Nissan_Sentra_(B18)_DSC_3754.jpg",
+    "artist": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "nissan-altima": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/59/2024_Nissan_Altima_SR%2C_front_left%2C_05-05-2025.jpg/960px-2024_Nissan_Altima_SR%2C_front_left%2C_05-05-2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Nissan_Altima_SR,_front_left,_05-05-2025.jpg",
+    "artist": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "nissan-kicks": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/65/2025_Nissan_Kicks_SV_AWD_in_Deep_Blue_Pearl%2C_front_right%2C_2024-10-06.jpg/960px-2025_Nissan_Kicks_SV_AWD_in_Deep_Blue_Pearl%2C_front_right%2C_2024-10-06.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Nissan_Kicks_SV_AWD_in_Deep_Blue_Pearl,_front_right,_2024-10-06.jpg",
+    "artist": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "nissan-murano": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/2025_Nissan_Murano_Platinum%2C_front_4.13.25.jpg/960px-2025_Nissan_Murano_Platinum%2C_front_4.13.25.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Nissan_Murano_Platinum,_front_4.13.25.jpg",
+    "artist": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "nissan-pathfinder": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/2023_Nissan_Pathfinder_Platinum_4WD_in_Baja_Storm_Metallic%2C_front_left.jpg/960px-2023_Nissan_Pathfinder_Platinum_4WD_in_Baja_Storm_Metallic%2C_front_left.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Nissan_Pathfinder_Platinum_4WD_in_Baja_Storm_Metallic,_front_left.jpg",
+    "artist": "Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "nissan-armada": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/2025_Nissan_Armada_Pro-4X%2C_front_NYIAS_2025.jpg/960px-2025_Nissan_Armada_Pro-4X%2C_front_NYIAS_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2025_Nissan_Armada_Pro-4X,_front_NYIAS_2025.jpg",
+    "artist": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "nissan-frontier": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/2021_Nissan_Frontier_Pro_4X_%28Colombia%3B_facelift%29_front_view_01.png/960px-2021_Nissan_Frontier_Pro_4X_%28Colombia%3B_facelift%29_front_view_01.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2021_Nissan_Frontier_Pro_4X_(Colombia;_facelift)_front_view_01.png",
+    "artist": "Autosdeprimera",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0"
+  },
+  "nissan-ariya": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2023_Nissan_Ariya_Advance_Front.jpg/960px-2023_Nissan_Ariya_Advance_Front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Nissan_Ariya_Advance_Front.jpg",
+    "artist": "Vauxford",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "nissan-z": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/2023_Nissan_Z_RZ34_in_Granite_Black%2C_front_left%2C_05-05-2024.jpg/960px-2023_Nissan_Z_RZ34_in_Granite_Black%2C_front_left%2C_05-05-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Nissan_Z_RZ34_in_Granite_Black,_front_left,_05-05-2024.jpg",
+    "artist": "Ethan Llamas",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "mazda-mazda3-sedan": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e7/Mazda3_SEDAN_20S_L_Package_2WD_%285BA-BPFP%29_front.jpg/960px-Mazda3_SEDAN_20S_L_Package_2WD_%285BA-BPFP%29_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda3_SEDAN_20S_L_Package_2WD_(5BA-BPFP)_front.jpg",
+    "artist": "Tokumeigakarinoaoshima",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "mazda-cx-30": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Mazda_CX-30_Touring%2C_2020_front.jpg/960px-Mazda_CX-30_Touring%2C_2020_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-30_Touring,_2020_front.jpg",
+    "artist": "EurovisionNim",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "mazda-cx-70": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Mazda_CX-70_3.3_Turbo_S_Premium.jpg/960px-Mazda_CX-70_3.3_Turbo_S_Premium.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Mazda_CX-70_3.3_Turbo_S_Premium.jpg",
+    "artist": "TTTNIS",
+    "license": "CC0",
+    "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en"
+  },
+  "subaru-impreza": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/2024_Subaru_Impreza_Base%2C_front_right%2C_03-02-2024.jpg/960px-2024_Subaru_Impreza_Base%2C_front_right%2C_03-02-2024.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2024_Subaru_Impreza_Base,_front_right,_03-02-2024.jpg",
+    "artist": "MercurySable99",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "subaru-legacy": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/2020_Subaru_Legacy%2C_front_10.1.20.jpg/960px-2020_Subaru_Legacy%2C_front_10.1.20.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2020_Subaru_Legacy,_front_10.1.20.jpg",
+    "artist": "Kevauto",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "subaru-brz": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/2022_Subaru_BRZ_Limited_in_Crystal_Black_Silica%2C_front_right_%28NYIAS_2022%29.jpg/960px-2022_Subaru_BRZ_Limited_in_Crystal_Black_Silica%2C_front_right_%28NYIAS_2022%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2022_Subaru_BRZ_Limited_in_Crystal_Black_Silica,_front_right_(NYIAS_2022).jpg",
+    "artist": "Mr.choppers",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+  },
+  "subaru-solterra": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/63/2023_Subaru_Solterra_AWD_Technology_Package_in_Smoked_Carbon%2C_Front_Left%2C_07-14-2023.jpg/960px-2023_Subaru_Solterra_AWD_Technology_Package_in_Smoked_Carbon%2C_Front_Left%2C_07-14-2023.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2023_Subaru_Solterra_AWD_Technology_Package_in_Smoked_Carbon,_Front_Left,_07-14-2023.jpg",
+    "artist": "Elise240SX",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "mitsubishi-outlander-sport": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/64/2012_Mitsubishi_Outlander_Sport_PX_2.0_GA2W_%2820220519%29.jpg/960px-2012_Mitsubishi_Outlander_Sport_PX_2.0_GA2W_%2820220519%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:2012_Mitsubishi_Outlander_Sport_PX_2.0_GA2W_(20220519).jpg",
+    "artist": "オーバードライブ83",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
   "tesla-model-s": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9e/Tesla_Model_S_%28Facelift_ab_04-2016%29_%28cropped%29.jpg/960px-Tesla_Model_S_%28Facelift_ab_04-2016%29_%28cropped%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "source": "https://commons.wikimedia.org/wiki/File:Tesla_Model_S_(Facelift_ab_04-2016)_(cropped).jpg",
@@ -604,6 +842,13 @@
   "mercedes-benz-s-class": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Mercedes-Benz_W223_IMG_6663.jpg/960px-Mercedes-Benz_W223_IMG_6663.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_W223_IMG_6663.jpg",
+    "artist": "Alexander Migl",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "mercedes-benz-gls": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Mercedes-Benz_X167_IMG_5259.jpg/960px-Mercedes-Benz_X167_IMG_5259.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Mercedes-Benz_X167_IMG_5259.jpg",
     "artist": "Alexander Migl",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"

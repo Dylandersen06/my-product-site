@@ -23,6 +23,8 @@ const D8 = "8-speed dual-clutch";
 const M6 = "6-speed manual";
 const M6A8 = "6-speed manual or 8-speed automatic";
 const M6A10 = "6-speed manual or 10-speed automatic";
+const M6A6 = "6-speed manual or 6-speed automatic";
+const M6A9 = "6-speed manual or 9-speed automatic";
 
 export type SpecRow = [number[], string | string[], number, number | null, number[]?];
 
@@ -133,6 +135,7 @@ export const TRIM_SPECS: Record<string, SpecRow> = {
   "mercedes-benz-glc": [[6.2, 6.2, 4.6], A9, 19.4, 0],
   "mercedes-benz-e-class": [[6.2, 6.2, 4.5], A9, 19, 0],
   "mercedes-benz-s-class": [[4.9, 4.4, 4.5], A9, 12.9, 0],
+  "mercedes-benz-gls": [[5.8, 4.6, 4.1], A9, 17.4, 0],
   "mercedes-benz-g-class": [[5.6, 4.2], A9, 38.1, 0],
   "audi-a3": [[6.8, 6.8, 4.5], D7, 10.9, null],
   "audi-q5": [[6.0, 6.0, 6.0, 4.4], [D7, D7, D7, A8], 25.8, 2],
@@ -209,4 +212,39 @@ export const TRIM_SPECS: Record<string, SpecRow> = {
   "rolls-royce-cullinan": [[4.9, 4.9], A8, 21.2, 0],
   "rolls-royce-spectre": [[4.4, 4.1], EV, 8.6, 0],
   "rolls-royce-phantom": [[5.1, 5.3], A8, 19, 0],
+  // Full lineups: Japanese mainstream brands
+  "toyota-corolla-hatchback": [[8.2, 8.2, 8.2], CVT, 17.8, null],
+  "toyota-corolla-cross": [[9.5, 9.5, 7.5, 9.5], CVT, 24.9, null],
+  "toyota-crown": [[7.6, 7.6, 5.7], [CVT, CVT, A6], 15.2, 1],
+  "toyota-crown-signia": [[7.3, 7.3], CVT, 25.8, 0],
+  "toyota-bz4x": [[7.1, 6.5, 6.5], EV, 27.7, 2],
+  "toyota-grand-highlander": [[7.6, 8.5, 7.6, 6.3], [A8, CVT, A8, A6], 20.6, 2, [5000, 3500, 5000, 5000]],
+  "toyota-sequoia": [[6.1, 6.1, 6.1, 6.1], A10, 11.5, 1],
+  "toyota-tundra": [[6.5, 6.1, 6.1, 5.7], A10, 62.9, 1, [8300, 12000, 11200, 11175]],
+  "toyota-land-cruiser": [[7.5, 7.5, 7.5], A8, 37.5, 1],
+  "toyota-gr86": [[6.1, 6.1], M6A6, 6.3, null],
+  "toyota-gr-supra": [[3.9, 3.9], M6A8, 10.2, null],
+  "toyota-gr-corolla": [[5.0, 5.0], M6A8, 17.8, null],
+  "toyota-mirai": [[9.1, 9.1], EV, 9.6, 1],
+  "honda-passport": [[6.4, 6.4, 6.4], A9, 41.2, null],
+  "honda-ridgeline": [[6.5, 6.5, 6.5, 6.5], A9, 33.9, null],
+  "honda-prologue": [[7.3, 7.3, 6.3], EV, 25.2, null],
+  "honda-civic-type-r": [[5.0], M6, 24.5, null],
+  "nissan-sentra": [[8.7, 8.7, 8.7], CVT, 14.3, 2],
+  "nissan-altima": [[7.8, 7.8, 7.8, 7.8], CVT, 15.4, null],
+  "nissan-kicks": [[8.9, 8.9, 8.9], CVT, 30, 2],
+  "nissan-murano": [[7.2, 7.2, 7.2], A9, 37.4, 1],
+  "nissan-pathfinder": [[6.8, 6.8, 6.8, 6.8], A9, 16.6, 2, [3500, 3500, 6000, 6000]],
+  "nissan-armada": [[5.9, 5.9, 5.9, 5.9], A9, 20.2, 1],
+  "nissan-frontier": [[6.6, 6.6, 6.6], A9, 33.5, 2],
+  "nissan-ariya": [[7.5, 7.5, 5.0], EV, 22.8, 2],
+  "nissan-z": [[4.5, 4.3, 4.1], [M6A9, M6A9, A9], 6.9, null],
+  "mazda-mazda3-sedan": [[7.6, 7.6, 5.6], A6, 13.2, 2],
+  "mazda-cx-30": [[8.2, 8.2, 6.4], A6, 20.2, 2],
+  "mazda-cx-70": [[6.5, 6.2, 5.9], A8, 39.6, 1, [5000, 3500, 5000]],
+  "subaru-impreza": [[9.5, 9.5, 7.6], CVT, 20.4, null],
+  "subaru-legacy": [[8.6, 8.6, 6.0, 8.6], CVT, 15.1, null],
+  "subaru-brz": [[6.1, 6.1, 6.1], [M6A6, M6A6, M6], 6.3, null],
+  "subaru-solterra": [[6.5, 6.5, 6.5], EV, 23.8, 2],
+  "mitsubishi-outlander-sport": [[9.5, 8.6, 8.6], CVT, 21.7, null],
 };

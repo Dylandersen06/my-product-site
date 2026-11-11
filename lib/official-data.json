@@ -3830,32 +3830,6 @@
        "combined": 26
       },
       "epaId": 48925
-     },
-     {
-      "name": "Outlander Sport 4WD",
-      "engine": "2.0L 4-cyl",
-      "drive": "4-Wheel Drive",
-      "transmission": "Automatic (AV-S6)",
-      "fuel": "Regular",
-      "mpg": {
-       "city": 23,
-       "highway": 29,
-       "combined": 26
-      },
-      "epaId": 48926
-     },
-     {
-      "name": "Outlander Sport 4WD",
-      "engine": "2.4L 4-cyl",
-      "drive": "4-Wheel Drive",
-      "transmission": "Automatic (AV-S6)",
-      "fuel": "Regular",
-      "mpg": {
-       "city": 23,
-       "highway": 28,
-       "combined": 25
-      },
-      "epaId": 48927
      }
     ]
    },
@@ -6021,6 +5995,1966 @@
     ]
    }
   },
+  "toyota-corolla-hatchback": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Corolla Hatchback",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 32,
+       "highway": 41,
+       "combined": 35
+      },
+      "epaId": 47996
+     },
+     {
+      "name": "Corolla Hatchback XSE",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 30,
+       "highway": 38,
+       "combined": 33
+      },
+      "epaId": 47997
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Toyota COROLLA HATCHBACK 5 HB FWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20252
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "toyota-corolla-cross": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Corolla Cross",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 31,
+       "highway": 33,
+       "combined": 32
+      },
+      "epaId": 48911
+     },
+     {
+      "name": "Corolla Cross AWD",
+      "engine": "2.0L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 29,
+       "highway": 31,
+       "combined": 30
+      },
+      "epaId": 48938
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Toyota COROLLA CROSS SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20255
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "toyota-crown": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Crown AWD",
+      "engine": "2.4L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 29,
+       "highway": 32,
+       "combined": 30
+      },
+      "epaId": 47937
+     },
+     {
+      "name": "Crown AWD",
+      "engine": "2.5L 4-cyl hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 42,
+       "highway": 41,
+       "combined": 41
+      },
+      "epaId": 47936
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     },
+     {
+      "campaign": "25V595000",
+      "date": "11/09/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Toyota Venza, 2023-2025 RAV4 Prime, RAV4, Highlander, GR Corolla, Crown, 2024-2025 Lexus TX, LS, Toyota Tacoma, Grand Highlander, and 2025 Lexus RX, Toyota Crown Signia, Camry, RAV 4 Plug-in Hybrid ("
+     },
+     {
+      "campaign": "24V548000",
+      "date": "23/07/2024",
+      "component": "Equipment:Other:Labels",
+      "summary": "Gulf States Toyota, Inc. (GST) is recalling certain Toyota 2023 GR Supra, 2024 4 Runner, Corolla, Grand Highlander, Grand Highlander Hybrid, Land Cruiser Hybrid, Tacoma, Tacoma Hybrid, 2023-2024 BZ4X, Corolla Cross Hybrid, GR Corolla, GR86, Highlander, Highlander Hybrid, Prius, P"
+     }
+    ]
+   }
+  },
+  "toyota-crown-signia": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Crown Signia AWD",
+      "engine": "2.5L 4-cyl hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 39,
+       "highway": 37,
+       "combined": 38
+      },
+      "epaId": 48049
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V179000",
+      "date": "24/03/2026",
+      "component": "Equipment:Other:Labels",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024-2025 Toyota Tundra, Tacoma Hybrid, Tacoma, RAV4 Hybrid, Land Cruiser Hybrid, Lexus GX550, 2024-2026 Tundra Hybrid, 2025 Sequoia Hybrid, Crown Signia, Grand Highlander, Lexus TX500 Hybrid, Lexus NX350 Hybr"
+     },
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     },
+     {
+      "campaign": "25V595000",
+      "date": "11/09/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Toyota Venza, 2023-2025 RAV4 Prime, RAV4, Highlander, GR Corolla, Crown, 2024-2025 Lexus TX, LS, Toyota Tacoma, Grand Highlander, and 2025 Lexus RX, Toyota Crown Signia, Camry, RAV 4 Plug-in Hybrid ("
+     }
+    ]
+   }
+  },
+  "toyota-bz4x": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "bZ4X",
+      "engine": "150 kW AC Synchronous",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49126,
+      "mpge": 119,
+      "rangeMi": 252
+     },
+     {
+      "name": "bZ4X AWD (18inch Wheels)",
+      "engine": "80 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49127,
+      "mpge": 104,
+      "rangeMi": 228
+     },
+     {
+      "name": "bZ4X AWD (20inch Wheels)",
+      "engine": "80 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49128,
+      "mpge": 102,
+      "rangeMi": 222
+     },
+     {
+      "name": "bZ4X LIMITED",
+      "engine": "80 kW AC Synchronous",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48997,
+      "mpge": 112,
+      "rangeMi": 236
+     },
+     {
+      "name": "bZ4X LIMITED AWD",
+      "engine": "80 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49129,
+      "mpge": 102,
+      "rangeMi": 222
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Toyota bZ4X SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20291
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     },
+     {
+      "campaign": "25V577000",
+      "date": "04/09/2025",
+      "component": "Visibility:Defroster/Defogger/Hvac System",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2025 bZ4X, Lexus RZ, and Subaru Solterra vehicles. During certain HVAC system faults, such as electrical compressor failure, the defroster and defogger system may become inoperative."
+     }
+    ]
+   }
+  },
+  "toyota-grand-highlander": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Grand Highlander AWD LE/XLE",
+      "engine": "2.4L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48974
+     },
+     {
+      "name": "Grand Highlander AWD Limited/Platinum",
+      "engine": "2.4L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 20,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48975
+     },
+     {
+      "name": "Grand Highlander LE/XLE",
+      "engine": "2.4L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 28,
+       "combined": 24
+      },
+      "epaId": 48949
+     },
+     {
+      "name": "Grand Highlander Limited",
+      "engine": "2.4L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 28,
+       "combined": 24
+      },
+      "epaId": 48950
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Toyota GRAND HIGHLANDER SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20287
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V179000",
+      "date": "24/03/2026",
+      "component": "Equipment:Other:Labels",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024-2025 Toyota Tundra, Tacoma Hybrid, Tacoma, RAV4 Hybrid, Land Cruiser Hybrid, Lexus GX550, 2024-2026 Tundra Hybrid, 2025 Sequoia Hybrid, Crown Signia, Grand Highlander, Lexus TX500 Hybrid, Lexus NX350 Hybr"
+     },
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     },
+     {
+      "campaign": "25V595000",
+      "date": "11/09/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Toyota Venza, 2023-2025 RAV4 Prime, RAV4, Highlander, GR Corolla, Crown, 2024-2025 Lexus TX, LS, Toyota Tacoma, Grand Highlander, and 2025 Lexus RX, Toyota Crown Signia, Camry, RAV 4 Plug-in Hybrid ("
+     }
+    ]
+   }
+  },
+  "toyota-sequoia": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Sequoia 2WD",
+      "engine": "3.4L 6-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 24,
+       "combined": 22
+      },
+      "epaId": 48553
+     },
+     {
+      "name": "Sequoia 4WD",
+      "engine": "3.4L 6-cyl turbo hybrid",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 22,
+       "combined": 20
+      },
+      "epaId": 48575
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "toyota-tundra": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Tundra 2WD",
+      "engine": "3.4L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 23,
+       "combined": 20
+      },
+      "epaId": 48510
+     },
+     {
+      "name": "Tundra 2WD",
+      "engine": "3.4L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 23,
+       "combined": 20
+      },
+      "epaId": 48511
+     },
+     {
+      "name": "Tundra 4WD",
+      "engine": "3.4L 6-cyl turbo",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 22,
+       "combined": 19
+      },
+      "epaId": 48516
+     },
+     {
+      "name": "Tundra 4WD",
+      "engine": "3.4L 6-cyl turbo",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 22,
+       "combined": 19
+      },
+      "epaId": 48517
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Toyota TUNDRA PU/CC 4WD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20275
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 5,
+    "items": [
+     {
+      "campaign": "26V571000",
+      "date": "02/09/2026",
+      "component": "Equipment:Other:Labels",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024 Toyota Tacoma Hybrid, 2025 Tundra Hybrid, Tundra, 2026 RAV4 Hybrid, 4Runner i-Force Max Hybrid, and 4Runner vehicles. The load carrying capacity modification label may display inaccurate added weight valu"
+     },
+     {
+      "campaign": "26V179000",
+      "date": "24/03/2026",
+      "component": "Equipment:Other:Labels",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024-2025 Toyota Tundra, Tacoma Hybrid, Tacoma, RAV4 Hybrid, Land Cruiser Hybrid, Lexus GX550, 2024-2026 Tundra Hybrid, 2025 Sequoia Hybrid, Crown Signia, Grand Highlander, Lexus TX500 Hybrid, Lexus NX350 Hybr"
+     },
+     {
+      "campaign": "26V038000",
+      "date": "23/01/2026",
+      "component": "Back Over Prevention:Software",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2024-2025 Toyota Tundra and Tundra Hybrid vehicles equipped with a Panoramic View Monitor (PVM) system. The rearview camera image may not display when the vehicle is placed in reverse. As such, these vehicles "
+     },
+     {
+      "campaign": "25V657000",
+      "date": "01/10/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2025 Tundra, Tundra Hybrid, and 2023-2025 Sequoia Hybrid vehicles. A software error may cause the rearview image not to display when the vehicle is placed in reverse. As such, these vehicles fail to compl"
+     },
+     {
+      "campaign": "25V322000",
+      "date": "15/05/2025",
+      "component": "Exterior Lighting:Back Up Lights",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2025 Toyota Tundra and Tundra Hybrid vehicles. Moisture may enter the reverse light assemblies and cause a light failure."
+     }
+    ]
+   }
+  },
+  "toyota-land-cruiser": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Land Cruiser",
+      "engine": "2.4L 4-cyl turbo hybrid",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 25,
+       "combined": 23
+      },
+      "epaId": 48977
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Toyota LAND CRUISER SUV 4WD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 20264
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "toyota-gr86": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "GR 86",
+      "engine": "2.4L 4-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 30,
+       "combined": 24
+      },
+      "epaId": 48822
+     },
+     {
+      "name": "GR 86",
+      "engine": "2.4L 4-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48821
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "toyota-gr-supra": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "GR Supra",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 31,
+       "combined": 27
+      },
+      "epaId": 47966
+     },
+     {
+      "name": "GR Supra",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 47967
+     },
+     {
+      "name": "GR Supra",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 27,
+       "combined": 21
+      },
+      "epaId": 47968
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "toyota-gr-corolla": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "GR Corolla",
+      "engine": "1.6L 3-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 27,
+       "combined": 22
+      },
+      "epaId": 48595
+     },
+     {
+      "name": "GR Corolla",
+      "engine": "1.6L 3-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 28,
+       "combined": 24
+      },
+      "epaId": 48596
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V595000",
+      "date": "11/09/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Toyota Venza, 2023-2025 RAV4 Prime, RAV4, Highlander, GR Corolla, Crown, 2024-2025 Lexus TX, LS, Toyota Tacoma, Grand Highlander, and 2025 Lexus RX, Toyota Crown Signia, Camry, RAV 4 Plug-in Hybrid ("
+     }
+    ]
+   }
+  },
+  "toyota-mirai": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Mirai XLE",
+      "engine": "Engine",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Hydrogen",
+      "mpg": {
+       "city": 76,
+       "highway": 71,
+       "combined": 74
+      },
+      "epaId": 49064
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     }
+    ]
+   }
+  },
+  "honda-passport": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Passport AWD",
+      "engine": "3.5L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48092
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Honda PASSPORT SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20097
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "honda-ridgeline": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Ridgeline AWD",
+      "engine": "3.5L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48246
+     },
+     {
+      "name": "Ridgeline AWD TrailSport",
+      "engine": "3.5L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 23,
+       "combined": 20
+      },
+      "epaId": 48247
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Honda RIDGELINE PU/CC AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20102
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V332000",
+      "date": "22/05/2026",
+      "component": "Air Bags:Sensor:Occupant Classification:Front Passenger",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2018-2021, 2023 Acura TLX, 2019-2024 RDX, 2017-2020, 2022-2026 MDX, 2017-2021, 2023, 2025 Honda Ridgeline, 2017-2022 Pilot, 2019-2021 Passport, 2018-2026 Odyssey, 2019-2022 Insight, 2019-2021 HR-V, 2018-2020 Fit, 2020-2022 CR-"
+     },
+     {
+      "campaign": "24V321000",
+      "date": "10/05/2024",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Honda (America Honda Motor Co) is recalling certain 2020-2024 Ridgeline vehicles. The rearview camera (RVC) tailgate wire harness may fatigue and break, which can prevent the rearview camera image from displaying."
+     }
+    ]
+   }
+  },
+  "honda-prologue": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Prologue AWD Elite",
+      "engine": "67 and 180 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49090,
+      "mpge": 95,
+      "rangeMi": 283
+     },
+     {
+      "name": "Prologue AWD Touring",
+      "engine": "67 and 180 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49089,
+      "mpge": 99,
+      "rangeMi": 294
+     },
+     {
+      "name": "Prologue FWD",
+      "engine": "180 kW ACPM",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49091,
+      "mpge": 104,
+      "rangeMi": 308
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V306000",
+      "date": "15/05/2026",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "American Honda Motor Company (Honda) is recalling certain 2024-2025 Honda Prologue and 2024 Acura ZDX vehicles. The rearview camera screen may display a distorted or blank image."
+     }
+    ]
+   }
+  },
+  "honda-civic-type-r": {
+   "epa": null,
+   "epaNote": "Not listed separately in the EPA data.",
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "24V744000",
+      "date": "04/10/2024",
+      "component": "Steering",
+      "summary": "Honda (American Honda Motor Co.) is recalling certain 2023-2025 Acura Integra, Civic Type R, CR-V Hybrid, CR-V, HR-V, 2022-2025 Civic, Civic Hatchback, 2024-2025 Acura Integra Type S, 2025 CR-V Fuel Cell EV, Civic Hybrid, and Civic Hatchback Hybrid vehicles. The steering gearbox "
+     }
+    ]
+   }
+  },
+  "nissan-sentra": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Sentra",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 30,
+       "highway": 40,
+       "combined": 34
+      },
+      "epaId": 48500
+     },
+     {
+      "name": "Sentra SR",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 30,
+       "highway": 38,
+       "combined": 33
+      },
+      "epaId": 48501
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Nissan Sentra 4 DR FWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20742
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V410000",
+      "date": "27/06/2026",
+      "component": "Power Train:Driveline:Driveshaft",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Nissan Sentra vehicles. The front left-side driveshaft may not be fully seated in the continuously variable transmission (CVT) assembly, which can cause a transmission fluid leak and loss of drive power."
+     },
+     {
+      "campaign": "26V023000",
+      "date": "21/01/2026",
+      "component": "Latches/Locks/Linkages:Doors:Latch",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Altima, Sentra, 2025-2026 Frontier, and 2026 Kicks vehicles. The door strikers may have been improperly welded and break, allowing the door to open while moving. As such, these vehicles fail to comply with the requirem"
+     },
+     {
+      "campaign": "25V807000",
+      "date": "21/11/2025",
+      "component": "Visibility:Windshield",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Sentra vehicles. The windshield glass may have visible air bubbles, which can obscure the driver's visibility. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard numbe"
+     },
+     {
+      "campaign": "25V153000",
+      "date": "11/03/2025",
+      "component": "Seats",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Sentra vehicles. The driver's seat frame may not be fully secured to the outer side of the seat track. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard numbers 207, "
+     }
+    ]
+   }
+  },
+  "nissan-altima": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Altima",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 38,
+       "combined": 31
+      },
+      "epaId": 48186
+     },
+     {
+      "name": "Altima AWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 25,
+       "highway": 34,
+       "combined": 28
+      },
+      "epaId": 48187
+     },
+     {
+      "name": "Altima SL/SR",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 36,
+       "combined": 30
+      },
+      "epaId": 48188
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Nissan Altima 4 DR AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20744
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V526000",
+      "date": "13/08/2026",
+      "component": "Air Bags:Critical Fasteners",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Altima vehicles. The front passenger air bag and front passenger knee air bag may have been installed with incorrect mounting fasteners, which can cause the air bags not to deploy as intended."
+     },
+     {
+      "campaign": "26V023000",
+      "date": "21/01/2026",
+      "component": "Latches/Locks/Linkages:Doors:Latch",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Altima, Sentra, 2025-2026 Frontier, and 2026 Kicks vehicles. The door strikers may have been improperly welded and break, allowing the door to open while moving. As such, these vehicles fail to comply with the requirem"
+     }
+    ]
+   }
+  },
+  "nissan-kicks": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Kicks",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 28,
+       "highway": 35,
+       "combined": 31
+      },
+      "epaId": 48259
+     },
+     {
+      "name": "Kicks AWD",
+      "engine": "2.0L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 34,
+       "combined": 30
+      },
+      "epaId": 48277
+     },
+     {
+      "name": "Kicks Play",
+      "engine": "1.6L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 31,
+       "highway": 36,
+       "combined": 33
+      },
+      "epaId": 49042
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Nissan Kicks SUV AWD",
+    "overall": "4",
+    "frontal": "3",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20760
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V331000",
+      "date": "22/05/2026",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025-2026 Kicks vehicles. A software error in the combination meter may cause the screen display to go partially or fully blank. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety S"
+     },
+     {
+      "campaign": "25V324000",
+      "date": "04/06/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Frontier and Kicks vehicles. The center information display unit may display a blank screen when shifted into reverse. As such, these vehicles fail to comply with Federal Motor Vehicle Safety Standard (FMVSS) number 11"
+     },
+     {
+      "campaign": "25V188000",
+      "date": "18/04/2025",
+      "component": "Equipment:Other:Labels",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Kicks vehicles. The certification label may have been printed with the incorrect Gross Vehicle Weight Rating (GVWR) and Gross Axle Weight Rating (GAWR) values, which can result in the vehicle being overloaded. As such,"
+     },
+     {
+      "campaign": "24V969000",
+      "date": "23/12/2024",
+      "component": "Electrical System:Body Control Module/Bcm",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Kicks vehicles. The \"Shift-to-Park\" warning may not activate as intended when the vehicle is shut off and still in a gear other than \"Park.\" As such, these vehicles fail to comply with the requirements of Federal Motor"
+     }
+    ]
+   }
+  },
+  "nissan-murano": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Murano AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48930
+     },
+     {
+      "name": "Murano FWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48909
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Nissan Murano SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20756
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V821000",
+      "date": "27/11/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Murano, 2025-2026 Armada, and Infiniti QX80 vehicles. A software error may occur in the In-Vehicle Infotainment (IVI) system at vehicle startup, resulting in the rearview camera image not displaying when the vehicle is"
+     },
+     {
+      "campaign": "25V173000",
+      "date": "19/03/2025",
+      "component": "Service Brakes, Hydraulic:Foundation Components:Disc:Caliper",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Murano, Pathfinder, and INFINITI QX60 vehicles. One or both front brake caliper assemblies may have reduced strength and could break. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicl"
+     }
+    ]
+   }
+  },
+  "nissan-pathfinder": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Pathfinder 2WD",
+      "engine": "3.5L 6-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 20,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48606
+     },
+     {
+      "name": "Pathfinder 4WD",
+      "engine": "3.5L 6-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48615
+     },
+     {
+      "name": "Pathfinder 4WD Platinum",
+      "engine": "3.5L 6-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 20,
+       "highway": 25,
+       "combined": 22
+      },
+      "epaId": 48648
+     },
+     {
+      "name": "Pathfinder 4WD Rock Creek",
+      "engine": "3.5L 6-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 23,
+       "combined": 21
+      },
+      "epaId": 48616
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Nissan Pathfinder SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20746
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V173000",
+      "date": "19/03/2025",
+      "component": "Service Brakes, Hydraulic:Foundation Components:Disc:Caliper",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Murano, Pathfinder, and INFINITI QX60 vehicles. One or both front brake caliper assemblies may have reduced strength and could break. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicl"
+     }
+    ]
+   }
+  },
+  "nissan-armada": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Armada 2WD",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 20,
+       "combined": 18
+      },
+      "epaId": 48947
+     },
+     {
+      "name": "Armada 4WD",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 19,
+       "combined": 17
+      },
+      "epaId": 48968
+     },
+     {
+      "name": "Armada 4WD PRO-4X",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 15,
+       "highway": 18,
+       "combined": 16
+      },
+      "epaId": 48969
+     }
+    ]
+   },
+   "safety": {
+    "year": 2024,
+    "description": "2024 Nissan Armada SUV 4WD",
+    "overall": "4",
+    "frontal": "3",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 19588
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V455000",
+      "date": "16/07/2026",
+      "component": "Equipment:Other:Labels",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2020-2026 Nissan Armada, 2011-2013 Infiniti QX56, and 2014-2027 QX80 vehicles equipped with 22\" wheels. The Gross Axle Weight Rating (GAWR) listed on the certification label is incorrect, which can allow the vehicle to be o"
+     },
+     {
+      "campaign": "25V821000",
+      "date": "27/11/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Murano, 2025-2026 Armada, and Infiniti QX80 vehicles. A software error may occur in the In-Vehicle Infotainment (IVI) system at vehicle startup, resulting in the rearview camera image not displaying when the vehicle is"
+     }
+    ]
+   }
+  },
+  "nissan-frontier": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Frontier 2WD",
+      "engine": "3.8L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48509
+     },
+     {
+      "name": "Frontier 4WD",
+      "engine": "3.8L 6-cyl",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 21,
+       "combined": 19
+      },
+      "epaId": 48514
+     },
+     {
+      "name": "Frontier 4WD PRO4X",
+      "engine": "3.8L 6-cyl",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 16,
+       "highway": 20,
+       "combined": 18
+      },
+      "epaId": 48515
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V023000",
+      "date": "21/01/2026",
+      "component": "Latches/Locks/Linkages:Doors:Latch",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Altima, Sentra, 2025-2026 Frontier, and 2026 Kicks vehicles. The door strikers may have been improperly welded and break, allowing the door to open while moving. As such, these vehicles fail to comply with the requirem"
+     },
+     {
+      "campaign": "25V508000",
+      "date": "08/08/2025",
+      "component": "Exterior Lighting:Lighting Control Module:Software",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Nissan Frontier vehicles. Due to a software logic error, the daytime running lights may dim unexpectedly when the idle start-stop feature cycles the engine from off to on. As such, these vehicles fail to comply with th"
+     },
+     {
+      "campaign": "25V324000",
+      "date": "04/06/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Nissan North America, Inc. (Nissan) is recalling certain 2025 Frontier and Kicks vehicles. The center information display unit may display a blank screen when shifted into reverse. As such, these vehicles fail to comply with Federal Motor Vehicle Safety Standard (FMVSS) number 11"
+     }
+    ]
+   }
+  },
+  "nissan-ariya": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "ARIYA ENGAGE+/EVOLVE+ e-4ORCE 87kWh",
+      "engine": "160 and 160 kW AC 3-phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48719,
+      "mpge": 92,
+      "rangeMi": 272
+     },
+     {
+      "name": "ARIYA EVOLVE+ FWD 87kWh",
+      "engine": "178 and 160 kW AC 3-phase",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48720,
+      "mpge": 98,
+      "rangeMi": 289
+     },
+     {
+      "name": "ARIYA FWD 63kWh",
+      "engine": "160 kW AC 3-phase",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48721,
+      "mpge": 101,
+      "rangeMi": 216
+     },
+     {
+      "name": "ARIYA PLATINUM+ e-4ORCE 87kWh 19in. Wheels",
+      "engine": "160 and 160 kW AC 3-phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48722,
+      "mpge": 90,
+      "rangeMi": 267
+     },
+     {
+      "name": "ARIYA PLATINUM+ e-4ORCE 87kWh 20in. Wheels",
+      "engine": "160 and 160 kW AC 3-phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48723,
+      "mpge": 87,
+      "rangeMi": 257
+     },
+     {
+      "name": "ARIYA e-4ORCE 63kWh",
+      "engine": "160 and 160 kW AC 3-phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48718,
+      "mpge": 95,
+      "rangeMi": 205
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Nissan ARIYA SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20765
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "nissan-z": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Z",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 28,
+       "combined": 22
+      },
+      "epaId": 48806
+     },
+     {
+      "name": "Z",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 24,
+       "combined": 20
+      },
+      "epaId": 48805
+     },
+     {
+      "name": "Z NISMO",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 48807
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "mazda-mazda3-sedan": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "3 4-Door 2WD",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 37,
+       "combined": 31
+      },
+      "epaId": 47989
+     },
+     {
+      "name": "3 4-Door 4WD",
+      "engine": "2.5L 4-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 35,
+       "combined": 30
+      },
+      "epaId": 47990
+     },
+     {
+      "name": "3 4-Door 4WD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 32,
+       "combined": 27
+      },
+      "epaId": 47991
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Mazda MAZDA3 SEDAN 4 DR AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20104
+   },
+   "recalls": null
+  },
+  "mazda-cx-30": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "CX-30 4WD",
+      "engine": "2.5L 4-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 33,
+       "combined": 29
+      },
+      "epaId": 48612
+     },
+     {
+      "name": "CX-30 4WD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 22,
+       "highway": 30,
+       "combined": 25
+      },
+      "epaId": 48613
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Mazda CX-30 SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20107
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V357000",
+      "date": "29/05/2025",
+      "component": "Air Bags: Air Bag/Restraint Control Module:Software",
+      "summary": "Mazda North American Operations is recalling certain 2024-2025 Mazda3 and CX30 vehicles. The Sophisticated Air Bag Sensor (SAS) units may set an error code and deactivate the air bags, due to a low battery condition."
+     }
+    ]
+   }
+  },
+  "mazda-cx-70": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "CX-70 4WD",
+      "engine": "3.3L 6-cyl turbo hybrid",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 28,
+       "combined": 25
+      },
+      "epaId": 48133
+     },
+     {
+      "name": "CX-70 4WD",
+      "engine": "3.3L 6-cyl turbo hybrid",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 24,
+       "highway": 28,
+       "combined": 25
+      },
+      "epaId": 48293
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Mazda CX-70 SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20115
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "25V568000",
+      "date": "02/09/2025",
+      "component": "Electrical System:Body Control Module:Software",
+      "summary": "Mazda North American Operations (Mazda) is recalling certain 2024-2025 CX-90 and 2025 CX-70 mild hybrid electric vehicles (MHEV). The fuel gauge in the instrument cluster may display an inaccurate fuel reading."
+     },
+     {
+      "campaign": "24V817000",
+      "date": "31/10/2024",
+      "component": "Electrical System:Propulsion System:Inverter",
+      "summary": "Mazda North American Operations (Mazda) is recalling certain 2024 CX-90 and 2025 CX-70 plug-in hybrid electric vehicles. Improper inverter software may cause the malfunction indicator lights to illuminate, and a loss of drive power may occur while in electric vehicle (EV) mode."
+     },
+     {
+      "campaign": "24V815000",
+      "date": "31/10/2024",
+      "component": "Power Train:Automatic Transmission:Control Module (Tcm/Pcm/Tecm)",
+      "summary": "Mazda North American Operations (Mazda) is recalling certain 2024 CX-90 and 2025 CX-70 vehicles. The powertrain control module (PCM) and engine control modules (ECM) software may cause malfunction indicator lights to illuminate and a loss of drive power."
+     },
+     {
+      "campaign": "24V814000",
+      "date": "31/10/2024",
+      "component": "Electrical System:Software",
+      "summary": "Mazda North American Operations (Mazda) is recalling certain 2024-2025 CX-90 and 2025 CX-70 vehicles equipped with a Dash Electrical Supply Unit (ESU). During vehicle startup, the defroster, seat belt warning, 360\u00b0 view monitor functions, and the PHEV high-voltage battery cooling"
+     }
+    ]
+   }
+  },
+  "subaru-impreza": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Impreza",
+      "engine": "2.0L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 34,
+       "combined": 30
+      },
+      "epaId": 48507
+     },
+     {
+      "name": "Impreza",
+      "engine": "2.5L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 33,
+       "combined": 29
+      },
+      "epaId": 48508
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Subaru Impreza SW AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20204
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "subaru-legacy": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Legacy AWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 35,
+       "combined": 30
+      },
+      "epaId": 47778
+     },
+     {
+      "name": "Legacy AWD",
+      "engine": "2.4L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 47779
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Subaru Legacy 4 DR AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20025
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "subaru-brz": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "BRZ",
+      "engine": "2.4L 4-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S6)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 30,
+       "combined": 25
+      },
+      "epaId": 48485
+     },
+     {
+      "name": "BRZ",
+      "engine": "2.4L 4-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 27,
+       "combined": 22
+      },
+      "epaId": 48484
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "subaru-solterra": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Solterra AWD",
+      "engine": "80 and 80 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48762,
+      "mpge": 104,
+      "rangeMi": 227
+     },
+     {
+      "name": "Solterra Limited/Touring AWD",
+      "engine": "80 and 80 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48763,
+      "mpge": 102,
+      "rangeMi": 222
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Subaru Solterra SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20213
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     },
+     {
+      "campaign": "25V577000",
+      "date": "04/09/2025",
+      "component": "Visibility:Defroster/Defogger/Hvac System",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2025 bZ4X, Lexus RZ, and Subaru Solterra vehicles. During certain HVAC system faults, such as electrical compressor failure, the defroster and defogger system may become inoperative."
+     }
+    ]
+   }
+  },
+  "mitsubishi-outlander-sport": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Outlander Sport 4WD",
+      "engine": "2.0L 4-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (AV-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 29,
+       "combined": 26
+      },
+      "epaId": 48926
+     },
+     {
+      "name": "Outlander Sport 4WD",
+      "engine": "2.4L 4-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (AV-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 28,
+       "combined": 25
+      },
+      "epaId": 48927
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Mitsubishi Outlander Sport SUV AWD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20194
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
   "tesla-model-s": {
    "epa": {
     "year": 2025,
@@ -6763,6 +8697,54 @@
        "combined": 20
       },
       "epaId": 48600
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-gls": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG GLS63 4matic Plus",
+      "engine": "4.0L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 18,
+       "combined": 15
+      },
+      "epaId": 48136
+     },
+     {
+      "name": "GLS450 4matic",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48142
+     },
+     {
+      "name": "GLS580 4matic",
+      "engine": "4.0L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 19,
+       "combined": 16
+      },
+      "epaId": 48139
      }
     ]
    },

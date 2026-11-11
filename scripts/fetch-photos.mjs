@@ -37,6 +37,8 @@ const ARTICLES = {
   "aston-martin-vantage": "Aston Martin Vantage (2018)",
   "aston-martin-dbx707": "Aston Martin DBX",
   "ford-f-150": "Ford F-Series",
+  "toyota-corolla-hatchback": "Toyota Corolla (E210)",
+  "mazda-mazda3-sedan": "Mazda3",
 };
 
 /** Specific Commons files chosen by hand after reviewing the results. */

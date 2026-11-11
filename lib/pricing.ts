@@ -100,6 +100,10 @@ const MODEL_RETENTION: Record<string, number> = {
   "mercedes-benz-g-class": 0.85,
   "lexus-lx": 0.85,
   "porsche-911-carrera": 0.9,
+  "toyota-tundra": 0.8,
+  "toyota-land-cruiser": 0.85,
+  "toyota-gr86": 0.78,
+  "toyota-mirai": 0.2,
   "nissan-leaf": 0.45,
 };
 
@@ -124,6 +128,10 @@ const USED_AGE_YEARS: Record<string, number> = {
   "mclaren-750s": 2,
   "mclaren-artura": 2,
   "maserati-grecale": 2,
+  "toyota-crown-signia": 1,
+  "mazda-cx-70": 1,
+  "toyota-grand-highlander": 2,
+  "honda-prologue": 2,
   "maserati-granturismo": 2,
 };
 
