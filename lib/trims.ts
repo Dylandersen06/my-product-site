@@ -1255,4 +1255,226 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
   "volkswagen-golf-r": [
     ["Golf R", 46500, "2.0L turbo I4", 328, "26 mpg", "AWD", "acrbhs", "Torque-vectoring AWD, Drift mode"],
   ],
+  // Full lineups: German luxury brands
+  "bmw-2-series-coupe": [
+    ["230i", 40000, "2.0L turbo I4", 255, "29 mpg", "RWD or AWD", "acrbh", "Rear-drive coupe, curved display"],
+    ["M240i", 52000, "3.0L turbo I6", 382, "26 mpg", "RWD or AWD", "acrbhs", "Inline-six, adaptive M suspension"],
+  ],
+  "bmw-2-series-gran-coupe": [
+    ["228", 40000, "2.0L turbo I4", 241, "28 mpg", "FWD or AWD", "acrbh", "Curved display, 7-speed dual-clutch"],
+    ["M235 xDrive", 50000, "2.0L turbo I4", 312, "26 mpg", "AWD", "acrbhs", "M Sport suspension, xDrive AWD"],
+  ],
+  "bmw-4-series": [
+    ["430i Gran Coupe", 48000, "2.0L turbo I4", 255, "29 mpg", "RWD or AWD", "acrbh", "Four-door liftback, curved display"],
+    ["430i Coupe", 51000, "2.0L turbo I4", 255, "29 mpg", "RWD or AWD", "acrbh", "Two-door coupe, mild-hybrid boost"],
+    ["M440i xDrive Coupe", 64000, "3.0L turbo I6", 386, "26 mpg", "AWD", "acrbhs", "Inline-six, M Sport differential"],
+  ],
+  "bmw-5-series": [
+    ["530i", 58000, "2.0L turbo I4", 255, "30 mpg", "RWD or AWD", "acrbh", "14.9-in curved display, mild-hybrid boost"],
+    ["540i xDrive", 66000, "3.0L turbo I6", 375, "28 mpg", "AWD", "acrbhs", "Inline-six, xDrive AWD"],
+    ["550e xDrive", 75000, "3.0L plug-in hybrid I6", 483, "25 mi electric / 23 mpg", "AWD", "acrbhs", "Plug-in hybrid, 483 hp"],
+  ],
+  "bmw-i5": [
+    ["eDrive40", 67000, "Single electric motor", 335, "295 mi range", "RWD", "crbhs", "14.9-in curved display, Highway Assistant"],
+    ["xDrive40", 70000, "Dual electric motors", 389, "268 mi range", "AWD", "acrbhs", "Dual-motor AWD, air suspension"],
+    ["M60 xDrive", 85000, "Dual electric motors", 593, "240 mi range", "AWD", "acrbhs", "593 hp, adaptive M suspension"],
+  ],
+  "bmw-7-series": [
+    ["740i", 97000, "3.0L turbo I6", 375, "27 mpg", "RWD", "crbhs", "Air suspension, 31-in rear Theater Screen option"],
+    ["740i xDrive", 100000, "3.0L turbo I6", 375, "26 mpg", "AWD", "acrbhs", "xDrive AWD, Bowers & Wilkins option"],
+    ["760i xDrive", 122000, "4.4L twin-turbo V8", 536, "20 mpg", "AWD", "acrbhs", "V8 power, executive lounge seating"],
+  ],
+  "bmw-i7": [
+    ["eDrive50", 106000, "Single electric motor", 449, "321 mi range", "RWD", "crbhs", "Air suspension, 31-in rear Theater Screen option"],
+    ["xDrive60", 125000, "Dual electric motors", 536, "309 mi range", "AWD", "acrbhs", "Dual-motor AWD, Bowers & Wilkins audio"],
+    ["M70 xDrive", 170000, "Dual electric motors", 650, "291 mi range", "AWD", "acrbhs", "650 hp, executive lounge seating"],
+  ],
+  "bmw-8-series": [
+    ["840i Gran Coupe", 89000, "3.0L turbo I6", 335, "25 mpg", "RWD or AWD", "acrbhs", "Four-door coupe, Harman Kardon audio"],
+    ["840i Coupe", 91000, "3.0L turbo I6", 335, "25 mpg", "RWD or AWD", "acrbhs", "Two-door grand tourer, leather interior"],
+    ["M850i xDrive Coupe", 106000, "4.4L twin-turbo V8", 523, "20 mpg", "AWD", "acrbhs", "V8 power, Integral Active Steering"],
+  ],
+  "bmw-x1": [
+    ["xDrive28i", 42000, "2.0L turbo I4", 241, "28 mpg", "AWD", "acrbh", "Standard AWD, curved display"],
+    ["M35i xDrive", 51000, "2.0L turbo I4", 312, "26 mpg", "AWD", "acrbhs", "M Sport suspension, sport exhaust"],
+  ],
+  "bmw-x2": [
+    ["xDrive28i", 44000, "2.0L turbo I4", 241, "27 mpg", "AWD", "acrbh", "Coupe-style roof, curved display"],
+    ["M35i xDrive", 53000, "2.0L turbo I4", 312, "25 mpg", "AWD", "acrbhs", "M Sport suspension, quad exhaust"],
+  ],
+  "bmw-x4": [
+    ["xDrive30i", 56000, "2.0L turbo I4", 248, "25 mpg", "AWD", "acrbh", "Coupe-style roof, xDrive AWD"],
+    ["M40i", 66000, "3.0L turbo I6", 382, "24 mpg", "AWD", "acrbhs", "Inline-six, M Sport differential"],
+  ],
+  "bmw-x6": [
+    ["xDrive40i", 76000, "3.0L turbo I6", 375, "23 mpg", "AWD", "acrbhs", "Coupe-style roof, curved display"],
+    ["M60i xDrive", 95000, "4.4L twin-turbo V8", 523, "19 mpg", "AWD", "acrbhs", "V8 power, air suspension"],
+  ],
+  "bmw-x7": [
+    ["xDrive40i", 85000, "3.0L turbo I6", 375, "22 mpg", "AWD", "acrbhs", "Three rows, air suspension"],
+    ["M60i xDrive", 112000, "4.4L twin-turbo V8", 523, "18 mpg", "AWD", "acrbhs", "V8 power, Sky Lounge roof option"],
+  ],
+  "bmw-xm": [
+    ["XM", 160000, "4.4L twin-turbo V8 plug-in hybrid", 644, "31 mi electric / 14 mpg", "AWD", "acrbhs", "Plug-in hybrid V8, adaptive M suspension"],
+    ["Label", 186000, "4.4L twin-turbo V8 plug-in hybrid", 738, "29 mi electric / 14 mpg", "AWD", "acrbhs", "738 hp, carbon trim"],
+  ],
+  "bmw-ix": [
+    ["xDrive50", 88000, "Dual electric motors", 516, "307 mi range", "AWD", "acrbhs", "Curved display, panoramic glass roof"],
+    ["M60", 112000, "Dual electric motors", 610, "274 mi range", "AWD", "acrbhs", "610 hp, air suspension"],
+  ],
+  "bmw-z4": [
+    ["sDrive30i", 55000, "2.0L turbo I4", 255, "28 mpg", "RWD", "crbh", "Power soft top, adaptive LED lights"],
+    ["M40i", 67000, "3.0L turbo I6", 382, "26 mpg", "RWD", "crbh", "6-speed manual available, adaptive M suspension"],
+  ],
+  "bmw-m2": [
+    ["M2", 65000, "3.0L twin-turbo I6", 473, "19 mpg", "RWD", "crbh", "6-speed manual or 8-speed automatic, M differential"],
+  ],
+  "bmw-m4": [
+    ["Coupe", 81000, "3.0L twin-turbo I6", 473, "19 mpg", "RWD", "crbhs", "6-speed manual, adaptive M suspension"],
+    ["Competition xDrive Coupe", 90000, "3.0L twin-turbo I6", 523, "19 mpg", "AWD", "acrbhs", "M xDrive AWD, carbon roof"],
+  ],
+  "bmw-m5": [
+    ["M5", 120000, "4.4L twin-turbo V8 plug-in hybrid", 717, "25 mi electric / 15 mpg", "AWD", "acrbhs", "717-hp plug-in hybrid V8, M xDrive"],
+  ],
+  "mercedes-benz-gla": [
+    ["GLA 250", 44000, "2.0L turbo I4", 221, "28 mpg", "FWD or AWD", "acrbh", "MBUX touchscreen, mild-hybrid boost"],
+    ["AMG GLA 35", 58000, "2.0L turbo I4", 302, "24 mpg", "AWD", "acrbhs", "AMG suspension, 4MATIC AWD"],
+  ],
+  "mercedes-benz-glb": [
+    ["GLB 250 4MATIC", 47000, "2.0L turbo I4", 221, "26 mpg", "AWD", "acrbh", "Optional third row, 4MATIC AWD"],
+    ["AMG GLB 35", 60000, "2.0L turbo I4", 302, "23 mpg", "AWD", "acrbhs", "AMG suspension, sport exhaust"],
+  ],
+  "mercedes-benz-gle": [
+    ["GLE 350", 63000, "2.0L turbo I4", 255, "23 mpg", "RWD or AWD", "acrbhs", "MBUX dual screens, mild-hybrid boost"],
+    ["GLE 450 4MATIC", 71000, "3.0L turbo I6", 375, "22 mpg", "AWD", "acrbhs", "Inline-six, optional third row"],
+    ["GLE 450e 4MATIC", 72000, "2.0L plug-in hybrid I4", 381, "48 mi electric / 22 mpg", "AWD", "acrbhs", "Plug-in hybrid, 48-mi electric range"],
+    ["GLE 580 4MATIC", 92000, "4.0L twin-turbo V8", 510, "19 mpg", "AWD", "acrbhs", "V8 power, E-Active Body Control option"],
+    ["AMG GLE 63 S", 125000, "4.0L twin-turbo V8", 603, "16 mpg", "AWD", "acrbhs", "AMG active ride control, 603 hp"],
+  ],
+  "mercedes-benz-gle-coupe": [
+    ["GLE 450 4MATIC Coupe", 82000, "3.0L turbo I6", 375, "21 mpg", "AWD", "acrbhs", "Coupe-style roof, air suspension"],
+    ["AMG GLE 53 Coupe", 92000, "3.0L turbo I6", 429, "21 mpg", "AWD", "acrbhs", "AMG suspension, mild-hybrid boost"],
+    ["AMG GLE 63 S Coupe", 130000, "4.0L twin-turbo V8", 603, "16 mpg", "AWD", "acrbhs", "AMG active ride control, 603 hp"],
+  ],
+  "mercedes-benz-glc-coupe": [
+    ["GLC 300 4MATIC Coupe", 59000, "2.0L turbo I4", 255, "25 mpg", "AWD", "acrbhs", "Coupe-style roof, 11.9-in touchscreen"],
+    ["AMG GLC 43 Coupe", 72000, "2.0L turbo I4", 416, "22 mpg", "AWD", "acrbhs", "AMG suspension, electric turbocharger"],
+  ],
+  "mercedes-benz-cla": [
+    ["CLA 250", 44000, "2.0L turbo I4", 221, "29 mpg", "FWD or AWD", "acrbh", "MBUX touchscreen, coupe-like roofline"],
+    ["AMG CLA 35", 56000, "2.0L turbo I4", 302, "25 mpg", "AWD", "acrbhs", "AMG suspension, 4MATIC AWD"],
+    ["AMG CLA 45 S", 66000, "2.0L turbo I4", 416, "23 mpg", "AWD", "acrbhs", "416-hp four-cylinder, drift mode"],
+  ],
+  "mercedes-benz-cle": [
+    ["CLE 300 4MATIC Coupe", 58000, "2.0L turbo I4", 255, "27 mpg", "AWD", "acrbhs", "Two-door coupe, 11.9-in touchscreen"],
+    ["CLE 450 4MATIC Coupe", 68000, "3.0L turbo I6", 375, "26 mpg", "AWD", "acrbhs", "Inline-six, Burmester audio"],
+    ["AMG CLE 53 Coupe", 78000, "3.0L turbo I6", 443, "23 mpg", "AWD", "acrbhs", "AMG suspension, rear-axle steering"],
+  ],
+  "mercedes-benz-eqb": [
+    ["EQB 250+", 53000, "Single electric motor", 188, "251 mi range", "FWD", "crbh", "Optional third row, MBUX touchscreen"],
+    ["EQB 300 4MATIC", 57000, "Dual electric motors", 228, "221 mi range", "AWD", "acrbh", "Dual-motor AWD, heated seats"],
+    ["EQB 350 4MATIC", 61000, "Dual electric motors", 288, "221 mi range", "AWD", "acrbhs", "Higher output, panoramic roof"],
+  ],
+  "mercedes-benz-eqe": [
+    ["EQE 350+", 76000, "Single electric motor", 288, "308 mi range", "RWD", "crbhs", "MBUX Hyperscreen option, air suspension option"],
+    ["EQE 350 4MATIC", 79000, "Dual electric motors", 288, "260 mi range", "AWD", "acrbhs", "Dual-motor AWD, Burmester audio"],
+    ["AMG EQE", 108000, "Dual electric motors", 617, "219 mi range", "AWD", "acrbhs", "617 hp with boost, AMG suspension"],
+  ],
+  "mercedes-benz-eqe-suv": [
+    ["EQE 350+ SUV", 78000, "Single electric motor", 288, "279 mi range", "RWD", "crbhs", "MBUX Hyperscreen option, power liftgate"],
+    ["EQE 350 4MATIC SUV", 81000, "Dual electric motors", 288, "253 mi range", "AWD", "acrbhs", "Dual-motor AWD, Burmester audio"],
+    ["EQE 500 4MATIC SUV", 95000, "Dual electric motors", 402, "253 mi range", "AWD", "acrbhs", "Higher output, air suspension"],
+    ["AMG EQE SUV", 113000, "Dual electric motors", 617, "220 mi range", "AWD", "acrbhs", "617 hp with boost, AMG suspension"],
+  ],
+  "mercedes-benz-eqs": [
+    ["EQS 450+", 105000, "Single electric motor", 355, "390 mi range", "RWD", "crbhs", "390-mi range, MBUX Hyperscreen option"],
+    ["EQS 450 4MATIC", 108000, "Dual electric motors", 355, "370 mi range", "AWD", "acrbhs", "Dual-motor AWD, rear-axle steering"],
+    ["EQS 580 4MATIC", 128000, "Dual electric motors", 536, "340 mi range", "AWD", "acrbhs", "536 hp, massaging seats"],
+  ],
+  "mercedes-benz-eqs-suv": [
+    ["EQS 450+ SUV", 105000, "Single electric motor", 355, "339 mi range", "RWD", "crbhs", "Three rows, MBUX Hyperscreen option"],
+    ["EQS 450 4MATIC SUV", 108000, "Dual electric motors", 355, "305 mi range", "AWD", "acrbhs", "Dual-motor AWD, air suspension"],
+    ["EQS 580 4MATIC SUV", 128000, "Dual electric motors", 536, "285 mi range", "AWD", "acrbhs", "536 hp, Burmester 3D audio"],
+    ["Maybach EQS 680 SUV", 180000, "Dual electric motors", 649, "281 mi range", "AWD", "acrbhs", "Maybach rear seats, two-tone paint"],
+  ],
+  "mercedes-benz-amg-gt": [
+    ["AMG GT 43 Coupe", 107000, "2.0L turbo I4", 416, "22 mpg", "RWD", "crbh", "2+2 seating, electric turbocharger"],
+    ["AMG GT 55 Coupe", 137000, "4.0L twin-turbo V8", 469, "16 mpg", "AWD", "acrbh", "V8 power, 4MATIC+ AWD"],
+    ["AMG GT 63 Coupe", 177000, "4.0L twin-turbo V8", 577, "16 mpg", "AWD", "acrbh", "577 hp, active roll stabilization"],
+  ],
+  "mercedes-benz-sl": [
+    ["AMG SL 43", 110000, "2.0L turbo I4", 415, "22 mpg", "RWD", "crbh", "Power soft top, 2+2 seating"],
+    ["AMG SL 55", 145000, "4.0L twin-turbo V8", 469, "16 mpg", "AWD", "acrbh", "V8 power, 4MATIC+ AWD"],
+    ["AMG SL 63", 185000, "4.0L twin-turbo V8", 577, "16 mpg", "AWD", "acrbh", "577 hp, active roll stabilization"],
+  ],
+  "audi-a5": [
+    ["Premium", 47000, "2.0L turbo I4", 268, "29 mpg", "AWD", "acrbh", "quattro AWD, 11.9-in touchscreen"],
+    ["Premium Plus", 51000, "2.0L turbo I4", 268, "29 mpg", "AWD", "acrbhs", "Panoramic roof, Bang & Olufsen audio"],
+    ["S5 Premium", 62000, "3.0L turbo V6", 362, "25 mpg", "AWD", "acrbhs", "Sport differential, adaptive suspension"],
+  ],
+  "audi-a6": [
+    ["45 Premium", 60000, "2.0L turbo I4", 261, "27 mpg", "AWD", "acrbh", "quattro AWD, dual touchscreens"],
+    ["55 Premium Plus", 67000, "3.0L turbo V6", 335, "25 mpg", "AWD", "acrbhs", "V6 power, Bang & Olufsen audio"],
+    ["S6 Premium Plus", 79000, "2.9L twin-turbo V6", 444, "21 mpg", "AWD", "acrbhs", "Sport differential, adaptive air suspension"],
+  ],
+  "audi-a6-e-tron": [
+    ["Premium", 66000, "Single electric motor", 375, "370 mi range", "RWD", "crbhs", "800-volt fast charging, curved display"],
+    ["quattro Premium Plus", 74000, "Dual electric motors", 456, "325 mi range", "AWD", "acrbhs", "Dual-motor quattro, Bang & Olufsen audio"],
+    ["S6 e-tron", 86000, "Dual electric motors", 543, "320 mi range", "AWD", "acrbhs", "543 hp with boost, air suspension"],
+  ],
+  "audi-a7": [
+    ["55 Premium", 75000, "3.0L turbo V6", 335, "24 mpg", "AWD", "acrbhs", "Sportback liftgate, dual touchscreens"],
+    ["55 Prestige", 85000, "3.0L turbo V6", 335, "24 mpg", "AWD", "acrbhs", "Head-up display, Bang & Olufsen audio"],
+    ["S7 Premium Plus", 90000, "2.9L twin-turbo V6", 444, "21 mpg", "AWD", "acrbhs", "Sport differential, adaptive air suspension"],
+  ],
+  "audi-a8": [
+    ["A8 L 55", 91000, "3.0L turbo V6", 335, "22 mpg", "AWD", "acrbhs", "Long wheelbase, air suspension"],
+    ["S8", 122000, "4.0L twin-turbo V8", 563, "18 mpg", "AWD", "acrbhs", "563 hp, predictive active suspension"],
+  ],
+  "audi-q3": [
+    ["Premium", 40000, "2.0L turbo I4", 228, "24 mpg", "AWD", "acrbh", "quattro AWD, virtual cockpit"],
+    ["Premium Plus", 44000, "2.0L turbo I4", 228, "24 mpg", "AWD", "acrbhs", "Panoramic roof, heated seats"],
+    ["Prestige", 48000, "2.0L turbo I4", 228, "24 mpg", "AWD", "acrbhs", "Bang & Olufsen audio, 360-degree camera"],
+  ],
+  "audi-q4-e-tron": [
+    ["45 Premium", 50000, "Single electric motor", 282, "258 mi range", "RWD", "crbh", "11.6-in touchscreen, heat pump"],
+    ["55 quattro Premium", 54000, "Dual electric motors", 335, "244 mi range", "AWD", "acrbhs", "Dual-motor quattro, panoramic roof"],
+    ["55 quattro Prestige", 61000, "Dual electric motors", 335, "244 mi range", "AWD", "acrbhs", "Augmented-reality head-up display, Sonos audio"],
+  ],
+  "audi-q6-e-tron": [
+    ["Premium", 64000, "Dual electric motors", 456, "307 mi range", "AWD", "acrbhs", "800-volt fast charging, curved display"],
+    ["Premium Plus", 68000, "Dual electric motors", 456, "307 mi range", "AWD", "acrbhs", "Passenger display, Bang & Olufsen audio"],
+    ["SQ6 Premium", 73000, "Dual electric motors", 510, "275 mi range", "AWD", "acrbhs", "510 hp with launch control, air suspension"],
+  ],
+  "audi-q8": [
+    ["Premium", 74000, "3.0L turbo V6", 335, "20 mpg", "AWD", "acrbhs", "Coupe-style roof, dual touchscreens"],
+    ["Premium Plus", 78000, "3.0L turbo V6", 335, "20 mpg", "AWD", "acrbhs", "Bang & Olufsen audio, head-up display"],
+    ["SQ8", 97000, "4.0L twin-turbo V8", 500, "17 mpg", "AWD", "acrbhs", "V8 power, adaptive air suspension"],
+    ["RS Q8 Performance", 140000, "4.0L twin-turbo V8", 631, "15 mpg", "AWD", "acrbhs", "631 hp, carbon-ceramic brakes"],
+  ],
+  "porsche-macan": [
+    ["Macan", 64000, "2.0L turbo I4", 261, "21 mpg", "AWD", "acrbh", "Standard AWD, 10.9-in touchscreen"],
+    ["Macan T", 69000, "2.0L turbo I4", 261, "21 mpg", "AWD", "acrbh", "Sport suspension, Sport Chrono"],
+    ["Macan S", 78000, "2.9L twin-turbo V6", 375, "19 mpg", "AWD", "acrbhs", "Twin-turbo V6, adaptive dampers"],
+    ["Macan GTS", 92000, "2.9L twin-turbo V6", 434, "19 mpg", "AWD", "acrbhs", "434 hp, air suspension"],
+  ],
+  "porsche-panamera": [
+    ["Panamera", 104000, "2.9L twin-turbo V6", 348, "21 mpg", "RWD", "crbhs", "Air suspension, curved digital gauges"],
+    ["Panamera 4", 110000, "2.9L twin-turbo V6", 348, "21 mpg", "AWD", "acrbhs", "Standard AWD, passenger display option"],
+    ["Panamera GTS", 153000, "4.0L twin-turbo V8", 493, "18 mpg", "AWD", "acrbhs", "V8 power, sport exhaust"],
+  ],
+  "porsche-718-cayman": [
+    ["718 Cayman", 72000, "2.0L turbo flat-4", 300, "24 mpg", "RWD", "cbh", "Mid-engine, front and rear trunks"],
+    ["718 Cayman GTS 4.0", 102000, "4.0L flat-6", 394, "20 mpg", "RWD", "cbh", "Naturally aspirated flat-six, limited-slip differential"],
+    ["718 Cayman GT4 RS", 162000, "4.0L flat-6", 493, "17 mpg", "RWD", "cbh", "9,000-rpm flat-six, track aero"],
+  ],
+  "porsche-718-boxster": [
+    ["718 Boxster", 75000, "2.0L turbo flat-4", 300, "24 mpg", "RWD", "cbh", "Mid-engine roadster, power soft top"],
+    ["718 Boxster GTS 4.0", 104000, "4.0L flat-6", 394, "20 mpg", "RWD", "cbh", "Naturally aspirated flat-six, limited-slip differential"],
+    ["718 Spyder RS", 165000, "4.0L flat-6", 493, "17 mpg", "RWD", "cbh", "9,000-rpm flat-six, lightweight top"],
+  ],
+  "porsche-cayenne-coupe": [
+    ["Cayenne Coupe", 97000, "3.0L turbo V6", 348, "19 mpg", "AWD", "acrbhs", "Sloped roof, adaptive spoiler"],
+    ["Cayenne S Coupe", 115000, "4.0L twin-turbo V8", 468, "17 mpg", "AWD", "acrbhs", "V8 power, air suspension"],
+  ],
 };

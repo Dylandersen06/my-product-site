@@ -111,6 +111,18 @@ const MODEL_RETENTION: Record<string, number> = {
   "gmc-hummer-ev-pickup": 0.5,
   "gmc-hummer-ev-suv": 0.5,
   "chevrolet-malibu": 0.5,
+  "porsche-718-cayman": 0.82,
+  "porsche-718-boxster": 0.8,
+  "bmw-m2": 0.75,
+  "bmw-m4": 0.72,
+  "bmw-7-series": 0.45,
+  "bmw-i7": 0.42,
+  "audi-a8": 0.42,
+  "mercedes-benz-eqb": 0.4,
+  "mercedes-benz-eqe": 0.35,
+  "mercedes-benz-eqe-suv": 0.38,
+  "mercedes-benz-eqs": 0.33,
+  "mercedes-benz-eqs-suv": 0.38,
   "nissan-leaf": 0.45,
 };
 
@@ -144,6 +156,10 @@ const USED_AGE_YEARS: Record<string, number> = {
   "volkswagen-id-buzz": 1,
   "chevrolet-silverado-ev": 2,
   "gmc-sierra-ev": 1,
+  "bmw-i5": 2,
+  "mercedes-benz-cle": 2,
+  "audi-q6-e-tron": 1,
+  "audi-a6-e-tron": 1,
   "maserati-granturismo": 2,
 };
 

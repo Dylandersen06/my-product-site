@@ -10853,6 +10853,2834 @@
     ]
    }
   },
+  "bmw-2-series-coupe": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "230i Coupe",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 35,
+       "combined": 30
+      },
+      "epaId": 48151
+     },
+     {
+      "name": "230i xDrive Coupe",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 33,
+       "combined": 28
+      },
+      "epaId": 48152
+     },
+     {
+      "name": "M240i Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 32,
+       "combined": 26
+      },
+      "epaId": 48153
+     },
+     {
+      "name": "M240i xDrive Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 32,
+       "combined": 26
+      },
+      "epaId": 48154
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "bmw-2-series-gran-coupe": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "228 xDrive Gran Coupe",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 38,
+       "combined": 30
+      },
+      "epaId": 48841
+     },
+     {
+      "name": "M235 xDrive Gran Coupe",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 33,
+       "combined": 27
+      },
+      "epaId": 48842
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "bmw-4-series": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "430i Coupe",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 28,
+       "highway": 36,
+       "combined": 31
+      },
+      "epaId": 47765
+     },
+     {
+      "name": "430i Gran Coupe",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 27,
+       "highway": 35,
+       "combined": 30
+      },
+      "epaId": 48167
+     },
+     {
+      "name": "430i xDrive Coupe",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 27,
+       "highway": 34,
+       "combined": 30
+      },
+      "epaId": 47766
+     },
+     {
+      "name": "430i xDrive Gran Coupe",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 34,
+       "combined": 29
+      },
+      "epaId": 48168
+     },
+     {
+      "name": "M440i Coupe",
+      "engine": "3.0L 4-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 27,
+       "highway": 34,
+       "combined": 30
+      },
+      "epaId": 47769
+     },
+     {
+      "name": "M440i Gran Coupe",
+      "engine": "3.0L 4-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 32,
+       "combined": 28
+      },
+      "epaId": 48169
+     },
+     {
+      "name": "M440i xDrive Coupe",
+      "engine": "3.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 33,
+       "combined": 29
+      },
+      "epaId": 47770
+     },
+     {
+      "name": "M440i xDrive Gran Coupe",
+      "engine": "3.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 31,
+       "combined": 27
+      },
+      "epaId": 48170
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "bmw-5-series": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "530i Sedan",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 28,
+       "highway": 35,
+       "combined": 31
+      },
+      "epaId": 48175
+     },
+     {
+      "name": "530i xDrive Sedan",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 27,
+       "highway": 35,
+       "combined": 30
+      },
+      "epaId": 48176
+     },
+     {
+      "name": "540i xDrive Sedan",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 33,
+       "combined": 28
+      },
+      "epaId": 48177
+     },
+     {
+      "name": "550e xDrive Sedan",
+      "engine": "3.0L 6-cyl turbo plug-in hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium and Electricity",
+      "mpg": {
+       "city": 23,
+       "highway": 26,
+       "combined": 24
+      },
+      "epaId": 49005,
+      "electricRangeMi": 34,
+      "mpge": 67
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "bmw-i5": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "i5 M60 xDrive Sedan (19 inch Wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48319,
+      "mpge": 90,
+      "rangeMi": 253
+     },
+     {
+      "name": "i5 M60 xDrive Sedan (20 inch Wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48320,
+      "mpge": 88,
+      "rangeMi": 250
+     },
+     {
+      "name": "i5 M60 xDrive Sedan (21 inch Wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48321,
+      "mpge": 84,
+      "rangeMi": 239
+     },
+     {
+      "name": "i5 eDrive40 Sedan (19 inch Wheels)",
+      "engine": "250 kW EESM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48316,
+      "mpge": 105,
+      "rangeMi": 295
+     },
+     {
+      "name": "i5 eDrive40 Sedan (20 inch Wheels)",
+      "engine": "250 kW EESM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48317,
+      "mpge": 99,
+      "rangeMi": 278
+     },
+     {
+      "name": "i5 eDrive40 Sedan (21 inch Wheels)",
+      "engine": "250 kW EESM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48318,
+      "mpge": 96,
+      "rangeMi": 271
+     },
+     {
+      "name": "i5 xDrive40 Sedan (19 inch Wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48322,
+      "mpge": 93,
+      "rangeMi": 266
+     },
+     {
+      "name": "i5 xDrive40 Sedan (20 inch Wheels)",
+      "engine": "192 and 250 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48323,
+      "mpge": 93,
+      "rangeMi": 262
+     },
+     {
+      "name": "i5 xDrive40 Sedan (21 inch Wheels)",
+      "engine": "192 and 250 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48324,
+      "mpge": 87,
+      "rangeMi": 248
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V422000",
+      "date": "01/07/2026",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 Mini Cooper S, Mini Countryman S All4, X2, 2024 Rolls-Royce Spectre, 2023-2025 i7, 7 Series, X7, 2024-2025 i5, 5 Series, 2023-2024 XM, X1, 2024-2025 X6, and X5 vehicles. The integrated brake (IB) system may malfunction and"
+     },
+     {
+      "campaign": "24V697000",
+      "date": "18/09/2024",
+      "component": "Electronic Stability Control (Esc):Control Module",
+      "summary": "BMW of North America (BMW) is recalling certain 2023-2024 X1, 2024-2025 X5, 2025 X6, 2023-2025 X7, 740i, 760i, 2024 XM, 530i, 540i, i7, 750e, X2, 2024-2025 i5, 2024 Rolls Royce Spectre, 2025 MINI Countryman S ALL4, JCW Countryman ALL4, and 2025 MINI Hardtop 2 Door (Cooper, Cooper"
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "bmw-7-series": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "740i Sedan",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 31,
+       "combined": 28
+      },
+      "epaId": 48190
+     },
+     {
+      "name": "740i xDrive Sedan",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 31,
+       "combined": 27
+      },
+      "epaId": 48191
+     },
+     {
+      "name": "760i xDrive Sedan",
+      "engine": "4.4L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 25,
+       "combined": 20
+      },
+      "epaId": 48192
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "bmw-i7": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "i7 M70 xDrive Sedan (20 inch Wheels)",
+      "engine": "190 and 360 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48328,
+      "mpge": 75,
+      "rangeMi": 268
+     },
+     {
+      "name": "i7 M70 xDrive Sedan (21 inch Wheels)",
+      "engine": "190 and 360 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48329,
+      "mpge": 79,
+      "rangeMi": 285
+     },
+     {
+      "name": "i7 eDrive50 Sedan (19 inch Wheels)",
+      "engine": "335 kW EESM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48325,
+      "mpge": 88,
+      "rangeMi": 314
+     },
+     {
+      "name": "i7 eDrive50 Sedan (20 inch Wheels)",
+      "engine": "335 kW EESM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48326,
+      "mpge": 85,
+      "rangeMi": 301
+     },
+     {
+      "name": "i7 eDrive50 Sedan (21 inch Wheels)",
+      "engine": "335 kW EESM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48327,
+      "mpge": 87,
+      "rangeMi": 307
+     },
+     {
+      "name": "i7 xDrive60 Sedan (19 inch wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48330,
+      "mpge": 88,
+      "rangeMi": 311
+     },
+     {
+      "name": "i7 xDrive60 Sedan (20 inch wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48331,
+      "mpge": 83,
+      "rangeMi": 296
+     },
+     {
+      "name": "i7 xDrive60 Sedan (21inch wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48332,
+      "mpge": 87,
+      "rangeMi": 308
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V422000",
+      "date": "01/07/2026",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 Mini Cooper S, Mini Countryman S All4, X2, 2024 Rolls-Royce Spectre, 2023-2025 i7, 7 Series, X7, 2024-2025 i5, 5 Series, 2023-2024 XM, X1, 2024-2025 X6, and X5 vehicles. The integrated brake (IB) system may malfunction and"
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "bmw-8-series": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "840i Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 47696
+     },
+     {
+      "name": "840i Gran Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 47712
+     },
+     {
+      "name": "840i xDrive Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 47697
+     },
+     {
+      "name": "840i xDrive Gran Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 47713
+     },
+     {
+      "name": "M850i xDrive Coupe",
+      "engine": "4.4L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 47700
+     },
+     {
+      "name": "M850i xDrive Gran Coupe",
+      "engine": "4.4L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 47714
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "bmw-x1": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "X1 M35i",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 48262
+     },
+     {
+      "name": "X1 xDrive28i",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 33,
+       "combined": 28
+      },
+      "epaId": 48261
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 BMW X1 SUV AWD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20087
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "25V616000",
+      "date": "17/09/2025",
+      "component": "Seat Belts:Front:Retractor",
+      "summary": "BMW of North America, LLC is recalling certain 2025-2026 X1 and X2, MINI Cooper Convertible, MINI Cooper, Mini Countryman S ALL4, and 2025 MINI Countryman SE ALL4 vehicles. The torsion bar in both front seat belt retractors may have been damaged during production."
+     },
+     {
+      "campaign": "24V829000",
+      "date": "04/11/2024",
+      "component": "Structure:Body:Roof And Pillars",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 X1 xDrive28i and X1 M35i vehicles. The left and right-side B-Pillar reinforcement plates may have been manufactured with insufficient structural strength."
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "bmw-x2": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "X2 M35i",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 32,
+       "combined": 26
+      },
+      "epaId": 48264
+     },
+     {
+      "name": "X2 xDrive28i",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 33,
+       "combined": 28
+      },
+      "epaId": 48263
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V422000",
+      "date": "01/07/2026",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 Mini Cooper S, Mini Countryman S All4, X2, 2024 Rolls-Royce Spectre, 2023-2025 i7, 7 Series, X7, 2024-2025 i5, 5 Series, 2023-2024 XM, X1, 2024-2025 X6, and X5 vehicles. The integrated brake (IB) system may malfunction and"
+     },
+     {
+      "campaign": "25V616000",
+      "date": "17/09/2025",
+      "component": "Seat Belts:Front:Retractor",
+      "summary": "BMW of North America, LLC is recalling certain 2025-2026 X1 and X2, MINI Cooper Convertible, MINI Cooper, Mini Countryman S ALL4, and 2025 MINI Countryman SE ALL4 vehicles. The torsion bar in both front seat belt retractors may have been damaged during production."
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "bmw-x4": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "X4 xDrive30i",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 24
+      },
+      "epaId": 48079
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "24V910000",
+      "date": "05/12/2024",
+      "component": "Air Bags",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 X4 xDrive 30i, X4 M40i and X4 M vehicles. The inner-left roof frame near the head air bag may have a crack that can damage the head air bag during deployment."
+     }
+    ]
+   }
+  },
+  "bmw-x6": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "X6 M60i xDrive",
+      "engine": "4.4L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 22,
+       "combined": 19
+      },
+      "epaId": 47747
+     },
+     {
+      "name": "X6 xDrive40i",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 26,
+       "combined": 24
+      },
+      "epaId": 47746
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V422000",
+      "date": "01/07/2026",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 Mini Cooper S, Mini Countryman S All4, X2, 2024 Rolls-Royce Spectre, 2023-2025 i7, 7 Series, X7, 2024-2025 i5, 5 Series, 2023-2024 XM, X1, 2024-2025 X6, and X5 vehicles. The integrated brake (IB) system may malfunction and"
+     },
+     {
+      "campaign": "24V697000",
+      "date": "18/09/2024",
+      "component": "Electronic Stability Control (Esc):Control Module",
+      "summary": "BMW of North America (BMW) is recalling certain 2023-2024 X1, 2024-2025 X5, 2025 X6, 2023-2025 X7, 740i, 760i, 2024 XM, 530i, 540i, i7, 750e, X2, 2024-2025 i5, 2024 Rolls Royce Spectre, 2025 MINI Countryman S ALL4, JCW Countryman ALL4, and 2025 MINI Hardtop 2 Door (Cooper, Cooper"
+     },
+     {
+      "campaign": "24V345000",
+      "date": "15/05/2024",
+      "component": "Seat Belts:Front",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2024 XM, 2025 BMW X5 sDrive40i, X5 xDrive40i, X5 M60i, X5 M, X5 xDrive50e, X6 xDrive40i, X6 M60i, X6 M, X7 xDrive40i, X7 M60i, and Alpina XB7 vehicles. The seat belt system may inaccurately detect that passengers are belted, pr"
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "bmw-x7": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "X7 M60i xDrive",
+      "engine": "4.4L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 20,
+       "combined": 18
+      },
+      "epaId": 47749
+     },
+     {
+      "name": "X7 xDrive40i",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 24,
+       "combined": 22
+      },
+      "epaId": 47807
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V422000",
+      "date": "01/07/2026",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 Mini Cooper S, Mini Countryman S All4, X2, 2024 Rolls-Royce Spectre, 2023-2025 i7, 7 Series, X7, 2024-2025 i5, 5 Series, 2023-2024 XM, X1, 2024-2025 X6, and X5 vehicles. The integrated brake (IB) system may malfunction and"
+     },
+     {
+      "campaign": "24V697000",
+      "date": "18/09/2024",
+      "component": "Electronic Stability Control (Esc):Control Module",
+      "summary": "BMW of North America (BMW) is recalling certain 2023-2024 X1, 2024-2025 X5, 2025 X6, 2023-2025 X7, 740i, 760i, 2024 XM, 530i, 540i, i7, 750e, X2, 2024-2025 i5, 2024 Rolls Royce Spectre, 2025 MINI Countryman S ALL4, JCW Countryman ALL4, and 2025 MINI Hardtop 2 Door (Cooper, Cooper"
+     },
+     {
+      "campaign": "24V345000",
+      "date": "15/05/2024",
+      "component": "Seat Belts:Front",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2024 XM, 2025 BMW X5 sDrive40i, X5 xDrive40i, X5 M60i, X5 M, X5 xDrive50e, X6 xDrive40i, X6 M60i, X6 M, X7 xDrive40i, X7 M60i, and Alpina XB7 vehicles. The seat belt system may inaccurately detect that passengers are belted, pr"
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "bmw-xm": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "XM",
+      "engine": "4.4L 8-cyl turbo plug-in hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium and Electricity",
+      "mpg": {
+       "city": 12,
+       "highway": 17,
+       "combined": 14
+      },
+      "epaId": 48655,
+      "electricRangeMi": 31,
+      "mpge": 46
+     },
+     {
+      "name": "XM Label",
+      "engine": "4.4L 8-cyl turbo plug-in hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium and Electricity",
+      "mpg": {
+       "city": 12,
+       "highway": 17,
+       "combined": 14
+      },
+      "epaId": 49010,
+      "electricRangeMi": 31,
+      "mpge": 46
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "bmw-ix": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "iX M60 (21 inch Wheels)",
+      "engine": "190 and 360 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48333,
+      "mpge": 76,
+      "rangeMi": 284
+     },
+     {
+      "name": "iX M60 (22 inch Wheels)",
+      "engine": "190 and 360 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48334,
+      "mpge": 77,
+      "rangeMi": 285
+     },
+     {
+      "name": "iX xDrive40 (20 inch Wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48335,
+      "mpge": 86,
+      "rangeMi": 217
+     },
+     {
+      "name": "iX xDrive40 (21 inch Wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48336,
+      "mpge": 83,
+      "rangeMi": 211
+     },
+     {
+      "name": "iX xDrive40 (22 inch Wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48337,
+      "mpge": 87,
+      "rangeMi": 219
+     },
+     {
+      "name": "iX xDrive50 (20 inch wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48338,
+      "mpge": 83,
+      "rangeMi": 309
+     },
+     {
+      "name": "iX xDrive50 (21 inch wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48339,
+      "mpge": 81,
+      "rangeMi": 303
+     },
+     {
+      "name": "iX xDrive50 (22 inch wheels)",
+      "engine": "190 and 230 kW EESM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48340,
+      "mpge": 81,
+      "rangeMi": 302
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V470000",
+      "date": "16/07/2025",
+      "component": "Electrical System:Propulsion System:Traction Battery",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2022-2025 IX, 2023-2024 I7, and 2022-2023 i4 vehicles. The high-voltage battery cell modules may not have been assembled properly, resulting in stress on the module frame and possible module failure."
+     }
+    ]
+   }
+  },
+  "bmw-z4": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Z4 M40i",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 29,
+       "combined": 25
+      },
+      "epaId": 47763
+     },
+     {
+      "name": "Z4 M40i",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 47764
+     },
+     {
+      "name": "Z4 sDrive30i",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 33,
+       "combined": 28
+      },
+      "epaId": 47695
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "bmw-m2": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "M2 Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 23,
+       "combined": 19
+      },
+      "epaId": 47970
+     },
+     {
+      "name": "M2 Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 23,
+       "combined": 19
+      },
+      "epaId": 48155
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "bmw-m4": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "M4 Competition M xDrive Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 23,
+       "combined": 18
+      },
+      "epaId": 47775
+     },
+     {
+      "name": "M4 Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 23,
+       "combined": 19
+      },
+      "epaId": 47773
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "bmw-m5": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V096000",
+      "date": "19/02/2026",
+      "component": "Electrical System:Wiring",
+      "summary": "BMW of North America, LLC (BMW) is recalling certain 2025 M5 Sportswagon, 2025-2026 M5, 2024-2025 750e xDrive, 2025-2026 550e xDrive, 2023-2025 I7, 2023-2025 7 Series, 2024-2026 i5, and 5 Series vehicles. The electrical wiring harness for the air conditioning system may become da"
+     },
+     {
+      "campaign": "24V104000",
+      "date": "12/02/2024",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "BMW of North America, LLC. (BMW) is recalling certain 2023-2025 BMW, MINI, and Rolls-Royce vehicles. Please see the recall report for a complete list of models and model years. The integrated brake (IB) system may malfunction and result in a loss of power brake assist or cause th"
+     }
+    ]
+   }
+  },
+  "mercedes-benz-gla": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG GLA35 4matic",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 28,
+       "combined": 24
+      },
+      "epaId": 47944
+     },
+     {
+      "name": "GLA250",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 34,
+       "combined": 29
+      },
+      "epaId": 47947
+     },
+     {
+      "name": "GLA250 4matic",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 33,
+       "combined": 28
+      },
+      "epaId": 47963
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-glb": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG GLB35 4matic",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 26,
+       "combined": 23
+      },
+      "epaId": 47945
+     },
+     {
+      "name": "GLB250",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 33,
+       "combined": 28
+      },
+      "epaId": 47948
+     },
+     {
+      "name": "GLB250 4matic",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 33,
+       "combined": 27
+      },
+      "epaId": 47964
+     }
+    ]
+   },
+   "safety": {
+    "year": 2024,
+    "description": "2024 Mercedes-Benz GLB SUV AWD",
+    "overall": "Not Rated",
+    "frontal": "Not Rated",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 19632
+   },
+   "recalls": null
+  },
+  "mercedes-benz-gle": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG GLE53 4matic Plus",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 23,
+       "combined": 20
+      },
+      "epaId": 48143
+     },
+     {
+      "name": "AMG GLE63 S 4matic Plus",
+      "engine": "4.0L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 19,
+       "combined": 16
+      },
+      "epaId": 48135
+     },
+     {
+      "name": "GLE350",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 28,
+       "combined": 23
+      },
+      "epaId": 48614
+     },
+     {
+      "name": "GLE350 4matic",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48106
+     },
+     {
+      "name": "GLE450 4matic",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 25,
+       "combined": 21
+      },
+      "epaId": 48140
+     },
+     {
+      "name": "GLE450 4matic (coupe)",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 25,
+       "combined": 21
+      },
+      "epaId": 48141
+     },
+     {
+      "name": "GLE450e 4matic",
+      "engine": "2.0L 4-cyl turbo plug-in hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium and Electricity",
+      "mpg": {
+       "city": 21,
+       "highway": 26,
+       "combined": 23
+      },
+      "epaId": 48675,
+      "electricRangeMi": 50,
+      "mpge": 60
+     },
+     {
+      "name": "GLE580 4matic",
+      "engine": "4.0L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 15,
+       "highway": 20,
+       "combined": 17
+      },
+      "epaId": 48138
+     }
+    ]
+   },
+   "safety": {
+    "year": 2024,
+    "description": "2024 Mercedes-Benz GLE SUV AWD",
+    "overall": "Not Rated",
+    "frontal": "Not Rated",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 19637
+   },
+   "recalls": null
+  },
+  "mercedes-benz-gle-coupe": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG GLE53 4matic Plus Coupe",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 22,
+       "combined": 20
+      },
+      "epaId": 48144
+     },
+     {
+      "name": "AMG GLE63 S 4matic Plus Coupe",
+      "engine": "4.0L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 19,
+       "combined": 16
+      },
+      "epaId": 48134
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-glc-coupe": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG GLC43 4matic Coupe",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48197
+     },
+     {
+      "name": "GLC300 4matic Coupe",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 48276
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-cla": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG CLA35 4matic",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 29,
+       "combined": 25
+      },
+      "epaId": 47927
+     },
+     {
+      "name": "AMG CLA45 S 4matic",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 28,
+       "combined": 23
+      },
+      "epaId": 47994
+     },
+     {
+      "name": "CLA250",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 26,
+       "highway": 36,
+       "combined": 30
+      },
+      "epaId": 47929
+     },
+     {
+      "name": "CLA250 4matic",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 25,
+       "highway": 34,
+       "combined": 29
+      },
+      "epaId": 47928
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-cle": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG CLE53 4matic Plus (coupe)",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48487
+     },
+     {
+      "name": "CLE300 4matic (Coupe)",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 33,
+       "combined": 27
+      },
+      "epaId": 48157
+     },
+     {
+      "name": "CLE450 4matic (Coupe)",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 23,
+       "highway": 33,
+       "combined": 26
+      },
+      "epaId": 48159
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-eqb": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "EQB 250 Plus",
+      "engine": "140 kW ACPM 3-Phase",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49116,
+      "mpge": 107,
+      "rangeMi": 251
+     },
+     {
+      "name": "EQB 300 4matic",
+      "engine": "72 and 96 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49117,
+      "mpge": 87,
+      "rangeMi": 205
+     },
+     {
+      "name": "EQB 350 4matic",
+      "engine": "72 and 96 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49118,
+      "mpge": 87,
+      "rangeMi": 207
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-eqe": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG EQE 4matic Plus",
+      "engine": "165 and 165 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48382,
+      "mpge": 70,
+      "rangeMi": 220
+     },
+     {
+      "name": "EQE 350 4matic",
+      "engine": "71 and 144 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48383,
+      "mpge": 86,
+      "rangeMi": 267
+     },
+     {
+      "name": "EQE 350 Plus",
+      "engine": "215 kW ACPM 6-Phase",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48384,
+      "mpge": 94,
+      "rangeMi": 308
+     },
+     {
+      "name": "EQE 500 4matic",
+      "engine": "71 and 144 kW ACPM 6-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48385,
+      "mpge": 85,
+      "rangeMi": 266
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-eqe-suv": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG EQE 4matic Plus (SUV)",
+      "engine": "165 and 295 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48393,
+      "mpge": 74,
+      "rangeMi": 230
+     },
+     {
+      "name": "EQE 350 4matic (SUV)",
+      "engine": "71 and 144 kW ACPM 6-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48394,
+      "mpge": 81,
+      "rangeMi": 253
+     },
+     {
+      "name": "EQE 350 Plus (SUV)",
+      "engine": "215 kW ACPM 6-Phase",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48390,
+      "mpge": 93,
+      "rangeMi": 302
+     },
+     {
+      "name": "EQE 500 4matic (SUV)",
+      "engine": "71 and 144 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48391,
+      "mpge": 81,
+      "rangeMi": 264
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-eqs": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG EQS 4matic Plus",
+      "engine": "174 and 310 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48386,
+      "mpge": 78,
+      "rangeMi": 315
+     },
+     {
+      "name": "EQS 450 4matic",
+      "engine": "174 and 310 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48387,
+      "mpge": 92,
+      "rangeMi": 367
+     },
+     {
+      "name": "EQS 450 Plus",
+      "engine": "265 kW ACPM 6-Phase",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48388,
+      "mpge": 98,
+      "rangeMi": 390
+     },
+     {
+      "name": "EQS 580 4matic",
+      "engine": "310 kW ACPM 6-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48389,
+      "mpge": 93,
+      "rangeMi": 371
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-eqs-suv": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "EQS 450 4matic (SUV)",
+      "engine": "174 and 310 kW ACPM 6-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48395,
+      "mpge": 79,
+      "rangeMi": 312
+     },
+     {
+      "name": "EQS 450 Plus (SUV)",
+      "engine": "265 kW ACPM 6-Phase",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48392,
+      "mpge": 82,
+      "rangeMi": 323
+     },
+     {
+      "name": "EQS 580 4matic (SUV)",
+      "engine": "174 and 310 kW ACPM 6-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48396,
+      "mpge": 80,
+      "rangeMi": 317
+     },
+     {
+      "name": "EQS 680 4matic Maybach (SUV)",
+      "engine": "174 and 310 kW ACPM 6-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48397,
+      "mpge": 76,
+      "rangeMi": 302
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "mercedes-benz-amg-gt": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG GT 43 (coupe)",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 27,
+       "combined": 22
+      },
+      "epaId": 48488
+     },
+     {
+      "name": "AMG GT 55 4matic Plus (coupe)",
+      "engine": "4.0L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 12,
+       "highway": 19,
+       "combined": 14
+      },
+      "epaId": 48582
+     },
+     {
+      "name": "AMG GT 63 4matic Plus (coupe)",
+      "engine": "4.0L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 12,
+       "highway": 19,
+       "combined": 14
+      },
+      "epaId": 48583
+     },
+     {
+      "name": "AMG GT 63 PRO 4matic Plus (coupe)",
+      "engine": "4.0L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 12,
+       "highway": 19,
+       "combined": 14
+      },
+      "epaId": 48804
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "mercedes-benz-sl": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "AMG SL43",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 27,
+       "combined": 22
+      },
+      "epaId": 48481
+     },
+     {
+      "name": "AMG SL55 4matic Plus",
+      "engine": "4.0L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 13,
+       "highway": 21,
+       "combined": 16
+      },
+      "epaId": 48483
+     },
+     {
+      "name": "AMG SL63 4matic Plus",
+      "engine": "4.0L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 13,
+       "highway": 21,
+       "combined": 16
+      },
+      "epaId": 48482
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "audi-a5": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "A5 quattro",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 49040
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V899000",
+      "date": "20/12/2025",
+      "component": "Seat Belts:Rear/Other:Retractor",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2025 SQ6 E-Tron, SQ6 Sportback E-Tron, Q6 Sportback E-Tron, A6, A5, A6 Sportback E-Tron, Q6 E-Tron, S5, and S6 Sportback E-Tron vehicles. The automatic locking retractor may fail to engage when a child seat is installe"
+     },
+     {
+      "campaign": "25V638000",
+      "date": "24/09/2025",
+      "component": "Seat Belts:Front:Retractor",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 GTI, Golf R, Audi A5, A6 Sportback E-Tron, S5, S6 Sportback E-Tron, 2026 Q4 Sportback E-Tron, and Q4 E-Tron vehicles. The torsion bar in one or both front seat belt retractors may have been damaged during pr"
+     }
+    ]
+   }
+  },
+  "audi-a6": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "A6 Allroad quattro",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 30,
+       "combined": 25
+      },
+      "epaId": 48052
+     },
+     {
+      "name": "A6 quattro",
+      "engine": "2.0L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 24,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 48009
+     },
+     {
+      "name": "A6 quattro",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 30,
+       "combined": 25
+      },
+      "epaId": 48012
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Audi A6 Sedan 4 DR AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20600
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V900000",
+      "date": "20/12/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended. As such, these vehicles fail to comply with the requir"
+     },
+     {
+      "campaign": "25V899000",
+      "date": "20/12/2025",
+      "component": "Seat Belts:Rear/Other:Retractor",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2025 SQ6 E-Tron, SQ6 Sportback E-Tron, Q6 Sportback E-Tron, A6, A5, A6 Sportback E-Tron, Q6 E-Tron, S5, and S6 Sportback E-Tron vehicles. The automatic locking retractor may fail to engage when a child seat is installe"
+     }
+    ]
+   }
+  },
+  "audi-a6-e-tron": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "audi-a7": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "A7 quattro",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 30,
+       "combined": 25
+      },
+      "epaId": 48011
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Audi A7 4 DR AWD",
+    "overall": "Not Rated",
+    "frontal": "Not Rated",
+    "side": "5",
+    "rollover": "Not Rated",
+    "vehicleId": 20602
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V900000",
+      "date": "20/12/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended. As such, these vehicles fail to comply with the requir"
+     }
+    ]
+   }
+  },
+  "audi-a8": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "A8 quattro",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48036
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V900000",
+      "date": "20/12/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended. As such, these vehicles fail to comply with the requir"
+     }
+    ]
+   }
+  },
+  "audi-q3": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Q3",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 29,
+       "combined": 25
+      },
+      "epaId": 48260
+     },
+     {
+      "name": "Q3 S-Line quattro",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 28,
+       "combined": 23
+      },
+      "epaId": 48528
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Audi Q3 SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20607
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V082000",
+      "date": "13/02/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2022-2024 Tiguan, 2023 Arteon, and 2024-2025 Audi Q3 vehicles. An error may occur in the camera control unit at vehicle startup, resulting in the rearview camera image not displaying as intended. As such, these v"
+     }
+    ]
+   }
+  },
+  "audi-q4-e-tron": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Q4 45 e-tron",
+      "engine": "210 kW PMSM 3-Phase",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48296,
+      "mpge": 115,
+      "rangeMi": 288
+     },
+     {
+      "name": "Q4 55 e-tron quattro",
+      "engine": "80 and 170 kW Asynchron 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48681,
+      "mpge": 100,
+      "rangeMi": 258
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Audi Q4 e-tron SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20608
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V698000",
+      "date": "21/10/2026",
+      "component": "Electrical System:Propulsion System:Traction Battery",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2024-2025 Q4 E-Tron and Q4 Sportback E-Tron vehicles. The high voltage battery may fail and cause a fire."
+     },
+     {
+      "campaign": "25V125000",
+      "date": "28/02/2025",
+      "component": "Electrical System:12V/24V/48V Battery",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2024-2025 AUDI Q4 E-Tron SUV, AUDI Q4 E-Tron Sportback, and 2024 ID.4 vehicles. The on-board charger (OCDC) may fail and stop charging the 12-volt battery, which can result in a loss of drive power."
+     }
+    ]
+   }
+  },
+  "audi-q6-e-tron": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Q6 e-tron (19 inch wheels)",
+      "engine": "225 kW PMSM ECCA 3-Phase",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48683,
+      "mpge": 100,
+      "rangeMi": 310
+     },
+     {
+      "name": "Q6 e-tron (20 inch wheels)",
+      "engine": "225 kW PMSM ECCA 3-Phase",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48684,
+      "mpge": 96,
+      "rangeMi": 298
+     },
+     {
+      "name": "Q6 e-tron quattro (19 inch wheels)",
+      "engine": "140 and 280 kW PMSM ECCA 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48297,
+      "mpge": 99,
+      "rangeMi": 307
+     },
+     {
+      "name": "Q6 e-tron quattro (20 inch wheels)",
+      "engine": "140 and 280 kW Asynchron ECFA 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48298,
+      "mpge": 95,
+      "rangeMi": 295
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Audi Q6 e-tron SUV RWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20617
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "25V899000",
+      "date": "20/12/2025",
+      "component": "Seat Belts:Rear/Other:Retractor",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2025 SQ6 E-Tron, SQ6 Sportback E-Tron, Q6 Sportback E-Tron, A6, A5, A6 Sportback E-Tron, Q6 E-Tron, S5, and S6 Sportback E-Tron vehicles. The automatic locking retractor may fail to engage when a child seat is installe"
+     },
+     {
+      "campaign": "25V226000",
+      "date": "09/04/2025",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2025 SQ6 and Q6 vehicles. The rearview camera image may be delayed or deactivated after shifting into reverse. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard numbe"
+     },
+     {
+      "campaign": "25V225000",
+      "date": "09/04/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2025 SQ6 e-tron and Q6 e-tron vehicles. The rearview camera may show a blurry image. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 111, \"Rear Visibility.\""
+     }
+    ]
+   }
+  },
+  "audi-q8": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Q8 quattro",
+      "engine": "3.0L 6-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 23,
+       "combined": 19
+      },
+      "epaId": 48286
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Audi Q8 SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20621
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V900000",
+      "date": "20/12/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended. As such, these vehicles fail to comply with the requir"
+     },
+     {
+      "campaign": "25V777000",
+      "date": "13/11/2025",
+      "component": "Seat Belts:Front:Anchorage",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 Audi RS Q8, Audi Q8, Audi Q7, and Audi SQ8 vehicles. The driver and front passenger seat belt buckles may be missing a rivet that secures the buckle to the seat belt stalk."
+     }
+    ]
+   }
+  },
+  "porsche-macan": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Macan",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 25,
+       "combined": 21
+      },
+      "epaId": 48617
+     },
+     {
+      "name": "Macan GTS",
+      "engine": "2.9L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 22,
+       "combined": 19
+      },
+      "epaId": 49059
+     },
+     {
+      "name": "Macan S",
+      "engine": "2.9L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 23,
+       "combined": 19
+      },
+      "epaId": 48618
+     },
+     {
+      "name": "Macan T",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 25,
+       "combined": 21
+      },
+      "epaId": 48619
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "porsche-panamera": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Panamera",
+      "engine": "2.9L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 25,
+       "combined": 21
+      },
+      "epaId": 48194
+     },
+     {
+      "name": "Panamera 4",
+      "engine": "2.9L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 18,
+       "highway": 25,
+       "combined": 21
+      },
+      "epaId": 48195
+     },
+     {
+      "name": "Panamera GTS",
+      "engine": "4.0L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 24,
+       "combined": 18
+      },
+      "epaId": 49043
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V896000",
+      "date": "19/12/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2019-2025 Cayenne, Cayenne E-Hybrid, 2020-2025 911, Taycan, 2024-2025 Panamera, and 2025 Panamera E-Hybrid vehicles. The rearview camera image may not display when the vehicle is placed in reverse. As such, these veh"
+     },
+     {
+      "campaign": "25V634000",
+      "date": "23/09/2025",
+      "component": "Fuel System, Gasoline:Delivery:Fuel Pump",
+      "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2024-2026 Panamera, Cayenne, and 2025 Panamera E-Hybrid vehicles. The fasteners securing the high pressure fuel pump may not be tightened properly, resulting in a fuel leak."
+     }
+    ]
+   }
+  },
+  "porsche-718-cayman": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "718 Cayman",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 24
+      },
+      "epaId": 48811
+     },
+     {
+      "name": "718 Cayman",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 25,
+       "combined": 22
+      },
+      "epaId": 48810
+     },
+     {
+      "name": "718 Cayman GTS",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48587
+     },
+     {
+      "name": "718 Cayman GTS",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 48586
+     },
+     {
+      "name": "718 Cayman S",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 25,
+       "combined": 22
+      },
+      "epaId": 48815
+     },
+     {
+      "name": "718 Cayman S",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48814
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "porsche-718-boxster": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "718 Boxster",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 24
+      },
+      "epaId": 48809
+     },
+     {
+      "name": "718 Boxster",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 20,
+       "highway": 25,
+       "combined": 22
+      },
+      "epaId": 48808
+     },
+     {
+      "name": "718 Boxster GTS",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48585
+     },
+     {
+      "name": "718 Boxster GTS",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 48584
+     },
+     {
+      "name": "718 Boxster S",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 25,
+       "combined": 22
+      },
+      "epaId": 48813
+     },
+     {
+      "name": "718 Boxster S",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48812
+     },
+     {
+      "name": "718 Spyder RS",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 19,
+       "combined": 16
+      },
+      "epaId": 49032
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "porsche-cayenne-coupe": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Cayenne Coupe",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 23,
+       "combined": 19
+      },
+      "epaId": 48572
+     },
+     {
+      "name": "Cayenne GTS Coupe",
+      "engine": "4.0L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 22,
+       "combined": 18
+      },
+      "epaId": 48651
+     },
+     {
+      "name": "Cayenne S Coupe",
+      "engine": "4.0L 8-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 21,
+       "combined": 18
+      },
+      "epaId": 48971
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
   "tesla-model-s": {
    "epa": {
     "year": 2025,
@@ -15172,19 +18000,6 @@
       "epaId": 48571
      },
      {
-      "name": "Cayenne Coupe",
-      "engine": "3.0L 6-cyl turbo",
-      "drive": "All-Wheel Drive",
-      "transmission": "Automatic (S8)",
-      "fuel": "Premium",
-      "mpg": {
-       "city": 17,
-       "highway": 23,
-       "combined": 19
-      },
-      "epaId": 48572
-     },
-     {
       "name": "Cayenne GTS",
       "engine": "4.0L 8-cyl turbo",
       "drive": "All-Wheel Drive",
@@ -15198,19 +18013,6 @@
       "epaId": 48650
      },
      {
-      "name": "Cayenne GTS Coupe",
-      "engine": "4.0L 8-cyl turbo",
-      "drive": "All-Wheel Drive",
-      "transmission": "Automatic (S8)",
-      "fuel": "Premium",
-      "mpg": {
-       "city": 16,
-       "highway": 22,
-       "combined": 18
-      },
-      "epaId": 48651
-     },
-     {
       "name": "Cayenne S",
       "engine": "4.0L 8-cyl turbo",
       "drive": "All-Wheel Drive",
@@ -15222,19 +18024,6 @@
        "combined": 18
       },
       "epaId": 48970
-     },
-     {
-      "name": "Cayenne S Coupe",
-      "engine": "4.0L 8-cyl turbo",
-      "drive": "All-Wheel Drive",
-      "transmission": "Automatic (S8)",
-      "fuel": "Premium",
-      "mpg": {
-       "city": 16,
-       "highway": 21,
-       "combined": 18
-      },
-      "epaId": 48971
      },
      {
       "name": "Cayenne Turbo GT",
