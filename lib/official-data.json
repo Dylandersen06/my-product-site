@@ -2254,17 +2254,6 @@
       "rangeMi": 318
      },
      {
-      "name": "Ioniq 5 Robo taxi",
-      "engine": "168 kW PMSM",
-      "drive": "Rear-Wheel Drive",
-      "transmission": "Automatic (A1)",
-      "fuel": "Electricity",
-      "mpg": null,
-      "epaId": 49092,
-      "mpge": 71,
-      "rangeMi": 168
-     },
-     {
       "name": "Ioniq 5 Standard range",
       "engine": "125 kW PMSM",
       "drive": "Rear-Wheel Drive",
@@ -4684,32 +4673,6 @@
       "epaId": 48278
      },
      {
-      "name": "Atlas Cross Sport",
-      "engine": "2.0L 4-cyl turbo",
-      "drive": "Front-Wheel Drive",
-      "transmission": "Automatic (S8)",
-      "fuel": "Regular",
-      "mpg": {
-       "city": 20,
-       "highway": 26,
-       "combined": 23
-      },
-      "epaId": 48525
-     },
-     {
-      "name": "Atlas Cross Sport 4motion",
-      "engine": "2.0L 4-cyl turbo",
-      "drive": "All-Wheel Drive",
-      "transmission": "Automatic (S8)",
-      "fuel": "Regular",
-      "mpg": {
-       "city": 19,
-       "highway": 26,
-       "combined": 21
-      },
-      "epaId": 48548
-     },
-     {
       "name": "Atlas SE 4motion",
       "engine": "2.0L 4-cyl turbo",
       "drive": "All-Wheel Drive",
@@ -4946,32 +4909,6 @@
        "combined": 22
       },
       "epaId": 48564
-     },
-     {
-      "name": "Grand Cherokee L 2WD",
-      "engine": "3.6L 6-cyl",
-      "drive": "Rear-Wheel Drive",
-      "transmission": "Automatic 8-spd",
-      "fuel": "Regular",
-      "mpg": {
-       "city": 19,
-       "highway": 26,
-       "combined": 21
-      },
-      "epaId": 48551
-     },
-     {
-      "name": "Grand Cherokee L 4WD",
-      "engine": "3.6L 6-cyl",
-      "drive": "4-Wheel Drive",
-      "transmission": "Automatic 8-spd",
-      "fuel": "Regular",
-      "mpg": {
-       "city": 18,
-       "highway": 25,
-       "combined": 21
-      },
-      "epaId": 48563
      }
     ]
    },
@@ -7953,6 +7890,2967 @@
     "year": 2025,
     "count": 0,
     "items": []
+   }
+  },
+  "chevrolet-trailblazer": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Trailblazer AWD",
+      "engine": "1.3L 3-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 29,
+       "combined": 27
+      },
+      "epaId": 47792
+     },
+     {
+      "name": "Trailblazer FWD",
+      "engine": "1.3L 3-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 29,
+       "highway": 33,
+       "combined": 31
+      },
+      "epaId": 47787
+     },
+     {
+      "name": "Trailblazer FWD",
+      "engine": "1.2L 3-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Gasoline or E85",
+      "mpg": {
+       "city": 30,
+       "highway": 31,
+       "combined": 30
+      },
+      "epaId": 47788
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Chevrolet Trailblazer SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20409
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V539000",
+      "date": "20/08/2026",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "General Motors, LLC is recalling certain 2024-2025 Buick Envista, 2024-2026 Buick Encore GX, Chevrolet Trailblazer, and 2025 Chevrolet Trax vehicles. The rearview camera screen may display a distorted or blank image."
+     }
+    ]
+   }
+  },
+  "chevrolet-equinox": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Equinox AWD",
+      "engine": "1.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 24,
+       "highway": 29,
+       "combined": 26
+      },
+      "epaId": 48089
+     },
+     {
+      "name": "Equinox FWD",
+      "engine": "1.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 28,
+       "combined": 27
+      },
+      "epaId": 48061
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 CHEVROLET EQUINOX SUV  AWD",
+    "overall": "Not Rated",
+    "frontal": "Not Rated",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20413
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "chevrolet-blazer": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Blazer AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 22,
+       "highway": 27,
+       "combined": 24
+      },
+      "epaId": 48090
+     },
+     {
+      "name": "Blazer AWD",
+      "engine": "3.6L 6-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 48091
+     },
+     {
+      "name": "Blazer FWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 22,
+       "highway": 29,
+       "combined": 25
+      },
+      "epaId": 48062
+     },
+     {
+      "name": "Blazer FWD",
+      "engine": "3.6L 6-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic 9-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 48063
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Chevrolet Blazer SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20430
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "24V737000",
+      "date": "02/10/2024",
+      "component": "Latches/Locks/Linkages:Doors:Latch",
+      "summary": "General Motors, LLC (GM) is recalling certain 2025 Chevrolet Blazer, Blazer EV, and Equinox vehicles. The door strikers were not properly heat-treated, which can cause them to break."
+     }
+    ]
+   }
+  },
+  "chevrolet-blazer-ev": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Blazer EV AWD",
+      "engine": "67 and 180 kW AC Induction",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48342,
+      "mpge": 95,
+      "rangeMi": 283
+     },
+     {
+      "name": "Blazer EV AWD SS",
+      "engine": "155 and 220 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49068,
+      "mpge": 85,
+      "rangeMi": 303
+     },
+     {
+      "name": "Blazer EV FWD",
+      "engine": "180 kW ACPM",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49069,
+      "mpge": 104,
+      "rangeMi": 312
+     },
+     {
+      "name": "Blazer EV FWD 22 inch tire",
+      "engine": "180 kW ACPM",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49070,
+      "mpge": 95,
+      "rangeMi": 283
+     },
+     {
+      "name": "Blazer EV RWD",
+      "engine": "255 kW ACPM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48694,
+      "mpge": 95,
+      "rangeMi": 334
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Chevrolet Blazer EV SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20543
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V717000",
+      "date": "29/10/2026",
+      "component": "Service Brakes, Hydraulic:Antilock/Traction Control/Electronic Limited Slip:Control Unit/Module",
+      "summary": "General Motors, LLC (GM) is recalling certain 2023\u20132027 Cadillac LYRIQ, 2025\u20132026 model year Cadillac CELESTIQ, 2024\u20132027 Chevrolet Blazer EV, and 2026-2027 Cadillac VISTIQ vehicles. The brake system control module (BSCM) contains a software defect that may cause a loss of brakin"
+     },
+     {
+      "campaign": "26V031000",
+      "date": "22/01/2026",
+      "component": "Parking Brake",
+      "summary": "General Motors, LLC (GM) is recalling certain 2024-2025 Chevrolet Blazer EV vehicles that may have been repaired incorrectly under recall 25V433. The rear parking brake wiring harness may become damaged or corroded, resulting in unintended activation of the parking brake or loss "
+     },
+     {
+      "campaign": "25V433000",
+      "date": "25/06/2025",
+      "component": "Parking Brake",
+      "summary": "General Motors, LLC (GM) is recalling certain 2024-2025 Chevrolet Blazer EV vehicles. The rear parking brake wiring harness may become damaged or corroded, resulting in unintended activation of the parking brake or loss of the parking brake function."
+     },
+     {
+      "campaign": "24V737000",
+      "date": "02/10/2024",
+      "component": "Latches/Locks/Linkages:Doors:Latch",
+      "summary": "General Motors, LLC (GM) is recalling certain 2025 Chevrolet Blazer, Blazer EV, and Equinox vehicles. The door strikers were not properly heat-treated, which can cause them to break."
+     }
+    ]
+   }
+  },
+  "chevrolet-traverse": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Traverse AWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48117
+     },
+     {
+      "name": "Traverse FWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 20,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48110
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Chevrolet Traverse SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20418
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "chevrolet-suburban": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Suburban 2WD",
+      "engine": "6.2L 8-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 10-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 15,
+       "highway": 19,
+       "combined": 16
+      },
+      "epaId": 48622
+     },
+     {
+      "name": "Suburban 2WD",
+      "engine": "5.3L 8-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 10-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 15,
+       "highway": 20,
+       "combined": 17
+      },
+      "epaId": 48624
+     },
+     {
+      "name": "Suburban 4WD",
+      "engine": "6.2L 8-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 10-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 18,
+       "combined": 16
+      },
+      "epaId": 48631
+     },
+     {
+      "name": "Suburban 4WD",
+      "engine": "5.3L 8-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 10-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 14,
+       "highway": 19,
+       "combined": 16
+      },
+      "epaId": 48633
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Chevrolet Suburban SUV 4WD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 20440
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "chevrolet-colorado": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Colorado 2WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 23,
+       "combined": 20
+      },
+      "epaId": 48882
+     },
+     {
+      "name": "Colorado 4WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 21,
+       "combined": 19
+      },
+      "epaId": 48888
+     },
+     {
+      "name": "Colorado Mud Terrain Tires 4WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 20,
+       "combined": 18
+      },
+      "epaId": 48889
+     },
+     {
+      "name": "Colorado ZR2 4WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 17,
+       "combined": 17
+      },
+      "epaId": 48890
+     },
+     {
+      "name": "Colorado ZR2 Bison 4WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 16,
+       "highway": 16,
+       "combined": 16
+      },
+      "epaId": 48891
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Chevrolet Colorado PU/CC 4WD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 20501
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V114000",
+      "date": "26/02/2026",
+      "component": "Equipment:Other:Owners/Service/Other Manual",
+      "summary": "General Motors has decided that certain 2027 Chevrolet Bolt EV, 2025-2026 Cadillac OPTIQ, Chevrolet Colorado, Equinox EV, GMC Canyon, 2026 Buick Enclave, Envision, Cadillac CT5, Escalade, Escalade ESV, Escalade IQ, Escalade IQL, LYRIQ, VISTIQ, Chevrolet Blazer EV, Corvette Conver"
+     }
+    ]
+   }
+  },
+  "chevrolet-silverado-2500hd": {
+   "epa": null,
+   "epaNote": "Heavy-duty pickups aren't EPA-rated.",
+   "safety": null,
+   "recalls": null
+  },
+  "chevrolet-silverado-ev": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Silverado EV (11 kW Charger)",
+      "engine": "189 and 189 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48700,
+      "mpge": 68,
+      "rangeMi": 408
+     },
+     {
+      "name": "Silverado EV (19 kW Charger)",
+      "engine": "189 and 189 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48701,
+      "mpge": 64,
+      "rangeMi": 390
+     },
+     {
+      "name": "Silverado EV 2WT",
+      "engine": "189 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49071,
+      "mpge": 66,
+      "rangeMi": 282
+     },
+     {
+      "name": "Silverado EV 5WT (11 kW Charger)",
+      "engine": "189 and 189 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48699,
+      "mpge": 70,
+      "rangeMi": 422
+     },
+     {
+      "name": "Silverado EV 5WT (19 kW Charger)",
+      "engine": "189 and 189 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48702,
+      "mpge": 70,
+      "rangeMi": 422
+     },
+     {
+      "name": "Silverado EV 8WT",
+      "engine": "189 and 189 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48698,
+      "mpge": 68,
+      "rangeMi": 492
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Chevrolet Silverado EV PU/CC AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20536
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "24V937000",
+      "date": "18/12/2024",
+      "component": "Forward Collision Avoidance: Warnings:External/Pedestrian Alert",
+      "summary": "General Motors LLC (GM) is recalling certain 2025 Chevrolet Silverado EV work trucks. The pedestrian alert sound system may not produce sound at a sufficient volume. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) numb"
+     }
+    ]
+   }
+  },
+  "chevrolet-corvette": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Corvette",
+      "engine": "6.2L 8-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 25,
+       "combined": 19
+      },
+      "epaId": 48477
+     },
+     {
+      "name": "Corvette E-Ray",
+      "engine": "6.2L 8-cyl hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 16,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 48478
+     },
+     {
+      "name": "Corvette Z06",
+      "engine": "5.5L 8-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 12,
+       "highway": 20,
+       "combined": 14
+      },
+      "epaId": 48479
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V213000",
+      "date": "02/04/2026",
+      "component": "Exterior Lighting:Turn Signal",
+      "summary": "General Motors, LLC (GM) is recalling certain 2026 Chevrolet Corvette ZR1X Coupe, Corvette ZR1X Convertible, Corvette Coupe E-Ray, Corvette Convertible E-Ray, Corvette Convertible, Corvette Coupe, 2025 Corvette E-Ray Coupe, Corvette E-Ray Convertible, Corvette Convertible, and Co"
+     },
+     {
+      "campaign": "25V536000",
+      "date": "22/08/2025",
+      "component": "Fuel System, Gasoline",
+      "summary": "General Motors, LLC (GM) is recalling certain 2023\u20132026 Chevrolet Corvette vehicles equipped with a left-side radiator/fan combination. Excess fuel may spill into the vehicle fuel-filler pocket during refueling and leak onto an ignition source."
+     },
+     {
+      "campaign": "24V418000",
+      "date": "06/06/2024",
+      "component": "Seat Belts:Front:Retractor",
+      "summary": "General Motors, LLC (GM) is recalling certain 2024-2025 Chevrolet Corvette vehicles. The driver and/or passenger seat belt retractors may lock in a stowed position and become inaccessible to occupants."
+     }
+    ]
+   }
+  },
+  "chevrolet-malibu": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Malibu",
+      "engine": "1.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 28,
+       "highway": 36,
+       "combined": 31
+      },
+      "epaId": 48015
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Chevrolet Malibu 4 DR FWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20385
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V212000",
+      "date": "02/04/2026",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "General Motors, LLC (GM) is recalling certain 2023-2025 Chevrolet Malibu vehicles. The rearview camera screen may display a distorted or blank image."
+     }
+    ]
+   }
+  },
+  "ford-escape": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Escape AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 48607
+     },
+     {
+      "name": "Escape AWD",
+      "engine": "1.5L 3-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 32,
+       "combined": 28
+      },
+      "epaId": 48608
+     },
+     {
+      "name": "Escape FWD",
+      "engine": "1.5L 3-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 34,
+       "combined": 30
+      },
+      "epaId": 48602
+     },
+     {
+      "name": "Escape FWD PHEV",
+      "engine": "2.5L 4-cyl plug-in hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular Gas and Electricity",
+      "mpg": {
+       "city": 42,
+       "highway": 37,
+       "combined": 40
+      },
+      "epaId": 48663,
+      "electricRangeMi": 37,
+      "mpge": 101
+     }
+    ]
+   },
+   "safety": {
+    "year": 2024,
+    "description": "2024 Ford Escape SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 19112
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 9,
+    "items": [
+     {
+      "campaign": "26V122000",
+      "date": "04/03/2026",
+      "component": "Engine And Engine Cooling:Exhaust System:Emission Control:Gas Recirculation Valve (Egr Valve)",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Ranger, Lincoln Nautilus, Mustang, Maverick, Explorer, Escape, Lincoln Corsair, Bronco Sport, and Bronco vehicles. The exhaust gas recirculation (EGR) valve may fail, resulting in an unexpected loss of drive power."
+     },
+     {
+      "campaign": "25V862000",
+      "date": "12/12/2025",
+      "component": "Seat Belts:Rear/Other:Retractor",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025-2026 Corsair and Escape vehicles. The seat belt retractors for the left and right rear passenger seats may not be securely fastened."
+     },
+     {
+      "campaign": "25V829000",
+      "date": "02/12/2025",
+      "component": "Structure:Body:Hatchback/Liftgate:Hinge And Attachments",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2020-2022 Escape and 2025 Escape vehicles. The liftgate hinge covers may not be properly secured and detach from the vehicle."
+     },
+     {
+      "campaign": "25V787000",
+      "date": "14/11/2025",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Maverick and Escape vehicles. The cover for the electric brake booster's ECU may cause the printed circuit board to overheat and result in a loss of vehicle stability control systems (anti-lock braking, electronic stability cont"
+     },
+     {
+      "campaign": "25V372000",
+      "date": "04/06/2025",
+      "component": "Engine",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2023-2025 Escape, and 2025 Bronco Sport vehicles. The cylinder head may have been improperly manufactured, which can cause the ball plugs to fail, resulting in an oil leak."
+     }
+    ]
+   }
+  },
+  "ford-bronco-sport": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Bronco Sport 4WD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48917
+     },
+     {
+      "name": "Bronco Sport 4WD",
+      "engine": "1.5L 3-cyl turbo",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 25,
+       "highway": 30,
+       "combined": 27
+      },
+      "epaId": 48916
+     },
+     {
+      "name": "Bronco Sport Sasquatch 4WD",
+      "engine": "1.5L 3-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 26,
+       "combined": 24
+      },
+      "epaId": 49057
+     }
+    ]
+   },
+   "safety": {
+    "year": 2024,
+    "description": "2024 Ford Bronco Sport SUV 4WD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 19108
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 7,
+    "items": [
+     {
+      "campaign": "26V340000",
+      "date": "27/05/2026",
+      "component": "Suspension:Front:Control Arm:Lower Ball Joint",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 Bronco Sport and 2022-2026 Maverick vehicles. The front lower control arm ball joints may have been incorrectly installed or incorrectly repaired at the vehicle assembly plant, allowing the control arm to disconnect from th"
+     },
+     {
+      "campaign": "26V201000",
+      "date": "31/03/2026",
+      "component": "Air Bags:Sensor:Occupant Classification:Front Passenger",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025-2026 Bronco Sport and Maverick vehicles. The Occupant Classification Sensor (OCS) unit may fail to correctly detect the presence of an adult or child in the front passenger seat. As such, these vehicles fail to comply with the r"
+     },
+     {
+      "campaign": "26V122000",
+      "date": "04/03/2026",
+      "component": "Engine And Engine Cooling:Exhaust System:Emission Control:Gas Recirculation Valve (Egr Valve)",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Ranger, Lincoln Nautilus, Mustang, Maverick, Explorer, Escape, Lincoln Corsair, Bronco Sport, and Bronco vehicles. The exhaust gas recirculation (EGR) valve may fail, resulting in an unexpected loss of drive power."
+     },
+     {
+      "campaign": "25V788000",
+      "date": "14/11/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025-2026 Bronco and Bronco Sport vehicles. The Instrument Panel Cluster (IPC) may fail at startup."
+     },
+     {
+      "campaign": "25V372000",
+      "date": "04/06/2025",
+      "component": "Engine",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2023-2025 Escape, and 2025 Bronco Sport vehicles. The cylinder head may have been improperly manufactured, which can cause the ball plugs to fail, resulting in an oil leak."
+     }
+    ]
+   }
+  },
+  "ford-expedition": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Expedition 2WD",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 16,
+       "highway": 24,
+       "combined": 19
+      },
+      "epaId": 48943
+     },
+     {
+      "name": "Expedition 4WD",
+      "engine": "3.5L 6-cyl turbo",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 15,
+       "highway": 22,
+       "combined": 18
+      },
+      "epaId": 48956
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 FORD EXPEDITION SUV  4WD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 20306
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 6,
+    "items": [
+     {
+      "campaign": "26V606000",
+      "date": "22/09/2026",
+      "component": "Exterior Lighting:Headlights",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025-2027 Expedition, 2026 F-250 SD, F-350 SD, F-450 SD, and F-550 SD vehicles. The headlight assemblies may contain a contaminated LED chip, which can result in a loss of daytime running lights, parking lights, high beams or low bea"
+     },
+     {
+      "campaign": "26V104000",
+      "date": "21/02/2026",
+      "component": "Electrical System: Integrated Trailer Brake Control",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer mo"
+     },
+     {
+      "campaign": "25V823000",
+      "date": "01/12/2025",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Lincoln Navigator, F-150, Expedition, Bronco, and Ranger vehicles. The Electronic Brake Booster (EBB) module may malfunction while driving or when the driver is utilizing an Advanced Driver Assistance System (ADAS) feature, resu"
+     },
+     {
+      "campaign": "25V488000",
+      "date": "25/07/2025",
+      "component": "Service Brakes, Hydraulic:Power Assist:Electric:Control Module:Software",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Lincoln Navigator, F-150, Expedition, Bronco, and Ranger vehicles. The Electronic Brake Booster (EBB) module may malfunction while driving or when the driver is utilizing an Advanced Driver Assistance System (ADAS) feature, resu"
+     },
+     {
+      "campaign": "25V439000",
+      "date": "27/06/2025",
+      "component": "Air Bags:Frontal",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Navigator and Expedition vehicles. The passenger side air bag may have been manufactured incorrectly, which can cause the air bag to deploy with excessive force during a crash."
+     }
+    ]
+   }
+  },
+  "ford-ranger": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Ranger 2WD",
+      "engine": "2.3L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 26,
+       "combined": 23
+      },
+      "epaId": 48883
+     },
+     {
+      "name": "Ranger 4WD",
+      "engine": "2.3L 4-cyl turbo",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 22
+      },
+      "epaId": 49046
+     },
+     {
+      "name": "Ranger 4WD",
+      "engine": "2.7L 6-cyl turbo",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 23,
+       "combined": 20
+      },
+      "epaId": 49142
+     },
+     {
+      "name": "Ranger RAPTOR 4WD",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Part-time 4-Wheel Drive",
+      "transmission": "Automatic (S10)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 16,
+       "highway": 18,
+       "combined": 17
+      },
+      "epaId": 48892
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 13,
+    "items": [
+     {
+      "campaign": "26V343000",
+      "date": "27/05/2026",
+      "component": "Engine And Engine Cooling:Engine:Hard Parts Internal/Mechanical",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025-2026 Explorer, Ranger, and Bronco vehicles. The engine may fail, which can result in a loss of drive power."
+     },
+     {
+      "campaign": "26V268000",
+      "date": "28/04/2026",
+      "component": "Seats:Critical Fasteners",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2024-2026 Ranger and Bronco vehicles. The front seats may have a loose or dislodged seat frame height-adjust pivot bolt."
+     },
+     {
+      "campaign": "26V238000",
+      "date": "14/04/2026",
+      "component": "Structure:Interior Panels:Sun Visor",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2024-2026 Ranger vehicles. The sun visor or headliner wiring harnesses may be improperly positioned or have excessive tape thickness, which can result in damaged wires."
+     },
+     {
+      "campaign": "26V122000",
+      "date": "04/03/2026",
+      "component": "Engine And Engine Cooling:Exhaust System:Emission Control:Gas Recirculation Valve (Egr Valve)",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2025 Ranger, Lincoln Nautilus, Mustang, Maverick, Explorer, Escape, Lincoln Corsair, Bronco Sport, and Bronco vehicles. The exhaust gas recirculation (EGR) valve may fail, resulting in an unexpected loss of drive power."
+     },
+     {
+      "campaign": "26V104000",
+      "date": "21/02/2026",
+      "component": "Electrical System: Integrated Trailer Brake Control",
+      "summary": "Ford Motor Company (Ford) is recalling certain 2021-2026 F-150, 2022-2026 F-250 SD, F-350 SD, F-450 SD, F-550 SD, Maverick, 2024-2026 Ranger, 2023-2026 F-600 SD, 2022-2027 Lincoln Navigator, Expedition, and 2026 E-Transit vehicles. When towing a trailer, the integrated trailer mo"
+     }
+    ]
+   }
+  },
+  "ford-f-150-lightning": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "F-150 Lightning 4WD ER1",
+      "engine": "210 and 210 kW AC PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48705,
+      "mpge": 70,
+      "rangeMi": 320
+     },
+     {
+      "name": "F-150 Lightning 4WD ER2",
+      "engine": "210 and 210 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49077,
+      "mpge": 72,
+      "rangeMi": 300
+     },
+     {
+      "name": "F-150 Lightning 4WD PRO ER1",
+      "engine": "210 and 210 kW AC PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48706,
+      "mpge": 70,
+      "rangeMi": 320
+     },
+     {
+      "name": "F-150 Lightning 4WD SR",
+      "engine": "358 and 358 kW AC PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48707,
+      "mpge": 68,
+      "rangeMi": 240
+     },
+     {
+      "name": "F-150 Lightning Platinum 4WD",
+      "engine": "210 and 210 kW AC PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48708,
+      "mpge": 66,
+      "rangeMi": 300
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "ford-f-250-super-duty": {
+   "epa": null,
+   "epaNote": "Heavy-duty pickups aren't EPA-rated.",
+   "safety": null,
+   "recalls": null
+  },
+  "gmc-acadia": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Acadia AWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 24,
+       "combined": 21
+      },
+      "epaId": 48122
+     },
+     {
+      "name": "Acadia FWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 20,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48111
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 GMC Acadia SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20422
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "gmc-canyon": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Canyon 2WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 23,
+       "combined": 20
+      },
+      "epaId": 48887
+     },
+     {
+      "name": "Canyon 4WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 21,
+       "combined": 19
+      },
+      "epaId": 48899
+     },
+     {
+      "name": "Canyon AT4X 4WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 17,
+       "combined": 17
+      },
+      "epaId": 48900
+     },
+     {
+      "name": "Canyon AT4X AEV 4WD",
+      "engine": "2.7L 4-cyl turbo",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 16,
+       "highway": 16,
+       "combined": 16
+      },
+      "epaId": 48901
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 GMC Canyon PU/CC 4WD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 20504
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V114000",
+      "date": "26/02/2026",
+      "component": "Equipment:Other:Owners/Service/Other Manual",
+      "summary": "General Motors has decided that certain 2027 Chevrolet Bolt EV, 2025-2026 Cadillac OPTIQ, Chevrolet Colorado, Equinox EV, GMC Canyon, 2026 Buick Enclave, Envision, Cadillac CT5, Escalade, Escalade ESV, Escalade IQ, Escalade IQL, LYRIQ, VISTIQ, Chevrolet Blazer EV, Corvette Conver"
+     },
+     {
+      "campaign": "25V856000",
+      "date": "11/12/2025",
+      "component": "Air Bags:Frontal:Passenger Side:Inflator Module",
+      "summary": "General Motors, LLC (GM) is recalling certain 2024\u20132026 GMC Canyon AT4X AEV vehicles. Incorrect sensing and diagnostic module (SDM) software may cause a second stage passenger air bag deployment when only a first stage is intended. As such, these vehicles fail to conform to Feder"
+     }
+    ]
+   }
+  },
+  "gmc-sierra-2500hd": {
+   "epa": null,
+   "epaNote": "Heavy-duty pickups aren't EPA-rated.",
+   "safety": null,
+   "recalls": null
+  },
+  "gmc-hummer-ev-pickup": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Hummer EV Pickup 2X",
+      "engine": "195 and 215 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48343,
+      "mpge": 53,
+      "rangeMi": 318
+     },
+     {
+      "name": "Hummer EV Pickup 3X",
+      "engine": "195, 195 and 195 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48344,
+      "mpge": 52,
+      "rangeMi": 312
+     },
+     {
+      "name": "Hummer EV Pickup MT Tires 2X",
+      "engine": "195 and 215 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48345,
+      "mpge": 47,
+      "rangeMi": 282
+     },
+     {
+      "name": "Hummer EV Pickup MT Tires 3X",
+      "engine": "195, 195 and 215 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48346,
+      "mpge": 48,
+      "rangeMi": 289
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "gmc-hummer-ev-suv": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Hummer EV SUV 2X",
+      "engine": "195 and 215 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48347,
+      "mpge": 53,
+      "rangeMi": 315
+     },
+     {
+      "name": "Hummer EV SUV 3X",
+      "engine": "195, 195 and 215 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48348,
+      "mpge": 52,
+      "rangeMi": 312
+     },
+     {
+      "name": "Hummer EV SUV MT Tires 2X",
+      "engine": "195 and 215 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48349,
+      "mpge": 47,
+      "rangeMi": 282
+     },
+     {
+      "name": "Hummer EV SUV MT Tires 3X",
+      "engine": "195, 195 and 215 kW ACPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48350,
+      "mpge": 48,
+      "rangeMi": 289
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "gmc-sierra-ev": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Sierra EV",
+      "engine": "189 and 189 kW ACPM",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48709,
+      "mpge": 64,
+      "rangeMi": 390
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 GMC Sierra EV PU/CC AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20537
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V015000",
+      "date": "16/01/2025",
+      "component": "Seat Belts:Rear/Other:Anchorage",
+      "summary": "General Motors, LLC (GM) is recalling certain 2024 Chevrolet Silverado EV and 2024-2025 GMC Sierra EV pickup trucks. The bolt that secures the rear center seat belt assembly to the seat structure may not have been properly tightened."
+     }
+    ]
+   }
+  },
+  "jeep-grand-cherokee-l": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Grand Cherokee L 2WD",
+      "engine": "3.6L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 48551
+     },
+     {
+      "name": "Grand Cherokee L 4WD",
+      "engine": "3.6L 6-cyl",
+      "drive": "4-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 25,
+       "combined": 21
+      },
+      "epaId": 48563
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Jeep Grand Cherokee L SUV 4WD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20163
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V559000",
+      "date": "01/09/2026",
+      "component": "Tires:Pressure Monitoring And Regulating Systems",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2024-2025 Jeep Wagoneer, 2024-2026 Jeep Grand Cherokee, Jeep Grand Cherokee L, Jeep Grand Cherokee 4XE, Jeep Grand Wagoneer, 2025 Jeep Wagoneer L, 2025-2026 Jeep Grand Wagoneer L, and 2026 Jeep Cherokee vehicles. Due to a software error,"
+     },
+     {
+      "campaign": "26V328000",
+      "date": "21/05/2026",
+      "component": "Air Bags: Air Bag/Restraint Control Module:Software",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2026 Jeep Grand Cherokee and 2023-2025 Jeep Grand Cherokee L vehicles. A software error in the occupant restraint controller module may cause the delayed deployment of the side air bags during a crash. As such, these vehicles fail "
+     }
+    ]
+   }
+  },
+  "jeep-wagoneer": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Wagoneer 2WD",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 20
+      },
+      "epaId": 48549
+     },
+     {
+      "name": "Wagoneer 4WD",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 16,
+       "highway": 23,
+       "combined": 19
+      },
+      "epaId": 48561
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Jeep Wagoneer SUV 4WD",
+    "overall": "4",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "3",
+    "vehicleId": 20168
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V584000",
+      "date": "10/09/2026",
+      "component": "Structure:Body:Roof And Pillars",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2025 Jeep Wagoneer, 2022-2026 Jeep Grand Wagoneer, 2023-2025 Jeep Wagoneer L, and 2023-2026 Jeep Grand Wagoneer L vehicles. The pivot bolts for the roof rack crossbars may not have been tightened properly, allowing them to detach."
+     },
+     {
+      "campaign": "26V559000",
+      "date": "01/09/2026",
+      "component": "Tires:Pressure Monitoring And Regulating Systems",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2024-2025 Jeep Wagoneer, 2024-2026 Jeep Grand Cherokee, Jeep Grand Cherokee L, Jeep Grand Cherokee 4XE, Jeep Grand Wagoneer, 2025 Jeep Wagoneer L, 2025-2026 Jeep Grand Wagoneer L, and 2026 Jeep Cherokee vehicles. Due to a software error,"
+     },
+     {
+      "campaign": "25V593000",
+      "date": "11/09/2025",
+      "component": "Structure:Exterior Trim",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2025 Jeep Wagoneer and Jeep Grand Wagoneer vehicles. The trim on the driver and passenger doors may not have been installed properly, which can allow it to detach."
+     }
+    ]
+   }
+  },
+  "jeep-grand-wagoneer": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Grand Wagoneer 4WD",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic 8-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 20,
+       "combined": 17
+      },
+      "epaId": 48559
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V584000",
+      "date": "10/09/2026",
+      "component": "Structure:Body:Roof And Pillars",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2025 Jeep Wagoneer, 2022-2026 Jeep Grand Wagoneer, 2023-2025 Jeep Wagoneer L, and 2023-2026 Jeep Grand Wagoneer L vehicles. The pivot bolts for the roof rack crossbars may not have been tightened properly, allowing them to detach."
+     },
+     {
+      "campaign": "26V559000",
+      "date": "01/09/2026",
+      "component": "Tires:Pressure Monitoring And Regulating Systems",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2024-2025 Jeep Wagoneer, 2024-2026 Jeep Grand Cherokee, Jeep Grand Cherokee L, Jeep Grand Cherokee 4XE, Jeep Grand Wagoneer, 2025 Jeep Wagoneer L, 2025-2026 Jeep Grand Wagoneer L, and 2026 Jeep Cherokee vehicles. Due to a software error,"
+     },
+     {
+      "campaign": "25V593000",
+      "date": "11/09/2025",
+      "component": "Structure:Exterior Trim",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2022-2025 Jeep Wagoneer and Jeep Grand Wagoneer vehicles. The trim on the driver and passenger doors may not have been installed properly, which can allow it to detach."
+     }
+    ]
+   }
+  },
+  "jeep-wagoneer-s": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Wagoneer S AWD (Falken tire)",
+      "engine": "250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49093,
+      "mpge": 93,
+      "rangeMi": 294
+     },
+     {
+      "name": "Wagoneer S AWD (Pirelli tire)",
+      "engine": "250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49151,
+      "mpge": 83,
+      "rangeMi": 262
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 6,
+    "items": [
+     {
+      "campaign": "26V262000",
+      "date": "23/04/2026",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2025 Jeep Wagoneer S and Dodge Charger electric vehicles. A software error may cause the instrument panel display to fail. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number"
+     },
+     {
+      "campaign": "26V141000",
+      "date": "12/03/2026",
+      "component": "Structure:Body:Hatchback/Liftgate:Hinge And Attachments",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2026 Jeep Wagoneer S vehicles. The liftgate hinge cover may not be properly clipped into position and may detach from the vehicle."
+     },
+     {
+      "campaign": "26V059000",
+      "date": "02/02/2026",
+      "component": "Exterior Lighting:Brake Lights",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2026 Jeep Wagoneer S, 2025-2026 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Ram 3500 Cab Chassis, Ram 4500 Cab Chassis, Ram 5500 Cab Chassis, and 2026 Jeep Cherokee vehicles. Due to an improperly designed trailer tow module,"
+     },
+     {
+      "campaign": "25V575000",
+      "date": "04/09/2025",
+      "component": "Structure:Body",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2025 Jeep Wagoneer S vehicles. The vehicles are equipped with an incorrect cross car beam in the instrument panel. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 208, \"Occupa"
+     },
+     {
+      "campaign": "25V574000",
+      "date": "04/09/2025",
+      "component": "Power Train:Automatic Transmission:Internal:Park Pawl",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2025 Dodge Charger and Jeep Wagoneer S electric vehicles. An incorrectly installed spring may cause the loss of the park function when the vehicle\u2019s gear selector is placed in the park (P) position, which can result in a vehicle ro"
+     }
+    ]
+   }
+  },
+  "ram-3500": {
+   "epa": null,
+   "epaNote": "Heavy-duty pickups aren't EPA-rated.",
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 5,
+    "items": [
+     {
+      "campaign": "26V225000",
+      "date": "09/04/2026",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2025-2026 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Ram 3500 Cab Chassis, Ram 4500 Cab Chassis, and Ram 5500 Cab Chassis vehicles. A software error may cause the instrument panel display to fail. As such, these vehicles fail to"
+     },
+     {
+      "campaign": "26V059000",
+      "date": "02/02/2026",
+      "component": "Exterior Lighting:Brake Lights",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2026 Jeep Wagoneer S, 2025-2026 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Ram 3500 Cab Chassis, Ram 4500 Cab Chassis, Ram 5500 Cab Chassis, and 2026 Jeep Cherokee vehicles. Due to an improperly designed trailer tow module,"
+     },
+     {
+      "campaign": "25V882000",
+      "date": "18/12/2025",
+      "component": "Air Bags: Air Bag/Restraint Control Module",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2025 Ram 2500 Pickup, 3500 Pickup, 3500 Cab Chassis, 4500 Cab Chassis, and 5500 Cab Chassis trucks. A software error in the occupant restraint controller module may cause the driver's side air bag and/or seat belt pretensioner not to de"
+     },
+     {
+      "campaign": "25V826000",
+      "date": "01/12/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2025-2026 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Ram 3500 Cab Chassis, 4500 Ram Cab Chassis, and Ram 5500 Cab Chassis vehicles. A software error may cause the instrument panel cluster display to be blank. As such, these vehi"
+     },
+     {
+      "campaign": "25V297000",
+      "date": "08/05/2025",
+      "component": "Power Train:Automatic Transmission:Gear Position Indication (Prndl)",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain Ram 2500 and Ram 3500 vehicles equipped with a 3.5\" cluster and column shifter. A software error may cause the gear selection display to be inaccurate. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicl"
+     }
+    ]
+   }
+  },
+  "buick-envision": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Envision AWD",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S9)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 22,
+       "highway": 28,
+       "combined": 24
+      },
+      "epaId": 48083
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Buick Envision SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20416
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "hyundai-sonata": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Sonata AWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 25,
+       "highway": 34,
+       "combined": 28
+      },
+      "epaId": 48043
+     },
+     {
+      "name": "Sonata FWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 32,
+       "combined": 27
+      },
+      "epaId": 48046
+     },
+     {
+      "name": "Sonata FWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 25,
+       "highway": 36,
+       "combined": 29
+      },
+      "epaId": 48044
+     },
+     {
+      "name": "Sonata FWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 28,
+       "highway": 38,
+       "combined": 32
+      },
+      "epaId": 48045
+     },
+     {
+      "name": "Sonata Hybrid",
+      "engine": "2.0L 4-cyl hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 44,
+       "highway": 51,
+       "combined": 47
+      },
+      "epaId": 48047
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Hyundai Sonata 4 DR AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20584
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "hyundai-kona": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Kona AWD",
+      "engine": "2.0L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S1)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 29,
+       "combined": 27
+      },
+      "epaId": 47959
+     },
+     {
+      "name": "Kona AWD",
+      "engine": "2.0L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S1)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 29,
+       "combined": 28
+      },
+      "epaId": 47960
+     },
+     {
+      "name": "Kona AWD",
+      "engine": "1.6L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 24,
+       "highway": 29,
+       "combined": 26
+      },
+      "epaId": 48093
+     },
+     {
+      "name": "Kona FWD",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S1)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 28,
+       "highway": 35,
+       "combined": 31
+      },
+      "epaId": 47952
+     },
+     {
+      "name": "Kona FWD",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S1)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 29,
+       "highway": 34,
+       "combined": 31
+      },
+      "epaId": 47953
+     },
+     {
+      "name": "Kona FWD",
+      "engine": "1.6L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 32,
+       "combined": 28
+      },
+      "epaId": 48064
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Hyundai Kona SUV AWD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20567
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V452000",
+      "date": "15/07/2026",
+      "component": "Seat Belts: Rear/Other:Buckle Assembly",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2024-2025 Kona Electric and 2024-2026 Kona vehicles. The seat belt buckle in the rear center seat may fail to properly restrain an occupant during a crash."
+     }
+    ]
+   }
+  },
+  "hyundai-kona-electric": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Kona Electric (17 inch Wheels)",
+      "engine": "150 kW PMSM (IPM)",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48357,
+      "mpge": 116,
+      "rangeMi": 261
+     },
+     {
+      "name": "Kona Electric (19 inch Wheels)",
+      "engine": "150 kW PMSM (IPM)",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48358,
+      "mpge": 103,
+      "rangeMi": 230
+     },
+     {
+      "name": "Kona Electric Standard Range",
+      "engine": "99 kW PMSM (IPM)",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48359,
+      "mpge": 118,
+      "rangeMi": 200
+     }
+    ]
+   },
+   "safety": {
+    "year": 2023,
+    "description": "2023 Hyundai Kona Electric SUV FWD",
+    "overall": "Not Rated",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "Not Rated",
+    "vehicleId": 18648
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V452000",
+      "date": "15/07/2026",
+      "component": "Seat Belts: Rear/Other:Buckle Assembly",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2024-2025 Kona Electric and 2024-2026 Kona vehicles. The seat belt buckle in the rear center seat may fail to properly restrain an occupant during a crash."
+     }
+    ]
+   }
+  },
+  "hyundai-santa-cruz": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Santa Cruz AWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 27,
+       "combined": 22
+      },
+      "epaId": 48267
+     },
+     {
+      "name": "Santa Cruz AWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 21,
+       "highway": 29,
+       "combined": 24
+      },
+      "epaId": 48266
+     },
+     {
+      "name": "Santa Cruz FWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 22,
+       "highway": 30,
+       "combined": 25
+      },
+      "epaId": 48257
+     },
+     {
+      "name": "Santa Cruz XRT AWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 18,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 48270
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Hyundai Santa Cruz PU/CC AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20589
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V316000",
+      "date": "19/05/2026",
+      "component": "Forward Collision Avoidance: Automatic Emergency Braking",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2025-2026 Santa Cruz, Tucson, Tucson Hybrid, and Tucson Plug-In Hybrid Electric (PHEV) vehicles. Software in the front cameras may cause the forward collision avoidance system to activate prematurely and unexpectedly apply the "
+     },
+     {
+      "campaign": "25V809000",
+      "date": "21/11/2025",
+      "component": "Air Bags:Side/Window:Curtain",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2025 Tucson, 2025-2026 Santa Cruz, Santa Fe, Santa Fe Hybrid, and 2026 Genesis GV70 vehicles. The side curtain air bags may not have been installed properly, which can cause the air bags not to deploy as intended."
+     },
+     {
+      "campaign": "24V877000",
+      "date": "20/11/2024",
+      "component": "Electrical System:Wiring",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2025 Tucson and Santa Cruz vehicles. The console extension wiring assembly may be routed improperly, allowing the transmission to be shifted out of Park without applying the brake pedal."
+     }
+    ]
+   }
+  },
+  "hyundai-ioniq-6": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Ioniq 6 AWD (18 inch Wheels)",
+      "engine": "74 and 165 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48361,
+      "mpge": 121,
+      "rangeMi": 316
+     },
+     {
+      "name": "Ioniq 6 AWD (20 inch Wheels)",
+      "engine": "74 and 165 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48365,
+      "mpge": 103,
+      "rangeMi": 270
+     },
+     {
+      "name": "Ioniq 6 RWD (18 inch Wheels)",
+      "engine": "168 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48362,
+      "mpge": 132,
+      "rangeMi": 342
+     },
+     {
+      "name": "Ioniq 6 RWD (20 inch Wheels)",
+      "engine": "168 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48363,
+      "mpge": 111,
+      "rangeMi": 291
+     },
+     {
+      "name": "Ioniq 6 Standard Range",
+      "engine": "111 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48364,
+      "mpge": 135,
+      "rangeMi": 240
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Hyundai Ioniq 6 4 DR AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20580
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V218000",
+      "date": "07/04/2026",
+      "component": "Seat Belts:Front:Anchorage",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2023-2025 Hyundai Ioniq 6, 2023-2026 Genesis G90, 2024-2026 Hyundai Santa Fe, and Hyundai Santa Fe Hybrid vehicles. The driver and passenger seat belt anchors may detach."
+     },
+     {
+      "campaign": "25V606000",
+      "date": "12/09/2025",
+      "component": "Electrical System:Propulsion System:Charging:Port",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2023-2025 IONIQ 6 electric vehicles. The charging port door panel may detach."
+     },
+     {
+      "campaign": "24V868000",
+      "date": "18/11/2024",
+      "component": "Electrical System:12V/24V/48V Battery",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2022-2024 IONIQ 5, 2023-2025 IONIQ 6, Genesis GV60, Genesis GV70 \"Electrified,\" and Genesis G80 \"Electrified\" vehicles. The Integrated Charging Control Unit (ICCU) may become damaged and stop charging the 12-volt battery, which"
+     }
+    ]
+   }
+  },
+  "hyundai-ioniq-9": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "Ioniq 9 AWD",
+      "engine": "66 and 160 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49662,
+      "mpge": 88,
+      "rangeMi": 320
+     },
+     {
+      "name": "Ioniq 9 AWD Performance",
+      "engine": "157 kW PMSM (IPM)",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49663,
+      "mpge": 85,
+      "rangeMi": 311
+     },
+     {
+      "name": "Ioniq 9 RWD",
+      "engine": "160 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49661,
+      "mpge": 92,
+      "rangeMi": 335
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2026,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V588000",
+      "date": "11/09/2026",
+      "component": "Seats:Mid/Rear Assembly:Power Adjust",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2026 Ioniq 9 vehicles equipped with a Limited, Calligraphy, or Calligraphy Design trim package. The second-row power seats may fail to detect a person. As a result, the seats may continue to move after contacting a person durin"
+     },
+     {
+      "campaign": "26V314000",
+      "date": "19/05/2026",
+      "component": "Suspension:Critical Fasteners",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2025 Ioniq 5 and 2026 Ioniq 9 vehicles. The fasteners for the rear suspension may loosen and detach, which can result in a loss of vehicle control."
+     },
+     {
+      "campaign": "26V068000",
+      "date": "06/02/2026",
+      "component": "Electrical System:Propulsion System:Traction Battery",
+      "summary": "Hyundai Motor America (Hyundai) is recalling certain 2025-2026 IONIQ 5 and 2026 IONIQ 9 vehicles. The high voltage battery system may contain an improperly tightened bus bar, which can cause a short-circuit."
+     }
+    ]
+   }
+  },
+  "kia-soul": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Soul",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 33,
+       "combined": 30
+      },
+      "epaId": 47942
+     },
+     {
+      "name": "Soul Eco dynamics",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 29,
+       "highway": 35,
+       "combined": 31
+      },
+      "epaId": 47943
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Kia Soul SUV FWD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20717
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "kia-seltos": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Seltos AWD",
+      "engine": "2.0L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 27,
+       "highway": 31,
+       "combined": 29
+      },
+      "epaId": 47962
+     },
+     {
+      "name": "Seltos AWD",
+      "engine": "1.6L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 24,
+       "highway": 27,
+       "combined": 25
+      },
+      "epaId": 47961
+     },
+     {
+      "name": "Seltos FWD",
+      "engine": "2.0L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AV-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 28,
+       "highway": 34,
+       "combined": 31
+      },
+      "epaId": 47954
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Kia Seltos SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20716
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "kia-k5": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "K5",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 33,
+       "combined": 27
+      },
+      "epaId": 47720
+     },
+     {
+      "name": "K5",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 25,
+       "highway": 36,
+       "combined": 29
+      },
+      "epaId": 47718
+     },
+     {
+      "name": "K5",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 26,
+       "highway": 37,
+       "combined": 30
+      },
+      "epaId": 47719
+     },
+     {
+      "name": "K5 AWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 24,
+       "highway": 33,
+       "combined": 27
+      },
+      "epaId": 47717
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Kia K5 4 DR AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20720
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V493000",
+      "date": "29/07/2025",
+      "component": "Structure:Body:Roof And Pillars",
+      "summary": "Kia America, Inc. (Kia) is recalling certain 2023-2025 K5 vehicles. The left and right rear window trim pieces may loosen and detach."
+     },
+     {
+      "campaign": "25V351000",
+      "date": "28/05/2025",
+      "component": "Exterior Lighting:Lighting Control Module:Software",
+      "summary": "Kia America, Inc. (Kia) is recalling certain 2025 K5 vehicles. A software error in the Power-net Domain Controller (PDC) may cause the parking lights to flicker. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard (FMVSS) 108, \"La"
+     }
+    ]
+   }
+  },
+  "kia-niro": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Niro",
+      "engine": "1.6L 4-cyl hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 53,
+       "highway": 45,
+       "combined": 49
+      },
+      "epaId": 48066
+     },
+     {
+      "name": "Niro FE",
+      "engine": "1.6L 4-cyl hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 53,
+       "highway": 54,
+       "combined": 53
+      },
+      "epaId": 48067
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Kia Niro SUV FWD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20732
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V024000",
+      "date": "17/01/2025",
+      "component": "Seats",
+      "summary": "Kia America, Inc. (Kia) is recalling certain 2023-2025 Niro EV, Plug-in Hybrid (PHEV), and Hybrid vehicles. The floor wiring assembly beneath the front passenger seat may become damaged, which can prevent the front air bags and seat belts from deploying properly or cause an unint"
+     }
+    ]
+   }
+  },
+  "kia-niro-ev": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Niro Electric",
+      "engine": "150 kW PMSM (IPM)",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48370,
+      "mpge": 113,
+      "rangeMi": 253
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V024000",
+      "date": "17/01/2025",
+      "component": "Seats",
+      "summary": "Kia America, Inc. (Kia) is recalling certain 2023-2025 Niro EV, Plug-in Hybrid (PHEV), and Hybrid vehicles. The floor wiring assembly beneath the front passenger seat may become damaged, which can prevent the front air bags and seat belts from deploying properly or cause an unint"
+     }
+    ]
+   }
+  },
+  "kia-sorento": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Sorento AWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 20,
+       "highway": 27,
+       "combined": 23
+      },
+      "epaId": 48101
+     },
+     {
+      "name": "Sorento AWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 28,
+       "combined": 25
+      },
+      "epaId": 48100
+     },
+     {
+      "name": "Sorento FWD",
+      "engine": "2.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 20,
+       "highway": 29,
+       "combined": 23
+      },
+      "epaId": 48069
+     },
+     {
+      "name": "Sorento FWD",
+      "engine": "2.5L 4-cyl",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 23,
+       "highway": 31,
+       "combined": 26
+      },
+      "epaId": 48068
+     },
+     {
+      "name": "Sorento Hybrid AWD",
+      "engine": "1.6L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 34,
+       "highway": 34,
+       "combined": 34
+      },
+      "epaId": 47736
+     },
+     {
+      "name": "Sorento Hybrid FWD",
+      "engine": "1.6L 4-cyl turbo hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (AM-S6)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 36,
+       "highway": 36,
+       "combined": 36
+      },
+      "epaId": 47729
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Kia Sorento SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20728
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 3,
+    "items": [
+     {
+      "campaign": "26V046000",
+      "date": "27/01/2026",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Kia America, Inc. (Kia) is recalling certain 2025 Kia K4, 2025-2026 Sorento, Sorento Hybrid, Sorento Plug-In Hybrid Electric (PHEV), 2026 Sportage, Sportage Hybrid, Sportage PHEV, K5, EV9, Carnival, and Carnival Hybrid vehicles. Due to a software error, the instrument panel displ"
+     },
+     {
+      "campaign": "25V548000",
+      "date": "25/08/2025",
+      "component": "Engine And Engine Cooling:Critical Fasteners",
+      "summary": "Kia America, Inc. (Kia) is recalling certain 2025 K4 and Sorento vehicles. The connecting rod bolts in the engine may have been improperly tightened, which can cause a loss of drive power."
+     },
+     {
+      "campaign": "25V006000",
+      "date": "13/01/2025",
+      "component": "Electrical System:Body Control Module:Software",
+      "summary": "Kia America, Inc. (Kia) is recalling certain 2024-2025 Sorento, 2025 Sorento Hybrid, and 2025 Sorento Plug-In Hybrid vehicles. A software error in the Body Domain Control Unit (BDC) may cause a loss of low beam headlights and taillights. As such, these vehicles fail to comply wit"
+     }
+    ]
+   }
+  },
+  "kia-ev6": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "EV6 AWD GT",
+      "engine": "175 and 303 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49094,
+      "mpge": 83,
+      "rangeMi": 231
+     },
+     {
+      "name": "EV6 Long Range AWD (19 inch Wheels)",
+      "engine": "74 and 165 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49095,
+      "mpge": 106,
+      "rangeMi": 295
+     },
+     {
+      "name": "EV6 Long Range AWD (20 inch Wheels)",
+      "engine": "74 and 165 kW PMSM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49096,
+      "mpge": 97,
+      "rangeMi": 270
+     },
+     {
+      "name": "EV6 Long Range RWD",
+      "engine": "168 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49097,
+      "mpge": 114,
+      "rangeMi": 319
+     },
+     {
+      "name": "EV6 Standard Range RWD",
+      "engine": "125 kW PMSM",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49098,
+      "mpge": 115,
+      "rangeMi": 237
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Kia EV6 SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "5",
+    "vehicleId": 20736
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "volkswagen-taos": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Taos",
+      "engine": "1.5L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 28,
+       "highway": 36,
+       "combined": 31
+      },
+      "epaId": 48914
+     },
+     {
+      "name": "Taos 4motion",
+      "engine": "1.5L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 25,
+       "highway": 33,
+       "combined": 28
+      },
+      "epaId": 48941
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Volkswagen Taos SUV AWD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20382
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V258000",
+      "date": "23/04/2026",
+      "component": "Fuel System, Gasoline:Delivery:Pressure Sensor",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025-2026 Taos vehicles. In the event of a rear-end crash, the fuel pressure sensor may dislodge or separate from the fuel tank. As such, these vehicles fail to comply with the requirements of Federal Motor Vehic"
+     },
+     {
+      "campaign": "26V185000",
+      "date": "25/03/2026",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 Jetta and Taos vehicles. The instrument panel may fail to display warning lights or gauges. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle Safety Standard number 101, \""
+     }
+    ]
+   }
+  },
+  "volkswagen-atlas-cross-sport": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Atlas Cross Sport",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 20,
+       "highway": 26,
+       "combined": 23
+      },
+      "epaId": 48525
+     },
+     {
+      "name": "Atlas Cross Sport 4motion",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 19,
+       "highway": 26,
+       "combined": 21
+      },
+      "epaId": 48548
+     }
+    ]
+   },
+   "safety": {
+    "year": 2025,
+    "description": "2025 Volkswagen Atlas Cross Sport SUV AWD",
+    "overall": "5",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20370
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 5,
+    "items": [
+     {
+      "campaign": "26V473000",
+      "date": "22/07/2026",
+      "component": "Back Over Prevention:Software",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling 2024-2026 Atlas Cross Sport and Atlas vehicles. The vehicles may experience a low-voltage electrical event that affects display screen functions. As a result, the rearview camera image may fail to display as intended."
+     },
+     {
+      "campaign": "25V434000",
+      "date": "30/06/2025",
+      "component": "Service Brakes",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2023-2025 Atlas, Atlas Cross Sport and 2023-2024 ID.4 vehicles. Certain bolts on the chassis, brake system and/or suspension (such as bolts for certain cross member, engine mount, control arm, subframe, rear brak"
+     },
+     {
+      "campaign": "25V334000",
+      "date": "21/05/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2024-2025 Atlas Cross Sport and Atlas vehicles. A software error may cause the rearview camera image to become distorted when the vehicle is in reverse. As such, these vehicles fail to comply with the requirement"
+     },
+     {
+      "campaign": "25V100000",
+      "date": "17/02/2025",
+      "component": "Engine",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2024-2025 Atlas and Atlas Cross Sport vehicles. The engine cover may have been improperly installed after vehicle service, allowing it to come loose and contact hot engine surfaces."
+     },
+     {
+      "campaign": "25V081000",
+      "date": "12/02/2025",
+      "component": "Power Train:Automatic Transmission",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 Atlas and Atlas Cross Sport vehicles. The transmission may have been manufactured incorrectly, which can result in a loss of drive power."
+     }
+    ]
+   }
+  },
+  "volkswagen-id-buzz": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "ID. Buzz",
+      "engine": "210 kW AC 3-Phase",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48444,
+      "mpge": 83,
+      "rangeMi": 234
+     },
+     {
+      "name": "ID. Buzz 4motion",
+      "engine": "80 and 210 kW AC 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 48445,
+      "mpge": 80,
+      "rangeMi": 231
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "25V269000",
+      "date": "15/05/2025",
+      "component": "Seats:Mid/Rear Assembly",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 ID. BUZZ vehicles. The third-row rear bench is wide enough for three passengers, but is designed for two passengers and equipped with two seat belts. As such, these vehicles fail to comply with the requireme"
+     },
+     {
+      "campaign": "25V233000",
+      "date": "10/04/2025",
+      "component": "Electrical System: Instrument Cluster/Panel",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 ID. Buzz vehicles. The brake system warning light on the instrument panel display may be the incorrect symbol and color. As such, these vehicles fail to comply with the requirements of Federal Motor Vehicle "
+     }
+    ]
+   }
+  },
+  "volkswagen-golf-r": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "Golf R",
+      "engine": "2.0L 4-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 22,
+       "highway": 31,
+       "combined": 25
+      },
+      "epaId": 48850
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V638000",
+      "date": "24/09/2025",
+      "component": "Seat Belts:Front:Retractor",
+      "summary": "Volkswagen Group of America, Inc. (Volkswagen) is recalling certain 2025 GTI, Golf R, Audi A5, A6 Sportback E-Tron, S5, S6 Sportback E-Tron, 2026 Q4 Sportback E-Tron, and Q4 E-Tron vehicles. The torsion bar in one or both front seat belt retractors may have been damaged during pr"
+     }
+    ]
    }
   },
   "tesla-model-s": {

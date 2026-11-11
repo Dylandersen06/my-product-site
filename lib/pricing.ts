@@ -104,6 +104,13 @@ const MODEL_RETENTION: Record<string, number> = {
   "toyota-land-cruiser": 0.85,
   "toyota-gr86": 0.78,
   "toyota-mirai": 0.2,
+  "chevrolet-corvette": 0.8,
+  "chevrolet-silverado-2500hd": 0.75,
+  "ford-f-250-super-duty": 0.75,
+  "ram-3500": 0.72,
+  "gmc-hummer-ev-pickup": 0.5,
+  "gmc-hummer-ev-suv": 0.5,
+  "chevrolet-malibu": 0.5,
   "nissan-leaf": 0.45,
 };
 
@@ -132,6 +139,11 @@ const USED_AGE_YEARS: Record<string, number> = {
   "mazda-cx-70": 1,
   "toyota-grand-highlander": 2,
   "honda-prologue": 2,
+  "hyundai-ioniq-9": 1,
+  "jeep-wagoneer-s": 1,
+  "volkswagen-id-buzz": 1,
+  "chevrolet-silverado-ev": 2,
+  "gmc-sierra-ev": 1,
   "maserati-granturismo": 2,
 };
 
