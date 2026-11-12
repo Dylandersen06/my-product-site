@@ -52,7 +52,7 @@ export default function ResultCard({
               <strong>{m.trim.name}</strong>
             </p>
             <p className="result-specs">
-              {BODY_LABELS[m.car.body]} · {FUEL_LABELS[m.car.fuel]} · {m.car.seats} seats
+              {BODY_LABELS[m.car.body]} · {FUEL_LABELS[m.trim.fuel]} · {m.car.seats} seats
             </p>
             {/* Advanced cards show horsepower and economy in the spec strip, so they aren't repeated here. */}
             <p className="result-specs">

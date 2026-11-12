@@ -68,8 +68,8 @@ function fuelCost(car: Car, trim: Trim, miles: number): { cost: number; label: s
   const mpg = trim.mpg ?? (car.body === "truck" ? FALLBACK_MPG.truck : FALLBACK_MPG.other);
   const perMileGas = gasPrice / mpg;
 
-  if (car.fuel === "electric") return { cost: miles * YEARS * perMileElectric, label: "Charging" };
-  if (car.fuel === "phev") {
+  if (trim.fuel === "electric") return { cost: miles * YEARS * perMileElectric, label: "Charging" };
+  if (trim.fuel === "phev") {
     const share = phevElectricShare(trim.evRangeMi ?? 10);
     return { cost: miles * YEARS * (share * perMileElectric + (1 - share) * perMileGas), label: "Fuel + charging" };
   }

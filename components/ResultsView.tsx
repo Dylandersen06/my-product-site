@@ -53,7 +53,7 @@ function compareItem(m: Match, prefs: Preferences): CompareItem {
       "Cargo space": `${trim.cargoCuFt} cu ft`,
       Seats: String(car.seats),
       "Body style": BODY_LABELS[car.body],
-      Fuel: FUEL_LABELS[car.fuel],
+      Fuel: FUEL_LABELS[trim.fuel],
       ...Object.fromEntries(COMPARE_FEATURES.map((f) => [FEATURE_LABELS[f], yesNo(f)])),
     },
     numbers: {

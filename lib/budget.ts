@@ -5,7 +5,7 @@ export const BUDGET_INPUT_MAX = 1_000_000;
  * For an exact max budget, cars below this fraction of it get only partial
  * budget points, so a $900k shopper isn't shown a $30k car first.
  */
-export const EXACT_BUDGET_FLOOR = 0.25;
+export const EXACT_BUDGET_FLOOR = 0.5;
 
 export const BUDGET_RANGES = [
   { key: "under30", label: "Under $30k", min: 0, max: 30_000 },
