@@ -8,14 +8,16 @@ import MilesControl from "@/components/MilesControl";
 import CarColors from "@/components/CarColors";
 import OfficialData from "@/components/OfficialData";
 import PriceComparison from "@/components/PriceComparison";
+import SaveCarButtons from "@/components/SaveCarButtons";
 import SpecStrip from "@/components/SpecStrip";
 import TrimList from "@/components/TrimList";
-import { BODY_LABELS, CARS, FUEL_LABELS } from "@/lib/cars";
+import { BODY_LABELS, CARS, FUEL_LABELS, carDetailsHref } from "@/lib/cars";
 import type { RawParams } from "@/lib/loosen";
 import { DOC_FEE, SALES_TAX, YEARS, costToOwn } from "@/lib/ownership";
 import { parsePreferences } from "@/lib/params";
 import { photoFor } from "@/lib/photos";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
+import { viewerSaved } from "@/lib/saved-cars";
 
 const findCar = (id: string) => CARS.find((car) => car.id === id);
 
@@ -41,6 +43,7 @@ export default async function CarPage({
   const { milesPerYear } = parsePreferences(query);
   const match = { car, trim, condition, ownership: costToOwn(car, trim, condition, milesPerYear) };
   const name = `${car.make} ${car.model}`;
+  const saved = await viewerSaved();
 
   return (
     <div className="container results-page">
@@ -61,6 +64,17 @@ export default async function CarPage({
             {trim.engine} · {trim.drivetrain} · {trim.transmission}
           </p>
           <SpecStrip trim={trim} />
+          {saved && (
+            <SaveCarButtons
+              carId={car.id}
+              carName={name}
+              trim={trim.name}
+              condition={condition}
+              initial={saved.states[car.id]}
+              signedIn={saved.signedIn}
+              returnTo={carDetailsHref(car.id, trim.name, condition)}
+            />
+          )}
         </div>
         <div className="result-foot">
           <PriceComparison match={match} conditions={[condition]} />
