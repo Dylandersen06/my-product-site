@@ -131,6 +131,9 @@ const MODEL_RETENTION: Record<string, number> = {
   "volvo-ex90": 0.4,
   "cadillac-escalade-iq": 0.5,
   "cadillac-celestiq": 0.6,
+  "porsche-911-gt3": 0.95,
+  "porsche-911-turbo": 0.85,
+  "audi-rs-6-avant": 0.65,
   "nissan-leaf": 0.45,
 };
 

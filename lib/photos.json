@@ -1833,6 +1833,13 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
   },
+  "audi-rs-6-avant": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/Audi_RS_6_Avant_Performance_%282018%29_%2852566506489%29.jpg/960px-Audi_RS_6_Avant_Performance_%282018%29_%2852566506489%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Audi_RS_6_Avant_Performance_(2018)_(52566506489).jpg",
+    "artist": "Charles from Port Chester, New York",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0"
+  },
   "lexus-es": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Lexus_ES_350_%28GSZ10%29_IMG_4332.jpg/960px-Lexus_ES_350_%28GSZ10%29_IMG_4332.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "source": "https://commons.wikimedia.org/wiki/File:Lexus_ES_350_(GSZ10)_IMG_4332.jpg",
@@ -2011,6 +2018,20 @@
   "porsche-911-carrera": {
     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Porsche_911%2C_EMS_2024%2C_Essen_%28P1032183%29.jpg/960px-Porsche_911%2C_EMS_2024%2C_Essen_%28P1032183%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
     "source": "https://commons.wikimedia.org/wiki/File:Porsche_911,_EMS_2024,_Essen_(P1032183).jpg",
+    "artist": "Matti Blume",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+  },
+  "porsche-911-gt3": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Porsche_911_GT3_RS_%28992%29_front_view_at_Japan_Mobility_Show_Kansai_2025.jpg/960px-Porsche_911_GT3_RS_%28992%29_front_view_at_Japan_Mobility_Show_Kansai_2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Porsche_911_GT3_RS_(992)_front_view_at_Japan_Mobility_Show_Kansai_2025.jpg",
+    "artist": "Aos.1905",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+  },
+  "porsche-911-turbo": {
+    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/06/Porsche_911_Turbo_S%2C_TC_24%2C_Essen_%28TCE43489%29.jpg/960px-Porsche_911_Turbo_S%2C_TC_24%2C_Essen_%28TCE43489%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+    "source": "https://commons.wikimedia.org/wiki/File:Porsche_911_Turbo_S,_TC_24,_Essen_(TCE43489).jpg",
     "artist": "Matti Blume",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/deed.en"

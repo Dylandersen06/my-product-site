@@ -501,6 +501,7 @@ export const CARS: Car[] = [
   car("Audi", "Q5", "suv", "gas", 5, 4400, ["luxury", "family"]),
   car("Audi", "Q7", "suv", "gas", 7, 7700, ["family", "luxury", "towing"]),
   car("Audi", "S e-tron GT", "sedan", "electric", 5, 0, ["performance", "luxury"]),
+  car("Audi", "RS 6 Avant", "wagon", "gas", 5, 4400, ["performance", "family", "roadtrip"]),
   car("Lexus", "ES", "sedan", "hybrid", 5, 0, ["luxury", "commute", "roadtrip"]),
   car("Lexus", "NX", "suv", "hybrid", 5, 2000, ["luxury", "commute"]),
   car("Lexus", "RX", "suv", "gas", 5, 3500, ["luxury", "family"]),
@@ -547,6 +548,8 @@ export const CARS: Car[] = [
   car("Porsche", "Cayenne", "suv", "gas", 5, 7700, ["luxury", "family", "towing", "performance"]),
   car("Porsche", "Taycan", "sedan", "electric", 4, 0, ["performance", "luxury"]),
   car("Porsche", "911 Carrera", "coupe", "gas", 4, 0, ["performance"]),
+  car("Porsche", "911 GT3", "coupe", "gas", 2, 0, ["performance"]),
+  car("Porsche", "911 Turbo", "coupe", "gas", 4, 0, ["performance", "roadtrip", "luxury"]),
 
   // ── Exotic & ultra-luxury brands ─────────────────────────────────────────
   car("Maserati", "Grecale", "suv", "gas", 5, 3500, ["luxury", "performance"]),
