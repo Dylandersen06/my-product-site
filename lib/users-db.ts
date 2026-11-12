@@ -11,7 +11,8 @@ import { accessFrom } from "./plan";
 let sql: NeonQueryFunction<false, false> | null = null;
 let schemaReady: Promise<void> | null = null;
 
-function db(): NeonQueryFunction<false, false> | null {
+/** The Neon connection, or null when no database is configured (e.g. local dev). */
+export function db(): NeonQueryFunction<false, false> | null {
   const url = process.env.DATABASE_URL ?? process.env.POSTGRES_URL;
   if (!url) return null;
   sql ??= neon(url);

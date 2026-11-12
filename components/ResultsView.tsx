@@ -10,6 +10,7 @@ import { SORT_LABELS, rankCars, type Match, type Preferences, type SortKey } fro
 import { epaSummary, officialFor, overallStars } from "@/lib/official";
 import { photoFor } from "@/lib/photos";
 import { CONDITIONS, CONDITION_LABELS } from "@/lib/pricing";
+import { viewerSaved } from "@/lib/saved-cars";
 
 const COMPARE_FEATURES: Feature[] = [
   "awd",
@@ -101,7 +102,7 @@ function Suggestions({
   );
 }
 
-export default function ResultsView({
+export default async function ResultsView({
   params,
   prefs,
   sort,
@@ -116,6 +117,8 @@ export default function ResultsView({
   const advanced = prefs.filters !== null;
   const newOnly = prefs.conditions.length === 1 && prefs.conditions[0] === "new";
   const suggestions = matches.length === 0 || fallback ? suggestLoosening(prefs) : [];
+  const saved = matches.length > 0 ? await viewerSaved() : null;
+  const returnTo = hrefWith(basePath, params);
 
   const summary = [
     prefs.conditions.map((c) => CONDITION_LABELS[c]).join(" + "),
@@ -138,6 +141,7 @@ export default function ResultsView({
           conditions={prefs.conditions}
           advanced={advanced}
           milesPerYear={prefs.milesPerYear}
+          saved={saved && { signedIn: saved.signedIn, state: saved.states[m.car.id], returnTo }}
         />
       ))}
     </ol>

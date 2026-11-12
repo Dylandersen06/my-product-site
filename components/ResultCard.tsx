@@ -3,6 +3,7 @@ import CarPhoto from "@/components/CarPhoto";
 import { CompareCheckbox } from "@/components/Compare";
 import CostToOwnCard from "@/components/CostToOwnCard";
 import PriceComparison from "@/components/PriceComparison";
+import SaveCarButtons from "@/components/SaveCarButtons";
 import ScoreRing from "@/components/ScoreRing";
 import { ColorDots } from "@/components/CarColors";
 import { OfficialBadges } from "@/components/OfficialData";
@@ -13,6 +14,7 @@ import type { Match } from "@/lib/match";
 import { DEFAULT_MILES_PER_YEAR } from "@/lib/ownership";
 import { photoFor } from "@/lib/photos";
 import type { Condition } from "@/lib/pricing";
+import type { SavedState } from "@/lib/saved-lists";
 
 export default function ResultCard({
   match: m,
@@ -20,12 +22,15 @@ export default function ResultCard({
   conditions,
   advanced,
   milesPerYear,
+  saved,
 }: {
   match: Match;
   rank: number;
   conditions: Condition[];
   advanced: boolean;
   milesPerYear: number;
+  /** Save-button state, or null when saving isn't available. */
+  saved: { signedIn: boolean; state?: SavedState; returnTo: string } | null;
 }) {
   const name = `${m.car.make} ${m.car.model}`;
   const details = carDetailsHref(
@@ -86,6 +91,17 @@ export default function ResultCard({
           <TrimList match={m} conditions={conditions} />
         </div>
         <div className="result-actions">
+          {saved && (
+            <SaveCarButtons
+              carId={m.car.id}
+              carName={name}
+              trim={m.trim.name}
+              condition={m.condition}
+              initial={saved.state}
+              signedIn={saved.signedIn}
+              returnTo={saved.returnTo}
+            />
+          )}
           {advanced && <CompareCheckbox id={m.car.id} name={name} />}
           <Link href={details} className="button button-outline result-details-link">
             View details

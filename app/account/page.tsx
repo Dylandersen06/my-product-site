@@ -6,8 +6,10 @@ import { redirect } from "next/navigation";
 import { after } from "next/server";
 import { ManageBillingButton } from "@/components/CheckoutButton";
 import Pricing from "@/components/Pricing";
+import SavedCars from "@/components/SavedCars";
 import { getStripe, grantFromCheckout } from "@/lib/billing";
 import { OFFERS, accessFrom, formatPassEnd } from "@/lib/plan";
+import { listSavedCars, savedCarsAvailable } from "@/lib/saved-cars";
 import { syncUser } from "@/lib/users-db";
 
 export const metadata: Metadata = { title: "Your account · CarMatch AI" };
@@ -48,6 +50,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
   const access = accessFrom(user.publicMetadata);
   const hasBilling = typeof user.privateMetadata.stripeCustomerId === "string";
   const planName = access.plan ? OFFERS[access.plan].name : "Free";
+  const saved = savedCarsAvailable() ? await listSavedCars(user.id) : null;
 
   return (
     <>
@@ -100,6 +103,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
         <p className="field-hint">
           To change your name, email or password, use the account menu (your picture or initial, top right).
         </p>
+        {saved && <SavedCars saved={saved} />}
       </div>
       {access.plan !== "monthly" && <Pricing id="plans" heading={access.passUntil ? "Want more time?" : "Unlock the AI advisor"} />}
     </>
