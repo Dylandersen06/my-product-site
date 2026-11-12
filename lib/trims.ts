@@ -30,6 +30,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["SEL Sport", 24500, "2.0L I4", 147, "34 mpg", "FWD", "crbh", "17-in wheels, dual-zone climate"],
     ["Limited", 28500, "2.0L I4", 147, "34 mpg", "FWD", "crbhs", "Leather seats, Bose audio"],
     ["N Line", 30000, "1.6L turbo I4", 201, "28 mpg", "FWD", "crbhs", "Sport suspension, sport seats"],
+    ["N", 35000, "2.0L turbo I4", 276, "25 mpg", "FWD", "crbh", "6-speed manual or 8-speed dual-clutch, electronic limited-slip"],
   ],
   "toyota-camry": [
     ["LE", 29000, "2.5L hybrid I4", 225, "51 mpg", "FWD or AWD", "acrb", "Toyota Safety Sense, 8-in touchscreen"],
@@ -127,16 +128,19 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Sport", 33000, "3.6L V6", 285, "20 mpg", "4WD", "ac", "Removable top, Command-Trac 4x4"],
     ["Sport S", 36000, "3.6L V6", 285, "20 mpg", "4WD", "acbh", "Power windows, remote keyless entry"],
     ["Rubicon", 46000, "3.6L V6", 285, "19 mpg", "4WD", "acrbh", "Locking differentials, disconnecting sway bar"],
+    ["Rubicon 392", 100000, "6.4L V8", 470, "14 mpg", "4WD", "acrbh", "HEMI V8, 2-in suspension lift"],
   ],
   "ford-bronco": [
     ["Big Bend", 40000, "2.3L turbo I4", 300, "20 mpg", "4WD", "acb", "Removable roof and doors, GOAT Modes"],
     ["Outer Banks", 47000, "2.3L turbo I4", 300, "20 mpg", "4WD", "acbh", "Leather-trimmed seats, body-color top"],
     ["Badlands", 50000, "2.3L turbo I4", 300, "18 mpg", "4WD", "acrbh", "Locking differentials, disconnecting sway bar"],
+    ["Raptor", 90000, "3.0L twin-turbo V6", 418, "15 mpg", "4WD", "acrbhs", "FOX Live Valve shocks, 37-in tires"],
   ],
   "toyota-4runner": [
     ["SR5", 41000, "2.4L turbo I4", 278, "22 mpg", "RWD or 4WD", "acrb", "Toyota Safety Sense, 8-in touchscreen"],
     ["TRD Off-Road", 48000, "2.4L turbo I4", 278, "21 mpg", "RWD or 4WD", "acrbh", "Locking rear differential, crawl control"],
     ["Limited", 56000, "2.4L turbo I4", 278, "21 mpg", "RWD or 4WD", "acrbhs", "Leather seats, JBL audio"],
+    ["TRD Pro", 67000, "2.4L turbo hybrid I4", 326, "23 mpg", "4WD", "acrbhs", "i-FORCE MAX hybrid, FOX shocks"],
   ],
 
   // Three-row SUVs
@@ -182,6 +186,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["SE", 46500, "Single or dual electric motors", 225, "318 mi range", "RWD or AWD", "acrbh", "Larger battery, heated front seats"],
     ["SEL", 49500, "Single or dual electric motors", 225, "318 mi range", "RWD or AWD", "acrbhs", "Power tailgate, wireless charging"],
     ["Limited", 54000, "Single or dual electric motors", 225, "318 mi range", "RWD or AWD", "acrbhs", "Vision roof, Bose audio"],
+    ["N", 67000, "Dual electric motors", 641, "221 mi range", "AWD", "acrbhs", "641 hp with N Grin Boost, simulated gearshifts"],
   ],
   "chevrolet-equinox-ev": [
     ["LT", 35000, "Single or dual electric motors", 213, "319 mi range", "FWD or AWD", "arb", "17.7-in touchscreen, Super Cruise available"],
@@ -239,12 +244,15 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["XLT", 46000, "2.7L turbo V6", 325, "22 mpg", "RWD or 4WD", "acrbh", "Crew cab available, remote start"],
     ["Lariat", 60000, "5.0L V8", 400, "19 mpg", "RWD or 4WD", "acrbhs", "Leather seats, power tailgate"],
     ["Platinum", 68000, "5.0L V8", 400, "19 mpg", "4WD", "acrbhs", "Massaging seats, Bang & Olufsen audio"],
+    ["Raptor", 80000, "3.5L twin-turbo V6", 450, "16 mpg", "4WD", "acrbhs", "FOX Live Valve shocks, 35-in tires"],
+    ["Raptor R", 110000, "5.2L supercharged V8", 720, "12 mpg", "4WD", "acrbhs", "720-hp supercharged V8, FOX Live Valve shocks"],
   ],
   "chevrolet-silverado-1500": [
     ["WT", 38000, "2.7L turbo I4", 310, "20 mpg", "RWD or 4WD", "acb", "Work-ready interior, 7-in touchscreen"],
     ["LT", 49000, "5.3L V8", 355, "18 mpg", "RWD or 4WD", "acrbh", "13.4-in touchscreen, remote start"],
     ["Trail Boss", 55000, "5.3L V8", 355, "17 mpg", "4WD", "acrbh", "2-in factory lift, Z71 off-road package"],
     ["LTZ", 58000, "5.3L V8", 355, "18 mpg", "RWD or 4WD", "acrbhs", "Leather seats, multi-flex tailgate"],
+    ["ZR2", 72000, "6.2L V8", 420, "16 mpg", "4WD", "acrbhs", "Multimatic DSSV dampers, front and rear lockers"],
   ],
 
   // Coupes & sports cars
@@ -252,6 +260,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["EcoBoost", 33000, "2.3L turbo I4", 315, "22 mpg", "RWD", "crb", "13.2-in touchscreen, drive modes"],
     ["GT", 43000, "5.0L V8", 480, "18 mpg", "RWD", "crbh", "Manual or automatic, limited-slip differential"],
     ["Dark Horse", 64000, "5.0L V8", 500, "17 mpg", "RWD", "crbh", "Track-tuned suspension, Tremec manual"],
+    ["GTD", 325000, "5.2L supercharged V8", 815, "12 mpg", "RWD", "cbh", "Track-bred, active aero and semi-active suspension"],
   ],
   "mazda-mx-5-miata": [
     ["Sport", 29500, "2.0L I4", 181, "30 mpg", "RWD", "cb", "Soft top, 6-speed manual"],
@@ -388,6 +397,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Tradesman", 41500, "3.6L V6 mild hybrid", 305, "20 mpg", "RWD or 4WD", "acb", "Work-ready interior, 8.4-in touchscreen"],
     ["Big Horn", 46000, "3.6L V6 mild hybrid", 305, "20 mpg", "RWD or 4WD", "acrbh", "Remote start, RamBox option"],
     ["Laramie", 56000, "3.0L turbo I6", 420, "19 mpg", "RWD or 4WD", "acrbhs", "Leather seats, 12-in touchscreen"],
+    ["RHO", 72000, "3.0L twin-turbo I6", 540, "16 mpg", "4WD", "acrbhs", "Off-road suspension, Bilstein Black Hawk shocks"],
     ["Limited", 73000, "3.0L turbo I6", 540, "18 mpg", "4WD", "acrbhs", "Air suspension, Harman Kardon audio"],
   ],
   "ram-2500": [
@@ -463,31 +473,38 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["sDrive40i", 67500, "3.0L turbo I6", 375, "24 mpg", "RWD", "crbhs", "Curved display, mild-hybrid boost"],
     ["xDrive40i", 70000, "3.0L turbo I6", 375, "24 mpg", "AWD", "acrbhs", "xDrive AWD, panoramic moonroof"],
     ["M60i xDrive", 90000, "4.4L turbo V8", 523, "20 mpg", "AWD", "acrbhs", "Air suspension, M Sport differential"],
+    ["X5 M Competition", 127000, "4.4L twin-turbo V8", 617, "16 mpg", "AWD", "acrbhs", "617 hp, M-tuned chassis"],
   ],
   "bmw-m3": [
     ["Base", 77000, "3.0L turbo I6", 473, "19 mpg", "RWD", "crbhs", "6-speed manual, M adaptive suspension"],
     ["Competition", 81000, "3.0L turbo I6", 503, "19 mpg", "RWD", "crbhs", "8-speed automatic, higher output"],
     ["Competition xDrive", 88000, "3.0L turbo I6", 523, "19 mpg", "AWD", "acrbhs", "M xDrive AWD, carbon roof"],
+    ["CS", 120000, "3.0L twin-turbo I6", 543, "19 mpg", "AWD", "acrbhs", "543 hp, carbon hood and roof"],
   ],
   "mercedes-benz-c-class": [
     ["C 300", 48000, "2.0L turbo I4", 255, "30 mpg", "RWD", "crbhs", "11.9-in touchscreen, mild-hybrid boost"],
     ["C 300 4MATIC", 50000, "2.0L turbo I4", 255, "29 mpg", "AWD", "acrbhs", "4MATIC AWD, 11.9-in touchscreen"],
     ["AMG C 43", 63000, "2.0L turbo I4", 402, "25 mpg", "AWD", "acrbhs", "AMG suspension, electric turbocharger"],
+    ["AMG C 63 S E Performance", 87000, "2.0L turbo plug-in hybrid I4", 671, "8 mi electric / 19 mpg", "AWD", "acrbhs", "671-hp plug-in hybrid, rear-axle steering"],
   ],
   "mercedes-benz-glc": [
     ["GLC 300", 49500, "2.0L turbo I4", 255, "26 mpg", "RWD", "crbhs", "11.9-in touchscreen, power tailgate"],
     ["GLC 300 4MATIC", 51500, "2.0L turbo I4", 255, "26 mpg", "AWD", "acrbhs", "4MATIC AWD, panoramic sunroof"],
     ["AMG GLC 43", 66000, "2.0L turbo I4", 416, "23 mpg", "AWD", "acrbhs", "AMG suspension, sport exhaust"],
+    ["AMG GLC 63 S E Performance", 90000, "2.0L turbo plug-in hybrid I4", 671, "8 mi electric / 18 mpg", "AWD", "acrbhs", "671-hp plug-in hybrid, rear-axle steering"],
   ],
   "mercedes-benz-e-class": [
     ["E 350", 62500, "2.0L turbo I4", 255, "27 mpg", "RWD", "crbhs", "MBUX Superscreen option, mild-hybrid boost"],
     ["E 350 4MATIC", 65000, "2.0L turbo I4", 255, "26 mpg", "AWD", "acrbhs", "4MATIC AWD, panoramic sunroof"],
     ["E 450 4MATIC", 68000, "3.0L turbo I6", 375, "25 mpg", "AWD", "acrbhs", "Inline-six power, air suspension option"],
+    ["AMG E 53 Hybrid", 88000, "3.0L turbo plug-in hybrid I6", 577, "40 mi electric / 22 mpg", "AWD", "acrbhs", "577 hp with boost, AMG suspension"],
   ],
   "mercedes-benz-s-class": [
     ["S 500 4MATIC", 118500, "3.0L turbo I6", 442, "24 mpg", "AWD", "acrbhs", "MBUX rear display option, air suspension"],
     ["S 580 4MATIC", 128000, "4.0L turbo V8", 496, "20 mpg", "AWD", "acrbhs", "V8 power, Burmester audio"],
+    ["AMG S 63 E Performance", 186000, "4.0L twin-turbo V8 plug-in hybrid", 791, "8 mi electric / 16 mpg", "AWD", "acrbhs", "791-hp plug-in hybrid, active roll stabilization"],
     ["Maybach S 580", 200000, "4.0L turbo V8", 496, "19 mpg", "AWD", "acrbhs", "Extended wheelbase, reclining rear seats"],
+    ["Maybach S 680", 240000, "6.0L twin-turbo V12", 621, "14 mpg", "AWD", "acrbhs", "V12 power, Maybach rear lounge"],
   ],
   "mercedes-benz-gls": [
     ["GLS 450 4MATIC", 88500, "3.0L turbo I6", 375, "21 mpg", "AWD", "acrbhs", "Seven seats, air suspension, mild-hybrid boost"],
@@ -502,6 +519,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Premium", 39000, "2.0L turbo I4", 201, "31 mpg", "FWD or AWD", "acrb", "10.1-in touchscreen, virtual cockpit"],
     ["Premium Plus", 42000, "2.0L turbo I4", 201, "31 mpg", "FWD or AWD", "acrbhs", "Heated seats, panoramic sunroof"],
     ["S3", 48000, "2.0L turbo I4", 328, "26 mpg", "AWD", "acrbhs", "Sport suspension, quattro AWD"],
+    ["RS 3", 64000, "2.5L turbo I5", 401, "22 mpg", "AWD", "acrbhs", "Five-cylinder, RS torque splitter"],
   ],
   "audi-q5": [
     ["Premium", 47000, "2.0L turbo I4", 261, "25 mpg", "AWD", "acrbhs", "quattro AWD, panoramic sunroof"],
@@ -566,6 +584,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["GT", 42000, "3.6L V6", 295, "20 mpg", "RWD or AWD", "acrbhs", "Three rows, 8.4-in touchscreen"],
     ["R/T", 48000, "5.7L V8", 360, "17 mpg", "RWD or AWD", "acrbhs", "HEMI V8, 8,700 lb towing"],
     ["SRT 392", 65000, "6.4L V8", 475, "13 mpg", "AWD", "acrbhs", "475 hp, Brembo brakes"],
+    ["SRT Hellcat", 100000, "6.2L supercharged V8", 710, "13 mpg", "AWD", "acrbhs", "710-hp supercharged V8, three rows"],
   ],
   "dodge-charger-daytona": [
     ["R/T", 59600, "Dual electric motors", 496, "308 mi range", "AWD", "acrbh", "496 hp, AWD, muscle-car styling"],
@@ -697,6 +716,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Luxury", 50000, "2.0L turbo I4", 237, "26 mpg", "RWD or AWD", "acrbhs", "33-in curved display, AKG audio"],
     ["Premium Luxury", 55000, "2.0L turbo I4", 237, "26 mpg", "RWD or AWD", "acrbhs", "Leather seats, power sunroof"],
     ["V-Series", 65000, "3.0L turbo V6", 360, "22 mpg", "RWD or AWD", "acrbhs", "Magnetic Ride Control, Brembo brakes"],
+    ["V-Series Blackwing", 96000, "6.2L supercharged V8", 668, "15 mpg", "RWD", "crbh", "6-speed manual available, Magnetic Ride Control"],
   ],
   "cadillac-lyriq": [
     ["Tech", 59000, "Single electric motor", 340, "326 mi range", "RWD", "rbhs", "33-in curved display, panoramic roof"],
@@ -708,6 +728,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Premium Luxury", 96000, "6.2L V8", 420, "16 mpg", "RWD or 4WD", "acrbhs", "Magnetic Ride Control, heated second row"],
     ["Sport", 98000, "6.2L V8", 420, "15 mpg", "RWD or 4WD", "acrbhs", "Sport styling, Super Cruise available"],
     ["Platinum", 116000, "6.2L V8", 420, "15 mpg", "4WD", "acrbhs", "Air Ride, AKG Studio audio"],
+    ["Escalade-V", 155000, "6.2L supercharged V8", 682, "13 mpg", "AWD", "acrbhs", "682-hp supercharged V8, Super Cruise"],
   ],
   "lincoln-corsair": [
     ["Premiere", 40000, "2.0L turbo I4", 250, "25 mpg", "FWD or AWD", "acrbhs", "13.2-in touchscreen, Co-Pilot360"],
@@ -732,16 +753,21 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Cayenne", 85000, "3.0L turbo V6", 348, "19 mpg", "AWD", "acrbhs", "12.3-in curved display, 7,700 lb towing"],
     ["Cayenne S", 98000, "4.0L turbo V8", 468, "18 mpg", "AWD", "acrbhs", "V8 power, adaptive suspension"],
     ["Cayenne GTS", 130000, "4.0L turbo V8", 493, "17 mpg", "AWD", "acrbhs", "Sport exhaust, lowered suspension"],
+    ["Cayenne Turbo E-Hybrid", 148000, "4.0L twin-turbo V8 plug-in hybrid", 729, "26 mi electric / 18 mpg", "AWD", "acrbhs", "729-hp plug-in hybrid, air suspension"],
   ],
   "porsche-taycan": [
     ["Taycan", 100000, "Single electric motor", 402, "300 mi range", "RWD", "crbhs", "Adaptive air suspension, 800-volt charging"],
     ["Taycan 4S", 120000, "Dual electric motors", 590, "295 mi range", "AWD", "acrbhs", "Dual motors, larger battery option"],
     ["Taycan Turbo", 175000, "Dual electric motors", 871, "287 mi range", "AWD", "acrbhs", "Launch-boosted power, rear-axle steering"],
+    ["Taycan Turbo S", 210000, "Dual electric motors", 938, "278 mi range", "AWD", "acrbhs", "938 hp with launch control, active ride option"],
+    ["Taycan Turbo GT", 231000, "Dual electric motors", 1019, "260 mi range", "AWD", "acrbh", "1,019 hp with launch control, track-tuned chassis"],
   ],
   "porsche-911-carrera": [
     ["Carrera", 122000, "3.0L turbo flat-6", 388, "20 mpg", "RWD", "crbhs", "PASM suspension, 12.6-in curved display"],
+    ["Carrera T", 136000, "3.0L turbo flat-6", 388, "19 mpg", "RWD", "crbh", "6-speed manual, lightweight glass and less sound deadening"],
     ["Carrera S", 138000, "3.0L turbo flat-6", 473, "19 mpg", "RWD", "crbhs", "Higher output, larger brakes"],
     ["Carrera 4S", 146000, "3.0L turbo flat-6", 473, "19 mpg", "AWD", "acrbhs", "All-wheel drive, sport chrono option"],
+    ["Carrera GTS", 166000, "3.6L turbo hybrid flat-6", 532, "18 mpg", "RWD", "crbhs", "T-Hybrid powertrain, rear-axle steering"],
   ],
 
   // Exotic & ultra-luxury brands
@@ -1065,6 +1091,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Stingray 3LT", 83000, "6.2L V8", 490, "19 mpg", "RWD", "cbh", "Leather interior, Bose audio"],
     ["E-Ray", 108000, "6.2L V8 hybrid", 655, "19 mpg", "AWD", "acbh", "Front electric motor, eAWD"],
     ["Z06", 115000, "5.5L flat-plane V8", 670, "14 mpg", "RWD", "cbh", "Track-focused, 8,600-rpm redline"],
+    ["ZR1", 175000, "5.5L twin-turbo flat-plane V8", 1064, "13 mpg", "RWD", "cbh", "1,064 hp, active aero"],
   ],
   "chevrolet-malibu": [
     ["LS", 26000, "1.5L turbo I4", 163, "32 mpg", "FWD", "cb", "8-in touchscreen, Chevy Safety Assist"],
@@ -1305,10 +1332,12 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
   "bmw-x4": [
     ["xDrive30i", 56000, "2.0L turbo I4", 248, "25 mpg", "AWD", "acrbh", "Coupe-style roof, xDrive AWD"],
     ["M40i", 66000, "3.0L turbo I6", 382, "24 mpg", "AWD", "acrbhs", "Inline-six, M Sport differential"],
+    ["X4 M Competition", 83000, "3.0L twin-turbo I6", 503, "17 mpg", "AWD", "acrbhs", "503 hp, M Sport differential"],
   ],
   "bmw-x6": [
     ["xDrive40i", 76000, "3.0L turbo I6", 375, "23 mpg", "AWD", "acrbhs", "Coupe-style roof, curved display"],
     ["M60i xDrive", 95000, "4.4L twin-turbo V8", 523, "19 mpg", "AWD", "acrbhs", "V8 power, air suspension"],
+    ["X6 M Competition", 131000, "4.4L twin-turbo V8", 617, "16 mpg", "AWD", "acrbhs", "617 hp, M-tuned chassis"],
   ],
   "bmw-x7": [
     ["xDrive40i", 85000, "3.0L turbo I6", 375, "22 mpg", "AWD", "acrbhs", "Three rows, air suspension"],
@@ -1332,6 +1361,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
   "bmw-m4": [
     ["Coupe", 81000, "3.0L twin-turbo I6", 473, "19 mpg", "RWD", "crbhs", "6-speed manual, adaptive M suspension"],
     ["Competition xDrive Coupe", 90000, "3.0L twin-turbo I6", 523, "19 mpg", "AWD", "acrbhs", "M xDrive AWD, carbon roof"],
+    ["CS", 124000, "3.0L twin-turbo I6", 543, "19 mpg", "AWD", "acrbh", "543 hp, carbon body parts and track-tuned suspension"],
   ],
   "bmw-m5": [
     ["M5", 120000, "4.4L twin-turbo V8 plug-in hybrid", 717, "25 mi electric / 15 mpg", "AWD", "acrbhs", "717-hp plug-in hybrid V8, M xDrive"],
@@ -1401,11 +1431,13 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["AMG GT 43 Coupe", 107000, "2.0L turbo I4", 416, "22 mpg", "RWD", "crbh", "2+2 seating, electric turbocharger"],
     ["AMG GT 55 Coupe", 137000, "4.0L twin-turbo V8", 469, "16 mpg", "AWD", "acrbh", "V8 power, 4MATIC+ AWD"],
     ["AMG GT 63 Coupe", 177000, "4.0L twin-turbo V8", 577, "16 mpg", "AWD", "acrbh", "577 hp, active roll stabilization"],
+    ["AMG GT 63 PRO Coupe", 200000, "4.0L twin-turbo V8", 603, "16 mpg", "AWD", "acrbh", "Track-tuned suspension, extra aero"],
   ],
   "mercedes-benz-sl": [
     ["AMG SL 43", 110000, "2.0L turbo I4", 415, "22 mpg", "RWD", "crbh", "Power soft top, 2+2 seating"],
     ["AMG SL 55", 145000, "4.0L twin-turbo V8", 469, "16 mpg", "AWD", "acrbh", "V8 power, 4MATIC+ AWD"],
     ["AMG SL 63", 185000, "4.0L twin-turbo V8", 577, "16 mpg", "AWD", "acrbh", "577 hp, active roll stabilization"],
+    ["AMG SL 63 S E Performance", 200000, "4.0L twin-turbo V8 plug-in hybrid", 805, "8 mi electric / 16 mpg", "AWD", "acrbh", "805-hp plug-in hybrid, active aero"],
   ],
   "audi-a5": [
     ["Premium", 47000, "2.0L turbo I4", 268, "29 mpg", "AWD", "acrbh", "quattro AWD, 11.9-in touchscreen"],
@@ -1426,6 +1458,7 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["55 Premium", 75000, "3.0L turbo V6", 335, "24 mpg", "AWD", "acrbhs", "Sportback liftgate, dual touchscreens"],
     ["55 Prestige", 85000, "3.0L turbo V6", 335, "24 mpg", "AWD", "acrbhs", "Head-up display, Bang & Olufsen audio"],
     ["S7 Premium Plus", 90000, "2.9L twin-turbo V6", 444, "21 mpg", "AWD", "acrbhs", "Sport differential, adaptive air suspension"],
+    ["RS 7 performance", 130000, "4.0L twin-turbo V8", 621, "17 mpg", "AWD", "acrbhs", "621 hp, RS adaptive air suspension"],
   ],
   "audi-a8": [
     ["A8 L 55", 91000, "3.0L turbo V6", 335, "22 mpg", "AWD", "acrbhs", "Long wheelbase, air suspension"],
@@ -1462,6 +1495,8 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
     ["Panamera", 104000, "2.9L twin-turbo V6", 348, "21 mpg", "RWD", "crbhs", "Air suspension, curved digital gauges"],
     ["Panamera 4", 110000, "2.9L twin-turbo V6", 348, "21 mpg", "AWD", "acrbhs", "Standard AWD, passenger display option"],
     ["Panamera GTS", 153000, "4.0L twin-turbo V8", 493, "18 mpg", "AWD", "acrbhs", "V8 power, sport exhaust"],
+    ["Panamera Turbo E-Hybrid", 196000, "4.0L twin-turbo V8 plug-in hybrid", 670, "40 mi electric / 19 mpg", "AWD", "acrbhs", "670-hp plug-in hybrid, Active Ride option"],
+    ["Panamera Turbo S E-Hybrid", 225000, "4.0L twin-turbo V8 plug-in hybrid", 771, "40 mi electric / 18 mpg", "AWD", "acrbhs", "771 hp, Porsche Active Ride"],
   ],
   "porsche-718-cayman": [
     ["718 Cayman", 72000, "2.0L turbo flat-4", 300, "24 mpg", "RWD", "cbh", "Mid-engine, front and rear trunks"],
@@ -1663,5 +1698,17 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
   "bentley-flying-spur": [
     ["Flying Spur", 230000, "4.0L V8 plug-in hybrid", 671, "40 mi electric", "AWD", "acrbhs", "Four-door grand tourer, rear-wheel steering"],
     ["Speed", 270000, "4.0L V8 plug-in hybrid", 771, "40 mi electric", "AWD", "acrbhs", "771 hp, active anti-roll"],
+  ],
+  // Performance models
+  "porsche-911-gt3": [
+    ["GT3", 222000, "4.0L flat-6", 502, "16 mpg", "RWD", "cbh", "9,000-rpm flat-six, swan-neck rear wing"],
+    ["GT3 Touring", 222000, "4.0L flat-6", 502, "16 mpg", "RWD", "cbh", "Wingless body, 6-speed manual"],
+    ["GT3 RS", 241000, "4.0L flat-6", 518, "15 mpg", "RWD", "cbh", "Active aero with DRS, adjustable race suspension"],
+  ],
+  "porsche-911-turbo": [
+    ["Turbo S", 230000, "3.7L twin-turbo flat-6", 640, "17 mpg", "AWD", "acrbhs", "640 hp, rear-axle steering"],
+  ],
+  "audi-rs-6-avant": [
+    ["RS 6 Avant performance", 128000, "4.0L twin-turbo V8", 621, "17 mpg", "AWD", "acrbhs", "621-hp wagon, RS adaptive air suspension"],
   ],
 };

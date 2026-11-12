@@ -16913,6 +16913,39 @@
     ]
    }
   },
+  "audi-rs-6-avant": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "RS 6 Avant",
+      "engine": "4.0L 8-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 21,
+       "combined": 17
+      },
+      "epaId": 48051
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V900000",
+      "date": "20/12/2025",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2019-2026 vehicles. Please see the recall report for a complete list of models. A software error may prevent the rearview camera image from displaying as intended. As such, these vehicles fail to comply with the requir"
+     }
+    ]
+   }
+  },
   "lexus-es": {
    "epa": {
     "year": 2025,
@@ -20565,6 +20598,19 @@
       "epaId": 48589
      },
      {
+      "name": "911 Carrera GTS",
+      "engine": "3.6L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 24,
+       "combined": 20
+      },
+      "epaId": 49135
+     },
+     {
       "name": "911 Carrera S",
       "engine": "3.0L 6-cyl turbo",
       "drive": "Rear-Wheel Drive",
@@ -20576,6 +20622,19 @@
        "combined": 20
       },
       "epaId": 49133
+     },
+     {
+      "name": "911 Carrera T",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 17,
+       "highway": 25,
+       "combined": 20
+      },
+      "epaId": 49033
      }
     ]
    },
@@ -20597,6 +20656,97 @@
       "summary": "Porsche Cars North America, Inc. (Porsche) is recalling certain 2025 911 vehicles. A software error in the front-end electronics control module may result in the low beam headlights creating a glare for oncoming traffic. As such, these vehicles fail to comply with the requirement"
      }
     ]
+   }
+  },
+  "porsche-911-gt3": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "911 GT3",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 17,
+       "combined": 15
+      },
+      "epaId": 50440
+     },
+     {
+      "name": "911 GT3",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 13,
+       "highway": 18,
+       "combined": 15
+      },
+      "epaId": 50441
+     },
+     {
+      "name": "911 GT3 Touring",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (AM-S7)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 18,
+       "combined": 15
+      },
+      "epaId": 50442
+     },
+     {
+      "name": "911 GT3 Touring",
+      "engine": "4.0L 6-cyl",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Manual 6-spd",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 13,
+       "highway": 18,
+       "combined": 15
+      },
+      "epaId": 50443
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2026,
+    "count": 0,
+    "items": []
+   }
+  },
+  "porsche-911-turbo": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "911 Turbo S",
+      "engine": "3.7L 6-cyl turbo",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (AM-S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 14,
+       "highway": 20,
+       "combined": 16
+      },
+      "epaId": 48593
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
    }
   },
   "maserati-grecale": {
