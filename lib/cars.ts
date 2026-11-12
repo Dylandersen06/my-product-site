@@ -59,6 +59,8 @@ export interface Trim extends ConditionPricing {
   mpg: number | null;
   /** Electric range in miles, null if it doesn't plug in or isn't published. */
   evRangeMi: number | null;
+  /** This trim's own fuel type, so a hybrid or plug-in trim of a gas model counts as one. */
+  fuel: Fuel;
   features: StoredFeature[];
   highlights: string[];
 }
@@ -141,6 +143,20 @@ function parseEconomy(economy: string) {
   return { mpg: mpg ? Number(mpg[1]) : null, evRangeMi: range ? Number(range[1]) : null };
 }
 
+/**
+ * A trim's own fuel type, read from its economy label and engine. Many gas
+ * models sell a hybrid or plug-in trim (Corolla Cross Hybrid S, Escape Plug-In
+ * Hybrid), and a mild hybrid still counts as gas.
+ */
+function trimFuel(economy: string, engine: string, modelFuel: Fuel): Fuel {
+  if (modelFuel === "electric" || / mi range/.test(economy)) return "electric";
+  if (/ mi electric/.test(economy)) return "phev";
+  const e = engine.toLowerCase();
+  if (e.includes("plug-in")) return "phev";
+  if (e.includes("hybrid") && !/mild[- ]hybrid/.test(e)) return "hybrid";
+  return modelFuel === "hybrid" ? "gas" : modelFuel;
+}
+
 const FEATURE_CODES: Record<string, StoredFeature> = {
   a: "awd",
   c: "carplay",
@@ -187,6 +203,7 @@ function car(
       cargoCuFt,
       towingLbs: towing ? towing[i] : towingLbs,
       ...parseEconomy(economy),
+      fuel: trimFuel(economy, engine, fuel),
       features: [
         ...[...codes].map((code) => FEATURE_CODES[code]),
         ...(cameraFrom !== null && i >= cameraFrom ? (["camera360"] as const) : []),

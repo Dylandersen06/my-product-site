@@ -16,7 +16,7 @@ import {
 import { trimPasses, type Filters } from "./filters";
 import { overallStars } from "./official";
 import { costToOwn, type CostToOwn } from "./ownership";
-import { CONDITION_LABELS, savingsVsNew, type Condition } from "./pricing";
+import { brandTier, CONDITION_LABELS, savingsVsNew, type Condition } from "./pricing";
 
 export interface Preferences {
   /** One or more conditions, in display order. */
@@ -58,6 +58,8 @@ export interface Match {
   /** 5-year estimate for the recommended trim in that condition. */
   ownership: CostToOwn;
   score: number; // 0–100
+  /** The unrounded score, used for ordering so near-ties still rank by fit. */
+  rank: number;
   reasons: string[];
   caveats: string[];
 }
@@ -76,16 +78,102 @@ export interface MatchResult {
 
 /** How many points each criterion can contribute (sums to 100). */
 const WEIGHTS = {
-  budget: 30,
-  seats: 15,
+  budget: 25,
+  seats: 10,
   fuel: 15,
   body: 15,
-  usage: 10,
+  usage: 20,
   features: 15,
 } as const;
 
-/** Cars priced more than this fraction above budget are excluded. */
+/**
+ * Of the usage points, how many come from the car being known for that use.
+ * The rest measure how well this trim's specs suit it (see `usageFit`), which
+ * is what separates the many cars that tick every box.
+ */
+const USAGE_TAG_POINTS = 12;
+
+/**
+ * Share of the tag points by where the use sits in the car's `goodFor` list,
+ * which is ordered by what the car is best at. A sports car whose main job is
+ * performance beats an off-roader that's also quick.
+ */
+const TAG_POSITION_SHARE = [1, 0.85, 0.7, 0.6];
+
+/**
+ * Cars priced more than this fraction above budget are excluded. Cars over
+ * budget but inside this margin only fill the list when too few cars fit.
+ */
 const MAX_OVER_BUDGET = 0.2;
+
+const clamp01 = (n: number) => Math.min(1, Math.max(0, n));
+
+/** 0–1: fuel economy, with EVs and plug-ins near the top. */
+function efficiency(trim: Trim): number {
+  // EVs top out a little below a 50-mpg hybrid, so an open-fuel commuter search
+  // shows a mix instead of only EVs.
+  if (trim.fuel === "electric") return 0.6 + 0.3 * clamp01((trim.evRangeMi ?? 0) / 300);
+  if (trim.fuel === "phev") return 0.8;
+  return clamp01(((trim.mpg ?? 20) - 20) / 30);
+}
+
+const OFFROAD_GEAR =
+  /lock|skid|all-terrain|off-road|\btrail(?!er)|rock|mud|TRD|Rubicon|Badlands|Raptor|Tremor|Z71|ZR2|AT4|PRO-4X|Overtrail|Wildtrak|Trailhawk|X-MODE/i;
+
+/**
+ * 0–1: how well this trim's specs suit the chosen use, beyond the car being
+ * tagged for it. A towing search ranks by towing capacity, a performance
+ * search by 0–60 time, a family search by seats and cargo, and so on.
+ */
+function usageFit(car: Car, trim: Trim, usage: Usage): number {
+  switch (usage) {
+    case "commute":
+      return efficiency(trim);
+    case "city": {
+      const size = car.body === "hatchback" ? 1 : car.body === "sedan" ? 0.8 : car.body === "suv" && car.seats <= 5 ? 0.6 : 0.2;
+      return 0.6 * efficiency(trim) + 0.4 * size;
+    }
+    case "roadtrip":
+      return 0.5 * efficiency(trim) + 0.3 * clamp01(trim.cargoCuFt / 35) + 0.2 * (trim.features.includes("adaptiveCruise") ? 1 : 0);
+    case "family":
+      return 0.5 * clamp01((car.seats - 4) / 4) + 0.5 * clamp01(trim.cargoCuFt / 40);
+    case "offroad": {
+      const drive = /4WD/.test(trim.drivetrain) ? 0.6 : /AWD/.test(trim.drivetrain) ? 0.4 : 0;
+      const gear = OFFROAD_GEAR.test(`${trim.name} ${trim.highlights.join(" ")}`) ? 0.4 : 0;
+      return drive + gear;
+    }
+    case "towing":
+      return clamp01(trim.towingLbs / 12000);
+    case "performance":
+      // 2.0s or quicker scores 1, 8.0s scores 0, so supercars still out-rank 3-second SUVs.
+      return clamp01((8 - trim.zero60) / 6);
+    case "luxury": {
+      const tier = brandTier(car.make);
+      return 0.5 * (tier === "mainstream" ? 0 : 1) + 0.5 * clamp01(trim.features.length / 7);
+    }
+  }
+}
+
+function usagePoints(car: Car, trim: Trim, usage: Usage | "any"): number {
+  if (usage === "any") return WEIGHTS.usage;
+  const position = car.goodFor.indexOf(usage);
+  const tagged = position < 0 ? 0 : USAGE_TAG_POINTS * TAG_POSITION_SHARE[Math.min(position, TAG_POSITION_SHARE.length - 1)];
+  return tagged + (WEIGHTS.usage - USAGE_TAG_POINTS) * usageFit(car, trim, usage);
+}
+
+function fuelPoints(trim: Trim, fuel: Fuel | "any"): number {
+  if (fuel === "any" || trim.fuel === fuel) return WEIGHTS.fuel;
+  return WEIGHTS.fuel * (FUEL_SIMILARITY[fuel]?.[trim.fuel] ?? 0);
+}
+
+/** A short spec that backs up why the car suits the chosen use. */
+function usageDetail(car: Car, trim: Trim, usage: Usage): string | null {
+  if (usage === "towing" && trim.towingLbs > 0) return `tows up to ${trim.towingLbs.toLocaleString("en-US")} lb`;
+  if (usage === "performance") return `0–60 mph in ${trim.zero60}s`;
+  if (usage === "family") return `${car.seats} seats, ${trim.cargoCuFt} cu ft of cargo`;
+  if (usage === "commute" || usage === "city") return trim.economy;
+  return null;
+}
 
 /** Partial credit for fuel types that are close to what was asked for. */
 const FUEL_SIMILARITY: Partial<Record<Fuel, Partial<Record<Fuel, number>>>> = {
@@ -125,7 +213,7 @@ const priceText = (trim: Trim, condition: Condition, price: number) =>
  * Budget points for a price: full points inside [min, max]. Above the max, a
  * sliding scale down to zero at 20% over (beyond that it returns null unless
  * `ignoreCap` is set). Below the min (the bottom of a preset range, or a
- * quarter of an exact budget), partial credit in proportion to how close it
+ * half of an exact budget), partial credit in proportion to how close it
  * gets, so a $22k car doesn't top the list for a $250k–$1M shopper.
  */
 function budgetPoints(price: number, budget: Budget, ignoreCap: boolean): number | null {
@@ -144,31 +232,39 @@ function savingsFor(trim: Trim, conditions: Condition[]): number {
   return Math.max(...(preOwned.length > 0 ? preOwned : (["used"] as const)).map((c) => savingsVsNew(trim.prices, c)));
 }
 
-/** The price ties are broken toward. "Any budget" favors the cheapest option. */
+/**
+ * The price ties are broken toward. "Any budget" favors the cheapest option;
+ * otherwise the middle of the range, which for an exact budget is 75% of it.
+ */
 const budgetMidpoint = (budget: Budget) => (budget.range === "any" ? 0 : (budget.min + budget.max) / 2);
 
 /**
- * Picks the trim and selected condition with the most budget and must-have
- * points. Ties go to the price closest to the middle of the budget, so an
- * "Under $30k" search gets the cheapest trim that does the job and a bigger
- * budget gets a better-equipped one. Returns null if every option is too far
- * over budget.
+ * Picks the trim and selected condition that fit best. Anything within the
+ * budget beats anything over it; after that, the most points for budget,
+ * fuel, must-haves and how well the trim suits the chosen use. Ties go to the
+ * price closest to the middle of the budget, so an "Under $30k" search gets
+ * the cheapest trim that does the job and a bigger budget gets a
+ * better-equipped one. Returns null if every option is too far over budget.
  */
 function bestOption(car: Car, prefs: Preferences, ignoreCap: boolean) {
   const target = budgetMidpoint(prefs.budget);
-  let best: { trim: Trim; condition: Condition; price: number; points: number; budget: number } | null = null;
+  const strict = prefs.filters !== null;
+  let best: { trim: Trim; condition: Condition; price: number; key: number; budget: number } | null = null;
   for (const trim of car.trims) {
     const have = prefs.features.filter((f) => hasFeature(car, trim, f)).length;
-    if (prefs.filters && (!trimPasses(trim, prefs.filters) || have < prefs.features.length)) continue;
+    if (strict && (!trimPasses(trim, prefs.filters!) || have < prefs.features.length)) continue;
+    if (strict && prefs.fuel !== "any" && trim.fuel !== prefs.fuel) continue;
     const featureShare = prefs.features.length === 0 ? 1 : have / prefs.features.length;
+    const trimPoints =
+      WEIGHTS.features * featureShare + fuelPoints(trim, prefs.fuel) + usagePoints(car, trim, prefs.usage);
     for (const condition of prefs.conditions) {
       const price = trim.prices[condition];
       const budget = budgetPoints(price, prefs.budget, ignoreCap);
       if (budget === null) continue;
-      const points = budget + WEIGHTS.features * featureShare;
+      const key = (price <= prefs.budget.max ? 1000 : 0) + budget + trimPoints;
       const closer = best !== null && Math.abs(price - target) < Math.abs(best.price - target);
-      if (!best || points > best.points || (points === best.points && closer)) {
-        best = { trim, condition, price, points, budget };
+      if (!best || key > best.key + 1e-9 || (Math.abs(key - best.key) <= 1e-9 && closer)) {
+        best = { trim, condition, price, key, budget };
       }
     }
   }
@@ -190,7 +286,7 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
     if (filters.makes.length > 0 && !filters.makes.includes(car.make)) return null;
     if (filters.excludeMakes.includes(car.make)) return null;
     if (filters.minStars !== null && (overallStars(car.id) ?? 0) < filters.minStars) return null;
-    if (prefs.fuel !== "any" && car.fuel !== prefs.fuel) return null;
+    // Fuel is checked per trim in bestOption, so a gas model's hybrid trim counts.
     if (prefs.body !== "any" && car.body !== prefs.body) return null;
   }
 
@@ -227,14 +323,12 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
     reasons.push(under >= 1000 ? `${text}, ${usd(under)} under your budget` : `${text}, right at your budget`);
   }
 
-  // Fuel type
-  if (prefs.fuel === "any" || car.fuel === prefs.fuel) {
-    score += WEIGHTS.fuel;
-    if (prefs.fuel !== "any") reasons.push(`${FUEL_LABELS[car.fuel]}, as requested (${trim.economy})`);
+  // Fuel type, judged on the recommended trim
+  score += fuelPoints(trim, prefs.fuel);
+  if (prefs.fuel === "any" || trim.fuel === prefs.fuel) {
+    if (prefs.fuel !== "any") reasons.push(`${FUEL_LABELS[trim.fuel]}, as requested (${trim.economy})`);
   } else {
-    const similarity = FUEL_SIMILARITY[prefs.fuel]?.[car.fuel] ?? 0;
-    score += WEIGHTS.fuel * similarity;
-    caveats.push(`${FUEL_LABELS[car.fuel]} rather than ${FUEL_LABELS[prefs.fuel].toLowerCase()}`);
+    caveats.push(`${FUEL_LABELS[trim.fuel]} rather than ${FUEL_LABELS[prefs.fuel].toLowerCase()}`);
   }
 
   // Body style
@@ -247,14 +341,15 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
     caveats.push(`${BODY_LABELS[car.body]} rather than ${BODY_LABELS[prefs.body].toLowerCase()}`);
   }
 
-  // Primary use
-  if (prefs.usage === "any") {
-    score += WEIGHTS.usage;
-  } else if (car.goodFor.includes(prefs.usage)) {
-    score += WEIGHTS.usage;
-    reasons.push(USAGE_REASONS[prefs.usage]);
-  } else {
-    caveats.push(`Not a standout for ${USAGE_LABELS[prefs.usage].toLowerCase()}`);
+  // Primary use: being known for it, plus how well this trim's specs suit it
+  score += usagePoints(car, trim, prefs.usage);
+  if (prefs.usage !== "any") {
+    const detail = usageDetail(car, trim, prefs.usage);
+    if (car.goodFor.includes(prefs.usage)) {
+      reasons.push(detail ? `${USAGE_REASONS[prefs.usage]} (${detail})` : USAGE_REASONS[prefs.usage]);
+    } else {
+      caveats.push(`Not a standout for ${USAGE_LABELS[prefs.usage].toLowerCase()}`);
+    }
   }
 
   // Must-have features
@@ -287,6 +382,7 @@ export function scoreCar(car: Car, prefs: Preferences, { ignoreBudgetCap = false
     savings: savingsFor(trim, prefs.conditions),
     ownership: costToOwn(car, trim, condition, prefs.milesPerYear),
     score: Math.round(score),
+    rank: score,
     reasons,
     caveats,
   };
@@ -309,11 +405,17 @@ export function rankCars(prefs: Preferences, sort: SortKey = DEFAULT_SORT, limit
   // that actually use the budget.
   const target = budgetMidpoint(prefs.budget);
   const distance = (m: Match) => Math.abs(m.price - target);
-  scored.sort((a, b) => b.score - a.score || distance(a) - distance(b));
+  const byFit = (a: Match, b: Match) => b.rank - a.rank || distance(a) - distance(b);
+  // Cars within the budget always come first. Ones a little over it only fill
+  // the list when too few cars fit, so a $25k search isn't shown a $26.6k
+  // truck while plenty of $25k options exist.
+  const within = scored.filter((m) => m.price <= prefs.budget.max).sort(byFit);
+  const over = scored.filter((m) => m.price > prefs.budget.max).sort(byFit);
+  const top = [...within, ...over].slice(0, limit);
 
   if (scored.length > 0) {
     return {
-      matches: applySort(scored.slice(0, limit), sort),
+      matches: applySort(top, sort),
       excludedCount: CARS.length - scored.length,
       totalMatches: scored.length,
       fallback: false,
