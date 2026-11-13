@@ -2004,6 +2004,68 @@ details[open] > .cost-head::after,
 .advisor-card-link {
   margin-top: auto;
 }
+.advisor-take {
+  padding: 10px 12px;
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  border-radius: 6px;
+}
+.advisor-stats-title {
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+.advisor-card-badge {
+  align-self: flex-start;
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-contrast);
+}
+.advisor-card-specs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+.advisor-card-specs dt {
+  font-size: var(--fs-xs);
+  color: var(--muted);
+}
+.advisor-card-specs dd {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.advisor-card-subhead {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  color: var(--muted);
+  margin-top: 8px;
+}
+.advisor-card-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.advisor-card-tags li {
+  font-size: var(--fs-xs);
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.advisor-card-highlights {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
 
 /* Car details page -------------------------------------------------------- */
 .back-link {
@@ -3331,4 +3393,32 @@ details[open] > .cost-head::after,
     width: 96px;
     height: 68px;
   }
+}
+
+/* Homepage: sign-up call to action above the plans, and photo credits at the bottom */
+.join-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+.photo-credits {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 12px 24px 24px;
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+  color: var(--muted);
+}
+.photo-credits summary {
+  cursor: pointer;
+}
+.photo-credits ul {
+  list-style: none;
+  margin-top: 6px;
+}
+.photo-credits a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }

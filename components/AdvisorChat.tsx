@@ -34,30 +34,38 @@ function formatInline(text: string): ReactNode[] {
   );
 }
 
+const isBullet = (line: string) => /^\s*[-*] /.test(line);
+
+/** Splits a block into runs of plain lines and runs of "- " bullets, so a pitch line can sit above its bullets. */
 function MessageText({ text }: { text: string }) {
   const blocks = text.split(/\n{2,}/).filter((b) => b.trim());
   return (
     <>
-      {blocks.map((block, i) => {
-        const lines = block.split("\n").filter((l) => l.trim());
-        if (lines.every((l) => /^\s*[-*] /.test(l))) {
-          return (
-            <ul key={i}>
-              {lines.map((l, j) => (
+      {blocks.flatMap((block, i) => {
+        const runs: { bullets: boolean; lines: string[] }[] = [];
+        for (const line of block.split("\n").filter((l) => l.trim())) {
+          const bullets = isBullet(line);
+          const last = runs[runs.length - 1];
+          if (last && last.bullets === bullets) last.lines.push(line);
+          else runs.push({ bullets, lines: [line] });
+        }
+        return runs.map((run, r) =>
+          run.bullets ? (
+            <ul key={`${i}-${r}`}>
+              {run.lines.map((l, j) => (
                 <li key={j}>{formatInline(l.replace(/^\s*[-*] /, ""))}</li>
               ))}
             </ul>
-          );
-        }
-        return (
-          <p key={i}>
-            {lines.map((l, j) => (
-              <span key={j}>
-                {j > 0 && <br />}
-                {formatInline(l)}
-              </span>
-            ))}
-          </p>
+          ) : (
+            <p key={`${i}-${r}`} className={/^my take:/i.test(run.lines[0].trim()) ? "advisor-take" : undefined}>
+              {run.lines.map((l, j) => (
+                <span key={j}>
+                  {j > 0 && <br />}
+                  {formatInline(l)}
+                </span>
+              ))}
+            </p>
+          ),
         );
       })}
     </>
@@ -66,33 +74,63 @@ function MessageText({ text }: { text: string }) {
 
 function RecommendationCards({ cards }: { cards: AdvisorCard[] }) {
   return (
-    <ul className="advisor-cards" aria-label="Recommended cars">
-      {cards.map((card) => (
-        <li key={`${card.id}-${card.trim}-${card.condition}`} className="advisor-card">
-          <CarPhoto name={card.name} bodyLabel={card.bodyLabel} photo={card.photo} />
-          <div className="advisor-card-body">
-            <h3>{card.name}</h3>
-            <p className="advisor-card-trim">
-              {card.trim} · {card.conditionLabel}
-            </p>
-            <dl className="advisor-card-figures">
-              <div>
-                <dt>{card.condition === "new" ? "Starting price" : "Price (est.)"}</dt>
-                <dd>{usd(card.price)}</dd>
-              </div>
-              <div>
-                <dt>5-year cost (est.)</dt>
-                <dd>{usd(card.fiveYearCost)}</dd>
-              </div>
-            </dl>
-            <p className="advisor-card-monthly">About {usd(card.monthlyCost)}/mo est. at 12,000 miles a year</p>
-            <Link href={card.href} className="button button-outline advisor-card-link">
-              View details
-            </Link>
-          </div>
-        </li>
-      ))}
-    </ul>
+    <section className="advisor-stats" aria-label="Full stats for the recommended cars">
+      <h3 className="advisor-stats-title">Full stats</h3>
+      <ul className="advisor-cards">
+        {cards.map((card, i) => (
+          <li key={`${card.id}-${card.trim}-${card.condition}`} className="advisor-card">
+            <CarPhoto name={card.name} bodyLabel={card.bodyLabel} photo={card.photo} />
+            <div className="advisor-card-body">
+              {i === 0 && cards.length > 1 && <span className="advisor-card-badge">Top pick</span>}
+              <h3>{card.name}</h3>
+              <p className="advisor-card-trim">
+                {card.trim} · {card.conditionLabel}
+              </p>
+              <dl className="advisor-card-figures">
+                <div>
+                  <dt>{card.condition === "new" ? "Starting price" : "Price (est.)"}</dt>
+                  <dd>{usd(card.price)}</dd>
+                </div>
+                <div>
+                  <dt>5-year cost (est.)</dt>
+                  <dd>{usd(card.fiveYearCost)}</dd>
+                </div>
+              </dl>
+              <p className="advisor-card-monthly">About {usd(card.monthlyCost)}/mo est. at 12,000 miles a year</p>
+              {card.stats && (
+                <dl className="advisor-card-specs">
+                  {card.stats.map(([label, value]) => (
+                    <div key={label}>
+                      <dt>{label}</dt>
+                      <dd>{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              )}
+              {card.features && card.features.length > 0 && (
+                <>
+                  <h4 className="advisor-card-subhead">Features</h4>
+                  <ul className="advisor-card-tags">
+                    {card.features.map((f) => (
+                      <li key={f}>{f}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {card.highlights && card.highlights.length > 0 && (
+                <>
+                  <h4 className="advisor-card-subhead">Highlights</h4>
+                  <p className="advisor-card-highlights">{card.highlights.join(" · ")}</p>
+                </>
+              )}
+              <Link href={card.href} className="button button-outline advisor-card-link">
+                View details
+              </Link>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 }
 

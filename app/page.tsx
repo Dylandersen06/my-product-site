@@ -1,5 +1,6 @@
 import Link from "next/link";
-import CarCutoutCard from "@/components/CarCutoutCard";
+import { Show } from "@clerk/nextjs";
+import CarCutoutCard, { PhotoCredits } from "@/components/CarCutoutCard";
 import ResultsView from "@/components/ResultsView";
 import SearchForm from "@/components/SearchForm";
 import Pricing from "@/components/Pricing";
@@ -8,6 +9,7 @@ import type { RawParams } from "@/lib/loosen";
 import { DEFAULT_SORT, rankCars } from "@/lib/match";
 import { hasSearch, parsePreferences, parseSort } from "@/lib/params";
 import { CONDITIONS } from "@/lib/pricing";
+import { SAVED_LISTS } from "@/lib/saved-lists";
 
 const BRAND_COUNT = new Set(CARS.map((car) => car.make)).size;
 
@@ -29,8 +31,16 @@ const BODY_TILES: { body: BodyStyle; carId: string; plural: string }[] = [
   { body: "sedan", carId: "rolls-royce-phantom", plural: "sedans" },
 ];
 
+const heroExample = () => rankCars(parsePreferences(EXAMPLE_SEARCH), DEFAULT_SORT).matches[0];
+
+/** Every car pictured on the homepage, for the photo credits. */
+const homepageCars = () => [
+  ...[heroExample()?.car].filter((c) => c !== undefined),
+  ...BODY_TILES.flatMap(({ carId }) => CARS.filter((c) => c.id === carId)),
+];
+
 function HeroExample() {
-  const example = rankCars(parsePreferences(EXAMPLE_SEARCH), DEFAULT_SORT).matches[0];
+  const example = heroExample();
   if (!example) return null;
   return (
     <aside className="hero-example" aria-label="Example result">
@@ -42,7 +52,6 @@ function HeroExample() {
           See this full results list →
         </Link>
       </CarCutoutCard>
-      <p className="cutout-prompt">Tap the car for specs and prices</p>
     </aside>
   );
 }
@@ -75,6 +84,69 @@ function BodyStrip() {
         </ul>
       </div>
     </section>
+  );
+}
+
+const SAVE_STEPS = [
+  {
+    title: `Tap ${SAVED_LISTS.favorite.empty} ${SAVED_LISTS.favorite.label}`,
+    body: `On any search result or car page, tap the ${SAVED_LISTS.favorite.label} button. The heart fills in (${SAVED_LISTS.favorite.icon}) once it's saved. Tap it again to remove it.`,
+  },
+  {
+    title: `Use ${SAVED_LISTS.interested.empty} ${SAVED_LISTS.interested.label} for maybes`,
+    body: `Not sure yet? Tap ${SAVED_LISTS.interested.label} to keep a car on a second, shorter-term list while you compare.`,
+  },
+  {
+    title: "Find them in your account",
+    body: "Your favorites are saved to your account, so they're there on any device. You'll need to log in first, and we'll bring you right back to the car.",
+  },
+];
+
+function SaveFavorites() {
+  return (
+    <section className="section section-tight" aria-labelledby="favorites-title">
+      <div className="container">
+        <h2 id="favorites-title" className="section-title">
+          Save the cars you love
+        </h2>
+        <p className="section-sub">
+          Keep a shortlist as you shop. <Link href="/account">See your saved cars →</Link>
+        </p>
+        <div className="steps">
+          {SAVE_STEPS.map((step, i) => (
+            <div key={step.title} className="step">
+              <span className="step-num">{i + 1}</span>
+              <div>
+                <h3>{step.title}</h3>
+                <p className="muted">{step.body}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/** Right under the car photos: sign up, then every plan. */
+function JoinAndPricing() {
+  return (
+    <>
+      <Show when="signed-out">
+        <section className="section section-tight join-cta" aria-labelledby="join-title">
+          <div className="container join-cta-inner">
+            <h2 id="join-title" className="section-title">
+              Save cars and unlock the AI advisor
+            </h2>
+            <p className="section-sub">Searching is free. An account lets you keep favorites and pick a plan.</p>
+            <Link href="/sign-up" className="button button-signal button-lg">
+              Create an account
+            </Link>
+          </div>
+        </section>
+      </Show>
+      <Pricing />
+    </>
   );
 }
 
@@ -179,7 +251,9 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
       </section>
 
       <BodyStrip />
+      <JoinAndPricing />
       <YourCarYourRules />
+      <SaveFavorites />
 
       <section className="section section-tight">
         <div className="container steps">
@@ -205,7 +279,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
         </div>
       </section>
 
-      <Pricing />
+      <PhotoCredits cars={homepageCars()} />
     </>
   );
 }

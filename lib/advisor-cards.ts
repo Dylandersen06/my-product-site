@@ -2,7 +2,8 @@
 // from the dataset, not the model's text, and a line that doesn't match a real
 // car and trim gets no card, so a card can't show an invented car or price.
 
-import { BODY_LABELS, CARS, carDetailsHref, type Car, type Trim } from "./cars";
+import { BODY_LABELS, CARS, FEATURE_LABELS, FUEL_LABELS, carDetailsHref, hasFeature, towingText, type Car, type Feature, type Trim } from "./cars";
+import { officialFor, overallStars } from "./official";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "./ownership";
 import { photoFor, type CarPhoto } from "./photos";
 import { CONDITION_LABELS, type Condition } from "./pricing";
@@ -19,6 +20,35 @@ export interface AdvisorCard {
   monthlyCost: number;
   photo?: CarPhoto;
   href: string;
+  /** Every stat for this trim, label then value, shown under the advisor's pitch. */
+  stats: [string, string][];
+  /** Features this exact trim has, in plain words. */
+  features: string[];
+  highlights: string[];
+}
+
+const ALL_FEATURES = Object.keys(FEATURE_LABELS) as Feature[];
+
+function statsFor(car: Car, trim: Trim, condition: Condition): [string, string][] {
+  const stars = overallStars(car.id);
+  const recalls = officialFor(car.id)?.recalls;
+  const stats: [string, string][] = [
+    ["Year", condition === "new" ? String(car.year) : `About ${car.year - trim.usedAgeYears} (~${trim.usedAgeYears} yrs old)`],
+    ["Engine", trim.engine],
+    ["Horsepower", `${trim.hp} hp`],
+    ["0–60 mph", `${trim.zero60}s`],
+    [trim.mpg === null && trim.evRangeMi !== null ? "EV range" : "MPG / range", trim.economy],
+    ["Fuel", FUEL_LABELS[trim.fuel]],
+    ["Drivetrain", trim.drivetrain],
+    ["Transmission", trim.transmission],
+    ["Seats", String(car.seats)],
+    [car.body === "truck" ? "Bed volume" : "Cargo", `${trim.cargoCuFt} cu ft`],
+    ["Towing", towingText(trim.towingLbs)],
+    ["NHTSA safety", stars !== null ? `${stars}/5 stars overall` : "Not rated"],
+  ];
+  if (recalls) stats.push([`Recalls (${recalls.year})`, String(recalls.count)]);
+  if (condition !== "new") stats.push(["Typical mileage", `${trim.mileage[condition].toLocaleString("en-US")} mi`]);
+  return stats;
 }
 
 const MAX_CARDS_PER_REPLY = 3;
@@ -98,6 +128,9 @@ export function cardsFromReply(text: string): AdvisorCard[] {
       monthlyCost: cost.monthly,
       photo: photoFor(car.id),
       href: carDetailsHref(car.id, trim.name, condition),
+      stats: statsFor(car, trim, condition),
+      features: ALL_FEATURES.filter((f) => hasFeature(car, trim, f)).map((f) => FEATURE_LABELS[f]),
+      highlights: trim.highlights,
     });
   }
   return [...cards.values()];

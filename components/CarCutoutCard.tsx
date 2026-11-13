@@ -9,7 +9,8 @@ import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 /**
  * A car's photo in a cream frame, with no text until it's pressed, which opens
  * its specs and prices. Uses a native details element, so it works with a
- * keyboard and without JavaScript.
+ * keyboard and without JavaScript. Photo credits are shown together by
+ * PhotoCredits, so no text sits under the photos.
  */
 export default function CarCutoutCard({
   car,
@@ -100,23 +101,39 @@ export default function CarCutoutCard({
           {children}
         </div>
       </details>
-      {photo && (
-        <p className="photo-credit cutout-credit">
-          Photo:{" "}
-          <a href={photo.source} target="_blank" rel="noopener noreferrer">
-            {photo.artist}
-          </a>{" "}
-          ·{" "}
-          {photo.licenseUrl ? (
-            <a href={photo.licenseUrl} target="_blank" rel="noopener noreferrer license">
-              {photo.license}
-            </a>
-          ) : (
-            photo.license
-          )}{" "}
-          · Wikimedia Commons. Year and trim may differ.
-        </p>
-      )}
     </div>
+  );
+}
+
+/** One small, collapsed list of photo credits for the cars on a page, as their licenses require. */
+export function PhotoCredits({ cars }: { cars: Car[] }) {
+  const credits = cars.flatMap((car) => {
+    const photo = photoFor(car.id);
+    return photo ? [{ name: `${car.make} ${car.model}`, photo }] : [];
+  });
+  if (credits.length === 0) return null;
+  return (
+    <details className="photo-credits">
+      <summary>Photo credits</summary>
+      <ul>
+        {credits.map(({ name, photo }) => (
+          <li key={name}>
+            {name}:{" "}
+            <a href={photo.source} target="_blank" rel="noopener noreferrer">
+              {photo.artist}
+            </a>{" "}
+            ·{" "}
+            {photo.licenseUrl ? (
+              <a href={photo.licenseUrl} target="_blank" rel="noopener noreferrer license">
+                {photo.license}
+              </a>
+            ) : (
+              photo.license
+            )}{" "}
+            · Wikimedia Commons. Year and trim may differ.
+          </li>
+        ))}
+      </ul>
+    </details>
   );
 }
