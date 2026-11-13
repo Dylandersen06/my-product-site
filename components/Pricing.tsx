@@ -4,11 +4,21 @@ import { OFFERS, type PlanKey } from "@/lib/plan";
 const ORDER: PlanKey[] = ["pass", "monthly"];
 
 /** Plans for the AI advisor. Searches are free, so only the advisor is paid. */
-export default function Pricing({ id = "pricing", heading = "Simple pricing" }: { id?: string; heading?: string }) {
+export default function Pricing({
+  id = "pricing",
+  heading = "Simple pricing",
+  pageTitle = false,
+}: {
+  id?: string;
+  heading?: string;
+  /** True on the pricing page, where the heading is the page's h1. */
+  pageTitle?: boolean;
+}) {
+  const Heading = pageTitle ? "h1" : "h2";
   return (
     <section id={id} className="section">
       <div className="container">
-        <h2 className="section-title">{heading}</h2>
+        <Heading className="section-title">{heading}</Heading>
         <p className="section-sub">
           Quick Search and Advanced Search are free. A plan unlocks the AI advisor. Payments are handled securely by
           Stripe.

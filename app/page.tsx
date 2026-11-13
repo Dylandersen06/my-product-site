@@ -3,7 +3,6 @@ import { Show } from "@clerk/nextjs";
 import CarCutoutCard, { PhotoCredits } from "@/components/CarCutoutCard";
 import ResultsView from "@/components/ResultsView";
 import SearchForm from "@/components/SearchForm";
-import Pricing from "@/components/Pricing";
 import { CARS, type BodyStyle } from "@/lib/cars";
 import type { RawParams } from "@/lib/loosen";
 import { DEFAULT_SORT, rankCars } from "@/lib/match";
@@ -128,25 +127,25 @@ function SaveFavorites() {
   );
 }
 
-/** Right under the car photos: sign up, then every plan. */
-function JoinAndPricing() {
+/** Right under the car photos: a sign-up button. Plans and prices live on the pricing page. */
+function JoinCta() {
   return (
-    <>
-      <Show when="signed-out">
-        <section className="section section-tight join-cta" aria-labelledby="join-title">
-          <div className="container join-cta-inner">
-            <h2 id="join-title" className="section-title">
-              Save cars and unlock the AI advisor
-            </h2>
-            <p className="section-sub">Searching is free. An account lets you keep favorites and pick a plan.</p>
-            <Link href="/sign-up" className="button button-signal button-lg">
-              Create an account
-            </Link>
-          </div>
-        </section>
-      </Show>
-      <Pricing />
-    </>
+    <Show when="signed-out">
+      <section className="section section-tight join-cta" aria-labelledby="join-title">
+        <div className="container join-cta-inner">
+          <h2 id="join-title" className="section-title">
+            Save cars and unlock the AI advisor
+          </h2>
+          <p className="section-sub">
+            Searching is free. An account lets you keep favorites and pick a plan.{" "}
+            <Link href="/pricing">See plans →</Link>
+          </p>
+          <Link href="/sign-up" className="button button-signal button-lg">
+            Create an account
+          </Link>
+        </div>
+      </section>
+    </Show>
   );
 }
 
@@ -200,7 +199,6 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
             </div>
           </section>
         </div>
-        <Pricing />
       </>
     );
   }
@@ -251,7 +249,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
       </section>
 
       <BodyStrip />
-      <JoinAndPricing />
+      <JoinCta />
       <YourCarYourRules />
       <SaveFavorites />
 
