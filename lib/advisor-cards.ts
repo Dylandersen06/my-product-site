@@ -16,8 +16,8 @@ export interface AdvisorCard {
   condition: Condition;
   conditionLabel: string;
   price: number;
-  fiveYearCost: number;
-  monthlyCost: number;
+  /** Average yearly running cost over 5 years: fuel, maintenance, insurance and registration. */
+  yearlyCost: number;
   photo?: CarPhoto;
   href: string;
   /** Every stat for this trim, label then value, shown under the advisor's pitch. */
@@ -124,8 +124,7 @@ export function cardsFromReply(text: string): AdvisorCard[] {
       condition,
       conditionLabel: CONDITION_LABELS[condition],
       price: trim.prices[condition],
-      fiveYearCost: cost.total,
-      monthlyCost: cost.monthly,
+      yearlyCost: cost.yearly.total,
       photo: photoFor(car.id),
       href: carDetailsHref(car.id, trim.name, condition),
       stats: statsFor(car, trim, condition),

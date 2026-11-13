@@ -72,6 +72,8 @@ function MessageText({ text }: { text: string }) {
   );
 }
 
+const MORE_OPTIONS_MESSAGE = "Can you show me a few more options?";
+
 function RecommendationCards({ cards }: { cards: AdvisorCard[] }) {
   return (
     <section className="advisor-stats" aria-label="Full stats for the recommended cars">
@@ -91,12 +93,17 @@ function RecommendationCards({ cards }: { cards: AdvisorCard[] }) {
                   <dt>{card.condition === "new" ? "Starting price" : "Price (est.)"}</dt>
                   <dd>{usd(card.price)}</dd>
                 </div>
-                <div>
-                  <dt>5-year cost (est.)</dt>
-                  <dd>{usd(card.fiveYearCost)}</dd>
-                </div>
+                {card.yearlyCost !== undefined && (
+                  <div>
+                    <dt>Running cost (est.)</dt>
+                    <dd>{usd(card.yearlyCost)}/yr</dd>
+                  </div>
+                )}
               </dl>
-              <p className="advisor-card-monthly">About {usd(card.monthlyCost)}/mo est. at 12,000 miles a year</p>
+              <p className="advisor-card-monthly">
+                Yearly average over 5 years for fuel, maintenance, insurance and registration at 12,000 miles a year.
+                Doesn&rsquo;t include the price or financing.
+              </p>
               {card.stats && (
                 <dl className="advisor-card-specs">
                   {card.stats.map(([label, value]) => (
@@ -298,6 +305,14 @@ export default function AdvisorChat() {
                 </div>
               )}
               {m.cards && m.cards.length > 0 && <RecommendationCards cards={m.cards} />}
+              {m.cards && m.cards.length > 0 && i === messages.length - 1 && !busy && !atLimit && (
+                <div className="advisor-more">
+                  <p>Want to see more options?</p>
+                  <button type="button" className="button button-outline" onClick={() => void send(MORE_OPTIONS_MESSAGE)}>
+                    Show more options
+                  </button>
+                </div>
+              )}
             </Fragment>
           ))}
           <div ref={end} />

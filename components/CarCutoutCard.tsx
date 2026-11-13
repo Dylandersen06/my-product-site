@@ -89,9 +89,9 @@ export default function CarCutoutCard({
               <dd>{towingText(trim.towingLbs)}</dd>
             </div>
             <div>
-              <dt>5-year cost (est.)</dt>
+              <dt>Yearly running cost (est.)</dt>
               <dd>
-                {usd(cost.total)}, {CONDITION_LABELS[condition].toLowerCase()}
+                {usd(cost.yearly.total)}/yr, {CONDITION_LABELS[condition].toLowerCase()}
               </dd>
             </div>
           </dl>

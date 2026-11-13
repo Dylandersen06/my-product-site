@@ -49,7 +49,7 @@ export default function AffordCheck({
   trimName: string;
   conditionLabel: string;
   price: number;
-  /** Fuel or charging, insurance and maintenance, per month. */
+  /** Fuel or charging, maintenance, insurance and registration, per month. */
   runningMonthly: number;
   salesTax: number;
   docFee: number;
