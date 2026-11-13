@@ -255,7 +255,13 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
       <YourCarYourRules />
       <SaveFavorites />
 
-      <section className="section section-tight">
+      <section className="section section-tight" aria-labelledby="how-it-works-title">
+        <div className="container">
+          <h2 id="how-it-works-title" className="section-title">
+            How it works
+          </h2>
+          <p className="section-sub">Three steps from what you need to your best matches.</p>
+        </div>
         <div className="container steps">
           {STEPS.map((step, i) => (
             <div key={step.title} className="step">
