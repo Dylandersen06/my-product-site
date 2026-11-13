@@ -3422,3 +3422,15 @@ details[open] > .cost-head::after,
   text-decoration: underline;
   text-underline-offset: 2px;
 }
+
+/* AI advisor: offer more options under the latest picks */
+.advisor-more {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+.advisor-more p {
+  font-weight: 600;
+}

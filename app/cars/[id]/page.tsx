@@ -13,7 +13,7 @@ import SpecStrip from "@/components/SpecStrip";
 import TrimList from "@/components/TrimList";
 import { BODY_LABELS, CARS, FUEL_LABELS, carDetailsHref } from "@/lib/cars";
 import type { RawParams } from "@/lib/loosen";
-import { DOC_FEE, SALES_TAX, YEARS, costToOwn } from "@/lib/ownership";
+import { DOC_FEE, SALES_TAX, costToOwn } from "@/lib/ownership";
 import { parsePreferences } from "@/lib/params";
 import { photoFor } from "@/lib/photos";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
@@ -88,9 +88,7 @@ export default async function CarPage({
             trimName={trim.name}
             conditionLabel={CONDITION_LABELS[condition]}
             price={trim.prices[condition]}
-            runningMonthly={
-              (match.ownership.fuel + match.ownership.insurance + match.ownership.maintenance) / (YEARS * 12)
-            }
+            runningMonthly={match.ownership.yearly.monthly}
             salesTax={SALES_TAX}
             docFee={DOC_FEE}
           />

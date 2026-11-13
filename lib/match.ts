@@ -40,7 +40,7 @@ export const SORT_LABELS = {
   best: "Best match",
   price: "Price: low to high",
   savings: "Biggest savings",
-  cost: "Lowest cost to own",
+  cost: "Lowest yearly cost",
 } as const;
 export type SortKey = keyof typeof SORT_LABELS;
 export const DEFAULT_SORT: SortKey = "best";
@@ -55,7 +55,7 @@ export interface Match {
   price: number;
   /** Largest saving vs new among the selected used/CPO conditions. */
   savings: number;
-  /** 5-year estimate for the recommended trim in that condition. */
+  /** Cost estimates, including the yearly running cost, for the recommended trim in that condition. */
   ownership: CostToOwn;
   score: number; // 0–100
   /** The unrounded score, used for ordering so near-ties still rank by fit. */
@@ -415,7 +415,9 @@ const isMatch = (m: Match | null): m is Match => m !== null;
 function applySort(matches: Match[], sort: SortKey): Match[] {
   if (sort === "price") return [...matches].sort((a, b) => a.price - b.price || b.score - a.score);
   if (sort === "savings") return [...matches].sort((a, b) => b.savings - a.savings || b.score - a.score);
-  if (sort === "cost") return [...matches].sort((a, b) => a.ownership.total - b.ownership.total || b.score - a.score);
+  if (sort === "cost") {
+    return [...matches].sort((a, b) => a.ownership.yearly.total - b.ownership.yearly.total || b.score - a.score);
+  }
   return matches;
 }
 

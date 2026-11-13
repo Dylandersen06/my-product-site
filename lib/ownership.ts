@@ -1,6 +1,8 @@
-// 5-Year Cost to Own estimates. These are modeled from each trim's price and
-// specs with the assumptions below, not quotes: real costs vary by location,
-// driver, loan terms and how the car is used. Loan interest isn't included.
+// Cost estimates: the 5-year cost to own, and the yearly running cost the site
+// shows (fuel, maintenance, insurance and registration, with no purchase or
+// financing). These are modeled from each trim's price and specs with the
+// assumptions below, not quotes: real costs vary by location, driver, loan
+// terms and how the car is used. Loan interest isn't included.
 
 import type { Car, Trim } from "./cars";
 import { brandTier, valueShareAtAge, type Condition } from "./pricing";
@@ -56,6 +58,21 @@ export interface CostToOwn {
   monthly: number;
   /** "Fuel", "Charging" or "Fuel + charging". */
   fuelLabel: string;
+  /**
+   * Average cost per year over the 5 years to run the car, without the
+   * purchase or financing: fuel, maintenance, insurance and registration.
+   */
+  yearly: RunningCost;
+}
+
+/** Yearly running costs, each averaged over the 5 years. */
+export interface RunningCost {
+  fuel: number;
+  maintenance: number;
+  insurance: number;
+  registration: number;
+  total: number;
+  monthly: number;
 }
 
 const round10 = (n: number) => Math.round(n / 10) * 10;
@@ -119,5 +136,18 @@ export function costToOwn(car: Car, trim: Trim, condition: Condition, milesPerYe
     fees: round10(fees),
   };
   const total = parts.depreciation + parts.fuel + parts.insurance + parts.maintenance + parts.fees;
-  return { ...parts, total, monthly: Math.round(total / (YEARS * 12)), fuelLabel: fuel.label };
+  const running = {
+    fuel: round10(fuel.cost / YEARS),
+    maintenance: round10(maintenancePerYear),
+    insurance: round10(insurancePerYear),
+    registration: REGISTRATION_PER_YEAR,
+  };
+  const yearlyTotal = running.fuel + running.maintenance + running.insurance + running.registration;
+  return {
+    ...parts,
+    total,
+    monthly: Math.round(total / (YEARS * 12)),
+    fuelLabel: fuel.label,
+    yearly: { ...running, total: yearlyTotal, monthly: Math.round(yearlyTotal / 12) },
+  };
 }
