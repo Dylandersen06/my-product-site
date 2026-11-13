@@ -101,10 +101,15 @@ const USAGE_TAG_POINTS = 12;
 const TAG_POSITION_SHARE = [1, 0.85, 0.7, 0.6];
 
 /**
- * Cars priced more than this fraction above budget are excluded. Cars over
- * budget but inside this margin only fill the list when too few cars fit.
+ * Cars can be up to this fraction over budget and still count as matches.
+ * Anything pricier is excluded.
  */
-const MAX_OVER_BUDGET = 0.2;
+const MAX_OVER_BUDGET = 0.05;
+/** Budget points a car loses at the full 5% over, so one at the budget still wins a tie. */
+const MAX_OVER_BUDGET_LOSS = 2;
+
+/** The most a matching car can cost: the budget plus the 5% allowance. */
+const budgetCeiling = (budget: Budget) => budget.max * (1 + MAX_OVER_BUDGET);
 
 const clamp01 = (n: number) => Math.min(1, Math.max(0, n));
 
@@ -210,20 +215,37 @@ const priceText = (trim: Trim, condition: Condition, price: number) =>
     : `The ${trim.name} is around ${usd(price)} ${CONDITION_LABELS[condition].toLowerCase()} (estimate)`;
 
 /**
- * Budget points for a price: full points inside [min, max]. Above the max, a
- * sliding scale down to zero at 20% over (beyond that it returns null unless
- * `ignoreCap` is set). Below the min (the bottom of a preset range, or a
- * half of an exact budget), partial credit in proportion to how close it
- * gets, so a $22k car doesn't top the list for a $250k–$1M shopper.
+ * Prices from this share of the budget up to the max get full budget points,
+ * so a $100k shopper sees cars that use their budget, not $20k ones.
+ */
+const BUDGET_SWEET_SPOT = 0.85;
+/** At or below this share of the budget, a price loses the most budget points. */
+const BUDGET_POINTS_FLOOR = 0.2;
+/**
+ * The most budget points a far-under-budget price can lose. Kept below the
+ * full budget weight so a car that fits what was asked for (say, the hybrid
+ * a shopper wants) still beats one that's merely priced closer.
+ */
+const MAX_UNDER_BUDGET_LOSS = 12;
+
+/**
+ * Budget points for a price: full points from 85% of the max up to the max.
+ * Up to 5% over the max loses a few points (beyond that it returns null
+ * unless `ignoreCap` is set). Below 85%, points fall off
+ * steadily down to 20% of the max, so cars close to the budget rank first.
+ * "Any budget" has no target, so every price gets full points.
  */
 function budgetPoints(price: number, budget: Budget, ignoreCap: boolean): number | null {
   if (price > budget.max) {
     const over = (price - budget.max) / budget.max;
     if (over > MAX_OVER_BUDGET && !ignoreCap) return null;
-    return WEIGHTS.budget * Math.max(0, 1 - over / MAX_OVER_BUDGET);
+    return Math.max(0, WEIGHTS.budget - MAX_OVER_BUDGET_LOSS * (over / MAX_OVER_BUDGET));
   }
-  if (price < budget.min) return WEIGHTS.budget * (price / budget.min);
-  return WEIGHTS.budget;
+  if (budget.range === "any") return WEIGHTS.budget;
+  const share = price / budget.max;
+  if (share >= BUDGET_SWEET_SPOT) return WEIGHTS.budget;
+  const shortfall = clamp01((BUDGET_SWEET_SPOT - share) / (BUDGET_SWEET_SPOT - BUDGET_POINTS_FLOOR));
+  return WEIGHTS.budget - MAX_UNDER_BUDGET_LOSS * shortfall;
 }
 
 /** The biggest saving vs new among selected used/CPO conditions (or used, if only New is selected). */
@@ -234,17 +256,16 @@ function savingsFor(trim: Trim, conditions: Condition[]): number {
 
 /**
  * The price ties are broken toward. "Any budget" favors the cheapest option;
- * otherwise the middle of the range, which for an exact budget is 75% of it.
+ * otherwise the budget itself, so the closest to it wins.
  */
-const budgetMidpoint = (budget: Budget) => (budget.range === "any" ? 0 : (budget.min + budget.max) / 2);
+const budgetMidpoint = (budget: Budget) => (budget.range === "any" ? 0 : budget.max);
 
 /**
  * Picks the trim and selected condition that fit best. Anything within the
- * budget beats anything over it; after that, the most points for budget,
+ * budget plus its 5% allowance beats anything pricier; after that, the most points for budget,
  * fuel, must-haves and how well the trim suits the chosen use. Ties go to the
- * price closest to the middle of the budget, so an "Under $30k" search gets
- * the cheapest trim that does the job and a bigger budget gets a
- * better-equipped one. Returns null if every option is too far over budget.
+ * price closest to the budget, so shoppers get the best-equipped trim they
+ * can afford. Returns null if every option is too far over budget.
  */
 function bestOption(car: Car, prefs: Preferences, ignoreCap: boolean) {
   const target = budgetMidpoint(prefs.budget);
@@ -261,7 +282,7 @@ function bestOption(car: Car, prefs: Preferences, ignoreCap: boolean) {
       const price = trim.prices[condition];
       const budget = budgetPoints(price, prefs.budget, ignoreCap);
       if (budget === null) continue;
-      const key = (price <= prefs.budget.max ? 1000 : 0) + budget + trimPoints;
+      const key = (price <= budgetCeiling(prefs.budget) ? 1000 : 0) + budget + trimPoints;
       const closer = best !== null && Math.abs(price - target) < Math.abs(best.price - target);
       if (!best || key > best.key + 1e-9 || (Math.abs(key - best.key) <= 1e-9 && closer)) {
         best = { trim, condition, price, key, budget };
@@ -400,18 +421,14 @@ function applySort(matches: Match[], sort: SortKey): Match[] {
 
 export function rankCars(prefs: Preferences, sort: SortKey = DEFAULT_SORT, limit = 10): MatchResult {
   const scored = CARS.map((car) => scoreCar(car, prefs)).filter(isMatch);
-  // Ties go to the car priced closest to the middle of the budget, so an
-  // "Under $30k" search favors cheap cars and a $150k search favors cars
-  // that actually use the budget.
+  // Ties go to the car priced closest to the budget, so a $100k search favors
+  // cars that actually use it.
   const target = budgetMidpoint(prefs.budget);
   const distance = (m: Match) => Math.abs(m.price - target);
   const byFit = (a: Match, b: Match) => b.rank - a.rank || distance(a) - distance(b);
-  // Cars within the budget always come first. Ones a little over it only fill
-  // the list when too few cars fit, so a $25k search isn't shown a $26.6k
-  // truck while plenty of $25k options exist.
-  const within = scored.filter((m) => m.price <= prefs.budget.max).sort(byFit);
-  const over = scored.filter((m) => m.price > prefs.budget.max).sort(byFit);
-  const top = [...within, ...over].slice(0, limit);
+  // Every scored car is at most 5% over budget, and those over it lose a few
+  // points, so cars at or under the budget win close calls.
+  const top = scored.sort(byFit).slice(0, limit);
 
   if (scored.length > 0) {
     return {
