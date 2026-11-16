@@ -575,6 +575,27 @@ export const CARS: Car[] = [
   car("Rolls-Royce", "Cullinan", "suv", "gas", 5, 0, ["luxury", "roadtrip"]),
   car("Rolls-Royce", "Spectre", "coupe", "electric", 4, 0, ["luxury", "roadtrip"]),
   car("Rolls-Royce", "Phantom", "sedan", "gas", 5, 0, ["luxury"]),
+  // Added November 2026
+  car("Toyota", "Prius Plug-in Hybrid", "hatchback", "phev", 5, 0, ["commute", "city", "roadtrip"]),
+  car("Toyota", "C-HR", "suv", "electric", 5, 0, ["commute", "city", "performance"]),
+  car("Chevrolet", "Bolt", "hatchback", "electric", 5, 0, ["commute", "city"]),
+  car("Subaru", "Uncharted", "suv", "electric", 5, 0, ["commute", "city", "family"]),
+  car("Subaru", "Trailseeker", "wagon", "electric", 5, 3500, ["roadtrip", "offroad", "family"]),
+  car("Jeep", "Cherokee", "suv", "hybrid", 5, 2000, ["family", "commute", "offroad"]),
+  car("Jeep", "Recon", "suv", "electric", 5, 0, ["offroad", "performance"]),
+  car("Honda", "Prelude", "coupe", "hybrid", 4, 0, ["performance", "commute"]),
+  car("Infiniti", "QX65", "suv", "gas", 5, 3500, ["luxury", "roadtrip", "commute"]),
+  car("Audi", "Q5 Sportback", "suv", "gas", 5, 4400, ["luxury", "commute", "roadtrip"]),
+  car("Rivian", "R2", "suv", "electric", 5, 4400, ["family", "offroad", "roadtrip"]),
+  car("Chevrolet", "Silverado 3500HD", "truck", "gas", 5, 36000, ["towing", "offroad"]),
+  car("GMC", "Sierra 3500HD", "truck", "gas", 5, 30800, ["towing", "offroad", "luxury"]),
+  car("Ford", "F-350 Super Duty", "truck", "gas", 5, 38000, ["towing", "offroad"]),
+  car("VinFast", "VF 8", "suv", "electric", 5, 4000, ["family", "commute"]),
+  car("VinFast", "VF 9", "suv", "electric", 7, 3500, ["family", "roadtrip"]),
+  car("Ineos", "Grenadier", "suv", "gas", 5, 7716, ["offroad", "towing"]),
+  car("Ferrari", "Amalfi", "coupe", "gas", 4, 0, ["performance", "luxury"]),
+  car("Ferrari", "849 Testarossa", "coupe", "phev", 2, 0, ["performance"]),
+  car("Maserati", "MCPura", "coupe", "gas", 2, 0, ["performance"]),
   // Bugatti is intentionally omitted: its cheapest model costs several million
   // dollars, far above the $1,000,000 budget cap.
 ];

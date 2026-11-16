@@ -1711,4 +1711,95 @@ export const TRIM_DATA: Record<string, TrimRow[]> = {
   "audi-rs-6-avant": [
     ["RS 6 Avant performance", 128000, "4.0L twin-turbo V8", 621, "17 mpg", "AWD", "acrbhs", "621-hp wagon, RS adaptive air suspension"],
   ],
+  // Added November 2026 from current US launch pricing (before destination).
+  // Figures for brand-new models are early and may still change.
+  "toyota-prius-plug-in-hybrid": [
+    ["SE", 33800, "2.0L plug-in hybrid I4", 220, "44 mi electric / 52 mpg", "FWD", "crb", "Longest electric range of the lineup, 8-in touchscreen"],
+    ["XSE", 37000, "2.0L plug-in hybrid I4", 220, "39 mi electric / 48 mpg", "FWD", "crbh", "12.3-in touchscreen, 19-in wheels"],
+    ["XSE Premium", 40500, "2.0L plug-in hybrid I4", 220, "39 mi electric / 48 mpg", "FWD", "crbhs", "Solar roof, JBL audio"],
+  ],
+  "toyota-c-hr": [
+    ["SE", 37000, "Dual electric motors", 338, "287 mi range", "AWD", "acrbh", "338 hp, 0-60 in about 5 s"],
+    ["XSE", 39000, "Dual electric motors", 338, "273 mi range", "AWD", "acrbhs", "Panoramic roof, 20-in wheels"],
+  ],
+  "chevrolet-bolt": [
+    ["LT", 29000, "Single electric motor", 210, "262 mi range", "FWD", "crbh", "America's cheapest new EV, NACS charging port"],
+    ["RS", 33000, "Single electric motor", 210, "262 mi range", "FWD", "crbhs", "Sport styling, ventilated seats"],
+  ],
+  "subaru-uncharted": [
+    ["Premium", 35000, "Single electric motor", 221, "308 mi range", "FWD", "crbh", "Longest range of the lineup"],
+    ["Sport", 39800, "Dual electric motors", 338, "287 mi range", "AWD", "acrbh", "338 hp, X-MODE"],
+    ["GT", 43800, "Dual electric motors", 338, "273 mi range", "AWD", "acrbhs", "Harman Kardon audio, panoramic roof"],
+  ],
+  "subaru-trailseeker": [
+    ["Premium", 40000, "Dual electric motors", 375, "281 mi range", "AWD", "acrbh", "375 hp, raised roof rails"],
+    ["Limited", 44000, "Dual electric motors", 375, "274 mi range", "AWD", "acrbhs", "Ventilated seats, panoramic roof"],
+    ["Touring", 46600, "Dual electric motors", 375, "274 mi range", "AWD", "acrbhs", "Harman Kardon audio, 360-degree camera"],
+  ],
+  "jeep-cherokee": [
+    ["Cherokee", 35000, "1.6L turbo hybrid I4", 210, "37 mpg", "AWD", "acrbh", "Hybrid-only, standard AWD"],
+    ["Laredo", 38000, "1.6L turbo hybrid I4", 210, "37 mpg", "AWD", "acrbh", "Power liftgate, 12.3-in touchscreen"],
+    ["Limited", 40500, "1.6L turbo hybrid I4", 210, "37 mpg", "AWD", "acrbhs", "Leather seats, wireless charging"],
+    ["Overland", 44000, "1.6L turbo hybrid I4", 210, "37 mpg", "AWD", "acrbhs", "Panoramic roof, premium audio"],
+  ],
+  "jeep-recon": [
+    ["Moab", 65000, "Dual electric motors", 650, "222 mi range", "4WD", "acrbh", "Removable doors and glass, Trail Rated"],
+  ],
+  "honda-prelude": [
+    ["Prelude", 42000, "2.0L hybrid I4", 200, "44 mpg", "FWD", "crbh", "Simulated shifts (S+ Shift), Bose audio"],
+  ],
+  "infiniti-qx65": [
+    ["Luxe", 54000, "2.0L variable-compression turbo I4", 268, "22 mpg", "AWD", "acrbh", "Two-row fastback, 12.3-in touchscreen"],
+    ["Sport", 55700, "2.0L variable-compression turbo I4", 268, "22 mpg", "AWD", "acrbhs", "Sport styling, panoramic roof"],
+    ["Autograph", 62600, "2.0L variable-compression turbo I4", 268, "22 mpg", "AWD", "acrbhs", "Semi-aniline leather, Klipsch audio"],
+  ],
+  "audi-q5-sportback": [
+    ["Premium", 55100, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbh", "Sloped roofline, standard quattro"],
+    ["Premium Plus", 57800, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbhs", "Bang & Olufsen audio, adaptive cruise"],
+    ["Prestige", 62800, "2.0L turbo I4", 268, "24 mpg", "AWD", "acrbhs", "Head-up display, matrix LED lights"],
+  ],
+  "rivian-r2": [
+    ["Premium", 54000, "Dual electric motors", 450, "330 mi range", "AWD", "acrbhs", "Dual-motor AWD, fold-flat rear seats"],
+    ["Performance Launch Package", 58000, "Dual electric motors", 656, "330 mi range", "AWD", "acrbhs", "656 hp, 0-60 in 3.6 s"],
+  ],
+  "chevrolet-silverado-3500hd": [
+    ["WT", 47500, "6.6L V8", 401, "Not EPA-rated", "RWD or 4WD", "acb", "Heavy-duty 1-ton frame, dual rear wheels available"],
+    ["LT", 56600, "6.6L V8", 401, "Not EPA-rated", "RWD or 4WD", "acrbh", "13.4-in touchscreen, heated seats"],
+    ["LTZ", 67500, "6.6L turbo-diesel V8", 470, "Not EPA-rated", "RWD or 4WD", "acrbhs", "Duramax diesel, leather seats"],
+    ["High Country", 78000, "6.6L turbo-diesel V8", 470, "Not EPA-rated", "4WD", "acrbhs", "Duramax diesel, up to 36,000-lb gooseneck towing"],
+  ],
+  "gmc-sierra-3500hd": [
+    ["Pro", 48200, "6.6L V8", 401, "Not EPA-rated", "RWD or 4WD", "acb", "Heavy-duty 1-ton frame, dual rear wheels available"],
+    ["AT4", 72500, "6.6L turbo-diesel V8", 470, "Not EPA-rated", "4WD", "acrbhs", "Rancho shocks, skid plates"],
+    ["Denali", 75200, "6.6L turbo-diesel V8", 470, "Not EPA-rated", "RWD or 4WD", "acrbhs", "Ventilated seats, Bose audio"],
+    ["Denali Ultimate", 94200, "6.6L turbo-diesel V8", 470, "Not EPA-rated", "4WD", "acrbhs", "Super Cruise trailering, Bose audio"],
+  ],
+  "ford-f-350-super-duty": [
+    ["XL", 48000, "6.8L V8", 405, "Not EPA-rated", "RWD or 4WD", "acb", "Heavy-duty 1-ton frame, dual rear wheels available"],
+    ["XLT", 54500, "7.3L V8", 430, "Not EPA-rated", "RWD or 4WD", "acrbh", "Bigger V8, remote start"],
+    ["Lariat", 68000, "6.7L turbo-diesel V8", 475, "Not EPA-rated", "RWD or 4WD", "acrbhs", "Power Stroke diesel, leather seats"],
+    ["Platinum", 87000, "6.7L high-output turbo-diesel V8", 500, "Not EPA-rated", "4WD", "acrbhs", "High-output diesel, up to 38,000-lb gooseneck towing"],
+  ],
+  "vinfast-vf-8": [
+    ["Eco", 39900, "Dual electric motors", 349, "256 mi range", "AWD", "acrbh", "Standard AWD, 10-year battery warranty"],
+    ["Plus", 44900, "Dual electric motors", 402, "235 mi range", "AWD", "acrbhs", "402 hp, panoramic roof"],
+  ],
+  "vinfast-vf-9": [
+    ["Eco", 69800, "Dual electric motors", 402, "330 mi range", "AWD", "acrbh", "Three rows, 123-kWh battery"],
+    ["Plus", 73800, "Dual electric motors", 402, "291 mi range", "AWD", "acrbhs", "Captain's chairs, panoramic roof"],
+  ],
+  "ineos-grenadier": [
+    ["Station Wagon", 71000, "3.0L turbo I6", 282, "14 mpg", "4WD", "ach", "Body-on-frame, solid axles, locking differentials"],
+    ["Black Edition", 83000, "3.0L turbo I6", 282, "14 mpg", "4WD", "achs", "Blacked-out styling, Safari windows"],
+  ],
+  "ferrari-amalfi": [
+    ["Amalfi", 262000, "3.9L twin-turbo V8", 631, "17 mpg", "RWD", "crb", "Front-mid V8, replaces the Roma"],
+  ],
+  "ferrari-849-testarossa": [
+    ["849 Testarossa", 550000, "4.0L twin-turbo V8 plug-in hybrid", 1036, "15 mi electric", "AWD", "acrb", "1,036 hp, replaces the SF90 Stradale"],
+  ],
+  "maserati-mcpura": [
+    ["Coupe", 245000, "3.0L twin-turbo V6", 621, "18 mpg", "RWD", "crb", "Updated MC20, 120 US cars for 2026"],
+    ["Cielo", 280000, "3.0L twin-turbo V6", 621, "18 mpg", "RWD", "crb", "Retractable glass roof"],
+  ],
 };

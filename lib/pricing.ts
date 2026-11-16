@@ -44,6 +44,8 @@ const BRAND_RETENTION: Record<string, number> = {
   Polestar: 0.55,
   Rivian: 0.7,
   Lucid: 0.55,
+  VinFast: 0.4,
+  Ineos: 0.6,
   Lotus: 0.6,
   Porsche: 0.75,
   Mazda: 0.7,
@@ -183,6 +185,23 @@ const USED_AGE_YEARS: Record<string, number> = {
   "cadillac-celestiq": 1,
   "aston-martin-vanquish": 1,
   "maserati-granturismo": 2,
+  // Added November 2026
+  "toyota-c-hr": 1,
+  "chevrolet-bolt": 1,
+  "subaru-uncharted": 1,
+  "subaru-trailseeker": 1,
+  "jeep-cherokee": 1,
+  "jeep-recon": 1,
+  "honda-prelude": 1,
+  "infiniti-qx65": 1,
+  "audi-q5-sportback": 1,
+  "rivian-r2": 1,
+  "ferrari-amalfi": 1,
+  "ferrari-849-testarossa": 1,
+  "maserati-mcpura": 1,
+  "vinfast-vf-8": 2,
+  "vinfast-vf-9": 2,
+  "ineos-grenadier": 2,
 };
 
 /** Depreciation is steepest early: share of the 3-year loss taken by each age. */
@@ -199,6 +218,7 @@ export function valueShareAtAge(threeYearShare: number, age: number): number {
 }
 
 const LUXURY_BRANDS = new Set([
+  "Ineos",
   "BMW",
   "Mercedes-Benz",
   "Audi",

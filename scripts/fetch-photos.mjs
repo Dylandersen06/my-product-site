@@ -1,5 +1,7 @@
 // Finds a freely licensed Wikimedia Commons photo for every car and writes
 // lib/photos.json. Run with: node scripts/fetch-photos.mjs
+// Add --missing to keep every photo already in the file and look up only cars
+// that don't have one.
 //
 // The starting point is the lead image of the model's Wikipedia article. A file
 // is only accepted if it lives on Commons and its machine-readable license is
@@ -15,6 +17,13 @@ const WIDTH = 960;
 
 /** Wikipedia article for models whose title isn't simply "Make Model". */
 const ARTICLES = {
+  "toyota-prius-plug-in-hybrid": "Toyota Prius",
+  "chevrolet-silverado-3500hd": "Chevrolet Silverado",
+  "gmc-sierra-3500hd": "GMC Sierra",
+  "ford-f-350-super-duty": "Ford Super Duty",
+  "audi-q5-sportback": "Audi Q5",
+  "vinfast-vf-8": "VinFast VF 8",
+  "vinfast-vf-9": "VinFast VF 9",
   "mazda-mazda3-hatchback": "Mazda3",
   "toyota-rav4-hybrid": "Toyota RAV4",
   "toyota-rav4-plug-in-hybrid": "Toyota RAV4",
@@ -121,9 +130,12 @@ const cars = [...source.matchAll(/^\s*car\("([^"]+)", "([^"]+)",/gm)].map(([, ma
     .replace(/(^-|-$)/g, ""),
 }));
 
-const photos = {};
+const onlyMissing = process.argv.includes("--missing");
+const photosFile = new URL("../lib/photos.json", import.meta.url);
+const photos = onlyMissing ? JSON.parse(readFileSync(photosFile, "utf8")) : {};
 const report = [];
 for (const car of cars) {
+  if (onlyMissing && photos[car.id]) continue;
   const override = FILE_OVERRIDES[car.id];
   if (override === null) {
     report.push(`SKIP ${car.id}: no suitable free photo`);
@@ -143,6 +155,6 @@ for (const car of cars) {
   }
 }
 
-writeFileSync(new URL("../lib/photos.json", import.meta.url), `${JSON.stringify(photos, null, 2)}\n`);
+writeFileSync(photosFile, `${JSON.stringify(photos, null, 2)}\n`);
 console.log(report.join("\n"));
 console.log(`\n${Object.keys(photos).length} of ${cars.length} cars have a free photo`);
