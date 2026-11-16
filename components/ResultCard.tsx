@@ -3,6 +3,7 @@ import CarPhoto from "@/components/CarPhoto";
 import { CompareCheckbox } from "@/components/Compare";
 import CostToOwnCard from "@/components/CostToOwnCard";
 import PriceComparison from "@/components/PriceComparison";
+import ReliabilityScore from "@/components/ReliabilityScore";
 import SafetyScore from "@/components/SafetyScore";
 import SaveCarButtons from "@/components/SaveCarButtons";
 import ScoreRing from "@/components/ScoreRing";
@@ -14,6 +15,7 @@ import { BODY_LABELS, FUEL_LABELS, carDetailsHref } from "@/lib/cars";
 import type { Match } from "@/lib/match";
 import { DEFAULT_MILES_PER_YEAR } from "@/lib/ownership";
 import { photoFor } from "@/lib/photos";
+import { reliabilityScore } from "@/lib/reliability";
 import { safetyScore } from "@/lib/safety";
 import type { Condition } from "@/lib/pricing";
 import type { SavedState } from "@/lib/saved-lists";
@@ -36,6 +38,7 @@ export default function ResultCard({
 }) {
   const name = `${m.car.make} ${m.car.model}`;
   const safety = safetyScore(m.car, m.trim);
+  const reliability = reliabilityScore(m.car);
   const details = carDetailsHref(
     m.car.id,
     m.trim.name,
@@ -51,6 +54,7 @@ export default function ResultCard({
           photo={photoFor(m.car.id)}
           rank={rank}
           safety={{ score: safety.score, estimated: !safety.crashTested }}
+          reliability={reliability.score}
         />
       </div>
       <div className="result-body">
@@ -77,7 +81,10 @@ export default function ResultCard({
           </div>
           <ScoreRing score={m.score} />
         </div>
-        <SafetyScore safety={safety} />
+        <div className="rating-lines">
+          <SafetyScore safety={safety} />
+          <ReliabilityScore reliability={reliability} make={m.car.make} />
+        </div>
         {advanced && <SpecStrip trim={m.trim} />}
         <OfficialBadges car={m.car} />
         <ColorDots car={m.car} />

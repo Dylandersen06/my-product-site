@@ -81,7 +81,7 @@ const MORE_OPTIONS_MESSAGE = "Can you show me a few more options?";
 function WhereToBuy({ card, location }: { card: AdvisorCard; location: string }) {
   if (!card.make || !card.model) return null;
   if (!location.trim()) {
-    return <p className="advisor-buy-hint">Add your ZIP code above to see dealers and listings near you.</p>;
+    return <p className="advisor-buy-hint">Add your ZIP code or city to see dealers and listings near you.</p>;
   }
   const { links, note } = whereToBuy(card.make, card.model, card.condition, location);
   return (
@@ -110,24 +110,11 @@ function RecommendationCards({
   onLocationChange: (location: string) => void;
 }) {
   return (
-    <section className="advisor-stats" aria-label="Full stats for the recommended cars">
-      <h3 className="advisor-stats-title">Full stats</h3>
-      <label className="advisor-location">
-        <span>Your ZIP code or city, to find dealers near you</span>
-        <input
-          type="text"
-          inputMode="text"
-          autoComplete="postal-code"
-          maxLength={MAX_LOCATION_CHARS}
-          placeholder="e.g. 84101 or Salt Lake City, UT"
-          value={location}
-          onChange={(e) => onLocationChange(e.target.value)}
-        />
-      </label>
+    <section className="advisor-stats" aria-label="The recommended cars">
       <ul className="advisor-cards">
         {cards.map((card, i) => (
           <li key={`${card.id}-${card.trim}-${card.condition}`} className="advisor-card">
-            <CarPhoto name={card.name} bodyLabel={card.bodyLabel} photo={card.photo} safety={card.safety} />
+            <CarPhoto name={card.name} bodyLabel={card.bodyLabel} photo={card.photo} safety={card.safety} reliability={card.reliability} />
             <div className="advisor-card-body">
               {i === 0 && cards.length > 1 && <span className="advisor-card-badge">Top pick</span>}
               <h3>{card.name}</h3>
@@ -146,38 +133,53 @@ function RecommendationCards({
                   </div>
                 )}
               </dl>
-              <p className="advisor-card-monthly">
-                Yearly average over 5 years for fuel, maintenance, insurance and registration at 12,000 miles a year.
-                Doesn&rsquo;t include the price or financing.
-              </p>
-              {card.stats && (
-                <dl className="advisor-card-specs">
-                  {card.stats.map(([label, value]) => (
-                    <div key={label}>
-                      <dt>{label}</dt>
-                      <dd>{value}</dd>
-                    </div>
-                  ))}
-                </dl>
-              )}
-              {card.features && card.features.length > 0 && (
-                <>
-                  <h4 className="advisor-card-subhead">Features</h4>
-                  <ul className="advisor-card-tags">
-                    {card.features.map((f) => (
-                      <li key={f}>{f}</li>
+              <details className="advisor-card-more">
+                <summary>More info</summary>
+                <p className="advisor-card-monthly">
+                  Running cost is the yearly average over 5 years for fuel, maintenance, insurance and registration at
+                  12,000 miles a year. It doesn&rsquo;t include the price or financing.
+                </p>
+                {card.stats && (
+                  <dl className="advisor-card-specs">
+                    {card.stats.map(([label, value]) => (
+                      <div key={label}>
+                        <dt>{label}</dt>
+                        <dd>{value}</dd>
+                      </div>
                     ))}
-                  </ul>
-                </>
-              )}
-              {card.highlights && card.highlights.length > 0 && (
-                <>
-                  <h4 className="advisor-card-subhead">Highlights</h4>
-                  <p className="advisor-card-highlights">{card.highlights.join(" · ")}</p>
-                </>
-              )}
-              <h4 className="advisor-card-subhead">Where to buy</h4>
-              <WhereToBuy card={card} location={location} />
+                  </dl>
+                )}
+                {card.features && card.features.length > 0 && (
+                  <>
+                    <h4 className="advisor-card-subhead">Features</h4>
+                    <ul className="advisor-card-tags">
+                      {card.features.map((f) => (
+                        <li key={f}>{f}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
+                {card.highlights && card.highlights.length > 0 && (
+                  <>
+                    <h4 className="advisor-card-subhead">Highlights</h4>
+                    <p className="advisor-card-highlights">{card.highlights.join(" · ")}</p>
+                  </>
+                )}
+                <h4 className="advisor-card-subhead">Where to buy</h4>
+                <label className="advisor-location">
+                  <span>Your ZIP code or city</span>
+                  <input
+                    type="text"
+                    inputMode="text"
+                    autoComplete="postal-code"
+                    maxLength={MAX_LOCATION_CHARS}
+                    placeholder="e.g. 84101 or Salt Lake City, UT"
+                    value={location}
+                    onChange={(e) => onLocationChange(e.target.value)}
+                  />
+                </label>
+                <WhereToBuy card={card} location={location} />
+              </details>
               <Link href={card.href} className="button button-outline advisor-card-link">
                 View details
               </Link>

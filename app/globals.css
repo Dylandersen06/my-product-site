@@ -3768,3 +3768,103 @@ h4 {
   right: 26px;
   bottom: 20px;
 }
+
+/* AI advisor cards: details tucked into a More info dropdown */
+.advisor-card-more {
+  margin: 6px 0 10px;
+  border-top: 1px solid var(--border);
+}
+.advisor-card-more > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: var(--fs-sm);
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+.advisor-card-more > summary::-webkit-details-marker {
+  display: none;
+}
+.advisor-card-more > summary::after {
+  content: "+";
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 1rem;
+  color: var(--muted);
+}
+.advisor-card-more[open] > summary::after {
+  content: "–";
+}
+.advisor-card-more .advisor-location {
+  max-width: none;
+  margin: 4px 0 8px;
+  font-weight: 500;
+}
+
+/* Safety and reliability together */
+.rating-lines .safety-compact {
+  margin: 4px 0;
+}
+.rating-lines {
+  margin: 8px 0 4px;
+}
+.rating-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.rating-blocks .safety-large {
+  margin: 0;
+}
+.reliability-large {
+  border-left-color: var(--border-strong);
+}
+
+/* Both scores stacked in a photo's corner */
+.photo-ratings {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  pointer-events: none;
+}
+.photo-rating {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+  padding: 2px 7px;
+  border-radius: 3px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #fffaeb;
+  background: rgba(8, 48, 31, 0.88);
+}
+.photo-rating-label {
+  margin-right: 3px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  opacity: 0.85;
+}
+.photo-rating-of {
+  font-size: 0.6875rem;
+  opacity: 0.75;
+}
+.photo-rating-est {
+  margin-left: 3px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 0.625rem;
+  opacity: 0.8;
+}
+.cutout-summary .photo-ratings {
+  right: 26px;
+  bottom: 20px;
+}

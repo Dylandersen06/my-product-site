@@ -34,7 +34,7 @@ export interface SafetyScore {
 }
 
 /** 5 for no recalls, down to 1 for ten or more. */
-function recallPoints(count: number | null): number {
+export function recallPoints(count: number | null): number {
   if (count === null) return UNKNOWN_RECALLS;
   if (count === 0) return 5;
   if (count <= 2) return 4;

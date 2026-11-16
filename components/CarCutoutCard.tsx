@@ -4,7 +4,8 @@ import { usd } from "@/lib/budget";
 import { BODY_LABELS, FUEL_LABELS, carDetailsHref, towingText, type Car, type Trim } from "@/lib/cars";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "@/lib/ownership";
 import { photoFor } from "@/lib/photos";
-import SafetyBadge from "@/components/SafetyBadge";
+import PhotoRatings from "@/components/PhotoRatings";
+import { reliabilityScore } from "@/lib/reliability";
 import { formatSafety, safetyScore } from "@/lib/safety";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 
@@ -30,6 +31,7 @@ export default function CarCutoutCard({
   const photo = photoFor(car.id);
   const cost = costToOwn(car, trim, condition, DEFAULT_MILES_PER_YEAR);
   const safety = safetyScore(car, trim);
+  const reliability = reliabilityScore(car);
 
   return (
     <div className="cutout-card">
@@ -41,7 +43,7 @@ export default function CarCutoutCard({
           ) : (
             <span className="cutout-img cutout-missing">{name}</span>
           )}
-          <SafetyBadge score={safety.score} estimated={!safety.crashTested} />
+          <PhotoRatings safety={{ score: safety.score, estimated: !safety.crashTested }} reliability={reliability.score} />
           <span className="cutout-hint">
             <span className="sr-only">Show specs and prices for the {name}</span>
             <span aria-hidden="true" className="cutout-hint-icon" />
@@ -69,6 +71,10 @@ export default function CarCutoutCard({
               <dd>
                 {formatSafety(safety.score)}/5{safety.crashTested ? "" : " (est.)"}
               </dd>
+            </div>
+            <div>
+              <dt>Reliability score</dt>
+              <dd>{formatSafety(reliability.score)}/5 (est.)</dd>
             </div>
             <div>
               <dt>Type</dt>

@@ -8,6 +8,7 @@ import { filterChips } from "@/lib/filters";
 import { hrefWith, suggestLoosening, type RawParams, type Suggestion } from "@/lib/loosen";
 import { SORT_LABELS, rankCars, type Match, type Preferences, type SortKey } from "@/lib/match";
 import { epaSummary, officialFor, overallStars } from "@/lib/official";
+import { reliabilityScore } from "@/lib/reliability";
 import { formatSafety, safetyScore } from "@/lib/safety";
 import { photoFor } from "@/lib/photos";
 import { CONDITIONS, CONDITION_LABELS } from "@/lib/pricing";
@@ -29,6 +30,7 @@ function compareItem(m: Match, prefs: Preferences): CompareItem {
   const yesNo = (f: Feature) => (hasFeature(car, trim, f) ? "Yes" : "—");
   const stars = overallStars(car.id);
   const safety = safetyScore(car, trim);
+  const reliability = reliabilityScore(car);
   const recalls = officialFor(car.id)?.recalls;
   return {
     id: car.id,
@@ -48,6 +50,7 @@ function compareItem(m: Match, prefs: Preferences): CompareItem {
       "MPG / range": trim.economy,
       "EPA MPG / range (official)": epaSummary(car.id) ?? "Not listed",
       "Safety score": `${formatSafety(safety.score)}/5${safety.crashTested ? "" : " (est.)"}`,
+      "Reliability score": `${formatSafety(reliability.score)}/5 (est.)`,
       "NHTSA crash rating (official)": stars !== null ? `${stars}★ overall` : "Not rated",
       "NHTSA recalls (official)": recalls ? `${recalls.count} (${recalls.year} models)` : "Not matched",
       Engine: trim.engine,
@@ -75,6 +78,7 @@ function compareItem(m: Match, prefs: Preferences): CompareItem {
       Towing: { value: trim.towingLbs, better: "high" },
       "Cargo space": { value: trim.cargoCuFt, better: "high" },
       "Safety score": { value: safety.score, better: "high" },
+      "Reliability score": { value: reliability.score, better: "high" },
       ...(stars !== null ? { "NHTSA crash rating (official)": { value: stars, better: "high" as const } } : {}),
     },
   };

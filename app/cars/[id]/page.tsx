@@ -8,6 +8,7 @@ import MilesControl from "@/components/MilesControl";
 import CarColors from "@/components/CarColors";
 import OfficialData from "@/components/OfficialData";
 import PriceComparison from "@/components/PriceComparison";
+import ReliabilityScore from "@/components/ReliabilityScore";
 import SafetyScore from "@/components/SafetyScore";
 import SaveCarButtons from "@/components/SaveCarButtons";
 import SpecStrip from "@/components/SpecStrip";
@@ -18,6 +19,7 @@ import { DOC_FEE, SALES_TAX, costToOwn } from "@/lib/ownership";
 import { parsePreferences } from "@/lib/params";
 import { photoFor } from "@/lib/photos";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
+import { reliabilityScore } from "@/lib/reliability";
 import { safetyScore } from "@/lib/safety";
 import { viewerSaved } from "@/lib/saved-cars";
 
@@ -47,6 +49,7 @@ export default async function CarPage({
   const name = `${car.make} ${car.model}`;
   const saved = await viewerSaved();
   const safety = safetyScore(car, trim);
+  const reliability = reliabilityScore(car);
 
   return (
     <div className="container results-page">
@@ -58,6 +61,7 @@ export default async function CarPage({
             bodyLabel={BODY_LABELS[car.body]}
             photo={photoFor(car.id)}
             safety={{ score: safety.score, estimated: !safety.crashTested }}
+            reliability={reliability.score}
           />
         </div>
         <div className="result-body">
@@ -71,7 +75,10 @@ export default async function CarPage({
           <p className="result-specs">
             {trim.engine} · {trim.drivetrain} · {trim.transmission}
           </p>
-          <SafetyScore safety={safety} size="large" />
+          <div className="rating-blocks">
+            <SafetyScore safety={safety} size="large" />
+            <ReliabilityScore reliability={reliability} make={car.make} size="large" />
+          </div>
           <SpecStrip trim={trim} />
           {saved && (
             <SaveCarButtons
