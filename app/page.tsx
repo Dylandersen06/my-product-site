@@ -254,11 +254,11 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
       <section className="section section-tight" aria-labelledby="about-title">
         <div className="container about">
           <h2 id="about-title" className="section-title">
-            Who built this
+            Our background
           </h2>
           <div className="about-body">
             <p>
-              CarMatch was built by <strong>Dylan Andersen</strong>, an engineering student at PSU who loves cars:
+              CarMatch was built by <strong>Dylan Andersen</strong>, a mechanical engineering student at PSU who loves cars:
               how they&rsquo;re engineered, what makes one trim worth more than another, and why two cars at the same
               price can cost very different amounts to own.
             </p>
