@@ -4,6 +4,7 @@
 
 import { BODY_LABELS, CARS, FEATURE_LABELS, FUEL_LABELS, carDetailsHref, hasFeature, towingText, type Car, type Feature, type Trim } from "./cars";
 import { officialFor, overallStars } from "./official";
+import { reliabilityScore } from "./reliability";
 import { formatSafety, safetyScore } from "./safety";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "./ownership";
 import { photoFor, type CarPhoto } from "./photos";
@@ -28,8 +29,9 @@ export interface AdvisorCard {
   /** Features this exact trim has, in plain words. */
   features: string[];
   highlights: string[];
-  /** For the badge in the photo's corner. */
+  /** For the badges in the photo's corner. */
   safety: { score: number; estimated: boolean };
+  reliability: number;
 }
 
 const ALL_FEATURES = Object.keys(FEATURE_LABELS) as Feature[];
@@ -51,6 +53,7 @@ function statsFor(car: Car, trim: Trim, condition: Condition): [string, string][
     [car.body === "truck" ? "Bed volume" : "Cargo", `${trim.cargoCuFt} cu ft`],
     ["Towing", towingText(trim.towingLbs)],
     ["Safety score", `${formatSafety(safety.score)}/5${safety.crashTested ? "" : " (est.)"}`],
+    ["Reliability score", `${formatSafety(reliabilityScore(car).score)}/5 (est.)`],
     ["NHTSA crash rating", stars !== null ? `${stars}/5 stars overall` : "Not rated"],
   ];
   if (recalls) stats.push([`Recalls (${recalls.year})`, String(recalls.count)]);
@@ -140,6 +143,7 @@ export function cardsFromReply(text: string): AdvisorCard[] {
       features: ALL_FEATURES.filter((f) => hasFeature(car, trim, f)).map((f) => FEATURE_LABELS[f]),
       highlights: trim.highlights,
       safety: (({ score, crashTested }) => ({ score, estimated: !crashTested }))(safetyScore(car, trim)),
+      reliability: reliabilityScore(car).score,
     });
   }
   return [...cards.values()];

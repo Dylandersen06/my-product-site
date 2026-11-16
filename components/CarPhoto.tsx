@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import SafetyBadge from "@/components/SafetyBadge";
+import PhotoRatings from "@/components/PhotoRatings";
 import type { CarPhoto as Photo } from "@/lib/photos";
 
 /**
@@ -14,6 +14,7 @@ export default function CarPhoto({
   photo,
   rank,
   safety,
+  reliability,
 }: {
   name: string;
   bodyLabel: string;
@@ -21,6 +22,8 @@ export default function CarPhoto({
   rank?: number;
   /** Shown in the photo's corner. */
   safety?: { score: number; estimated: boolean };
+  /** Reliability score, shown with safety. Always an estimate. */
+  reliability?: number;
 }) {
   const [failed, setFailed] = useState(false);
   const image = useRef<HTMLImageElement>(null);
@@ -35,7 +38,7 @@ export default function CarPhoto({
     return (
       <div className="car-photo-wrap">
         {rank !== undefined && <span className="car-rank">#{rank}</span>}
-        {safety && <SafetyBadge score={safety.score} estimated={safety.estimated} />}
+        {safety && <PhotoRatings safety={safety} reliability={reliability} />}
         <div className="car-photo car-placeholder">
           <span className="car-placeholder-name">{name}</span>
           <span className="car-placeholder-body">{bodyLabel}</span>
@@ -48,7 +51,7 @@ export default function CarPhoto({
     <>
       <div className="car-photo-wrap">
         {rank !== undefined && <span className="car-rank">#{rank}</span>}
-        {safety && <SafetyBadge score={safety.score} estimated={safety.estimated} />}
+        {safety && <PhotoRatings safety={safety} reliability={reliability} />}
         {/* Plain img: photos stay hosted on Wikimedia Commons, with no optimization proxy. */}
         <img
           ref={image}

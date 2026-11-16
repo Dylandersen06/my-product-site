@@ -2,7 +2,7 @@ import type { CSSProperties } from "react";
 import { formatSafety, safetyBasis, type SafetyScore as Score } from "@/lib/safety";
 
 /** Five stars, filled to the score. The number is always shown as text too. */
-function Stars({ score }: { score: number }) {
+export function Stars({ score }: { score: number }) {
   return (
     <span className="safety-stars" aria-hidden="true" style={{ "--fill": `${(score / 5) * 100}%` } as CSSProperties}>
       <span className="safety-stars-empty">★★★★★</span>

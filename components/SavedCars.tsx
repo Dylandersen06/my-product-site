@@ -4,6 +4,7 @@ import SaveCarButtons from "@/components/SaveCarButtons";
 import { usd } from "@/lib/budget";
 import { BODY_LABELS, CARS, carDetailsHref } from "@/lib/cars";
 import { photoFor } from "@/lib/photos";
+import { reliabilityScore } from "@/lib/reliability";
 import { safetyScore } from "@/lib/safety";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 import type { SavedCar } from "@/lib/saved-cars";
@@ -66,6 +67,7 @@ function SavedCarCard({ row, state }: { row: SavedCar; state: SavedState }) {
           bodyLabel={BODY_LABELS[car.body]}
           photo={photoFor(car.id)}
           safety={{ score: safety.score, estimated: !safety.crashTested }}
+          reliability={reliabilityScore(car).score}
         />
       </Link>
       <div className="saved-card-body">
