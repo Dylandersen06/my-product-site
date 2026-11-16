@@ -7,9 +7,10 @@ export const MAX_MESSAGE_CHARS = 800;
 export const MAX_USER_MESSAGES = 10;
 /**
  * Most tokens the model can use per reply, including hidden reasoning, which can
- * take over 1,500 by itself. Replies are told to stay under 200 words.
+ * take over 1,500 by itself. Replies recommend four cars and are told to stay
+ * under 450 words, roughly 700 tokens.
  */
-export const MAX_OUTPUT_TOKENS = 4000;
+export const MAX_OUTPUT_TOKENS = 6000;
 /** Longest earlier reply accepted back from the browser, in characters. */
 export const MAX_ASSISTANT_CHARS = 8000;
 /** Requests allowed from one visitor in the window below. */
