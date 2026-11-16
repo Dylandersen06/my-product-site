@@ -111,6 +111,14 @@ const MAX_OVER_BUDGET_LOSS = 2;
 /** The most a matching car can cost: the budget plus the 5% allowance. */
 const budgetCeiling = (budget: Budget) => budget.max * (1 + MAX_OVER_BUDGET);
 
+/**
+ * True when a price is in the budget window: from 15% under the budget to the
+ * 5% allowance over it. Cars in the window rank ahead of cheaper ones, which
+ * only fill the list when too few cars fit. "Any budget" has no window.
+ */
+const inBudgetWindow = (price: number, budget: Budget) =>
+  budget.range === "any" || (price >= budget.max * BUDGET_SWEET_SPOT && price <= budgetCeiling(budget));
+
 const clamp01 = (n: number) => Math.min(1, Math.max(0, n));
 
 /** 0–1: fuel economy, with EVs and plug-ins near the top. */
@@ -282,7 +290,12 @@ function bestOption(car: Car, prefs: Preferences, ignoreCap: boolean) {
       const price = trim.prices[condition];
       const budget = budgetPoints(price, prefs.budget, ignoreCap);
       if (budget === null) continue;
-      const key = (price <= budgetCeiling(prefs.budget) ? 1000 : 0) + budget + trimPoints;
+      // Within the ceiling beats over it; inside the budget window beats below it.
+      const key =
+        (price <= budgetCeiling(prefs.budget) ? 1000 : 0) +
+        (inBudgetWindow(price, prefs.budget) ? 500 : 0) +
+        budget +
+        trimPoints;
       const closer = best !== null && Math.abs(price - target) < Math.abs(best.price - target);
       if (!best || key > best.key + 1e-9 || (Math.abs(key - best.key) <= 1e-9 && closer)) {
         best = { trim, condition, price, key, budget };
@@ -428,9 +441,15 @@ export function rankCars(prefs: Preferences, sort: SortKey = DEFAULT_SORT, limit
   const target = budgetMidpoint(prefs.budget);
   const distance = (m: Match) => Math.abs(m.price - target);
   const byFit = (a: Match, b: Match) => b.rank - a.rank || distance(a) - distance(b);
-  // Every scored car is at most 5% over budget, and those over it lose a few
-  // points, so cars at or under the budget win close calls.
-  const top = scored.sort(byFit).slice(0, limit);
+  // Every scored car is at most 5% over budget. Order: cars of the requested
+  // fuel and body style within 15% under the budget (or up to 5% over), then
+  // those of the requested type that are cheaper, then everything else. So the
+  // budget window matters, but never puts an electric truck ahead of the
+  // hybrid a shopper asked for.
+  const fitsAsk = (m: Match) =>
+    (prefs.fuel === "any" || m.trim.fuel === prefs.fuel) && (prefs.body === "any" || m.car.body === prefs.body);
+  const tier = (m: Match) => (fitsAsk(m) ? 0 : 2) + (inBudgetWindow(m.price, prefs.budget) ? 0 : 1);
+  const top = [...scored].sort((a, b) => tier(a) - tier(b) || byFit(a, b)).slice(0, limit);
 
   if (scored.length > 0) {
     return {

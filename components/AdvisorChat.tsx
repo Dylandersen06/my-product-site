@@ -76,7 +76,6 @@ function MessageText({ text }: { text: string }) {
   );
 }
 
-const MORE_OPTIONS_MESSAGE = "Can you show me a few more options?";
 
 function WhereToBuy({ card, location }: { card: AdvisorCard; location: string }) {
   if (!card.make || !card.model) return null;
@@ -374,12 +373,9 @@ export default function AdvisorChat() {
               )}
               {m.cards && m.cards.length > 0 && <RecommendationCards cards={m.cards} location={location} onLocationChange={changeLocation} />}
               {m.cards && m.cards.length > 0 && i === messages.length - 1 && !busy && !atLimit && (
-                <div className="advisor-more">
-                  <p>Want to see more options? You can also tell me brands you&rsquo;d prefer or want to avoid.</p>
-                  <button type="button" className="button button-outline" onClick={() => void send(MORE_OPTIONS_MESSAGE)}>
-                    Show more options
-                  </button>
-                </div>
+                <p className="advisor-more">
+                  Do you prefer any brands, or want to stay away from others? Tell me below.
+                </p>
               )}
             </Fragment>
           ))}
