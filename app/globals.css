@@ -3626,3 +3626,12 @@ h4 {
     order: 6;
   }
 }
+
+/* Homepage: who built the site */
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 64ch;
+  font-size: 1.0625rem;
+}
