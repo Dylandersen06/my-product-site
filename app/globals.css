@@ -3434,3 +3434,43 @@ details[open] > .cost-head::after,
 .advisor-more p {
   font-weight: 600;
 }
+
+/* AI advisor: where to buy each recommended car */
+.advisor-location {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 360px;
+  margin-bottom: 12px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.advisor-location input {
+  font: inherit;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: inherit;
+}
+.advisor-buy-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+.advisor-buy-links a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.advisor-buy-note,
+.advisor-buy-hint {
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--muted);
+  margin: 4px 0 8px;
+}
