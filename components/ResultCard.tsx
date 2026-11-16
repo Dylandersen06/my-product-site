@@ -3,6 +3,7 @@ import CarPhoto from "@/components/CarPhoto";
 import { CompareCheckbox } from "@/components/Compare";
 import CostToOwnCard from "@/components/CostToOwnCard";
 import PriceComparison from "@/components/PriceComparison";
+import SafetyScore from "@/components/SafetyScore";
 import SaveCarButtons from "@/components/SaveCarButtons";
 import ScoreRing from "@/components/ScoreRing";
 import { ColorDots } from "@/components/CarColors";
@@ -13,6 +14,7 @@ import { BODY_LABELS, FUEL_LABELS, carDetailsHref } from "@/lib/cars";
 import type { Match } from "@/lib/match";
 import { DEFAULT_MILES_PER_YEAR } from "@/lib/ownership";
 import { photoFor } from "@/lib/photos";
+import { safetyScore } from "@/lib/safety";
 import type { Condition } from "@/lib/pricing";
 import type { SavedState } from "@/lib/saved-lists";
 
@@ -68,6 +70,7 @@ export default function ResultCard({
           </div>
           <ScoreRing score={m.score} />
         </div>
+        <SafetyScore safety={safetyScore(m.car, m.trim)} />
         {advanced && <SpecStrip trim={m.trim} />}
         <OfficialBadges car={m.car} />
         <ColorDots car={m.car} />

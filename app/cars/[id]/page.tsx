@@ -8,6 +8,7 @@ import MilesControl from "@/components/MilesControl";
 import CarColors from "@/components/CarColors";
 import OfficialData from "@/components/OfficialData";
 import PriceComparison from "@/components/PriceComparison";
+import SafetyScore from "@/components/SafetyScore";
 import SaveCarButtons from "@/components/SaveCarButtons";
 import SpecStrip from "@/components/SpecStrip";
 import TrimList from "@/components/TrimList";
@@ -17,6 +18,7 @@ import { DOC_FEE, SALES_TAX, costToOwn } from "@/lib/ownership";
 import { parsePreferences } from "@/lib/params";
 import { photoFor } from "@/lib/photos";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
+import { safetyScore } from "@/lib/safety";
 import { viewerSaved } from "@/lib/saved-cars";
 
 const findCar = (id: string) => CARS.find((car) => car.id === id);
@@ -63,6 +65,7 @@ export default async function CarPage({
           <p className="result-specs">
             {trim.engine} · {trim.drivetrain} · {trim.transmission}
           </p>
+          <SafetyScore safety={safetyScore(car, trim)} size="large" />
           <SpecStrip trim={trim} />
           {saved && (
             <SaveCarButtons
