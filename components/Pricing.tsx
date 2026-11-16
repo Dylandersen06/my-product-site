@@ -29,7 +29,7 @@ export default function Pricing({
             const featured = kind === "monthly";
             return (
               <article key={kind} className={`price-card${featured ? " featured" : ""}`}>
-                {featured && <span className="badge">Best value</span>}
+                {featured && <span className="price-note">Best value</span>}
                 <h3>{plan.name}</h3>
                 <p className="price">
                   {plan.price} <span>{plan.period}</span>

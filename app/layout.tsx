@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Archivo, IBM_Plex_Mono, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+
+// Archivo's narrow widths for headings, like a car brochure; Plex for body text
+// and for prices and figures, which read like a spec sheet.
+const display = Archivo({ subsets: ["latin"], axes: ["wdth"], variable: "--font-display" });
+const body = IBM_Plex_Sans({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-body" });
+const mono = IBM_Plex_Mono({ subsets: ["latin"], weight: ["400", "500", "600"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
   title: "CarMatch AI by Dylan Andersen",
@@ -13,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${display.variable} ${body.variable} ${mono.variable}`}>
       <body>
         <ClerkProvider
           signInUrl="/sign-in"
@@ -35,7 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               colorInputForeground: "#17231c",
               colorBorder: "#ded6bf",
               colorNeutral: "#17231c",
-              borderRadius: "10px",
+              borderRadius: "4px",
               fontFamily: "inherit",
             },
           }}

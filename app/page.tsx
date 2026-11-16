@@ -7,7 +7,6 @@ import { CARS, type BodyStyle } from "@/lib/cars";
 import type { RawParams } from "@/lib/loosen";
 import { DEFAULT_SORT, rankCars } from "@/lib/match";
 import { hasSearch, parsePreferences, parseSort } from "@/lib/params";
-import { CONDITIONS } from "@/lib/pricing";
 import { SAVED_LISTS } from "@/lib/saved-lists";
 
 const BRAND_COUNT = new Set(CARS.map((car) => car.make)).size;
@@ -114,7 +113,7 @@ function SaveFavorites() {
         <div className="steps">
           {SAVE_STEPS.map((step, i) => (
             <div key={step.title} className="step">
-              <span className="step-num">{i + 1}</span>
+              <span className="step-num">{String(i + 1).padStart(2, "0")}</span>
               <div>
                 <h3>{step.title}</h3>
                 <p className="muted">{step.body}</p>
@@ -208,14 +207,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="eyebrow">Unbiased car matching</span>
-            <h1>
-              Find <em>your perfect car</em>, ranked by what matters to you.
-            </h1>
+            <h1>The right car for how you actually drive.</h1>
             <p className="lead">
-              Tell us what you need, new, used or certified pre-owned. CarMatch AI ranks the best matches and recommends
-              the right trim for each, with a match score, the reasons behind it, and how much you could save versus
-              buying new.
+              Tell us your budget, your commute and who rides along. We&rsquo;ll go through {CARS.length} models from{" "}
+              {BRAND_COUNT} brands, new, used or certified pre-owned, and show which trim makes sense and why.
             </p>
             <div className="hero-actions">
               <Link href="/advisor" className="button button-signal button-lg">
@@ -225,24 +220,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
                 Snap a car
               </Link>
             </div>
-            <p className="hero-promise">No sponsored rankings. Your needs decide the order.</p>
-            <dl className="hero-stats">
-              <div>
-                <dd>{CARS.length}</dd>
-                <dt>models</dt>
-              </div>
-              <div>
-                <dd>{BRAND_COUNT}</dd>
-                <dt>brands</dt>
-              </div>
-              <div>
-                <dd>{CONDITIONS.length}</dd>
-                <dt>conditions</dt>
-              </div>
-            </dl>
-            <p className="creator">
-              Created by <strong>Dylan Andersen</strong>
-            </p>
+            <p className="hero-promise">No sponsored rankings. Nobody pays to be listed.</p>
           </div>
           <HeroExample />
         </div>
@@ -263,7 +241,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
         <div className="container steps">
           {STEPS.map((step, i) => (
             <div key={step.title} className="step">
-              <span className="step-num">{i + 1}</span>
+              <span className="step-num">{String(i + 1).padStart(2, "0")}</span>
               <div>
                 <h3>{step.title}</h3>
                 <p className="muted">{step.body}</p>
