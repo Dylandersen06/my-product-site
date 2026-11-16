@@ -4,6 +4,7 @@ import SaveCarButtons from "@/components/SaveCarButtons";
 import { usd } from "@/lib/budget";
 import { BODY_LABELS, CARS, carDetailsHref } from "@/lib/cars";
 import { photoFor } from "@/lib/photos";
+import { safetyScore } from "@/lib/safety";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 import type { SavedCar } from "@/lib/saved-cars";
 import { SAVED_LISTS, type SavedList, type SavedState } from "@/lib/saved-lists";
@@ -56,10 +57,16 @@ function SavedCarCard({ row, state }: { row: SavedCar; state: SavedState }) {
   const condition: Condition = CONDITIONS.find((c) => c === row.condition) ?? "new";
   const name = `${car.make} ${car.model}`;
   const href = carDetailsHref(car.id, trim.name, condition);
+  const safety = safetyScore(car, trim);
   return (
     <li className="saved-card">
       <Link href={href} className="saved-photo-link" aria-label={`View ${name}`}>
-        <CarPhoto name={name} bodyLabel={BODY_LABELS[car.body]} photo={photoFor(car.id)} />
+        <CarPhoto
+          name={name}
+          bodyLabel={BODY_LABELS[car.body]}
+          photo={photoFor(car.id)}
+          safety={{ score: safety.score, estimated: !safety.crashTested }}
+        />
       </Link>
       <div className="saved-card-body">
         <h4>

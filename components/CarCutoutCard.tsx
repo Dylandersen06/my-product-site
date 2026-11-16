@@ -4,6 +4,7 @@ import { usd } from "@/lib/budget";
 import { BODY_LABELS, FUEL_LABELS, carDetailsHref, towingText, type Car, type Trim } from "@/lib/cars";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "@/lib/ownership";
 import { photoFor } from "@/lib/photos";
+import SafetyBadge from "@/components/SafetyBadge";
 import { formatSafety, safetyScore } from "@/lib/safety";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 
@@ -40,6 +41,7 @@ export default function CarCutoutCard({
           ) : (
             <span className="cutout-img cutout-missing">{name}</span>
           )}
+          <SafetyBadge score={safety.score} estimated={!safety.crashTested} />
           <span className="cutout-hint">
             <span className="sr-only">Show specs and prices for the {name}</span>
             <span aria-hidden="true" className="cutout-hint-icon" />
