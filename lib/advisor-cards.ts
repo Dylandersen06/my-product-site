@@ -61,7 +61,7 @@ function statsFor(car: Car, trim: Trim, condition: Condition): [string, string][
   return stats;
 }
 
-const MAX_CARDS_PER_REPLY = 3;
+const MAX_CARDS_PER_REPLY = 4;
 
 const normalize = (s: string) =>
   s
