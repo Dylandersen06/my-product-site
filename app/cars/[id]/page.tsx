@@ -46,13 +46,19 @@ export default async function CarPage({
   const match = { car, trim, condition, ownership: costToOwn(car, trim, condition, milesPerYear) };
   const name = `${car.make} ${car.model}`;
   const saved = await viewerSaved();
+  const safety = safetyScore(car, trim);
 
   return (
     <div className="container results-page">
       <BackLink />
       <article className="result-card car-detail">
         <div className="result-media">
-          <CarPhoto name={name} bodyLabel={BODY_LABELS[car.body]} photo={photoFor(car.id)} />
+          <CarPhoto
+            name={name}
+            bodyLabel={BODY_LABELS[car.body]}
+            photo={photoFor(car.id)}
+            safety={{ score: safety.score, estimated: !safety.crashTested }}
+          />
         </div>
         <div className="result-body">
           <h1 className="car-detail-title">{name}</h1>
@@ -65,7 +71,7 @@ export default async function CarPage({
           <p className="result-specs">
             {trim.engine} · {trim.drivetrain} · {trim.transmission}
           </p>
-          <SafetyScore safety={safetyScore(car, trim)} size="large" />
+          <SafetyScore safety={safety} size="large" />
           <SpecStrip trim={trim} />
           {saved && (
             <SaveCarButtons

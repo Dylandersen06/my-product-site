@@ -35,6 +35,7 @@ export default function ResultCard({
   saved: { signedIn: boolean; state?: SavedState; returnTo: string } | null;
 }) {
   const name = `${m.car.make} ${m.car.model}`;
+  const safety = safetyScore(m.car, m.trim);
   const details = carDetailsHref(
     m.car.id,
     m.trim.name,
@@ -44,7 +45,13 @@ export default function ResultCard({
   return (
     <li className="result-card">
       <div className="result-media">
-        <CarPhoto name={name} bodyLabel={BODY_LABELS[m.car.body]} photo={photoFor(m.car.id)} rank={rank} />
+        <CarPhoto
+          name={name}
+          bodyLabel={BODY_LABELS[m.car.body]}
+          photo={photoFor(m.car.id)}
+          rank={rank}
+          safety={{ score: safety.score, estimated: !safety.crashTested }}
+        />
       </div>
       <div className="result-body">
         <div className="result-top">
@@ -70,7 +77,7 @@ export default function ResultCard({
           </div>
           <ScoreRing score={m.score} />
         </div>
-        <SafetyScore safety={safetyScore(m.car, m.trim)} />
+        <SafetyScore safety={safety} />
         {advanced && <SpecStrip trim={m.trim} />}
         <OfficialBadges car={m.car} />
         <ColorDots car={m.car} />

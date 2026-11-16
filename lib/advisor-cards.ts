@@ -28,6 +28,8 @@ export interface AdvisorCard {
   /** Features this exact trim has, in plain words. */
   features: string[];
   highlights: string[];
+  /** For the badge in the photo's corner. */
+  safety: { score: number; estimated: boolean };
 }
 
 const ALL_FEATURES = Object.keys(FEATURE_LABELS) as Feature[];
@@ -137,6 +139,7 @@ export function cardsFromReply(text: string): AdvisorCard[] {
       stats: statsFor(car, trim, condition),
       features: ALL_FEATURES.filter((f) => hasFeature(car, trim, f)).map((f) => FEATURE_LABELS[f]),
       highlights: trim.highlights,
+      safety: (({ score, crashTested }) => ({ score, estimated: !crashTested }))(safetyScore(car, trim)),
     });
   }
   return [...cards.values()];

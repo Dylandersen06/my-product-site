@@ -127,7 +127,7 @@ function RecommendationCards({
       <ul className="advisor-cards">
         {cards.map((card, i) => (
           <li key={`${card.id}-${card.trim}-${card.condition}`} className="advisor-card">
-            <CarPhoto name={card.name} bodyLabel={card.bodyLabel} photo={card.photo} />
+            <CarPhoto name={card.name} bodyLabel={card.bodyLabel} photo={card.photo} safety={card.safety} />
             <div className="advisor-card-body">
               {i === 0 && cards.length > 1 && <span className="advisor-card-badge">Top pick</span>}
               <h3>{card.name}</h3>
