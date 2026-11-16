@@ -4,6 +4,7 @@ import { CARS, hasFeature, towingText, type Car, type Feature, type Trim } from 
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "./ownership";
 import { officialFor, overallStars } from "./official";
 import { paletteFor } from "./colors";
+import { formatSafety, safetyScore } from "./safety";
 
 // The catalog goes into every request, so it's written as tersely as possible
 // to keep costs down. The instructions below explain the shorthand.
@@ -24,7 +25,7 @@ function trimLine(car: Car, trim: Trim, towingVaries: boolean): string {
   const run = (["used", "cpo", "new"] as const).map((c) => k(costToOwn(car, trim, c, DEFAULT_MILES_PER_YEAR).yearly.total));
   const specs = `${trim.engine} ${trim.hp}hp ${trim.zero60}s ${trim.economy} ${trim.drivetrain} ${trim.transmission}`;
   const tow = towingVaries ? ` tow ${towingText(trim.towingLbs)}` : "";
-  return `- ${trim.name}: ${k(trim.prices.used)}/${k(trim.prices.cpo)}/${k(trim.prices.new)}; run/yr ${run.join("/")}; ${specs}${tow}; ${features.join(",") || "-"}; ${trim.highlights.join(", ")}`;
+  return `- ${trim.name}: ${k(trim.prices.used)}/${k(trim.prices.cpo)}/${k(trim.prices.new)}; run/yr ${run.join("/")}; safety ${formatSafety(safetyScore(car, trim).score)}; ${specs}${tow}; ${features.join(",") || "-"}; ${trim.highlights.join(", ")}`;
 }
 
 function carBlock(car: Car): string {
@@ -74,8 +75,9 @@ Style:
 
 Reading the catalog:
 - Each model's first line gives body style, fuel, seats, cargo in cubic feet (bed volume for pickups), towing if the same for every trim, the age and used/CPO mileage of its pre-owned examples, and what it's good for. Seven or more seats means a third row. The bracket at the end is official government data: the NHTSA overall crash-test rating (or that NHTSA hasn't rated it) and the number of NHTSA recalls for that model year. When safety matters to the shopper, cite these as official NHTSA figures, and tell them to check a specific car's VIN for open recalls at nhtsa.gov/recalls. "No NHTSA rating" means untested, not unsafe.
-- Each trim line reads: name: used/CPO/new price; run/yr used/CPO/new yearly running cost; engine, horsepower, 0-60 time, MPG or range, drivetrain, transmission; features; highlights.
+- Each trim line reads: name: used/CPO/new price; run/yr used/CPO/new yearly running cost; safety = CarMatch Safety Score out of 5; engine, horsepower, 0-60 time, MPG or range, drivetrain, transmission; features; highlights.
 - TYPICAL COLORS lists common factory paints by brand, with a few models listed on their own. They're a general guide: not every color is offered on every model, trim or year, so say "typically" and suggest confirming with a dealer.
+- The CarMatch Safety Score (out of 5, in half steps) is the site's own rating: 70% the NHTSA overall crash rating, 20% the trim's blind-spot monitoring, adaptive cruise and 360° camera, and 10% the model's NHTSA recalls. Models without an NHTSA rating get a cautious middle value for the crash part, so call their score an estimate. When safety matters to the shopper, give the score and say what it's based on.
 - Feature codes, available on that trim: AWD = AWD or 4WD, CarPlay = Apple CarPlay and Android Auto, ACC = adaptive cruise control, BSM = blind-spot monitoring, Heated = heated seats, Roof = sunroof or glass roof, 360cam = 360-degree camera. Write these out in plain words for shoppers.
 
 Scope:

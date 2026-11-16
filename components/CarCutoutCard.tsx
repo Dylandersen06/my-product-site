@@ -4,6 +4,7 @@ import { usd } from "@/lib/budget";
 import { BODY_LABELS, FUEL_LABELS, carDetailsHref, towingText, type Car, type Trim } from "@/lib/cars";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "@/lib/ownership";
 import { photoFor } from "@/lib/photos";
+import { formatSafety, safetyScore } from "@/lib/safety";
 import { CONDITIONS, CONDITION_LABELS, type Condition } from "@/lib/pricing";
 
 /**
@@ -27,6 +28,7 @@ export default function CarCutoutCard({
   const name = `${car.make} ${car.model}`;
   const photo = photoFor(car.id);
   const cost = costToOwn(car, trim, condition, DEFAULT_MILES_PER_YEAR);
+  const safety = safetyScore(car, trim);
 
   return (
     <div className="cutout-card">
@@ -60,6 +62,12 @@ export default function CarCutoutCard({
             ))}
           </ul>
           <dl className="cutout-specs">
+            <div>
+              <dt>Safety score</dt>
+              <dd>
+                {formatSafety(safety.score)}/5{safety.crashTested ? "" : " (est.)"}
+              </dd>
+            </div>
             <div>
               <dt>Type</dt>
               <dd>

@@ -4,6 +4,7 @@
 
 import { BODY_LABELS, CARS, FEATURE_LABELS, FUEL_LABELS, carDetailsHref, hasFeature, towingText, type Car, type Feature, type Trim } from "./cars";
 import { officialFor, overallStars } from "./official";
+import { formatSafety, safetyScore } from "./safety";
 import { DEFAULT_MILES_PER_YEAR, costToOwn } from "./ownership";
 import { photoFor, type CarPhoto } from "./photos";
 import { CONDITION_LABELS, type Condition } from "./pricing";
@@ -34,6 +35,7 @@ const ALL_FEATURES = Object.keys(FEATURE_LABELS) as Feature[];
 function statsFor(car: Car, trim: Trim, condition: Condition): [string, string][] {
   const stars = overallStars(car.id);
   const recalls = officialFor(car.id)?.recalls;
+  const safety = safetyScore(car, trim);
   const stats: [string, string][] = [
     ["Year", condition === "new" ? String(car.year) : `About ${car.year - trim.usedAgeYears} (~${trim.usedAgeYears} yrs old)`],
     ["Engine", trim.engine],
@@ -46,7 +48,8 @@ function statsFor(car: Car, trim: Trim, condition: Condition): [string, string][
     ["Seats", String(car.seats)],
     [car.body === "truck" ? "Bed volume" : "Cargo", `${trim.cargoCuFt} cu ft`],
     ["Towing", towingText(trim.towingLbs)],
-    ["NHTSA safety", stars !== null ? `${stars}/5 stars overall` : "Not rated"],
+    ["Safety score", `${formatSafety(safety.score)}/5${safety.crashTested ? "" : " (est.)"}`],
+    ["NHTSA crash rating", stars !== null ? `${stars}/5 stars overall` : "Not rated"],
   ];
   if (recalls) stats.push([`Recalls (${recalls.year})`, String(recalls.count)]);
   if (condition !== "new") stats.push(["Typical mileage", `${trim.mileage[condition].toLocaleString("en-US")} mi`]);

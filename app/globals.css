@@ -3635,3 +3635,100 @@ h4 {
   max-width: 64ch;
   font-size: 1.0625rem;
 }
+
+/* CarMatch Safety Score ------------------------------------------------------ */
+.safety-stars {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.safety-stars-empty {
+  color: var(--border-strong);
+  opacity: 0.6;
+}
+.safety-stars-full {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--fill);
+  overflow: hidden;
+  color: var(--accent);
+}
+.safety-est {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--muted);
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  padding: 0 5px;
+}
+
+/* One line on result cards */
+.safety-compact {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 10px 0 6px;
+  font-size: var(--fs-sm);
+}
+.safety-compact-label {
+  font-weight: 600;
+  color: var(--muted);
+}
+.safety-compact strong {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+
+/* The headline block on a car's page */
+.safety-large {
+  margin: 16px 0;
+  padding: 16px 18px;
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.safety-large-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.safety-large-head h2 {
+  font-size: var(--fs-md);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.safety-large-value {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  margin: 4px 0 6px;
+}
+.safety-large-value strong {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.safety-large-value > span:not(.safety-stars) {
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+.safety-large-value .safety-stars {
+  font-size: 1.5rem;
+  align-self: center;
+}
+.safety-basis {
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.safety-how {
+  margin-top: 6px;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
