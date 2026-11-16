@@ -375,7 +375,7 @@ export default function AdvisorChat() {
               {m.cards && m.cards.length > 0 && <RecommendationCards cards={m.cards} location={location} onLocationChange={changeLocation} />}
               {m.cards && m.cards.length > 0 && i === messages.length - 1 && !busy && !atLimit && (
                 <div className="advisor-more">
-                  <p>Want to see more options?</p>
+                  <p>Want to see more options? You can also tell me brands you&rsquo;d prefer or want to avoid.</p>
                   <button type="button" className="button button-outline" onClick={() => void send(MORE_OPTIONS_MESSAGE)}>
                     Show more options
                   </button>
