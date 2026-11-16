@@ -11,6 +11,8 @@ import { CONDITION_LABELS, type Condition } from "./pricing";
 export interface AdvisorCard {
   id: string;
   name: string;
+  make: string;
+  model: string;
   bodyLabel: string;
   trim: string;
   condition: Condition;
@@ -119,6 +121,8 @@ export function cardsFromReply(text: string): AdvisorCard[] {
     cards.set(key, {
       id: car.id,
       name: `${car.make} ${car.model}`,
+      make: car.make,
+      model: car.model,
       bodyLabel: BODY_LABELS[car.body],
       trim: trim.name,
       condition,

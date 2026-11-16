@@ -6,6 +6,7 @@ import CarPhoto from "@/components/CarPhoto";
 import type { AdvisorCard } from "@/lib/advisor-cards";
 import { MAX_MESSAGE_CHARS, MAX_USER_MESSAGES } from "@/lib/advisor-limits";
 import { usd } from "@/lib/budget";
+import { whereToBuy } from "@/lib/where-to-buy";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -21,6 +22,9 @@ const contentForServer = ({ content, corrections }: ChatMessage) =>
   corrections?.length ? `${content}\n\nCorrections from the site's data check: ${corrections.join(" ")}` : content;
 
 const STORAGE_KEY = "carmatch-advisor-chat";
+/** The shopper's ZIP code or city for dealer links, kept in this browser only. */
+const LOCATION_KEY = "carmatch-advisor-location";
+const MAX_LOCATION_CHARS = 60;
 const STARTERS = [
   "I commute 40 miles a day and want to spend as little as possible on gas. Budget around $30k.",
   "We have three kids and a big dog, and we camp most weekends. What should we get?",
@@ -74,10 +78,52 @@ function MessageText({ text }: { text: string }) {
 
 const MORE_OPTIONS_MESSAGE = "Can you show me a few more options?";
 
-function RecommendationCards({ cards }: { cards: AdvisorCard[] }) {
+function WhereToBuy({ card, location }: { card: AdvisorCard; location: string }) {
+  if (!card.make || !card.model) return null;
+  if (!location.trim()) {
+    return <p className="advisor-buy-hint">Add your ZIP code above to see dealers and listings near you.</p>;
+  }
+  const { links, note } = whereToBuy(card.make, card.model, card.condition, location);
+  return (
+    <>
+      <ul className="advisor-buy-links">
+        {links.map((link) => (
+          <li key={link.href}>
+            <a href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label} ↗
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p className="advisor-buy-note">{note}</p>
+    </>
+  );
+}
+
+function RecommendationCards({
+  cards,
+  location,
+  onLocationChange,
+}: {
+  cards: AdvisorCard[];
+  location: string;
+  onLocationChange: (location: string) => void;
+}) {
   return (
     <section className="advisor-stats" aria-label="Full stats for the recommended cars">
       <h3 className="advisor-stats-title">Full stats</h3>
+      <label className="advisor-location">
+        <span>Your ZIP code or city, to find dealers near you</span>
+        <input
+          type="text"
+          inputMode="text"
+          autoComplete="postal-code"
+          maxLength={MAX_LOCATION_CHARS}
+          placeholder="e.g. 84101 or Salt Lake City, UT"
+          value={location}
+          onChange={(e) => onLocationChange(e.target.value)}
+        />
+      </label>
       <ul className="advisor-cards">
         {cards.map((card, i) => (
           <li key={`${card.id}-${card.trim}-${card.condition}`} className="advisor-card">
@@ -130,6 +176,8 @@ function RecommendationCards({ cards }: { cards: AdvisorCard[] }) {
                   <p className="advisor-card-highlights">{card.highlights.join(" · ")}</p>
                 </>
               )}
+              <h4 className="advisor-card-subhead">Where to buy</h4>
+              <WhereToBuy card={card} location={location} />
               <Link href={card.href} className="button button-outline advisor-card-link">
                 View details
               </Link>
@@ -149,6 +197,24 @@ export default function AdvisorChat() {
   const abort = useRef<AbortController | null>(null);
   const end = useRef<HTMLDivElement>(null);
   const [restored, setRestored] = useState(false);
+  const [location, setLocation] = useState("");
+
+  useEffect(() => {
+    try {
+      setLocation(localStorage.getItem(LOCATION_KEY) ?? "");
+    } catch {
+      // Storage can be unavailable. The field still works for this visit.
+    }
+  }, []);
+
+  function changeLocation(next: string) {
+    setLocation(next);
+    try {
+      localStorage.setItem(LOCATION_KEY, next);
+    } catch {
+      // See above.
+    }
+  }
 
   // Keep the chat for this browser tab, so visiting other pages doesn't lose it.
   useEffect(() => {
@@ -304,7 +370,7 @@ export default function AdvisorChat() {
                   </ul>
                 </div>
               )}
-              {m.cards && m.cards.length > 0 && <RecommendationCards cards={m.cards} />}
+              {m.cards && m.cards.length > 0 && <RecommendationCards cards={m.cards} location={location} onLocationChange={changeLocation} />}
               {m.cards && m.cards.length > 0 && i === messages.length - 1 && !busy && !atLimit && (
                 <div className="advisor-more">
                   <p>Want to see more options?</p>
