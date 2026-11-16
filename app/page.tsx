@@ -251,6 +251,28 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
         </div>
       </section>
 
+      <section className="section section-tight" aria-labelledby="about-title">
+        <div className="container about">
+          <h2 id="about-title" className="section-title">
+            Who built this
+          </h2>
+          <div className="about-body">
+            <p>
+              CarMatch was built by <strong>Dylan Andersen</strong>, an engineering student at PSU who loves cars:
+              how they&rsquo;re engineered, what makes one trim worth more than another, and why two cars at the same
+              price can cost very different amounts to own.
+            </p>
+            <p>
+              It started as a way to share that with everyone else. Most people buy a car only a few times in their
+              life, usually with a salesperson doing the explaining. This site is meant to teach you what actually
+              matters before you walk in: which trim makes sense, what it costs to run each year, and when used or
+              certified pre-owned beats buying new.
+            </p>
+            <p>No dealer or sponsor is behind it, so nobody pays to be ranked higher.</p>
+          </div>
+        </div>
+      </section>
+
       <section id="search" className="section">
         <div className="container narrow">
           <h2 className="section-title">What do you need in a car?</h2>
