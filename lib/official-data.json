@@ -21635,6 +21635,425 @@
     "count": 0,
     "items": []
    }
+  },
+  "toyota-prius-plug-in-hybrid": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 2,
+    "items": [
+     {
+      "campaign": "26V049000",
+      "date": "28/01/2026",
+      "component": "Electrical System:Wiring:Switches/Knobs/Buttons",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2023-2024 Prius Prime, 2023-2026 Prius, and 2025-2026 Prius Plug-in Hybrid vehicles. Water may enter the rear door switch and cause a short circuit, allowing an unlocked rear door to open unexpectedly."
+     },
+     {
+      "campaign": "25V744000",
+      "date": "30/10/2025",
+      "component": "Back Over Prevention:Display Function",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2022-2026 Toyota, Lexus, and Subaru Solterra vehicles equipped with a Panoramic View Monitor (PVM) system. Please see the recall report for a complete list of models. A software error may cause the rearview ca"
+     }
+    ]
+   }
+  },
+  "toyota-c-hr": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "C-HR AWD 18inch",
+      "engine": "87 and 167 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50307,
+      "mpge": 117,
+      "rangeMi": 287
+     },
+     {
+      "name": "C-HR AWD 20inch",
+      "engine": "87 and 167 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50308,
+      "mpge": 112,
+      "rangeMi": 273
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2026,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V570000",
+      "date": "02/09/2026",
+      "component": "Electrical System:Propulsion System",
+      "summary": "Toyota Motor Engineering & Manufacturing (Toyota) is recalling certain 2026 C-HR battery electric vehicles. A software programming error may cause the electric drive system battery to become overcharged under certain driving conditions, which can shut down the electric drive syst"
+     }
+    ]
+   }
+  },
+  "chevrolet-bolt": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "subaru-uncharted": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "Uncharted",
+      "engine": "167 kW AC Synchronous",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50301,
+      "mpge": 129,
+      "rangeMi": 308
+     },
+     {
+      "name": "Uncharted 20 inch AWD",
+      "engine": "87 and 167 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50302,
+      "mpge": 112,
+      "rangeMi": 273
+     },
+     {
+      "name": "Uncharted AWD",
+      "engine": "87 and 167 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50303,
+      "mpge": 117,
+      "rangeMi": 287
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "subaru-trailseeker": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "Trailseeker 20 inch AWD",
+      "engine": "167 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50299,
+      "mpge": 114,
+      "rangeMi": 274
+     },
+     {
+      "name": "Trailseeker AWD",
+      "engine": "167 kW AC Synchronous",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50300,
+      "mpge": 117,
+      "rangeMi": 281
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "jeep-cherokee": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "Cherokee AWD",
+      "engine": "1.6L 4-cyl turbo hybrid",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 39,
+       "highway": 35,
+       "combined": 37
+      },
+      "epaId": 50161
+     }
+    ]
+   },
+   "safety": {
+    "year": 2023,
+    "description": "2023 Jeep Cherokee SUV AWD",
+    "overall": "4",
+    "frontal": "4",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 19360
+   },
+   "recalls": {
+    "year": 2026,
+    "count": 4,
+    "items": [
+     {
+      "campaign": "26V559000",
+      "date": "01/09/2026",
+      "component": "Tires:Pressure Monitoring And Regulating Systems",
+      "summary": "Chrysler (FCA US LLC) is recalling certain 2024-2025 Jeep Wagoneer, 2024-2026 Jeep Grand Cherokee, Jeep Grand Cherokee L, Jeep Grand Cherokee 4XE, Jeep Grand Wagoneer, 2025 Jeep Wagoneer L, 2025-2026 Jeep Grand Wagoneer L, and 2026 Jeep Cherokee vehicles. Due to a software error,"
+     },
+     {
+      "campaign": "26V531000",
+      "date": "13/08/2026",
+      "component": "Back Over Prevention: Sensing System: Camera",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2026 Jeep Wrangler, Jeep Gladiator, Jeep Compass, Jeep Cherokee, Jeep Grand Cherokee, Jeep Grand Cherokee L, Jeep Grand Wagoneer, Jeep Grand Wagoneer L, Ram Promaster, Ram Promaster EV, Ram 1500, Ram 2500, Chrysler Pacifica Plug-In Hybr"
+     },
+     {
+      "campaign": "26V223000",
+      "date": "09/04/2026",
+      "component": "Electronic Stability Control (Esc)",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2026 Jeep Cherokee vehicles. The brake system control module may fail to operate properly, which can cause a loss of anti-lock brakes (ABS) and electronic stability control (ESC)."
+     },
+     {
+      "campaign": "26V059000",
+      "date": "02/02/2026",
+      "component": "Exterior Lighting:Brake Lights",
+      "summary": "Chrysler (FCA US, LLC) is recalling certain 2024-2026 Jeep Wagoneer S, 2025-2026 Ram 1500 Pickup, Ram 2500 Pickup, Ram 3500 Pickup, Ram 3500 Cab Chassis, Ram 4500 Cab Chassis, Ram 5500 Cab Chassis, and 2026 Jeep Cherokee vehicles. Due to an improperly designed trailer tow module,"
+     }
+    ]
+   }
+  },
+  "jeep-recon": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "Recon MOAB 4WD",
+      "engine": "250 kW DCPM",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 50449,
+      "mpge": 71,
+      "rangeMi": 222
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "honda-prelude": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "Prelude",
+      "engine": "2.0L 4-cyl hybrid",
+      "drive": "Front-Wheel Drive",
+      "transmission": "Automatic (variable gear ratios)",
+      "fuel": "Regular",
+      "mpg": {
+       "city": 46,
+       "highway": 41,
+       "combined": 44
+      },
+      "epaId": 50046
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "infiniti-qx65": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "audi-q5-sportback": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": {
+    "year": 2025,
+    "description": "2025 Audi Q5 Sportback SUV AWD",
+    "overall": "5",
+    "frontal": "5",
+    "side": "5",
+    "rollover": "4",
+    "vehicleId": 20614
+   },
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "26V266000",
+      "date": "24/04/2026",
+      "component": "Seat Belts:Pretensioner",
+      "summary": "Volkswagen Group of America, Inc. (Audi) is recalling certain 2025 Q5, Q5 Sportback, SQ5, and SQ5 Sportback vehicles. The driver and front passenger seat belts may have been manufactured incorrectly, and fail to properly restrain occupants during a crash."
+     }
+    ]
+   }
+  },
+  "rivian-r2": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "chevrolet-silverado-3500hd": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "gmc-sierra-3500hd": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "ford-f-350-super-duty": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "vinfast-vf-8": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "VF 8 Eco",
+      "engine": "260 and 300 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49086,
+      "mpge": 73,
+      "rangeMi": 256
+     },
+     {
+      "name": "VF 8 Plus",
+      "engine": "260 and 300 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49087,
+      "mpge": 76,
+      "rangeMi": 235
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 1,
+    "items": [
+     {
+      "campaign": "25V559000",
+      "date": "29/08/2025",
+      "component": "Lane Departure: Lane Keep: Automatic Steering",
+      "summary": "VinFast Auto, LLC (VinFast) is recalling certain 2023-2025 VF8 vehicles. The Advanced Driver Assistance System (ADAS) may activate during wide turns, causing unexpected steering wheel movements that are difficult for the driver to override."
+     }
+    ]
+   }
+  },
+  "vinfast-vf-9": {
+   "epa": {
+    "year": 2025,
+    "configs": [
+     {
+      "name": "VF 9 Plus",
+      "engine": "260 and 300 kW ACPM 3-Phase",
+      "drive": "All-Wheel Drive",
+      "transmission": "Automatic (A1)",
+      "fuel": "Electricity",
+      "mpg": null,
+      "epaId": 49088,
+      "mpge": 68,
+      "rangeMi": 287
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
+  },
+  "ineos-grenadier": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": {
+    "year": 2025,
+    "count": 0,
+    "items": []
+   }
+  },
+  "ferrari-amalfi": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "ferrari-849-testarossa": {
+   "epa": null,
+   "epaNote": "No matching EPA record.",
+   "safety": null,
+   "recalls": null
+  },
+  "maserati-mcpura": {
+   "epa": {
+    "year": 2026,
+    "configs": [
+     {
+      "name": "MCPURA",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 15,
+       "highway": 25,
+       "combined": 18
+      },
+      "epaId": 50272
+     },
+     {
+      "name": "MCPURA Spyder",
+      "engine": "3.0L 6-cyl turbo",
+      "drive": "Rear-Wheel Drive",
+      "transmission": "Automatic (S8)",
+      "fuel": "Premium",
+      "mpg": {
+       "city": 15,
+       "highway": 25,
+       "combined": 18
+      },
+      "epaId": 50274
+     }
+    ]
+   },
+   "safety": null,
+   "recalls": null
   }
  }
 }

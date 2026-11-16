@@ -2,6 +2,7 @@
 """Pull official U.S. government data for every model in lib/cars.ts.
 
 Run with:  python3 scripts/fetch_official_data.py
+           python3 scripts/fetch_official_data.py --missing   (only models not in the file yet)
 Writes:    lib/official-data.json
 
 Sources, both free and public domain:
@@ -468,8 +469,13 @@ def recalls(car, year):
 
 def main():
     cars = car_list()
+    # --missing keeps every model already in the file and fetches only new ones.
+    only_missing = "--missing" in sys.argv[1:]
+    previous = json.loads(OUT.read_text()) if only_missing and OUT.exists() else None
+    if previous:
+        cars = [c for c in cars if c["id"] not in previous["cars"]]
     rows = load_epa()
-    out, report = {}, []
+    out, report = ({**previous["cars"]} if previous else {}), []
     for car in cars:
         epa, why = epa_configs(rows, car)
         entry = {"epa": epa}
@@ -493,7 +499,7 @@ def main():
         "sources": {
             "epa": "FuelEconomy.gov (U.S. EPA and Department of Energy)",
             "nhtsa": "NHTSA crash ratings and recalls",
-            "fetchedOn": time.strftime("%Y-%m-%d"),
+            "fetchedOn": previous["sources"]["fetchedOn"] if previous else time.strftime("%Y-%m-%d"),
         },
         "cars": out,
     }, indent=1) + "\n")

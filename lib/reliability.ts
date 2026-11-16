@@ -58,7 +58,9 @@ const BRAND_TRACK_RECORD: Record<string, number> = {
   Maserati: 2.5,
   McLaren: 2.5,
   "Aston Martin": 2.5,
+  Ineos: 2.5,
   "Land Rover": 2,
+  VinFast: 2,
 };
 const UNKNOWN_BRAND = 3;
 const WEIGHTS = { brand: 0.7, recalls: 0.3 };
