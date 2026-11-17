@@ -85,41 +85,37 @@ function BodyStrip() {
   );
 }
 
-const SAVE_STEPS = [
-  {
-    title: `Tap ${SAVED_LISTS.favorite.empty} ${SAVED_LISTS.favorite.label}`,
-    body: `On any search result or car page, tap the ${SAVED_LISTS.favorite.label} button. The heart fills in (${SAVED_LISTS.favorite.icon}) once it's saved. Tap it again to remove it.`,
-  },
-  {
-    title: `Use ${SAVED_LISTS.interested.empty} ${SAVED_LISTS.interested.label} for maybes`,
-    body: `Not sure yet? Tap ${SAVED_LISTS.interested.label} to keep a car on a second, shorter-term list while you compare.`,
-  },
-  {
-    title: "Find them in your account",
-    body: "Your favorites are saved to your account, so they're there on any device. You'll need to log in first, and we'll bring you right back to the car.",
-  },
-];
-
 function SaveFavorites() {
+  const fav = SAVED_LISTS.favorite;
+  const maybe = SAVED_LISTS.interested;
   return (
     <section className="section section-tight" aria-labelledby="favorites-title">
       <div className="container">
-        <h2 id="favorites-title" className="section-title">
-          Save the cars you love
-        </h2>
-        <p className="section-sub">
-          Keep a shortlist as you shop. <Link href="/account">See your saved cars →</Link>
-        </p>
-        <div className="steps">
-          {SAVE_STEPS.map((step, i) => (
-            <div key={step.title} className="step">
-              <span className="step-num">{String(i + 1).padStart(2, "0")}</span>
-              <div>
-                <h3>{step.title}</h3>
-                <p className="muted">{step.body}</p>
-              </div>
+        <div className="save-note">
+          <h2 id="favorites-title" className="save-note-title">
+            <span aria-hidden="true">{fav.icon}</span> Keep a shortlist
+          </h2>
+          <dl className="save-note-list">
+            <div>
+              <dt>
+                {fav.empty} {fav.label}
+              </dt>
+              <dd>The cars you love. Tap the heart on any result or car page, and tap it again to take it off.</dd>
             </div>
-          ))}
+            <div>
+              <dt>
+                {maybe.empty} {maybe.label}
+              </dt>
+              <dd>The maybes, while you compare.</dd>
+            </div>
+            <div>
+              <dt>Where they go</dt>
+              <dd>
+                Your account, on any device. Log in first and you&rsquo;ll land right back on the car.{" "}
+                <Link href="/account">See your saved cars</Link>
+              </dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>
@@ -137,7 +133,7 @@ function JoinCta() {
           </h2>
           <p className="section-sub">
             Searching is free. An account lets you keep favorites and pick a plan.{" "}
-            <Link href="/pricing">See plans →</Link>
+            <Link href="/pricing">See plans</Link>
           </p>
           <Link href="/sign-up" className="button button-signal button-lg">
             Create an account
@@ -162,7 +158,7 @@ function YourCarYourRules() {
             <p className="muted">
               Check the features you won&rsquo;t give up, then set limits for horsepower, towing, cargo, MPG and more.
             </p>
-            <span className="personal-way-cta">Open Advanced Search →</span>
+            <span className="personal-way-cta">Open Advanced Search</span>
           </Link>
           <Link href="/advisor" className="personal-way">
             <h3>Tell us what matters</h3>
@@ -170,7 +166,7 @@ function YourCarYourRules() {
               Describe your life in your own words: the commute, the kids, the dog, the weekend trips. The AI Advisor
               suggests cars that fit and explains why.
             </p>
-            <span className="personal-way-cta">Talk to the AI Advisor →</span>
+            <span className="personal-way-cta">Talk to the AI Advisor</span>
           </Link>
         </div>
       </div>
@@ -251,21 +247,21 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
         </div>
       </section>
 
-      <section className="section section-tight" aria-labelledby="about-title">
+      <section className="about-paper" aria-labelledby="about-title">
         <div className="container about">
           <h2 id="about-title" className="section-title">
             Our background
           </h2>
+          <blockquote className="about-quote">The most honest car advice you&rsquo;ll find.</blockquote>
           <div className="about-body">
             <p>
               CarMatch was built by <strong>Dylan Andersen</strong>, a mechanical engineering student at PSU who loves
               cars and wants buying one to come with straight answers.
             </p>
             <p>
-              The goal is simple: the most honest car advice you&rsquo;ll find. No dealer, brand or sponsor pays us, so
-              no car is ranked higher because someone paid for it. Every match shows its downsides next to its
-              strengths, and if a cheaper car, a used one or a different brand suits you better, that&rsquo;s what
-              we&rsquo;ll tell you.
+              No dealer, brand or sponsor pays us, so no car is ranked higher because someone paid for it. Every match
+              shows its downsides next to its strengths, and if a cheaper car, a used one or a different brand suits you
+              better, that&rsquo;s what we&rsquo;ll tell you.
             </p>
             <p>
               Most people buy a car only a few times in their life, usually with a salesperson doing the explaining.
@@ -273,6 +269,7 @@ export default async function Home({ searchParams }: { searchParams: Promise<Raw
               straight from the government&rsquo;s NHTSA data, so you know what&rsquo;s fact and what&rsquo;s our best
               guess before you walk in.
             </p>
+            <p className="about-sign">Dylan Andersen &middot; Mechanical Engineering, PSU</p>
           </div>
         </div>
       </section>

@@ -3868,3 +3868,220 @@ h4 {
   right: 26px;
   bottom: 20px;
 }
+
+/* Hand-set look, pass 2 ---------------------------------------------------
+   Fewer widget patterns: no pills, gauges or check-mark badges. Results read
+   like a printed spec sheet, and the homepage varies its section shapes. */
+
+/* Search summary: plain text with dots, not pills */
+.chips {
+  gap: 0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+.chips li {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+.chips li + li::before {
+  content: "·";
+  margin: 0 8px;
+  color: var(--border-strong);
+}
+
+/* Sort: text tabs with an underline, not pill buttons */
+.sort-options {
+  gap: 4px 18px;
+}
+.sort-option,
+.sort-option:hover,
+.sort-option.active,
+.sort-option.active:hover {
+  min-height: 32px;
+  padding: 4px 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: var(--muted);
+}
+.sort-option:hover {
+  color: var(--text);
+}
+.sort-option.active,
+.sort-option.active:hover {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+/* Match score: a plain figure, not a gauge */
+.score-ring {
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 0;
+}
+.score-num {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+.score-label {
+  letter-spacing: 0.04em;
+}
+
+/* Reasons: plus and minus, like a reviewer's notes */
+.reasons li::before {
+  width: auto;
+  height: auto;
+  background: none;
+  border-radius: 0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  margin-top: 0;
+}
+.reason-good::before {
+  content: "+";
+  background: none;
+}
+.reason-warn::before {
+  content: "−";
+  background: none;
+}
+
+/* Official data: a plain line of facts */
+.official-badges {
+  gap: 0;
+  font-family: var(--font-mono), ui-monospace, monospace;
+}
+.official-badges li {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: none;
+  color: var(--muted);
+  font-weight: 500;
+}
+.official-badges li + li::before {
+  content: "·";
+  margin: 0 8px;
+  color: var(--border-strong);
+}
+
+/* Photo ratings: one quiet line instead of two stacked boxes */
+.photo-ratings {
+  flex-direction: row;
+  gap: 0;
+  right: 8px;
+  bottom: 8px;
+  background: rgba(8, 48, 31, 0.85);
+  border-radius: 2px;
+}
+.photo-rating {
+  background: none;
+  padding: 2px 7px;
+  border-radius: 0;
+}
+.photo-rating + .photo-rating {
+  border-left: 1px solid rgba(255, 250, 235, 0.25);
+}
+/* The homepage pictures stay clean: the ratings are inside each car's pop-up. */
+.cutout-summary .photo-ratings {
+  display: none;
+}
+
+/* Homepage: favorites as one short note, not another numbered grid */
+.save-note {
+  display: grid;
+  grid-template-columns: minmax(0, 14rem) minmax(0, 1fr);
+  gap: 16px 40px;
+  padding: 22px 0;
+  border-top: 1px solid var(--border-strong);
+  border-bottom: 1px solid var(--border-strong);
+}
+.save-note-title {
+  font-size: 1.5rem;
+  line-height: 1.1;
+}
+.save-note-title span {
+  color: var(--accent);
+}
+.save-note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.save-note-list > div {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 12px;
+}
+.save-note-list dt {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.save-note-list dd {
+  color: var(--muted);
+}
+.save-note-list a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 720px) {
+  .save-note,
+  .save-note-list > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4px;
+  }
+  .save-note {
+    gap: 14px;
+  }
+}
+
+/* Our background: a light printed-page band in both themes */
+.about-paper {
+  margin-top: 48px;
+  padding: 48px 0 56px;
+  background: #f5eedb;
+  color: #17231c;
+}
+.about-paper .section-title {
+  border-top: none;
+  padding-top: 0;
+  color: #4c5a50;
+  font-size: var(--fs-md);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.about-quote {
+  font-family: var(--font-display), var(--font-body), sans-serif;
+  font-stretch: 82%;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  max-width: 18ch;
+  margin: 10px 0 24px;
+  color: #08301f;
+}
+.about-paper .about-body strong {
+  color: #08301f;
+}
+.about-sign {
+  margin-top: 6px;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: var(--fs-sm);
+  color: #4c5a50;
+}
+
+/* Plain underlined links, without trailing arrows */
+.personal-way-cta {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
