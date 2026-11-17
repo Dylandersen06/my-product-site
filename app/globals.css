@@ -4085,3 +4085,8 @@ h4 {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.save-note-icon {
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
