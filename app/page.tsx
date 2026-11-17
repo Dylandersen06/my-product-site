@@ -98,13 +98,19 @@ function SaveFavorites() {
           <dl className="save-note-list">
             <div>
               <dt>
-                {fav.empty} {fav.label}
+                <span className="save-note-icon" aria-hidden="true">
+                  {fav.empty}
+                </span>{" "}
+                {fav.label}
               </dt>
               <dd>The cars you love. Tap the heart on any result or car page, and tap it again to take it off.</dd>
             </div>
             <div>
               <dt>
-                {maybe.empty} {maybe.label}
+                <span className="save-note-icon" aria-hidden="true">
+                  {maybe.empty}
+                </span>{" "}
+                {maybe.label}
               </dt>
               <dd>The maybes, while you compare.</dd>
             </div>
