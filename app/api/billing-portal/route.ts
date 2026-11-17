@@ -1,5 +1,5 @@
 import { currentUser } from "@clerk/nextjs/server";
-import { getStripe } from "@/lib/billing";
+import { getStripe, isMissingCustomer } from "@/lib/billing";
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +15,10 @@ export async function POST(request: Request) {
     const session = await stripe.billingPortal.sessions.create({ customer, return_url: `${new URL(request.url).origin}/account` });
     return Response.json({ url: session.url });
   } catch (error) {
+    // A customer saved in test mode doesn't exist once the site uses live keys.
+    if (isMissingCustomer(error)) {
+      return Response.json({ error: "No billing details on this account yet." }, { status: 404 });
+    }
     console.error("billing portal failed", error instanceof Error ? error.message : error);
     return Response.json({ error: "Couldn't open billing. Please try again." }, { status: 502 });
   }
