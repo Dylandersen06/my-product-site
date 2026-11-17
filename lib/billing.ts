@@ -22,8 +22,36 @@ export function getStripe(): Stripe | null {
 
 export const isOffer = (value: unknown): value is PlanKey => value === "pass" || value === "monthly";
 
-/** A Stripe Checkout page for one of the offers. */
+/**
+ * True when Stripe says a customer ID doesn't exist, as happens to an ID saved
+ * in test mode once the site uses live keys.
+ */
+export const isMissingCustomer = (error: unknown) =>
+  error instanceof Stripe.errors.StripeInvalidRequestError &&
+  error.code === "resource_missing" &&
+  (error.param === "customer" || /no such customer/i.test(error.message));
+
+/**
+ * A Stripe Checkout page for one of the offers. If the shopper's saved customer
+ * no longer exists (a test-mode ID after switching to live keys), it starts
+ * over with their email; the new customer is saved when the payment completes.
+ */
 export async function createCheckout(
+  stripe: Stripe,
+  kind: PlanKey,
+  user: { id: string; email: string | null; stripeCustomerId: string | null },
+  origin: string,
+): Promise<string> {
+  try {
+    return await checkoutUrl(stripe, kind, user, origin);
+  } catch (error) {
+    if (!user.stripeCustomerId || !isMissingCustomer(error)) throw error;
+    console.warn("saved Stripe customer not found; starting checkout without it");
+    return checkoutUrl(stripe, kind, { ...user, stripeCustomerId: null }, origin);
+  }
+}
+
+async function checkoutUrl(
   stripe: Stripe,
   kind: PlanKey,
   user: { id: string; email: string | null; stripeCustomerId: string | null },
